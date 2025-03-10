@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>about – paxnomada</title>
+<title>Stream – paxnomada</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -89,11 +89,15 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./about.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./stream.html"> 
+    <a class="nav-link active" href="./garden.html" aria-current="page"> 
 <span class="menu-text">Stream</span></a>
   </li>  
 </ul>
@@ -109,15 +113,27 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Stream</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
 
-<p>Hi, my name is Kevin Andrew Silberberg. I am a current Masters student in the Scientific Computing and Applied Math program at <a href="https://www.ucsc.edu/">University of California Santa Cruz</a>.</p>
-<p><em>ORCID:</em> <a href="https://orcid.org/0009-0009-4825-1865">0009-0009-4825-1865</a></p>
-<p><em>Email:</em> <a href="mailto:silberbergka@gmail.com">silberbergka@gmail.com</a></p>
-<p><em>GitHub:</em> <a href="https://github.com/ksilberb">ksilberb</a></p>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
 
 
 
@@ -212,7 +228,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/ksilberb\.github\.io\/paxnomada\/");
+      var filterRegex = new RegExp('/' + window.location.host + '/');
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
