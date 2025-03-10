@@ -26,6 +26,10 @@ Sample Output:
 
 ## Solution
 
+We use the inbuilt julia function `count(p, iter)` which counts the number of elements in `iter` for which predicate `p` is true.
+
+[count](https://www.jlhub.com/julia/manual/en/function/count)
+
 ```{julia}
 countNucs(s::String) = [
     count(==('A'), s), count(==('C'), s), count(==('G'), s), count(==('T'), s)
@@ -51,11 +55,9 @@ main()
 
 In Rosalind, you have to 'download the dataset' and they give you five minuets to submit your answer. This essentially means that your solution nees to be reasonably computationally efficient to solve within that time frame. If you write bad code, sometimes this is a non-trivial requirement because their data files for testing contain a large number of data.
 
-You can download my solution and data files here:
+[Github Filese](https://github.com/ksilberb/paxnomada/tree/main/rosalind/countdna)
 
-[countdna.jl](){download}
-
-and run the code by the following commandline call:
+The code can be ran using:
 
 ```{sh}
 julia countdna.jl rosalind_dna.txt output.txt
