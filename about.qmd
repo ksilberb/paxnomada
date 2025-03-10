@@ -1,5 +1,7 @@
----
-title: "About"
----
+Hi, my name is Kevin Andrew Silberberg. I am a current Masters student in the Scientific Computing and Applied Math program at [University of California Santa Cruz](https://www.ucsc.edu/).
 
-About this site
+*ORCID:* [0009-0009-4825-1865](https://orcid.org/0009-0009-4825-1865)
+
+*Email:* [silberbergka@gmail.com](mailto:silberbergka@gmail.com)
+
+*GitHub:* [ksilberb](https://github.com/ksilberb)

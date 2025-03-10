@@ -1,0 +1,4 @@
+[Rosalind](https://rosalind.info/about/) is a platform for learning bioinformatics through problem solving. The following are my solutions to the problems posed using the [Julia](https://julialang.org/) programming language.
+
+# Bioinformatics Stronghold
+[Counting DNA Nucleotides](countingdnanucleotides/countingdnanucleotides.qmd)

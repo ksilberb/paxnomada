@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>paxnomada</title>
+<title>multiplesof3or5 – paxnomada</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,25 +20,59 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-d166b450ba5a8e9f7a0ab969bf6592c1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-86b23442370dd7e489c9e8a6af3477b1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-d166b450ba5a8e9f7a0ab969bf6592c1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-86b23442370dd7e489c9e8a6af3477b1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -67,8 +101,37 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="styles.css">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-fixed fullcontent">
@@ -78,7 +141,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">paxnomada</span>
     </a>
   </div>
@@ -89,11 +152,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./stream.html"> 
+    <a class="nav-link" href="../stream.html"> 
 <span class="menu-text">Stream</span></a>
   </li>  
 </ul>
@@ -114,14 +177,104 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>Here I intend to document my projects, thoughts, academics, recommendations, opinions, travels, etc.</p>
-<p>I want this to be a place of discovery for those who find it.</p>
-<section id="my-solutions-to-math-and-programming-problems" class="level2">
-<h2 class="anchored" data-anchor-id="my-solutions-to-math-and-programming-problems">My solutions to math and programming problems</h2>
-<p><a href="./rosalind/index.html">Rosalind Bioinformatics Problems</a></p>
-<p><a href="./projecteuler/index.html">Project Euler</a></p>
+<section id="problem" class="level1">
+<h1>Problem</h1>
+<p>If we list all the natural numbers below <span class="math inline">\(10\)</span> that are multiplies of <span class="math inline">\(3\)</span> or <span class="math inline">\(5\)</span>, we get <span class="math inline">\(3, 5, 6, \text{and } 9\)</span>. The sum of these multiples is <span class="math inline">\(23\)</span>.</p>
+<p>Find the sum of all the multiples of <span class="math inline">\(3\)</span> or <span class="math inline">\(5\)</span> below <span class="math inline">\(1000\)</span>.</p>
+<section id="solution" class="level2">
+<h2 class="anchored" data-anchor-id="solution">Solution</h2>
+<section id="analytical-solution" class="level3">
+<h3 class="anchored" data-anchor-id="analytical-solution">Analytical Solution</h3>
+<p>Let <span class="math inline">\(A \in \mathbb{N}\)</span> be the set that contains all the natural numbers in the domain <span class="math inline">\([1, 1000)\)</span> that are multiples of <span class="math inline">\(3\)</span>.</p>
+<p><span class="math display">\[\begin{align}
+A = 3, 6, 9, 12, 15, \cdots, 999
+\end{align}\]</span></p>
+<p>Let <span class="math inline">\(B \in \mathbb{N}\)</span> be the set that contains the numbers in the same domain as <span class="math inline">\(A\)</span> but that are multiples of <span class="math inline">\(5\)</span>.</p>
+<p><span class="math display">\[\begin{align}
+B = 5, 10, 15, 20, 25, \cdots, 995
+\end{align}\]</span></p>
+<p>Essentially what we are looking for here is the sum of all the elements contained in <span class="math inline">\(A \cup B\)</span>.</p>
+<p>By the inclusion-exculsion principle, recall that</p>
+<p><span class="math display">\[\begin{align}
+A \cup B = A + B - A \cap B
+\end{align}\]</span></p>
+<p>so we need to find the sum of the elements contained in <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, and the set <span class="math inline">\(C = A \cap B\)</span> which is the set of all the numbers which are multiples of <span class="math inline">\(15\)</span>.</p>
+<p><span class="math display">\[\begin{align}
+C = 15, 30, 45, 60, \cdots, 990
+\end{align}\]</span></p>
+<p>For this we can use the formulas for <a href="https://en.wikipedia.org/wiki/Arithmetic_progression">Arithmetic Progression</a>.</p>
+<p><span class="math display">\[\begin{align}
+\sum A = n \left(\frac{a_1 + a_n}{2}\right)
+\end{align}\]</span></p>
+<p>where <span class="math inline">\(n\)</span> is the number of terms in the sequence, <span class="math inline">\(a_1\)</span> is the first term and <span class="math inline">\(a_n\)</span> is the last term. We don’t know what how many terms there are in the sequence so we can also use the <em>nth term formula</em></p>
+<p><span class="math display">\[\begin{align}
+a_n = a_1 + \left(n - 1\right)d
+\end{align}\]</span></p>
+<p>where <span class="math inline">\(d\)</span> is the value being added to <span class="math inline">\(a_{n-1}\)</span> to obtain <span class="math inline">\(a_n\)</span>.</p>
+<p>Let us compute these sums for <span class="math inline">\(A, B, C\)</span></p>
+<section id="a" class="level4">
+<h4 class="anchored" data-anchor-id="a">A</h4>
+<p>the last term in the sequence is <span class="math inline">\(999\)</span> thus,</p>
+<p><span class="math display">\[\begin{align}
+999 &amp;= 3 + \left(n - 1\right)3\\
+999 &amp;= 3n\\
+n &amp;= 333
+\end{align}\]</span></p>
+<p>hence,</p>
+<p><span class="math display">\[\begin{align}
+\sum A &amp;= 333 \left(\frac{3 + 999}{2}\right)\\
+&amp;= 333 \cdot \frac{1002}{2} \\
+&amp;= 166833
+\end{align}\]</span></p>
+</section>
+<section id="b" class="level4">
+<h4 class="anchored" data-anchor-id="b">B</h4>
+<p>the last term in the sequence is <span class="math inline">\(995\)</span> thus,</p>
+<p><span class="math display">\[\begin{align}
+995 &amp;= 5 + \left(n - 1\right)5\\
+995 &amp;= 5n\\
+n &amp;= 199
+\end{align}\]</span></p>
+<p>hence,</p>
+<p><span class="math display">\[\begin{align}
+\sum B &amp;= 199 \left(\frac{5 + 995}{2}\right)\\
+&amp;= 99500
+\end{align}\]</span></p>
+</section>
+<section id="c" class="level4">
+<h4 class="anchored" data-anchor-id="c">C</h4>
+<p>the last term in the sequence is <span class="math inline">\(990\)</span> thus,</p>
+<p><span class="math display">\[\begin{align}
+990 &amp;= 15 + \left(n - 1\right)15\\
+&amp;= 15n\\
+n &amp;= 66
+\end{align}\]</span></p>
+<p>hence,</p>
+<p><span class="math display">\[\begin{align}
+\sum C &amp;= 66 \left(\frac{15 + 990}{2}\right)\\
+&amp;= 66 \cdot \left(\frac{1005}{2}\right)\\
+&amp;= 33165
+\end{align}\]</span></p>
+<p>Therefore the final solution,</p>
+<p><span class="math display">\[\begin{align}
+\sum A \cup B = 166833 + 99500 - 33165 = 233168
+\end{align}\]</span></p>
+</section>
+</section>
+<section id="code" class="level3">
+<h3 class="anchored" data-anchor-id="code">Code</h3>
+<p>We can solve the problem brute force by writing a code that computes the sum of any number in the range <span class="math inline">\([1, 1000]\)</span> that is a multiple of <span class="math inline">\(3\)</span> or <span class="math inline">\(5\)</span>.</p>
+<div id="2" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(x <span class="cf">for</span> x <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span><span class="fl">999</span> <span class="cf">if</span> (x <span class="op">%</span> <span class="fl">3</span> <span class="op">==</span> <span class="fl">0</span>) <span class="op">||</span> (x <span class="op">%</span> <span class="fl">5</span> <span class="op">==</span> <span class="fl">0</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="1">
+<pre><code>233168</code></pre>
+</div>
+</div>
+<p>We use a generator function in the call to <code>sum</code> so that we don’t generate an intermediate array and then sum over the elements of the array. Instead it simply keeps a running total of the elements produced by the generator function.</p>
 
 
+</section>
+</section>
 </section>
 
 </main> <!-- /main -->

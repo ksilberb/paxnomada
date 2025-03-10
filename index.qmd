@@ -1,7 +1,9 @@
----
-title: "paxnomada"
----
+Here I intend to document my projects, thoughts, academics, recommendations, opinions, travels, etc.
 
-This is a Quarto website.
+I want this to be a place of discovery for those who find it.
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+## My solutions to math and programming problems
+
+[Rosalind Bioinformatics Problems](rosalind/index.qmd)
+
+[Project Euler](projecteuler/index.qmd)

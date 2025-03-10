@@ -1,0 +1,63 @@
+---
+engine: julia-1.11
+julia:
+  exeflags: ["--project=/home/kevinsilberberg/paxnomada/rosalind/"]
+execute:
+  daemon: true
+  cache: true
+  eval: false
+---
+
+# Problem
+
+Given: A DNA string *s* of length $1000$ nucleotides
+
+Return: Four integers (seperated by spaces) counting the respoective number of times that the symbols 'A' 'C' 'G' 'T' occur in *s*.
+
+Sample Dataset:
+
+AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC
+
+Sample Output:
+
+\begin{matrix}
+20 & 12 & 17 & 21
+\end{matrix}
+
+## Solution
+
+```{julia}
+countNucs(s::String) = [
+    count(==('A'), s), count(==('C'), s), count(==('G'), s), count(==('T'), s)
+]
+
+function main()
+    if length(ARGS) < 2
+        println("Usage: julia $(Base.PROGRAM_FILE) <fileIN> <fileOUT>")
+        exit(1)
+    end
+    s = read(ARGS[1], String)
+    data = countNucs(s)
+    open(ARGS[2], "w") do file
+        println(file, join(data, " "))
+    end
+    exit(0)
+end
+
+main()
+```
+
+## Notes
+
+In Rosalind, you have to 'download the dataset' and they give you five minuets to submit your answer. This essentially means that your solution nees to be reasonably computationally efficient to solve within that time frame. If you write bad code, sometimes this is a non-trivial requirement because their data files for testing contain a large number of data.
+
+You can download my solution and data files here:
+
+[countingDNANucleotides.jl](countingdnanucleotides.jl){download}
+[rosalind_dna.txt](rosalind_dna.txt){download}
+
+and run the code by the following commandline call:
+
+```{sh}
+julia countingDNANucleotides.jl rosalind_dna.txt output.txt
+```
