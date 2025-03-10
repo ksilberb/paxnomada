@@ -1,80 +1,10 @@
 [
   {
-    "objectID": "stream.html",
-    "href": "stream.html",
-    "title": "Sunday, March 09, 2025, 12:22PM",
-    "section": "",
-    "text": "Sunday, March 09, 2025, 12:22PM\nLately I have been contemplating what I want to do after I graduate from UCSC next quarter. I have been here for four years and have had such a broad spectrum of things that I took interest in while I was here. When I project myself into the future I see so many possibilities its hard to really pin-point what I should focus on first. I know for sure I want to be a scientist and pursue knowlege, but in what area of science? I’ve been thinking about robotics, bioinformatics and computational genomics, marine biology and ecology, perhaps even machine learning.\nI’m always scheming on ideas. Like the other day I was sure I wanted to just drop everything I’m doing and just become a kelp farmer or vertical greenhouse farming. I know I want to do something impactful and that has meaning, but on the other hand I also have that adventurous itch that I need to scratch that makes me want to just sell everything I own, buy a boat and sail around the world for a couple years. It feels so cliche to say all this, but its so real.\n\n\nSaturday, March 08, 2025, 10:34PM\nI created this website to document my thoughts, projects, and perhaps even create a portfolio of all the things that I want to learn. I want to post pictures that I take with my new camera on here. Publish coding projects, etc."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "paxnomada",
-    "section": "",
-    "text": "Here I intend to document my projects, thoughts, academics, recommendations, opinions, travels, etc.\nI want this to be a place of discovery for those who find it."
-  },
-  {
-    "objectID": "index.html#links",
-    "href": "index.html#links",
-    "title": "paxnomada",
-    "section": "",
-    "text": "Rosalind Bioinformatics Problems"
-  },
-  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "paxnomada",
     "section": "",
     "text": "Hi, my name is Kevin Andrew Silberberg. I am a current Masters student in the Scientific Computing and Applied Math program at University of California Santa Cruz.\nORCID: 0009-0009-4825-1865\nEmail: silberbergka@gmail.com\nGitHub: ksilberb"
-  },
-  {
-    "objectID": "rosalind/index.html",
-    "href": "rosalind/index.html",
-    "title": "Bioinformatics Stronghold",
-    "section": "",
-    "text": "Rosalind is a platform for learning bioinformatics through problem solving. The following are my solutions to the problems posed using the Julia programming language.\n\nBioinformatics Stronghold\nCounting DNA Nucleotides"
-  },
-  {
-    "objectID": "projecteuler/index.html",
-    "href": "projecteuler/index.html",
-    "title": "paxnomada",
-    "section": "",
-    "text": "Project Euler is a website with problems in mathematics and computer science. The following are my own solutions to the problems.\nMultiples of 3 or 5"
-  },
-  {
-    "objectID": "projecteuler/multiplesof3or5.html",
-    "href": "projecteuler/multiplesof3or5.html",
-    "title": "Problem",
-    "section": "",
-    "text": "If we list all the natural numbers below \\(10\\) that are multiplies of \\(3\\) or \\(5\\), we get \\(3, 5, 6, \\text{and } 9\\). The sum of these multiples is \\(23\\).\nFind the sum of all the multiples of \\(3\\) or \\(5\\) below \\(1000\\).\n\n\n\n\nLet \\(A \\in \\mathbb{N}\\) be the set that contains all the natural numbers in the domain \\([1, 1000)\\) that are multiples of \\(3\\).\n\\[\\begin{align}\nA = 3, 6, 9, 12, 15, \\cdots, 999\n\\end{align}\\]\nLet \\(B \\in \\mathbb{N}\\) be the set that contains the numbers in the same domain as \\(A\\) but that are multiples of \\(5\\).\n\\[\\begin{align}\nB = 5, 10, 15, 20, 25, \\cdots, 995\n\\end{align}\\]\nEssentially what we are looking for here is the sum of all the elements contained in \\(A \\cup B\\).\nBy the inclusion-exculsion principle, recall that\n\\[\\begin{align}\nA \\cup B = A + B - A \\cap B\n\\end{align}\\]\nso we need to find the sum of the elements contained in \\(A\\), \\(B\\), and the set \\(C = A \\cap B\\) which is the set of all the numbers which are multiples of \\(15\\).\n\\[\\begin{align}\nC = 15, 30, 45, 60, \\cdots, 990\n\\end{align}\\]\nFor this we can use the formulas for Arithmetic Progression.\n\\[\\begin{align}\n\\sum A = n \\left(\\frac{a_1 + a_n}{2}\\right)\n\\end{align}\\]\nwhere \\(n\\) is the number of terms in the sequence, \\(a_1\\) is the first term and \\(a_n\\) is the last term. We don’t know what how many terms there are in the sequence so we can also use the nth term formula\n\\[\\begin{align}\na_n = a_1 + \\left(n - 1\\right)d\n\\end{align}\\]\nwhere \\(d\\) is the value being added to \\(a_{n-1}\\) to obtain \\(a_n\\).\nLet us compute these sums for \\(A, B, C\\)\n\n\nthe last term in the sequence is \\(999\\) thus,\n\\[\\begin{align}\n999 &= 3 + \\left(n - 1\\right)3\\\\\n999 &= 3n\\\\\nn &= 333\n\\end{align}\\]\nhence,\n\\[\\begin{align}\n\\sum A &= 333 \\left(\\frac{3 + 999}{2}\\right)\\\\\n&= 333 \\cdot \\frac{1002}{2} \\\\\n&= 166833\n\\end{align}\\]\n\n\n\nthe last term in the sequence is \\(995\\) thus,\n\\[\\begin{align}\n995 &= 5 + \\left(n - 1\\right)5\\\\\n995 &= 5n\\\\\nn &= 199\n\\end{align}\\]\nhence,\n\\[\\begin{align}\n\\sum B &= 199 \\left(\\frac{5 + 995}{2}\\right)\\\\\n&= 99500\n\\end{align}\\]\n\n\n\nthe last term in the sequence is \\(990\\) thus,\n\\[\\begin{align}\n990 &= 15 + \\left(n - 1\\right)15\\\\\n&= 15n\\\\\nn &= 66\n\\end{align}\\]\nhence,\n\\[\\begin{align}\n\\sum C &= 66 \\left(\\frac{15 + 990}{2}\\right)\\\\\n&= 66 \\cdot \\left(\\frac{1005}{2}\\right)\\\\\n&= 33165\n\\end{align}\\]\nTherefore the final solution,\n\\[\\begin{align}\n\\sum A \\cup B = 166833 + 99500 - 33165 = 233168\n\\end{align}\\]\n\n\n\n\nWe can solve the problem brute force by writing a code that computes the sum of any number in the range \\([1, 1000]\\) that is a multiple of \\(3\\) or \\(5\\).\n\nsum(x for x in 1:999 if (x % 3 == 0) || (x % 5 == 0))\n\n233168\n\n\nWe use a generator function in the call to sum so that we don’t generate an intermediate array and then sum over the elements of the array. Instead it simply keeps a running total of the elements produced by the generator function."
-  },
-  {
-    "objectID": "projecteuler/multiplesof3or5.html#solution",
-    "href": "projecteuler/multiplesof3or5.html#solution",
-    "title": "Problem",
-    "section": "",
-    "text": "Let \\(A \\in \\mathbb{N}\\) be the set that contains all the natural numbers in the domain \\([1, 1000)\\) that are multiples of \\(3\\).\n\\[\\begin{align}\nA = 3, 6, 9, 12, 15, \\cdots, 999\n\\end{align}\\]\nLet \\(B \\in \\mathbb{N}\\) be the set that contains the numbers in the same domain as \\(A\\) but that are multiples of \\(5\\).\n\\[\\begin{align}\nB = 5, 10, 15, 20, 25, \\cdots, 995\n\\end{align}\\]\nEssentially what we are looking for here is the sum of all the elements contained in \\(A \\cup B\\).\nBy the inclusion-exculsion principle, recall that\n\\[\\begin{align}\nA \\cup B = A + B - A \\cap B\n\\end{align}\\]\nso we need to find the sum of the elements contained in \\(A\\), \\(B\\), and the set \\(C = A \\cap B\\) which is the set of all the numbers which are multiples of \\(15\\).\n\\[\\begin{align}\nC = 15, 30, 45, 60, \\cdots, 990\n\\end{align}\\]\nFor this we can use the formulas for Arithmetic Progression.\n\\[\\begin{align}\n\\sum A = n \\left(\\frac{a_1 + a_n}{2}\\right)\n\\end{align}\\]\nwhere \\(n\\) is the number of terms in the sequence, \\(a_1\\) is the first term and \\(a_n\\) is the last term. We don’t know what how many terms there are in the sequence so we can also use the nth term formula\n\\[\\begin{align}\na_n = a_1 + \\left(n - 1\\right)d\n\\end{align}\\]\nwhere \\(d\\) is the value being added to \\(a_{n-1}\\) to obtain \\(a_n\\).\nLet us compute these sums for \\(A, B, C\\)\n\n\nthe last term in the sequence is \\(999\\) thus,\n\\[\\begin{align}\n999 &= 3 + \\left(n - 1\\right)3\\\\\n999 &= 3n\\\\\nn &= 333\n\\end{align}\\]\nhence,\n\\[\\begin{align}\n\\sum A &= 333 \\left(\\frac{3 + 999}{2}\\right)\\\\\n&= 333 \\cdot \\frac{1002}{2} \\\\\n&= 166833\n\\end{align}\\]\n\n\n\nthe last term in the sequence is \\(995\\) thus,\n\\[\\begin{align}\n995 &= 5 + \\left(n - 1\\right)5\\\\\n995 &= 5n\\\\\nn &= 199\n\\end{align}\\]\nhence,\n\\[\\begin{align}\n\\sum B &= 199 \\left(\\frac{5 + 995}{2}\\right)\\\\\n&= 99500\n\\end{align}\\]\n\n\n\nthe last term in the sequence is \\(990\\) thus,\n\\[\\begin{align}\n990 &= 15 + \\left(n - 1\\right)15\\\\\n&= 15n\\\\\nn &= 66\n\\end{align}\\]\nhence,\n\\[\\begin{align}\n\\sum C &= 66 \\left(\\frac{15 + 990}{2}\\right)\\\\\n&= 66 \\cdot \\left(\\frac{1005}{2}\\right)\\\\\n&= 33165\n\\end{align}\\]\nTherefore the final solution,\n\\[\\begin{align}\n\\sum A \\cup B = 166833 + 99500 - 33165 = 233168\n\\end{align}\\]\n\n\n\n\nWe can solve the problem brute force by writing a code that computes the sum of any number in the range \\([1, 1000]\\) that is a multiple of \\(3\\) or \\(5\\).\n\nsum(x for x in 1:999 if (x % 3 == 0) || (x % 5 == 0))\n\n233168\n\n\nWe use a generator function in the call to sum so that we don’t generate an intermediate array and then sum over the elements of the array. Instead it simply keeps a running total of the elements produced by the generator function."
-  },
-  {
-    "objectID": "index.html#my-solutions-to-math-and-programming-problems",
-    "href": "index.html#my-solutions-to-math-and-programming-problems",
-    "title": "paxnomada",
-    "section": "My solutions to math and programming problems",
-    "text": "My solutions to math and programming problems\nRosalind Bioinformatics Problems\nProject Euler"
-  },
-  {
-    "objectID": "rosalind/countingDNANucleotides.html",
-    "href": "rosalind/countingDNANucleotides.html",
-    "title": "Problem",
-    "section": "",
-    "text": "Given: A DNA string s of length \\(1000\\) nucleotides\nReturn: Four integers (seperated by spaces) counting the respoective number of times that the symbols ‘A’ ‘C’ ‘G’ ‘T’ occur in s.\nSample Dataset:\n\ns = \"AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC\"\n\n\"AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC\"\n\n\nSample Output:\n\\[\\begin{matrix}\n20 & 12 & 17 & 21\n\\end{matrix}\\]\n\n\n\ndata = zeros(Int, 4)\nfor char in s\n    if char == 'A'\n        data[1] += 1\n    elseif char == 'C'\n        data[2] += 1\n    elseif char == 'G'\n        data[3] += 1\n    elseif char == 'T'\n        data[4] += 1\n    end\nend\n\nprintln(join(data, \" \"))\n\n20 12 17 21"
-  },
-  {
-    "objectID": "rosalind/countingDNANucleotides.html#solution",
-    "href": "rosalind/countingDNANucleotides.html#solution",
-    "title": "Problem",
-    "section": "",
-    "text": "data = zeros(Int, 4)\nfor char in s\n    if char == 'A'\n        data[1] += 1\n    elseif char == 'C'\n        data[2] += 1\n    elseif char == 'G'\n        data[3] += 1\n    elseif char == 'T'\n        data[4] += 1\n    end\nend\n\nprintln(join(data, \" \"))\n\n20 12 17 21"
   },
   {
     "objectID": "rosalind/countingDNANucleotides/countingDNANucleotides.html",
@@ -96,5 +26,54 @@
     "title": "Problem",
     "section": "",
     "text": "In Rosalind, you have to ‘download the dataset’ and they give you five minuets to submit your answer. This essentially means that your solution nees to be reasonably computationally efficient to solve within that time frame. If you write bad code, sometimes this is a non-trivial requirement because their data files for testing contain a large number of data.\nYou can download my solution and data files here:\ncountingDNANucleotides.jl{download} rosalind_dna.txt{download}\nand run the code by the following commandline call:\njulia countingDNANucleotides.jl rosalind_dna.txt output.txt"
+  },
+  {
+    "objectID": "projecteuler/multiplesof3or5.html",
+    "href": "projecteuler/multiplesof3or5.html",
+    "title": "Problem",
+    "section": "",
+    "text": "If we list all the natural numbers below \\(10\\) that are multiplies of \\(3\\) or \\(5\\), we get \\(3, 5, 6, \\text{and } 9\\). The sum of these multiples is \\(23\\).\nFind the sum of all the multiples of \\(3\\) or \\(5\\) below \\(1000\\).\n\n\n\n\nLet \\(A \\in \\mathbb{N}\\) be the set that contains all the natural numbers in the domain \\([1, 1000)\\) that are multiples of \\(3\\).\n\\[\\begin{align}\nA = 3, 6, 9, 12, 15, \\cdots, 999\n\\end{align}\\]\nLet \\(B \\in \\mathbb{N}\\) be the set that contains the numbers in the same domain as \\(A\\) but that are multiples of \\(5\\).\n\\[\\begin{align}\nB = 5, 10, 15, 20, 25, \\cdots, 995\n\\end{align}\\]\nEssentially what we are looking for here is the sum of all the elements contained in \\(A \\cup B\\).\nBy the inclusion-exculsion principle, recall that\n\\[\\begin{align}\nA \\cup B = A + B - A \\cap B\n\\end{align}\\]\nso we need to find the sum of the elements contained in \\(A\\), \\(B\\), and the set \\(C = A \\cap B\\) which is the set of all the numbers which are multiples of \\(15\\).\n\\[\\begin{align}\nC = 15, 30, 45, 60, \\cdots, 990\n\\end{align}\\]\nFor this we can use the formulas for Arithmetic Progression.\n\\[\\begin{align}\n\\sum A = n \\left(\\frac{a_1 + a_n}{2}\\right)\n\\end{align}\\]\nwhere \\(n\\) is the number of terms in the sequence, \\(a_1\\) is the first term and \\(a_n\\) is the last term. We don’t know what how many terms there are in the sequence so we can also use the nth term formula\n\\[\\begin{align}\na_n = a_1 + \\left(n - 1\\right)d\n\\end{align}\\]\nwhere \\(d\\) is the value being added to \\(a_{n-1}\\) to obtain \\(a_n\\).\nLet us compute these sums for \\(A, B, C\\)\n\n\nthe last term in the sequence is \\(999\\) thus,\n\\[\\begin{align}\n999 &= 3 + \\left(n - 1\\right)3\\\\\n999 &= 3n\\\\\nn &= 333\n\\end{align}\\]\nhence,\n\\[\\begin{align}\n\\sum A &= 333 \\left(\\frac{3 + 999}{2}\\right)\\\\\n&= 333 \\cdot \\frac{1002}{2} \\\\\n&= 166833\n\\end{align}\\]\n\n\n\nthe last term in the sequence is \\(995\\) thus,\n\\[\\begin{align}\n995 &= 5 + \\left(n - 1\\right)5\\\\\n995 &= 5n\\\\\nn &= 199\n\\end{align}\\]\nhence,\n\\[\\begin{align}\n\\sum B &= 199 \\left(\\frac{5 + 995}{2}\\right)\\\\\n&= 99500\n\\end{align}\\]\n\n\n\nthe last term in the sequence is \\(990\\) thus,\n\\[\\begin{align}\n990 &= 15 + \\left(n - 1\\right)15\\\\\n&= 15n\\\\\nn &= 66\n\\end{align}\\]\nhence,\n\\[\\begin{align}\n\\sum C &= 66 \\left(\\frac{15 + 990}{2}\\right)\\\\\n&= 66 \\cdot \\left(\\frac{1005}{2}\\right)\\\\\n&= 33165\n\\end{align}\\]\nTherefore the final solution,\n\\[\\begin{align}\n\\sum A \\cup B = 166833 + 99500 - 33165 = 233168\n\\end{align}\\]\n\n\n\n\nWe can solve the problem brute force by writing a code that computes the sum of any number in the range \\([1, 1000]\\) that is a multiple of \\(3\\) or \\(5\\).\n\nsum(x for x in 1:999 if (x % 3 == 0) || (x % 5 == 0))\n\n233168\n\n\nWe use a generator function in the call to sum so that we don’t generate an intermediate array and then sum over the elements of the array. Instead it simply keeps a running total of the elements produced by the generator function."
+  },
+  {
+    "objectID": "projecteuler/multiplesof3or5.html#solution",
+    "href": "projecteuler/multiplesof3or5.html#solution",
+    "title": "Problem",
+    "section": "",
+    "text": "Let \\(A \\in \\mathbb{N}\\) be the set that contains all the natural numbers in the domain \\([1, 1000)\\) that are multiples of \\(3\\).\n\\[\\begin{align}\nA = 3, 6, 9, 12, 15, \\cdots, 999\n\\end{align}\\]\nLet \\(B \\in \\mathbb{N}\\) be the set that contains the numbers in the same domain as \\(A\\) but that are multiples of \\(5\\).\n\\[\\begin{align}\nB = 5, 10, 15, 20, 25, \\cdots, 995\n\\end{align}\\]\nEssentially what we are looking for here is the sum of all the elements contained in \\(A \\cup B\\).\nBy the inclusion-exculsion principle, recall that\n\\[\\begin{align}\nA \\cup B = A + B - A \\cap B\n\\end{align}\\]\nso we need to find the sum of the elements contained in \\(A\\), \\(B\\), and the set \\(C = A \\cap B\\) which is the set of all the numbers which are multiples of \\(15\\).\n\\[\\begin{align}\nC = 15, 30, 45, 60, \\cdots, 990\n\\end{align}\\]\nFor this we can use the formulas for Arithmetic Progression.\n\\[\\begin{align}\n\\sum A = n \\left(\\frac{a_1 + a_n}{2}\\right)\n\\end{align}\\]\nwhere \\(n\\) is the number of terms in the sequence, \\(a_1\\) is the first term and \\(a_n\\) is the last term. We don’t know what how many terms there are in the sequence so we can also use the nth term formula\n\\[\\begin{align}\na_n = a_1 + \\left(n - 1\\right)d\n\\end{align}\\]\nwhere \\(d\\) is the value being added to \\(a_{n-1}\\) to obtain \\(a_n\\).\nLet us compute these sums for \\(A, B, C\\)\n\n\nthe last term in the sequence is \\(999\\) thus,\n\\[\\begin{align}\n999 &= 3 + \\left(n - 1\\right)3\\\\\n999 &= 3n\\\\\nn &= 333\n\\end{align}\\]\nhence,\n\\[\\begin{align}\n\\sum A &= 333 \\left(\\frac{3 + 999}{2}\\right)\\\\\n&= 333 \\cdot \\frac{1002}{2} \\\\\n&= 166833\n\\end{align}\\]\n\n\n\nthe last term in the sequence is \\(995\\) thus,\n\\[\\begin{align}\n995 &= 5 + \\left(n - 1\\right)5\\\\\n995 &= 5n\\\\\nn &= 199\n\\end{align}\\]\nhence,\n\\[\\begin{align}\n\\sum B &= 199 \\left(\\frac{5 + 995}{2}\\right)\\\\\n&= 99500\n\\end{align}\\]\n\n\n\nthe last term in the sequence is \\(990\\) thus,\n\\[\\begin{align}\n990 &= 15 + \\left(n - 1\\right)15\\\\\n&= 15n\\\\\nn &= 66\n\\end{align}\\]\nhence,\n\\[\\begin{align}\n\\sum C &= 66 \\left(\\frac{15 + 990}{2}\\right)\\\\\n&= 66 \\cdot \\left(\\frac{1005}{2}\\right)\\\\\n&= 33165\n\\end{align}\\]\nTherefore the final solution,\n\\[\\begin{align}\n\\sum A \\cup B = 166833 + 99500 - 33165 = 233168\n\\end{align}\\]\n\n\n\n\nWe can solve the problem brute force by writing a code that computes the sum of any number in the range \\([1, 1000]\\) that is a multiple of \\(3\\) or \\(5\\).\n\nsum(x for x in 1:999 if (x % 3 == 0) || (x % 5 == 0))\n\n233168\n\n\nWe use a generator function in the call to sum so that we don’t generate an intermediate array and then sum over the elements of the array. Instead it simply keeps a running total of the elements produced by the generator function."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "paxnomada",
+    "section": "",
+    "text": "Here I intend to document my projects, thoughts, academics, recommendations, opinions, travels, etc.\nI want this to be a place of discovery for those who find it."
+  },
+  {
+    "objectID": "index.html#my-solutions-to-math-and-programming-problems",
+    "href": "index.html#my-solutions-to-math-and-programming-problems",
+    "title": "paxnomada",
+    "section": "My solutions to math and programming problems",
+    "text": "My solutions to math and programming problems\nRosalind Bioinformatics Problems\nProject Euler"
+  },
+  {
+    "objectID": "projecteuler/index.html",
+    "href": "projecteuler/index.html",
+    "title": "paxnomada",
+    "section": "",
+    "text": "Project Euler is a website with problems in mathematics and computer science. The following are my own solutions to the problems.\nMultiples of 3 or 5"
+  },
+  {
+    "objectID": "rosalind/index.html",
+    "href": "rosalind/index.html",
+    "title": "Bioinformatics Stronghold",
+    "section": "",
+    "text": "Rosalind is a platform for learning bioinformatics through problem solving. The following are my solutions to the problems posed using the Julia programming language.\n\nBioinformatics Stronghold\nCounting DNA Nucleotides"
+  },
+  {
+    "objectID": "stream.html",
+    "href": "stream.html",
+    "title": "Sunday, March 09, 2025, 12:22PM",
+    "section": "",
+    "text": "Sunday, March 09, 2025, 12:22PM\nLately I have been contemplating what I want to do after I graduate from UCSC next quarter. I have been here for four years and have had such a broad spectrum of things that I took interest in while I was here. When I project myself into the future I see so many possibilities its hard to really pin-point what I should focus on first. I know for sure I want to be a scientist and pursue knowlege, but in what area of science? I’ve been thinking about robotics, bioinformatics and computational genomics, marine biology and ecology, perhaps even machine learning.\nI’m always scheming on ideas. Like the other day I was sure I wanted to just drop everything I’m doing and just become a kelp farmer or vertical greenhouse farming. I know I want to do something impactful and that has meaning, but on the other hand I also have that adventurous itch that I need to scratch that makes me want to just sell everything I own, buy a boat and sail around the world for a couple years. It feels so cliche to say all this, but its so real.\n\n\nSaturday, March 08, 2025, 10:34PM\nI created this website to document my thoughts, projects, and perhaps even create a portfolio of all the things that I want to learn. I want to post pictures that I take with my new camera on here. Publish coding projects, etc."
   }
 ]
