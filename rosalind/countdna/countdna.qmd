@@ -53,11 +53,10 @@ In Rosalind, you have to 'download the dataset' and they give you five minuets t
 
 You can download my solution and data files here:
 
-[countingDNANucleotides.jl](https://github.com/ksilberb/paxnomada/blob/main/rosalind/countingDNANucleotides/countingDNANucleotides.jl){download}
-[rosalind_dna.txt](https://github.com/ksilberb/paxnomada/blob/main/rosalind/countingDNANucleotides/rosalind_dna.txt){download}
+[countdna.jl](){download}
 
 and run the code by the following commandline call:
 
 ```{sh}
-julia countingDNANucleotides.jl rosalind_dna.txt output.txt
+julia countdna.jl rosalind_dna.txt output.txt
 ```
