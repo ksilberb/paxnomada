@@ -5,6 +5,7 @@ julia:
 execute:
   daemon: true
   cache: true
+  freeze: auto
 ---
 
 # Problem
