@@ -1,0 +1,57 @@
+---
+format:
+    html:
+        toc: true
+---
+
+# Shasta 2023
+
+This was a trip that [Ben Ruef](https://www.instagram.com/benruef) and I took right after finals week of Spring 2023. We road triped from Santa Cruz, to Mt. Shasta, then we stopped in Ashland Oregon while on our way to Promontory in Northwest California.
+
+## Castle Crags
+
+::: {.figure-container}
+<div class="figure-date">Sat, 17 Jun 2023, 11:18:55 AM PDT</div>
+![The view of Mt. Shasta from the trail, on our way up to a climb at Castle Crags.](shasta_1.jpg)
+:::
+
+::: {.figure-container}
+<div class="figure-date">Sat, 17 Jun 2023, 03:26:33 PM PDT</div>
+![The top of a small scramble.](shasta_7.jpg)
+:::
+
+## Mt. Shasta
+
+::: {.figure-container}
+<div class="figure-date">Tue, 20 Jun 2023, 05:52:29 PM PDT</div>
+![On our way up to Helen Lake. :)](shasta_2.jpg)
+:::
+
+::: {.figure-container}
+<div class="figure-date">Tue, 20 Jun 2023, 08:04:17 PM PDT</div>
+![Making lap wraps inside the tent. We hung all our wet socks and boots from the hike up.](shasta_3.jpg)
+:::
+
+::: {.figure-container}
+<div class="figure-date">Tue, 20 Jun 2023, 08:53:38 PM PDT</div>
+![A photo I snapped after we got settled in and ate.](shasta_4.jpg)
+:::
+
+::: {.figure-container}
+<div class="figure-date">Wed, 21 Jun 2023, 06:46:24 AM PDT</div>
+![When we left Helen Lake at 4 am I melted some snow into a nalgene and I think it pretty much froze solid at this point.](shasta_5.jpg)
+:::
+
+::: {.figure-container}
+<div class="figure-date">Wed, 21 Jun 2023, 08:34:54 AM PDT</div>
+![The Red Banks.](shasta_6.jpg)
+:::
+
+## Promontory
+
+::: {.figure-container}
+<div class="figure-date">Sat, 24 Jun 2023, 11:05:20 AM PDT</div>
+![We ran into some friends from pacific edge at promontory](shasta_8.jpg)
+:::
+
+[back to top](index.qmd)

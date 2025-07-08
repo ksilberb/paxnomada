@@ -1,0 +1,66 @@
+---
+format:
+    html:
+        toc: true
+---
+
+# Spring Break 2025
+
+::: {.figure-container}
+<div class="figure-date">Sun, 23 Mar 2025, 03:08:16 AM PDT</div>
+![We found our friends! The view from our camp site looking at Pine creek canyon. ](spring_1.JPG)
+:::
+
+::: {.figure-container}
+<div class="figure-date">Sun, 23 Mar 2025, 05:47:38 AM PDT</div>
+![Getting our gear ready for the hike up to the climb.](spring_2.JPG)
+:::
+
+::: {.figure-container}
+<div class="figure-date">Sun, 23 Mar 2025, 05:48:42 AM PDT</div>
+![The view of the crag from the road.](spring_3.JPG)
+:::
+
+::: {.figure-container}
+<div class="figure-date">Sun, 23 Mar 2025, 06:05:14 AM PDT</div>
+![Looking out accross the canyon. We found a cairn!](spring_4.JPG)
+:::
+
+::: {.figure-container}
+<div class="figure-date">Sun, 23 Mar 2025, 07:15:12 AM PDT</div>
+![About to rope up and climb some slab! Kaela found the belay spot. ](spring_5.JPG)
+:::
+
+::: {.figure-container}
+<div class="figure-date">Sun, 23 Mar 2025, 07:25:04 AM PDT</div>
+![Crushing the scarry slab climb!](spring_6.JPG)
+:::
+
+::: {.figure-container}
+<div class="figure-date">Sun, 23 Mar 2025, 01:17:44 PM PDT</div>
+![Right before sunset at the camp after we got back from Pine Creek.](spring_7.JPG)
+:::
+
+I bought some snow shoes at the Mammoth Gear Exchange for 15 dollars and decided to take a rest day from climbing. I drove up to aspendell and snowshoed to Lake Sabrina!
+
+::: {.figure-container}
+<div class="figure-date">Mon, 24 Mar 2025, 11:30:20 AM PDT</div>
+![Lake Sabrina still frozen. ](spring_8.JPG)
+:::
+
+::: {.figure-container}
+<div class="figure-date">Wed, 26 Mar 2025, 01:10:16 PM PDT</div>
+![Bishop Sunset.](spring_9.JPG)
+:::
+
+::: {.figure-container}
+<div class="figure-date">Thu, 27 Mar 2025, 02:11:48 AM PDT</div>
+![Obligatory group photo :)](spring_10.JPG)
+:::
+
+::: {.figure-container}
+<div class="figure-date">Thu, 27 Mar 2025, 02:51:46 PM PDT</div>
+![My beautiful girl friend Kaela Rose. We visited my mom after our Bishop trip. ](spring_11.JPG)
+:::
+
+[back to top](index.qmd)

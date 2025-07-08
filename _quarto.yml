@@ -8,6 +8,10 @@ website:
     left:
       - text: "About"
         href: about.qmd
+      - text: "Photos"
+        href: photos/index.qmd
+      - text: "Stream"
+        href: stream.qmd
       - text: "License"
         href: LICENSE.qmd
 
@@ -16,7 +20,7 @@ format:
     theme: darkly
     css: styles.css
     toc: false
-    code-tools: true
+    code-tools: false
 
 execute:
     freeze: auto

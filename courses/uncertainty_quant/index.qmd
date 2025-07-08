@@ -1,6 +1,6 @@
 # Fundamentals of Uncertainty Quantification in Computational Science and Engineering
 
-## Course description
+## Course Description
 
 Computing the statistical properties of nonlinear random systems is of fundamental importance in many areas of science and engineering. The primary objective of the course is to introduce students to state-of-the-art methods for uncertainty propagation and quantification in model-based computations, focusing on the computational and algorithmic features of these methods most useful in dealing with systems specified in terms of ordinary and partial differential equations.
 

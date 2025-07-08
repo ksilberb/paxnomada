@@ -2,58 +2,121 @@
   {
     "objectID": "about.html",
     "href": "about.html",
-    "title": "",
+    "title": "About",
     "section": "",
-    "text": "Code\n\n\n\n\nHi, my name is Kevin Andrew Silberberg. I recently graduated from the Scientific Computing and Applied Math Master’s program at University of California Santa Cruz.\nORCID: 0009-0009-4825-1865\nEmail: ksilberb@pm.me\nGitHub: ksilberb\nWebsite: paxnomada\nLinkedIn: []"
+    "text": "I’m Kevin Andrew Silberberg, a recent graduate from the Scientific Computing and Applied Math Master’s program at University of California Santa Cruz.\n\n\n\nThis website serves as my consolidated online presence, moving away from mainstream social media as the primary medium of my digital identity. I’ve designed it to be a focused space for learning, documenting, and sharing my work and thoughts.\nEvery document accessible on this website was created using Quarto markdown in an Emacs environment and published on GitHub Pages. I’ve found this workflow particularly rewarding for technical documentation, coding projects, and academic work.\n\n\n\nStream: My personal blog where I share thoughts, projects, and insights\nPhotos: A visual blog featuring photography from my travels and daily life, with dedicated sections for specific trips and a continuous stream of recent photos\n\n\n\n\n\nEmail: ksilberb@pm.me\nPhone: 1 (619) 417-6705\nWebsite: ksilberb.github.io/paxnomada\n\n\n\nGitHub\nORCID\nLinkedIn\n\n\n\n\n\nBlueSky\nInstagram\nFacebook"
   },
   {
-    "objectID": "stream.html",
-    "href": "stream.html",
-    "title": "",
+    "objectID": "about.html#introduction",
+    "href": "about.html#introduction",
+    "title": "About",
     "section": "",
-    "text": "Code"
+    "text": "I’m Kevin Andrew Silberberg, a recent graduate from the Scientific Computing and Applied Math Master’s program at University of California Santa Cruz."
   },
   {
-    "objectID": "projecteuler/evenfibonaccinumbers.html",
-    "href": "projecteuler/evenfibonaccinumbers.html",
-    "title": "",
+    "objectID": "about.html#about-this-website",
+    "href": "about.html#about-this-website",
+    "title": "About",
     "section": "",
-    "text": "Code"
+    "text": "This website serves as my consolidated online presence, moving away from mainstream social media as the primary medium of my digital identity. I’ve designed it to be a focused space for learning, documenting, and sharing my work and thoughts.\nEvery document accessible on this website was created using Quarto markdown in an Emacs environment and published on GitHub Pages. I’ve found this workflow particularly rewarding for technical documentation, coding projects, and academic work.\n\n\n\nStream: My personal blog where I share thoughts, projects, and insights\nPhotos: A visual blog featuring photography from my travels and daily life, with dedicated sections for specific trips and a continuous stream of recent photos"
   },
   {
-    "objectID": "projecteuler/evenfibonaccinumbers.html#solution",
-    "href": "projecteuler/evenfibonaccinumbers.html#solution",
-    "title": "",
-    "section": "Solution",
-    "text": "Solution\nThe fibonacci sequence can be thought of as a discrete dynamical system or a recurrance relation defined as follows,\n\\[\\begin{align}\nx_{n+1} = x_{n} + x_{n-1}\n\\end{align}\\]\nwhere \\(x_{0} = 0\\) and \\(x_{1} = 1\\) and \\(n = 1, 2, 3, \\cdots, N\\).\nWhen \\(N = 35\\) the value \\(x_{N}\\) exceeds four million, thus we will solve for the fibonacci numbers up to the value \\(N = 34\\) and then use a julia filter function along with the iseven conditional function to sum only the even values.\n\nN = 34\nx = Vector{Int}(undef, N)\nx[1] = 0\nx[2] = 1\nfor n = 2:N-1\n    x[n+1] = x[n] + x[n-1]\nend\nprintln(sum(filter(iseven, x)))\n\n4613732"
-  },
-  {
-    "objectID": "projecteuler/largestpalindromeproduct.html",
-    "href": "projecteuler/largestpalindromeproduct.html",
-    "title": "",
+    "objectID": "about.html#contact-information",
+    "href": "about.html#contact-information",
+    "title": "About",
     "section": "",
-    "text": "Code"
+    "text": "Email: ksilberb@pm.me\nPhone: 1 (619) 417-6705\nWebsite: ksilberb.github.io/paxnomada\n\n\n\nGitHub\nORCID\nLinkedIn\n\n\n\n\n\nBlueSky\nInstagram\nFacebook"
   },
   {
-    "objectID": "projecteuler/largestpalindromeproduct.html#solution",
-    "href": "projecteuler/largestpalindromeproduct.html#solution",
-    "title": "",
-    "section": "Solution",
-    "text": "Solution\n\nfunction isPalindrome(num::Int64)\n    x = Vector{Int}(undef, 18)\n    for i in eachindex(x)\n        x[i] = num % 10\n        num ÷= 10\n    end\n    y = x[1:findlast(i -&gt; i &gt; 0, x)]\n    for i in eachindex(y)\n        if !(y[i] == y[end - i + 1])\n            return false\n        end\n    end\n    return true\nend\n\nfunction main()\n    current = 0\n    idx = (0, 0)\n    for i in 999:-1:900\n        for j in 999:-1:900\n            new = i*j\n            if (new &gt; current && isPalindrome(new))\n                current = new\n                idx = (i, j)\n            end\n        end\n    end\n    println(\"$(current) = $(idx[1]) x $(idx[2])\")\nend\nmain()\n\n906609 = 993 x 913"
-  },
-  {
-    "objectID": "projecteuler/multiplesof3or5.html",
-    "href": "projecteuler/multiplesof3or5.html",
-    "title": "",
+    "objectID": "photos/shasta2023/index.html",
+    "href": "photos/shasta2023/index.html",
+    "title": "Shasta 2023",
     "section": "",
-    "text": "Code"
+    "text": "This was a trip that Ben Ruef and I took right after finals week of Spring 2023. We road triped from Santa Cruz, to Mt. Shasta, then we stopped in Ashland Oregon while on our way to Promontory in Northwest California.\n\n\n\n\nSat, 17 Jun 2023, 11:18:55 AM PDT\n\n\n\n\nThe view of Mt. Shasta from the trail, on our way up to a climb at Castle Crags.\n\n\n\n\n\nSat, 17 Jun 2023, 03:26:33 PM PDT\n\n\n\n\nThe top of a small scramble.\n\n\n\n\n\n\n\n\nTue, 20 Jun 2023, 05:52:29 PM PDT\n\n\n\n\nOn our way up to Helen Lake. :)\n\n\n\n\n\nTue, 20 Jun 2023, 08:04:17 PM PDT\n\n\n\n\nMaking lap wraps inside the tent. We hung all our wet socks and boots from the hike up.\n\n\n\n\n\nTue, 20 Jun 2023, 08:53:38 PM PDT\n\n\n\n\nA photo I snapped after we got settled in and ate.\n\n\n\n\n\nWed, 21 Jun 2023, 06:46:24 AM PDT\n\n\n\n\nWhen we left Helen Lake at 4 am I melted some snow into a nalgene and I think it pretty much froze solid at this point.\n\n\n\n\n\nWed, 21 Jun 2023, 08:34:54 AM PDT\n\n\n\n\nThe Red Banks.\n\n\n\n\n\n\n\n\nSat, 24 Jun 2023, 11:05:20 AM PDT\n\n\n\n\nWe ran into some friends from pacific edge at promontory\n\n\n\nback to top"
   },
   {
-    "objectID": "projecteuler/multiplesof3or5.html#solution",
-    "href": "projecteuler/multiplesof3or5.html#solution",
-    "title": "",
-    "section": "Solution",
-    "text": "Solution\n\nAnalytical Solution\nLet \\(A \\in \\mathbb{N}\\) be the set that contains all the natural numbers in the domain \\([1, 1000)\\) that are multiples of \\(3\\).\n\\[\\begin{align}\nA = 3, 6, 9, 12, 15, \\cdots, 999\n\\end{align}\\]\nLet \\(B \\in \\mathbb{N}\\) be the set that contains the numbers in the same domain as \\(A\\) but that are multiples of \\(5\\).\n\\[\\begin{align}\nB = 5, 10, 15, 20, 25, \\cdots, 995\n\\end{align}\\]\nEssentially what we are looking for here is the sum of all the elements contained in \\(A \\cup B\\).\nBy the inclusion-exculsion principle, recall that\n\\[\\begin{align}\nA \\cup B = A + B - A \\cap B\n\\end{align}\\]\nso we need to find the sum of the elements contained in \\(A\\), \\(B\\), and the set \\(C = A \\cap B\\) which is the set of all the numbers which are multiples of \\(15\\).\n\\[\\begin{align}\nC = 15, 30, 45, 60, \\cdots, 990\n\\end{align}\\]\nFor this we can use the formulas for Arithmetic Progression.\n\\[\\begin{align}\n\\sum A = n \\left(\\frac{a_1 + a_n}{2}\\right)\n\\end{align}\\]\nwhere \\(n\\) is the number of terms in the sequence, \\(a_1\\) is the first term and \\(a_n\\) is the last term. We don’t know what how many terms there are in the sequence so we can also use the nth term formula\n\\[\\begin{align}\na_n = a_1 + \\left(n - 1\\right)d\n\\end{align}\\]\nwhere \\(d\\) is the value being added to \\(a_{n-1}\\) to obtain \\(a_n\\).\nLet us compute these sums for \\(A, B, C\\)\n\nA\nthe last term in the sequence is \\(999\\) thus,\n\\[\\begin{align}\n999 &= 3 + \\left(n - 1\\right)3\\\\\n999 &= 3n\\\\\nn &= 333\n\\end{align}\\]\nhence,\n\\[\\begin{align}\n\\sum A &= 333 \\left(\\frac{3 + 999}{2}\\right)\\\\\n&= 333 \\cdot \\frac{1002}{2} \\\\\n&= 166833\n\\end{align}\\]\n\n\nB\nthe last term in the sequence is \\(995\\) thus,\n\\[\\begin{align}\n995 &= 5 + \\left(n - 1\\right)5\\\\\n995 &= 5n\\\\\nn &= 199\n\\end{align}\\]\nhence,\n\\[\\begin{align}\n\\sum B &= 199 \\left(\\frac{5 + 995}{2}\\right)\\\\\n&= 99500\n\\end{align}\\]\n\n\nC\nthe last term in the sequence is \\(990\\) thus,\n\\[\\begin{align}\n990 &= 15 + \\left(n - 1\\right)15\\\\\n&= 15n\\\\\nn &= 66\n\\end{align}\\]\nhence,\n\\[\\begin{align}\n\\sum C &= 66 \\left(\\frac{15 + 990}{2}\\right)\\\\\n&= 66 \\cdot \\left(\\frac{1005}{2}\\right)\\\\\n&= 33165\n\\end{align}\\]\nTherefore the final solution,\n\\[\\begin{align}\n\\sum A \\cup B = 166833 + 99500 - 33165 = 233168\n\\end{align}\\]\n\n\n\nCode\nWe can solve the problem brute force by writing a code that computes the sum of any number in the range \\([1, 1000]\\) that is a multiple of \\(3\\) or \\(5\\).\n\nsum(x for x in 1:999 if (x % 3 == 0) || (x % 5 == 0))\n\n233168\n\n\nWe use a generator function in the call to sum so that we don’t generate an intermediate array and then sum over the elements of the array. Instead it simply keeps a running total of the elements produced by the generator function."
+    "objectID": "photos/shasta2023/index.html#castle-crags",
+    "href": "photos/shasta2023/index.html#castle-crags",
+    "title": "Shasta 2023",
+    "section": "",
+    "text": "Sat, 17 Jun 2023, 11:18:55 AM PDT\n\n\n\n\nThe view of Mt. Shasta from the trail, on our way up to a climb at Castle Crags.\n\n\n\n\n\nSat, 17 Jun 2023, 03:26:33 PM PDT\n\n\n\n\nThe top of a small scramble."
+  },
+  {
+    "objectID": "photos/shasta2023/index.html#mt.-shasta",
+    "href": "photos/shasta2023/index.html#mt.-shasta",
+    "title": "Shasta 2023",
+    "section": "",
+    "text": "Tue, 20 Jun 2023, 05:52:29 PM PDT\n\n\n\n\nOn our way up to Helen Lake. :)\n\n\n\n\n\nTue, 20 Jun 2023, 08:04:17 PM PDT\n\n\n\n\nMaking lap wraps inside the tent. We hung all our wet socks and boots from the hike up.\n\n\n\n\n\nTue, 20 Jun 2023, 08:53:38 PM PDT\n\n\n\n\nA photo I snapped after we got settled in and ate.\n\n\n\n\n\nWed, 21 Jun 2023, 06:46:24 AM PDT\n\n\n\n\nWhen we left Helen Lake at 4 am I melted some snow into a nalgene and I think it pretty much froze solid at this point.\n\n\n\n\n\nWed, 21 Jun 2023, 08:34:54 AM PDT\n\n\n\n\nThe Red Banks."
+  },
+  {
+    "objectID": "photos/shasta2023/index.html#promontory",
+    "href": "photos/shasta2023/index.html#promontory",
+    "title": "Shasta 2023",
+    "section": "",
+    "text": "Sat, 24 Jun 2023, 11:05:20 AM PDT\n\n\n\n\nWe ran into some friends from pacific edge at promontory\n\n\n\nback to top"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Kevin Andrew Silberberg",
+    "section": "",
+    "text": "Hi, this is my personal website. Please see the about page for more information.\n\n\nFundamentals of Uncertainty Quantification\nAdvanced Methods in Applied Mathematics\n\n\n\nRosalind\nProject Euler"
+  },
+  {
+    "objectID": "index.html#courses-taken",
+    "href": "index.html#courses-taken",
+    "title": "Kevin Andrew Silberberg",
+    "section": "",
+    "text": "Fundamentals of Uncertainty Quantification\nAdvanced Methods in Applied Mathematics"
+  },
+  {
+    "objectID": "index.html#problem-sets",
+    "href": "index.html#problem-sets",
+    "title": "Kevin Andrew Silberberg",
+    "section": "",
+    "text": "Rosalind\nProject Euler"
+  },
+  {
+    "objectID": "projecteuler/largestprimefactor.html",
+    "href": "projecteuler/largestprimefactor.html",
+    "title": "Largest Prime Factor (Problem 3)",
+    "section": "",
+    "text": "The prime factors of 13195 are 5, 7, 13, and 29.\nWhat is the largest prime factor of the number 600851475143?\n\n\nA prime number is a whole number above \\(1\\) that cannot be made by multiplying other whole numbers.\nFor this problem we are going to need to generate prime numbers which I do not know how to do.\nresearch\nGeneration of primes (wiki)\nSieve of Atkin\nLet us implement the Sieve of Atkin algorithm, so we can generate prime numbers.\n\nfunction atkinSieve(N::Int)\n    sieve = falses(N)\n    if N &gt;= 2 sieve[2] = true end\n    if N &gt;= 3 sieve[3] = true end\n    if N &gt;= 5 sieve[5] = true end\n\n    for x in 1:isqrt(N)\n        for y in 1:isqrt(N)\n            n = 4*x*x + y*y\n            if n &lt;= N && (mod(n, 12) == 1 || mod(n, 12) == 5)\n                sieve[n] = !sieve[n]\n            end\n            n = 3*x*x + y*y\n            if n &lt;= N && mod(n, 12) == 7\n                sieve[n] = !sieve[n]\n            end\n            if x &gt; y\n                n = 3*x*x - y*y\n                if n &lt;= N && mod(n, 12) == 11\n                    sieve[n] = !sieve[n]\n                end\n            end\n        end\n    end\n\n    for r in 5:isqrt(N)\n        if sieve[r]\n            for i in r*r:r*r:N\n                sieve[i] = false\n            end\n        end\n    end\n    [i for i in 1:N if sieve[i]]\nend\n\natkinSieve (generic function with 1 method)\n\n\nFor the next part of the problem we need to develope an algorithm that finds the prime factorization for any integer \\(K\\).\n\nfunction primeFactor(K::Int)\n    if K &lt;= 0\n        throw(DomainError(K, \"Input must be a positive integer\"))\n    elseif K == 1\n        return Dict{Int, Int}()\n    end\n    # generate prime numbers up to sqrt(K)+1\n    primes = atkinSieve(isqrt(K) + 1)\n    factors = Dict{Int, Int}()\n    remaining = K\n    for p in primes\n        if remaining == 1\n            break\n        end\n        power = 0\n        # count how many times p divides remaining\n        while mod(remaining, p) == 0\n            power += 1\n            remaining ÷= p\n        end\n        # add the prime factor to dict\n        # the value represents how many times that factor divided remaining\n        if power &gt; 0\n            factors[p]  = power\n        end\n    end\n    # if the remaining value is greater than 1, it must be prime\n    # if it were composite it would have at least one prime factor less than or equal to sqrt(K)\n    # which we would have diveded out already.\n    if remaining &gt; 1\n        factors[remaining] = 1\n    end\n    factors\nend\nprimeFactor(600851475143)\n\nDict{Int64, Int64} with 4 entries:\n  839  =&gt; 1\n  71   =&gt; 1\n  1471 =&gt; 1\n  6857 =&gt; 1\n\n\nSo the largest prime number is therefore \\(6857\\)"
+  },
+  {
+    "objectID": "projecteuler/largestprimefactor.html#solution",
+    "href": "projecteuler/largestprimefactor.html#solution",
+    "title": "Largest Prime Factor (Problem 3)",
+    "section": "",
+    "text": "A prime number is a whole number above \\(1\\) that cannot be made by multiplying other whole numbers.\nFor this problem we are going to need to generate prime numbers which I do not know how to do.\nresearch\nGeneration of primes (wiki)\nSieve of Atkin\nLet us implement the Sieve of Atkin algorithm, so we can generate prime numbers.\n\nfunction atkinSieve(N::Int)\n    sieve = falses(N)\n    if N &gt;= 2 sieve[2] = true end\n    if N &gt;= 3 sieve[3] = true end\n    if N &gt;= 5 sieve[5] = true end\n\n    for x in 1:isqrt(N)\n        for y in 1:isqrt(N)\n            n = 4*x*x + y*y\n            if n &lt;= N && (mod(n, 12) == 1 || mod(n, 12) == 5)\n                sieve[n] = !sieve[n]\n            end\n            n = 3*x*x + y*y\n            if n &lt;= N && mod(n, 12) == 7\n                sieve[n] = !sieve[n]\n            end\n            if x &gt; y\n                n = 3*x*x - y*y\n                if n &lt;= N && mod(n, 12) == 11\n                    sieve[n] = !sieve[n]\n                end\n            end\n        end\n    end\n\n    for r in 5:isqrt(N)\n        if sieve[r]\n            for i in r*r:r*r:N\n                sieve[i] = false\n            end\n        end\n    end\n    [i for i in 1:N if sieve[i]]\nend\n\natkinSieve (generic function with 1 method)\n\n\nFor the next part of the problem we need to develope an algorithm that finds the prime factorization for any integer \\(K\\).\n\nfunction primeFactor(K::Int)\n    if K &lt;= 0\n        throw(DomainError(K, \"Input must be a positive integer\"))\n    elseif K == 1\n        return Dict{Int, Int}()\n    end\n    # generate prime numbers up to sqrt(K)+1\n    primes = atkinSieve(isqrt(K) + 1)\n    factors = Dict{Int, Int}()\n    remaining = K\n    for p in primes\n        if remaining == 1\n            break\n        end\n        power = 0\n        # count how many times p divides remaining\n        while mod(remaining, p) == 0\n            power += 1\n            remaining ÷= p\n        end\n        # add the prime factor to dict\n        # the value represents how many times that factor divided remaining\n        if power &gt; 0\n            factors[p]  = power\n        end\n    end\n    # if the remaining value is greater than 1, it must be prime\n    # if it were composite it would have at least one prime factor less than or equal to sqrt(K)\n    # which we would have diveded out already.\n    if remaining &gt; 1\n        factors[remaining] = 1\n    end\n    factors\nend\nprimeFactor(600851475143)\n\nDict{Int64, Int64} with 4 entries:\n  839  =&gt; 1\n  71   =&gt; 1\n  1471 =&gt; 1\n  6857 =&gt; 1\n\n\nSo the largest prime number is therefore \\(6857\\)"
+  },
+  {
+    "objectID": "projecteuler/index.html",
+    "href": "projecteuler/index.html",
+    "title": "Project Euler",
+    "section": "",
+    "text": "Project Euler is a website with problems in mathematics and computer science. The following are my own solutions to the problems.\n\n\nMultiples of 3 or 5\nEven Fibonacci Numbers\nLargest Prime Factor\nLargest Palindrome Product"
+  },
+  {
+    "objectID": "projecteuler/index.html#solutions",
+    "href": "projecteuler/index.html#solutions",
+    "title": "Project Euler",
+    "section": "",
+    "text": "Multiples of 3 or 5\nEven Fibonacci Numbers\nLargest Prime Factor\nLargest Palindrome Product"
+  },
+  {
+    "objectID": "projecteuler/smallestmultiple.html",
+    "href": "projecteuler/smallestmultiple.html",
+    "title": "Smallest Multiple",
+    "section": "",
+    "text": "\\(2520\\) is the smallest number that can be divided by each of the numbers from \\(1\\) to \\(10\\) without any remainder.\nWhat is the smallest positive number that can is evenly divisible by all of the numbers from \\(1\\) to \\(20\\)?\n\n\n\nfunction isDivisible(num::Int)\n    r::Int = 0\n    for i = 1:20\n        r = mod(num, i)\n        if r != 0\n            return false\n        end\n    end\n    return true\nend\n\nfunction main()\n    current = 2520\n    while !(isDivisible(current))\n        current += 1\n    end\n    current\nend\nmain()\n\n232792560"
+  },
+  {
+    "objectID": "projecteuler/smallestmultiple.html#solution",
+    "href": "projecteuler/smallestmultiple.html#solution",
+    "title": "Smallest Multiple",
+    "section": "",
+    "text": "function isDivisible(num::Int)\n    r::Int = 0\n    for i = 1:20\n        r = mod(num, i)\n        if r != 0\n            return false\n        end\n    end\n    return true\nend\n\nfunction main()\n    current = 2520\n    while !(isDivisible(current))\n        current += 1\n    end\n    current\nend\nmain()\n\n232792560"
   },
   {
     "objectID": "courses/uncertainty_quant/docs/hw1/hw1.html",
@@ -233,135 +296,135 @@
   {
     "objectID": "rosalind/bioinformatics_stronghold/complementing_a_strand_of_dna/complement.html",
     "href": "rosalind/bioinformatics_stronghold/complementing_a_strand_of_dna/complement.html",
-    "title": "",
+    "title": "Problem",
     "section": "",
-    "text": "Code"
+    "text": "In DNA strings, sysmbols ‘A’ and ‘T’ are complements of each other, as are ‘C’ and ‘G’.\nThe reverse complement of a DNA string \\(s\\) is the string \\(s^C\\) formed by reversing the symbols of \\(s\\), then taking the complement of each symbol (e.g., the reverse complement of ‘GTCA’ is ‘TGAC’).\n\n\nA DNA string \\(s\\) of length at most 1000 base pairs.\n\n\n\nThe reverse complement \\(s^C\\) of \\(s\\).\n\n\n\nAAAACCCGGT\n\n\n\nACCGGGTTTT\n\n\n\nfunction reverse_complement(s::AbstractString)\n    rev_map = Dict{Char, Char}(\n        'A' =&gt; 'T', 'T' =&gt; 'A',\n        'G' =&gt; 'C', 'C' =&gt; 'G'\n    )\n    io = IOBuffer()\n    for char in reverse(s)\n        write(io, rev_map[char])\n    end\n    return String(take!(io))\nend\n\nfunction main()\n    first_line = readline(ARGS[1])\n    output = reverse_complement(first_line)\n    write(\"output.txt\", output)\n    println(output)\nend\n\nmain()"
   },
   {
     "objectID": "rosalind/bioinformatics_stronghold/complementing_a_strand_of_dna/complement.html#given",
     "href": "rosalind/bioinformatics_stronghold/complementing_a_strand_of_dna/complement.html#given",
-    "title": "",
-    "section": "Given",
-    "text": "Given\nA DNA string \\(s\\) of length at most 1000 base pairs."
+    "title": "Problem",
+    "section": "",
+    "text": "A DNA string \\(s\\) of length at most 1000 base pairs."
   },
   {
     "objectID": "rosalind/bioinformatics_stronghold/complementing_a_strand_of_dna/complement.html#return",
     "href": "rosalind/bioinformatics_stronghold/complementing_a_strand_of_dna/complement.html#return",
-    "title": "",
-    "section": "Return",
-    "text": "Return\nThe reverse complement \\(s^C\\) of \\(s\\)."
+    "title": "Problem",
+    "section": "",
+    "text": "The reverse complement \\(s^C\\) of \\(s\\)."
   },
   {
     "objectID": "rosalind/bioinformatics_stronghold/complementing_a_strand_of_dna/complement.html#sample-dataset",
     "href": "rosalind/bioinformatics_stronghold/complementing_a_strand_of_dna/complement.html#sample-dataset",
-    "title": "",
-    "section": "Sample dataset",
-    "text": "Sample dataset\nAAAACCCGGT"
+    "title": "Problem",
+    "section": "",
+    "text": "AAAACCCGGT"
   },
   {
     "objectID": "rosalind/bioinformatics_stronghold/complementing_a_strand_of_dna/complement.html#sample-output",
     "href": "rosalind/bioinformatics_stronghold/complementing_a_strand_of_dna/complement.html#sample-output",
-    "title": "",
-    "section": "Sample Output",
-    "text": "Sample Output\nACCGGGTTTT\n\nSolution\n\nfunction reverse_complement(s::AbstractString)\n    rev_map = Dict{Char, Char}(\n        'A' =&gt; 'T', 'T' =&gt; 'A',\n        'G' =&gt; 'C', 'C' =&gt; 'G'\n    )\n    io = IOBuffer()\n    for char in reverse(s)\n        write(io, rev_map[char])\n    end\n    return String(take!(io))\nend\n\nfunction main()\n    first_line = readline(ARGS[1])\n    output = reverse_complement(first_line)\n    write(\"output.txt\", output)\n    println(output)\nend\n\nmain()"
+    "title": "Problem",
+    "section": "",
+    "text": "ACCGGGTTTT\n\n\n\nfunction reverse_complement(s::AbstractString)\n    rev_map = Dict{Char, Char}(\n        'A' =&gt; 'T', 'T' =&gt; 'A',\n        'G' =&gt; 'C', 'C' =&gt; 'G'\n    )\n    io = IOBuffer()\n    for char in reverse(s)\n        write(io, rev_map[char])\n    end\n    return String(take!(io))\nend\n\nfunction main()\n    first_line = readline(ARGS[1])\n    output = reverse_complement(first_line)\n    write(\"output.txt\", output)\n    println(output)\nend\n\nmain()"
   },
   {
     "objectID": "rosalind/bioinformatics_stronghold/transcribing_dna_into_rna/transcription.html",
     "href": "rosalind/bioinformatics_stronghold/transcribing_dna_into_rna/transcription.html",
-    "title": "",
+    "title": "Problem",
     "section": "",
-    "text": "Code"
+    "text": "Write a program\nGiven: A DNA string \\(t\\) having length at most 1000 nucleotides\nReturn: The transcribed RNA string of \\(t\\).\n\n\nGATGGAACTTGACTACGTAAATT\n\n\n\nGAUGGAACUUGACUACGUAAAUU\n\n\n\ntranscription.jl\n\ntranscribe(s::AbstractString) = replace(s, 'T'=&gt;'U')\n\nfunction main()\n    if length(ARGS) &lt; 2\n        println(\"Usage: julia $(Base.PROGRAM_FILE) &lt;fineIN&gt; &lt;fileOUT&gt;\")\n        exit(1)\n    end\n\n    s = read(ARGS[1], String)\n\n    open(ARGS[2], \"w\") do file\n        println(file, transcribe(s))\n    end\n    exit(0)\nend\n\nmain()\n\n\n\n\nWe use the in-built function replace which takes in a collection and for each pair old=&gt;new returns a copy of the collection where all occurances of old are replaced by new.\nGithub Files\nWe download the rosalind dataset and ran the code using,\njulia transcription.jl rosalind_rna.txt output.txt"
   },
   {
     "objectID": "rosalind/bioinformatics_stronghold/transcribing_dna_into_rna/transcription.html#sample-data",
     "href": "rosalind/bioinformatics_stronghold/transcribing_dna_into_rna/transcription.html#sample-data",
-    "title": "",
-    "section": "Sample data",
-    "text": "Sample data\nGATGGAACTTGACTACGTAAATT"
+    "title": "Problem",
+    "section": "",
+    "text": "GATGGAACTTGACTACGTAAATT"
   },
   {
     "objectID": "rosalind/bioinformatics_stronghold/transcribing_dna_into_rna/transcription.html#sample-output",
     "href": "rosalind/bioinformatics_stronghold/transcribing_dna_into_rna/transcription.html#sample-output",
-    "title": "",
-    "section": "Sample output",
-    "text": "Sample output\nGAUGGAACUUGACUACGUAAAUU"
+    "title": "Problem",
+    "section": "",
+    "text": "GAUGGAACUUGACUACGUAAAUU"
   },
   {
     "objectID": "rosalind/bioinformatics_stronghold/transcribing_dna_into_rna/transcription.html#code",
     "href": "rosalind/bioinformatics_stronghold/transcribing_dna_into_rna/transcription.html#code",
-    "title": "",
-    "section": "Code",
-    "text": "Code\ntranscription.jl\n\ntranscribe(s::AbstractString) = replace(s, 'T'=&gt;'U')\n\nfunction main()\n    if length(ARGS) &lt; 2\n        println(\"Usage: julia $(Base.PROGRAM_FILE) &lt;fineIN&gt; &lt;fileOUT&gt;\")\n        exit(1)\n    end\n\n    s = read(ARGS[1], String)\n\n    open(ARGS[2], \"w\") do file\n        println(file, transcribe(s))\n    end\n    exit(0)\nend\n\nmain()"
+    "title": "Problem",
+    "section": "",
+    "text": "transcription.jl\n\ntranscribe(s::AbstractString) = replace(s, 'T'=&gt;'U')\n\nfunction main()\n    if length(ARGS) &lt; 2\n        println(\"Usage: julia $(Base.PROGRAM_FILE) &lt;fineIN&gt; &lt;fileOUT&gt;\")\n        exit(1)\n    end\n\n    s = read(ARGS[1], String)\n\n    open(ARGS[2], \"w\") do file\n        println(file, transcribe(s))\n    end\n    exit(0)\nend\n\nmain()"
   },
   {
     "objectID": "rosalind/bioinformatics_stronghold/transcribing_dna_into_rna/transcription.html#notes",
     "href": "rosalind/bioinformatics_stronghold/transcribing_dna_into_rna/transcription.html#notes",
-    "title": "",
-    "section": "Notes",
-    "text": "Notes\nWe use the in-built function replace which takes in a collection and for each pair old=&gt;new returns a copy of the collection where all occurances of old are replaced by new.\nGithub Files\nWe download the rosalind dataset and ran the code using,\njulia transcription.jl rosalind_rna.txt output.txt"
+    "title": "Problem",
+    "section": "",
+    "text": "We use the in-built function replace which takes in a collection and for each pair old=&gt;new returns a copy of the collection where all occurances of old are replaced by new.\nGithub Files\nWe download the rosalind dataset and ran the code using,\njulia transcription.jl rosalind_rna.txt output.txt"
   },
   {
     "objectID": "rosalind/index.html",
     "href": "rosalind/index.html",
-    "title": "",
+    "title": "Rosalind",
     "section": "",
-    "text": "Code"
+    "text": "Rosalind is a platform for learning bioinformatics through problem solving. The following are my solutions to the problems posed using the Julia programming language.\n\n\nCounting DNA Nucleotides\nTranscribing DNA into RNA\nComplementing a Strand of DNA"
   },
   {
     "objectID": "rosalind/index.html#bioinformatics-stronghold",
     "href": "rosalind/index.html#bioinformatics-stronghold",
-    "title": "",
-    "section": "Bioinformatics Stronghold",
-    "text": "Bioinformatics Stronghold\nCounting DNA Nucleotides\nTranscribing DNA into RNA\nComplementing a Strand of DNA"
+    "title": "Rosalind",
+    "section": "",
+    "text": "Counting DNA Nucleotides\nTranscribing DNA into RNA\nComplementing a Strand of DNA"
   },
   {
     "objectID": "rosalind/bioinformatics_stronghold/counting_dna_nucleotides/countdna.html",
     "href": "rosalind/bioinformatics_stronghold/counting_dna_nucleotides/countdna.html",
-    "title": "",
+    "title": "Problem",
     "section": "",
-    "text": "Code"
+    "text": "Given: A DNA string s of length \\(1000\\) nucleotides\nReturn: Four integers (seperated by spaces) counting the respoective number of times that the symbols ‘A’ ‘C’ ‘G’ ‘T’ occur in s.\nSample Dataset:\nAGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC\nSample Output:\n\\[\\begin{matrix}\n20 & 12 & 17 & 21\n\\end{matrix}\\]\n\n\nWe use the inbuilt julia function count(p, iter) which counts the number of elements in iter for which predicate p is true.\ncount\n\ncountNucs(s::String) = [\n    count(==('A'), s), count(==('C'), s), count(==('G'), s), count(==('T'), s)\n]\n\nfunction main()\n    if length(ARGS) &lt; 2\n        println(\"Usage: julia $(Base.PROGRAM_FILE) &lt;fileIN&gt; &lt;fileOUT&gt;\")\n        exit(1)\n    end\n    s = read(ARGS[1], String)\n    data = countNucs(s)\n    open(ARGS[2], \"w\") do file\n        println(file, join(data, \" \"))\n    end\n    exit(0)\nend\n\nmain()\n\n\n\n\nIn Rosalind, you have to ‘download the dataset’ and they give you five minuets to submit your answer. This essentially means that your solution nees to be reasonably computationally efficient to solve within that time frame. If you write bad code, sometimes this is a non-trivial requirement because their data files for testing contain a large number of data.\nGithub Files\nThe cold was ran by downloading the dataset, then running the following command:\njulia countdna.jl rosalind_dna.txt output.txt"
   },
   {
     "objectID": "rosalind/bioinformatics_stronghold/counting_dna_nucleotides/countdna.html#solution",
     "href": "rosalind/bioinformatics_stronghold/counting_dna_nucleotides/countdna.html#solution",
-    "title": "",
-    "section": "Solution",
-    "text": "Solution\nWe use the inbuilt julia function count(p, iter) which counts the number of elements in iter for which predicate p is true.\ncount\n\ncountNucs(s::String) = [\n    count(==('A'), s), count(==('C'), s), count(==('G'), s), count(==('T'), s)\n]\n\nfunction main()\n    if length(ARGS) &lt; 2\n        println(\"Usage: julia $(Base.PROGRAM_FILE) &lt;fileIN&gt; &lt;fileOUT&gt;\")\n        exit(1)\n    end\n    s = read(ARGS[1], String)\n    data = countNucs(s)\n    open(ARGS[2], \"w\") do file\n        println(file, join(data, \" \"))\n    end\n    exit(0)\nend\n\nmain()"
+    "title": "Problem",
+    "section": "",
+    "text": "We use the inbuilt julia function count(p, iter) which counts the number of elements in iter for which predicate p is true.\ncount\n\ncountNucs(s::String) = [\n    count(==('A'), s), count(==('C'), s), count(==('G'), s), count(==('T'), s)\n]\n\nfunction main()\n    if length(ARGS) &lt; 2\n        println(\"Usage: julia $(Base.PROGRAM_FILE) &lt;fileIN&gt; &lt;fileOUT&gt;\")\n        exit(1)\n    end\n    s = read(ARGS[1], String)\n    data = countNucs(s)\n    open(ARGS[2], \"w\") do file\n        println(file, join(data, \" \"))\n    end\n    exit(0)\nend\n\nmain()"
   },
   {
     "objectID": "rosalind/bioinformatics_stronghold/counting_dna_nucleotides/countdna.html#notes",
     "href": "rosalind/bioinformatics_stronghold/counting_dna_nucleotides/countdna.html#notes",
-    "title": "",
-    "section": "Notes",
-    "text": "Notes\nIn Rosalind, you have to ‘download the dataset’ and they give you five minuets to submit your answer. This essentially means that your solution nees to be reasonably computationally efficient to solve within that time frame. If you write bad code, sometimes this is a non-trivial requirement because their data files for testing contain a large number of data.\nGithub Files\nThe cold was ran by downloading the dataset, then running the following command:\njulia countdna.jl rosalind_dna.txt output.txt"
+    "title": "Problem",
+    "section": "",
+    "text": "In Rosalind, you have to ‘download the dataset’ and they give you five minuets to submit your answer. This essentially means that your solution nees to be reasonably computationally efficient to solve within that time frame. If you write bad code, sometimes this is a non-trivial requirement because their data files for testing contain a large number of data.\nGithub Files\nThe cold was ran by downloading the dataset, then running the following command:\njulia countdna.jl rosalind_dna.txt output.txt"
   },
   {
     "objectID": "courses/uncertainty_quant/index.html",
     "href": "courses/uncertainty_quant/index.html",
-    "title": "",
+    "title": "Fundamentals of Uncertainty Quantification in Computational Science and Engineering",
     "section": "",
-    "text": "Code"
+    "text": "Computing the statistical properties of nonlinear random systems is of fundamental importance in many areas of science and engineering. The primary objective of the course is to introduce students to state-of-the-art methods for uncertainty propagation and quantification in model-based computations, focusing on the computational and algorithmic features of these methods most useful in dealing with systems specified in terms of ordinary and partial differential equations.\nThe course will focus mainly on the so-called forward UQ problem, in which uncertainties in input parameters such as initial conditions, boundary conditions, geometry or forcing terms are propagated through the equations of motion of the system into the solution. The course will also discuss cutting edge topics on data-driven modeling, deep learning with stochastic neural networks, and uncertainty propagation in high-dimensional systems via tensor methods.\nInstructor: Prof. Daniele Venturi\n\n\n\nProbability Spaces and Random Variables\nRandom Vectors\nRandom Processes and Random Fields\nPDF equations for dynamical systems and PDEs\nPolynomial Chaos\nSampling Methods\n\n\n\nThe following are my solutions to the homework assignments presented to me in this class.\nHomework 1\nHomework 2\nHomework 3\nHomework 4\nHomework 5\nFinal Project"
   },
   {
     "objectID": "courses/uncertainty_quant/index.html#course-description",
     "href": "courses/uncertainty_quant/index.html#course-description",
-    "title": "",
-    "section": "Course description",
-    "text": "Course description\nComputing the statistical properties of nonlinear random systems is of fundamental importance in many areas of science and engineering. The primary objective of the course is to introduce students to state-of-the-art methods for uncertainty propagation and quantification in model-based computations, focusing on the computational and algorithmic features of these methods most useful in dealing with systems specified in terms of ordinary and partial differential equations.\nThe course will focus mainly on the so-called forward UQ problem, in which uncertainties in input parameters such as initial conditions, boundary conditions, geometry or forcing terms are propagated through the equations of motion of the system into the solution. The course will also discuss cutting edge topics on data-driven modeling, deep learning with stochastic neural networks, and uncertainty propagation in high-dimensional systems via tensor methods.\nInstructor: Prof. Daniele Venturi"
+    "title": "Fundamentals of Uncertainty Quantification in Computational Science and Engineering",
+    "section": "",
+    "text": "Computing the statistical properties of nonlinear random systems is of fundamental importance in many areas of science and engineering. The primary objective of the course is to introduce students to state-of-the-art methods for uncertainty propagation and quantification in model-based computations, focusing on the computational and algorithmic features of these methods most useful in dealing with systems specified in terms of ordinary and partial differential equations.\nThe course will focus mainly on the so-called forward UQ problem, in which uncertainties in input parameters such as initial conditions, boundary conditions, geometry or forcing terms are propagated through the equations of motion of the system into the solution. The course will also discuss cutting edge topics on data-driven modeling, deep learning with stochastic neural networks, and uncertainty propagation in high-dimensional systems via tensor methods.\nInstructor: Prof. Daniele Venturi"
   },
   {
     "objectID": "courses/uncertainty_quant/index.html#course-notes",
     "href": "courses/uncertainty_quant/index.html#course-notes",
-    "title": "",
-    "section": "Course Notes",
-    "text": "Course Notes\nProbability Spaces and Random Variables\nRandom Vectors\nRandom Processes and Random Fields\nPDF equations for dynamical systems and PDEs\nPolynomial Chaos\nSampling Methods"
+    "title": "Fundamentals of Uncertainty Quantification in Computational Science and Engineering",
+    "section": "",
+    "text": "Probability Spaces and Random Variables\nRandom Vectors\nRandom Processes and Random Fields\nPDF equations for dynamical systems and PDEs\nPolynomial Chaos\nSampling Methods"
   },
   {
     "objectID": "courses/uncertainty_quant/index.html#homework-solutions",
     "href": "courses/uncertainty_quant/index.html#homework-solutions",
-    "title": "",
-    "section": "Homework Solutions",
-    "text": "Homework Solutions\nThe following are my solutions to the homework assignments presented to me in this class.\nHomework 1\nHomework 2\nHomework 3\nHomework 4\nHomework 5\nFinal Project"
+    "title": "Fundamentals of Uncertainty Quantification in Computational Science and Engineering",
+    "section": "",
+    "text": "The following are my solutions to the homework assignments presented to me in this class.\nHomework 1\nHomework 2\nHomework 3\nHomework 4\nHomework 5\nFinal Project"
   },
   {
     "objectID": "courses/uncertainty_quant/docs/hw3/hw3.html",
@@ -483,80 +546,87 @@
     "text": "Write the PDF equation you obtained in part e as an evolution equation for the cumulative distribution function (CDF) of \\(X(t;\\omega)\\).\n\n\nRecall the definition of the cumulative distribution function:\n\\[\\begin{align}\nF(x, y, t) = \\int_{-\\infty}^{x}p(y, t)dy\n\\end{align}\\]\nif we take the derivative on both sides with respect to \\(x\\) we have\n\\[\\begin{align}\np(x, t) = \\frac{\\partial F(x, t)}{\\partial x}\n\\end{align}\\]\nplugging this into Equation 4 we have\n\\[\\begin{align}\n\\frac{\\partial }{\\partial t}\\left(\\frac{\\partial F}{\\partial x}\\right) = \\frac{\\partial }{\\partial x}\\left(x^3\\frac{\\partial F}{\\partial x}\\right) + \\tau \\frac{\\partial }{\\partial x}\\left(\\frac{\\partial F}{\\partial x}\\frac{1}{2}e^{-\\tau t}\\right)\n\\end{align}\\]\ntaking the integral of both sides:\n\\[\\begin{align}\n    \\int_{-\\infty}^{x}\\frac{\\partial^2 F}{\\partial t\\partial x'}dx' &= \\int_{-\\infty}^{x}\\left(\\frac{\\partial }{\\partial x'}\\left(x'^3\\frac{\\partial F}{\\partial x'}\\right) + \\frac{\\tau}{2} \\frac{\\partial }{\\partial x'}\\left(\\frac{\\partial F}{\\partial x'}e^{-\\tau t}\\right)\\right)dx' \\\\\n\\frac{\\partial F(x, t)}{\\partial t} &= x'^3 \\frac{\\partial F}{\\partial x'}\\bigg|_{-\\infty}^{x} + \\frac{\\tau}{2} \\frac{\\partial F}{\\partial x'}e^{-\\tau t}\\bigg|_{-\\infty}^{x} \\\\\n\\end{align}\\]\nthus we are left with the evolution equation for \\(F(x, t)\\)\n\\[\\frac{\\partial F(x, t)}{\\partial t} = x^3 \\frac{\\partial F(x, t)}{\\partial x} + \\frac{\\tau}{2}e^{-\\tau t}\\frac{\\partial F(x, t)}{\\partial x}\\]"
   },
   {
-    "objectID": "projecteuler/smallestmultiple.html",
-    "href": "projecteuler/smallestmultiple.html",
-    "title": "",
+    "objectID": "courses/adv_methods/index.html",
+    "href": "courses/adv_methods/index.html",
+    "title": "Advanced Methods in Applied Mathematics",
     "section": "",
-    "text": "Code"
+    "text": "This course provides students with an overview of advanced topics and analytical techniques in Applied Mathematics, focusing on the analytical solution of ODEs and PDEs, including asymptotic analysis (method of strained coordinates; method of multiple scales; matched asymptotics; WKB theory), dimensional analysis, self-similar solutions, and Green’s function solutions of PDEs. It also introduces students to variational calculus for the optimization of functionals.\nInstructor: Pascale Garaud\n\n\n\nAM212 Lecture Notes"
   },
   {
-    "objectID": "projecteuler/smallestmultiple.html#solution",
-    "href": "projecteuler/smallestmultiple.html#solution",
-    "title": "",
-    "section": "Solution",
-    "text": "Solution\n\nfunction isDivisible(num::Int)\n    r::Int = 0\n    for i = 1:20\n        r = mod(num, i)\n        if r != 0\n            return false\n        end\n    end\n    return true\nend\n\nfunction main()\n    current = 2520\n    while !(isDivisible(current))\n        current += 1\n    end\n    current\nend\nmain()\n\n232792560"
-  },
-  {
-    "objectID": "projecteuler/index.html",
-    "href": "projecteuler/index.html",
-    "title": "",
+    "objectID": "courses/adv_methods/index.html#course-description",
+    "href": "courses/adv_methods/index.html#course-description",
+    "title": "Advanced Methods in Applied Mathematics",
     "section": "",
-    "text": "Code"
+    "text": "This course provides students with an overview of advanced topics and analytical techniques in Applied Mathematics, focusing on the analytical solution of ODEs and PDEs, including asymptotic analysis (method of strained coordinates; method of multiple scales; matched asymptotics; WKB theory), dimensional analysis, self-similar solutions, and Green’s function solutions of PDEs. It also introduces students to variational calculus for the optimization of functionals.\nInstructor: Pascale Garaud"
   },
   {
-    "objectID": "projecteuler/index.html#solutions",
-    "href": "projecteuler/index.html#solutions",
-    "title": "",
-    "section": "Solutions",
-    "text": "Solutions\nMultiples of 3 or 5\nEven Fibonacci Numbers\nLargest Prime Factor\nLargest Palindrome Product"
-  },
-  {
-    "objectID": "projecteuler/largestprimefactor.html",
-    "href": "projecteuler/largestprimefactor.html",
-    "title": "",
+    "objectID": "courses/adv_methods/index.html#course-notes",
+    "href": "courses/adv_methods/index.html#course-notes",
+    "title": "Advanced Methods in Applied Mathematics",
     "section": "",
-    "text": "Code"
+    "text": "AM212 Lecture Notes"
   },
   {
-    "objectID": "projecteuler/largestprimefactor.html#solution",
-    "href": "projecteuler/largestprimefactor.html#solution",
-    "title": "",
-    "section": "Solution",
-    "text": "Solution\nA prime number is a whole number above \\(1\\) that cannot be made by multiplying other whole numbers.\nFor this problem we are going to need to generate prime numbers which I do not know how to do.\nresearch\nGeneration of primes (wiki)\nSieve of Atkin\nLet us implement the Sieve of Atkin algorithm, so we can generate prime numbers.\n\nfunction atkinSieve(N::Int)\n    sieve = falses(N)\n    if N &gt;= 2 sieve[2] = true end\n    if N &gt;= 3 sieve[3] = true end\n    if N &gt;= 5 sieve[5] = true end\n\n    for x in 1:isqrt(N)\n        for y in 1:isqrt(N)\n            n = 4*x*x + y*y\n            if n &lt;= N && (mod(n, 12) == 1 || mod(n, 12) == 5)\n                sieve[n] = !sieve[n]\n            end\n            n = 3*x*x + y*y\n            if n &lt;= N && mod(n, 12) == 7\n                sieve[n] = !sieve[n]\n            end\n            if x &gt; y\n                n = 3*x*x - y*y\n                if n &lt;= N && mod(n, 12) == 11\n                    sieve[n] = !sieve[n]\n                end\n            end\n        end\n    end\n\n    for r in 5:isqrt(N)\n        if sieve[r]\n            for i in r*r:r*r:N\n                sieve[i] = false\n            end\n        end\n    end\n    [i for i in 1:N if sieve[i]]\nend\n\natkinSieve (generic function with 1 method)\n\n\nFor the next part of the problem we need to develope an algorithm that finds the prime factorization for any integer \\(K\\).\n\nfunction primeFactor(K::Int)\n    if K &lt;= 0\n        throw(DomainError(K, \"Input must be a positive integer\"))\n    elseif K == 1\n        return Dict{Int, Int}()\n    end\n    # generate prime numbers up to sqrt(K)+1\n    primes = atkinSieve(isqrt(K) + 1)\n    factors = Dict{Int, Int}()\n    remaining = K\n    for p in primes\n        if remaining == 1\n            break\n        end\n        power = 0\n        # count how many times p divides remaining\n        while mod(remaining, p) == 0\n            power += 1\n            remaining ÷= p\n        end\n        # add the prime factor to dict\n        # the value represents how many times that factor divided remaining\n        if power &gt; 0\n            factors[p]  = power\n        end\n    end\n    # if the remaining value is greater than 1, it must be prime\n    # if it were composite it would have at least one prime factor less than or equal to sqrt(K)\n    # which we would have diveded out already.\n    if remaining &gt; 1\n        factors[remaining] = 1\n    end\n    factors\nend\nprimeFactor(600851475143)\n\nDict{Int64, Int64} with 4 entries:\n  839  =&gt; 1\n  71   =&gt; 1\n  1471 =&gt; 1\n  6857 =&gt; 1\n\n\nSo the largest prime number is therefore \\(6857\\)"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "",
+    "objectID": "projecteuler/multiplesof3or5.html",
+    "href": "projecteuler/multiplesof3or5.html",
+    "title": "Problem",
     "section": "",
-    "text": "Code"
+    "text": "If we list all the natural numbers below \\(10\\) that are multiplies of \\(3\\) or \\(5\\), we get \\(3, 5, 6, \\text{and } 9\\). The sum of these multiples is \\(23\\).\nFind the sum of all the multiples of \\(3\\) or \\(5\\) below \\(1000\\).\n\n\n\n\nLet \\(A \\in \\mathbb{N}\\) be the set that contains all the natural numbers in the domain \\([1, 1000)\\) that are multiples of \\(3\\).\n\\[\\begin{align}\nA = 3, 6, 9, 12, 15, \\cdots, 999\n\\end{align}\\]\nLet \\(B \\in \\mathbb{N}\\) be the set that contains the numbers in the same domain as \\(A\\) but that are multiples of \\(5\\).\n\\[\\begin{align}\nB = 5, 10, 15, 20, 25, \\cdots, 995\n\\end{align}\\]\nEssentially what we are looking for here is the sum of all the elements contained in \\(A \\cup B\\).\nBy the inclusion-exculsion principle, recall that\n\\[\\begin{align}\nA \\cup B = A + B - A \\cap B\n\\end{align}\\]\nso we need to find the sum of the elements contained in \\(A\\), \\(B\\), and the set \\(C = A \\cap B\\) which is the set of all the numbers which are multiples of \\(15\\).\n\\[\\begin{align}\nC = 15, 30, 45, 60, \\cdots, 990\n\\end{align}\\]\nFor this we can use the formulas for Arithmetic Progression.\n\\[\\begin{align}\n\\sum A = n \\left(\\frac{a_1 + a_n}{2}\\right)\n\\end{align}\\]\nwhere \\(n\\) is the number of terms in the sequence, \\(a_1\\) is the first term and \\(a_n\\) is the last term. We don’t know what how many terms there are in the sequence so we can also use the nth term formula\n\\[\\begin{align}\na_n = a_1 + \\left(n - 1\\right)d\n\\end{align}\\]\nwhere \\(d\\) is the value being added to \\(a_{n-1}\\) to obtain \\(a_n\\).\nLet us compute these sums for \\(A, B, C\\)\n\n\nthe last term in the sequence is \\(999\\) thus,\n\\[\\begin{align}\n999 &= 3 + \\left(n - 1\\right)3\\\\\n999 &= 3n\\\\\nn &= 333\n\\end{align}\\]\nhence,\n\\[\\begin{align}\n\\sum A &= 333 \\left(\\frac{3 + 999}{2}\\right)\\\\\n&= 333 \\cdot \\frac{1002}{2} \\\\\n&= 166833\n\\end{align}\\]\n\n\n\nthe last term in the sequence is \\(995\\) thus,\n\\[\\begin{align}\n995 &= 5 + \\left(n - 1\\right)5\\\\\n995 &= 5n\\\\\nn &= 199\n\\end{align}\\]\nhence,\n\\[\\begin{align}\n\\sum B &= 199 \\left(\\frac{5 + 995}{2}\\right)\\\\\n&= 99500\n\\end{align}\\]\n\n\n\nthe last term in the sequence is \\(990\\) thus,\n\\[\\begin{align}\n990 &= 15 + \\left(n - 1\\right)15\\\\\n&= 15n\\\\\nn &= 66\n\\end{align}\\]\nhence,\n\\[\\begin{align}\n\\sum C &= 66 \\left(\\frac{15 + 990}{2}\\right)\\\\\n&= 66 \\cdot \\left(\\frac{1005}{2}\\right)\\\\\n&= 33165\n\\end{align}\\]\nTherefore the final solution,\n\\[\\begin{align}\n\\sum A \\cup B = 166833 + 99500 - 33165 = 233168\n\\end{align}\\]\n\n\n\n\nWe can solve the problem brute force by writing a code that computes the sum of any number in the range \\([1, 1000]\\) that is a multiple of \\(3\\) or \\(5\\).\n\nsum(x for x in 1:999 if (x % 3 == 0) || (x % 5 == 0))\n\n233168\n\n\nWe use a generator function in the call to sum so that we don’t generate an intermediate array and then sum over the elements of the array. Instead it simply keeps a running total of the elements produced by the generator function."
   },
   {
-    "objectID": "index.html#introduction",
-    "href": "index.html#introduction",
-    "title": "",
-    "section": "Introduction",
-    "text": "Introduction\nThis website is my attempt to consolidate my entire online presence into one place. I am trying to move away from more mainstream social media’s as the sole medium of my online identity. Perhaps in the future I will consider using something like bluesky – which is an open source twitter, but I see no need for that right now.\nI want the time that I spend at my computer to be more focused on learning, documenting, and writing. I have really enjoyed the experience of writing technical documentation, coding, and doing my homework and school projects using Quarto markdown which is what was used to produce this website. Every document that is accessible on this website was produced using quarto in an Emacs environment."
+    "objectID": "projecteuler/multiplesof3or5.html#solution",
+    "href": "projecteuler/multiplesof3or5.html#solution",
+    "title": "Problem",
+    "section": "",
+    "text": "Let \\(A \\in \\mathbb{N}\\) be the set that contains all the natural numbers in the domain \\([1, 1000)\\) that are multiples of \\(3\\).\n\\[\\begin{align}\nA = 3, 6, 9, 12, 15, \\cdots, 999\n\\end{align}\\]\nLet \\(B \\in \\mathbb{N}\\) be the set that contains the numbers in the same domain as \\(A\\) but that are multiples of \\(5\\).\n\\[\\begin{align}\nB = 5, 10, 15, 20, 25, \\cdots, 995\n\\end{align}\\]\nEssentially what we are looking for here is the sum of all the elements contained in \\(A \\cup B\\).\nBy the inclusion-exculsion principle, recall that\n\\[\\begin{align}\nA \\cup B = A + B - A \\cap B\n\\end{align}\\]\nso we need to find the sum of the elements contained in \\(A\\), \\(B\\), and the set \\(C = A \\cap B\\) which is the set of all the numbers which are multiples of \\(15\\).\n\\[\\begin{align}\nC = 15, 30, 45, 60, \\cdots, 990\n\\end{align}\\]\nFor this we can use the formulas for Arithmetic Progression.\n\\[\\begin{align}\n\\sum A = n \\left(\\frac{a_1 + a_n}{2}\\right)\n\\end{align}\\]\nwhere \\(n\\) is the number of terms in the sequence, \\(a_1\\) is the first term and \\(a_n\\) is the last term. We don’t know what how many terms there are in the sequence so we can also use the nth term formula\n\\[\\begin{align}\na_n = a_1 + \\left(n - 1\\right)d\n\\end{align}\\]\nwhere \\(d\\) is the value being added to \\(a_{n-1}\\) to obtain \\(a_n\\).\nLet us compute these sums for \\(A, B, C\\)\n\n\nthe last term in the sequence is \\(999\\) thus,\n\\[\\begin{align}\n999 &= 3 + \\left(n - 1\\right)3\\\\\n999 &= 3n\\\\\nn &= 333\n\\end{align}\\]\nhence,\n\\[\\begin{align}\n\\sum A &= 333 \\left(\\frac{3 + 999}{2}\\right)\\\\\n&= 333 \\cdot \\frac{1002}{2} \\\\\n&= 166833\n\\end{align}\\]\n\n\n\nthe last term in the sequence is \\(995\\) thus,\n\\[\\begin{align}\n995 &= 5 + \\left(n - 1\\right)5\\\\\n995 &= 5n\\\\\nn &= 199\n\\end{align}\\]\nhence,\n\\[\\begin{align}\n\\sum B &= 199 \\left(\\frac{5 + 995}{2}\\right)\\\\\n&= 99500\n\\end{align}\\]\n\n\n\nthe last term in the sequence is \\(990\\) thus,\n\\[\\begin{align}\n990 &= 15 + \\left(n - 1\\right)15\\\\\n&= 15n\\\\\nn &= 66\n\\end{align}\\]\nhence,\n\\[\\begin{align}\n\\sum C &= 66 \\left(\\frac{15 + 990}{2}\\right)\\\\\n&= 66 \\cdot \\left(\\frac{1005}{2}\\right)\\\\\n&= 33165\n\\end{align}\\]\nTherefore the final solution,\n\\[\\begin{align}\n\\sum A \\cup B = 166833 + 99500 - 33165 = 233168\n\\end{align}\\]\n\n\n\n\nWe can solve the problem brute force by writing a code that computes the sum of any number in the range \\([1, 1000]\\) that is a multiple of \\(3\\) or \\(5\\).\n\nsum(x for x in 1:999 if (x % 3 == 0) || (x % 5 == 0))\n\n233168\n\n\nWe use a generator function in the call to sum so that we don’t generate an intermediate array and then sum over the elements of the array. Instead it simply keeps a running total of the elements produced by the generator function."
   },
   {
-    "objectID": "index.html#course-work",
-    "href": "index.html#course-work",
-    "title": "",
-    "section": "Course Work",
-    "text": "Course Work\nFundamentals of Uncertainty Quantification"
+    "objectID": "projecteuler/largestpalindromeproduct.html",
+    "href": "projecteuler/largestpalindromeproduct.html",
+    "title": "Largest Palindrome Product",
+    "section": "",
+    "text": "A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is\n\\[\\begin{align}\n9009 = 91 \\times 99\n\\end{align}\\]\nFind the largest palindrome made from the product of two 3-digit numbers.\n\n\n\nfunction isPalindrome(num::Int64)\n    x = Vector{Int}(undef, 18)\n    for i in eachindex(x)\n        x[i] = num % 10\n        num ÷= 10\n    end\n    y = x[1:findlast(i -&gt; i &gt; 0, x)]\n    for i in eachindex(y)\n        if !(y[i] == y[end - i + 1])\n            return false\n        end\n    end\n    return true\nend\n\nfunction main()\n    current = 0\n    idx = (0, 0)\n    for i in 999:-1:900\n        for j in 999:-1:900\n            new = i*j\n            if (new &gt; current && isPalindrome(new))\n                current = new\n                idx = (i, j)\n            end\n        end\n    end\n    println(\"$(current) = $(idx[1]) x $(idx[2])\")\nend\nmain()\n\n906609 = 993 x 913"
   },
   {
-    "objectID": "index.html#problem-sets",
-    "href": "index.html#problem-sets",
-    "title": "",
-    "section": "Problem Sets",
-    "text": "Problem Sets\nRosalind\nProject Euler"
+    "objectID": "projecteuler/largestpalindromeproduct.html#solution",
+    "href": "projecteuler/largestpalindromeproduct.html#solution",
+    "title": "Largest Palindrome Product",
+    "section": "",
+    "text": "function isPalindrome(num::Int64)\n    x = Vector{Int}(undef, 18)\n    for i in eachindex(x)\n        x[i] = num % 10\n        num ÷= 10\n    end\n    y = x[1:findlast(i -&gt; i &gt; 0, x)]\n    for i in eachindex(y)\n        if !(y[i] == y[end - i + 1])\n            return false\n        end\n    end\n    return true\nend\n\nfunction main()\n    current = 0\n    idx = (0, 0)\n    for i in 999:-1:900\n        for j in 999:-1:900\n            new = i*j\n            if (new &gt; current && isPalindrome(new))\n                current = new\n                idx = (i, j)\n            end\n        end\n    end\n    println(\"$(current) = $(idx[1]) x $(idx[2])\")\nend\nmain()\n\n906609 = 993 x 913"
+  },
+  {
+    "objectID": "projecteuler/evenfibonaccinumbers.html",
+    "href": "projecteuler/evenfibonaccinumbers.html",
+    "title": "Even Fibonacci Numbers (Problem 2)",
+    "section": "",
+    "text": "Each new term in the Fibonacci sequence is generated by adding the previous two terms. By starting with 1 and 2, the first 10 terms will be:\n\\[\\begin{align}\n1, 2, 3, 5, 8, 13, 21, 34, 55, 89, \\cdots\n\\end{align}\\]\nBy considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms.\n\n\nThe fibonacci sequence can be thought of as a discrete dynamical system or a recurrance relation defined as follows,\n\\[\\begin{align}\nx_{n+1} = x_{n} + x_{n-1}\n\\end{align}\\]\nwhere \\(x_{0} = 0\\) and \\(x_{1} = 1\\) and \\(n = 1, 2, 3, \\cdots, N\\).\nWhen \\(N = 35\\) the value \\(x_{N}\\) exceeds four million, thus we will solve for the fibonacci numbers up to the value \\(N = 34\\) and then use a julia filter function along with the iseven conditional function to sum only the even values.\n\nN = 34\nx = Vector{Int}(undef, N)\nx[1] = 0\nx[2] = 1\nfor n = 2:N-1\n    x[n+1] = x[n] + x[n-1]\nend\nprintln(sum(filter(iseven, x)))\n\n4613732"
+  },
+  {
+    "objectID": "projecteuler/evenfibonaccinumbers.html#solution",
+    "href": "projecteuler/evenfibonaccinumbers.html#solution",
+    "title": "Even Fibonacci Numbers (Problem 2)",
+    "section": "",
+    "text": "The fibonacci sequence can be thought of as a discrete dynamical system or a recurrance relation defined as follows,\n\\[\\begin{align}\nx_{n+1} = x_{n} + x_{n-1}\n\\end{align}\\]\nwhere \\(x_{0} = 0\\) and \\(x_{1} = 1\\) and \\(n = 1, 2, 3, \\cdots, N\\).\nWhen \\(N = 35\\) the value \\(x_{N}\\) exceeds four million, thus we will solve for the fibonacci numbers up to the value \\(N = 34\\) and then use a julia filter function along with the iseven conditional function to sum only the even values.\n\nN = 34\nx = Vector{Int}(undef, N)\nx[1] = 0\nx[2] = 1\nfor n = 2:N-1\n    x[n+1] = x[n] + x[n-1]\nend\nprintln(sum(filter(iseven, x)))\n\n4613732"
+  },
+  {
+    "objectID": "photos/index.html",
+    "href": "photos/index.html",
+    "title": "Travels",
+    "section": "",
+    "text": "Travels\nSpring Break 2025\nShasta 2023\n\n\nLife\n\n\nTue, 27 Oct 2015, 05:17:56 PM PDT\n\n\n\n\nMy first time at Thousand Island Lake. We hiked in from the trail head accross from silver lake. The plan was to summit Banner Peak, but we bailed half way up due to snow conditions."
+  },
+  {
+    "objectID": "photos/springbreak2025/index.html",
+    "href": "photos/springbreak2025/index.html",
+    "title": "Spring Break 2025",
+    "section": "",
+    "text": "Spring Break 2025\n\n\nSun, 23 Mar 2025, 03:08:16 AM PDT\n\n\n\n\nWe found our friends! The view from our camp site looking at Pine creek canyon.\n\n\n\n\n\nSun, 23 Mar 2025, 05:47:38 AM PDT\n\n\n\n\nGetting our gear ready for the hike up to the climb.\n\n\n\n\n\nSun, 23 Mar 2025, 05:48:42 AM PDT\n\n\n\n\nThe view of the crag from the road.\n\n\n\n\n\nSun, 23 Mar 2025, 06:05:14 AM PDT\n\n\n\n\nLooking out accross the canyon. We found a cairn!\n\n\n\n\n\nSun, 23 Mar 2025, 07:15:12 AM PDT\n\n\n\n\nAbout to rope up and climb some slab! Kaela found the belay spot.\n\n\n\n\n\nSun, 23 Mar 2025, 07:25:04 AM PDT\n\n\n\n\nCrushing the scarry slab climb!\n\n\n\n\n\nSun, 23 Mar 2025, 01:17:44 PM PDT\n\n\n\n\nRight before sunset at the camp after we got back from Pine Creek.\n\n\n\nI bought some snow shoes at the Mammoth Gear Exchange for 15 dollars and decided to take a rest day from climbing. I drove up to aspendell and snowshoed to Lake Sabrina!\n\n\nMon, 24 Mar 2025, 11:30:20 AM PDT\n\n\n\n\nLake Sabrina still frozen.\n\n\n\n\n\nWed, 26 Mar 2025, 01:10:16 PM PDT\n\n\n\n\nBishop Sunset.\n\n\n\n\n\nThu, 27 Mar 2025, 02:11:48 AM PDT\n\n\n\n\nObligatory group photo :)\n\n\n\n\n\nThu, 27 Mar 2025, 02:51:46 PM PDT\n\n\n\n\nMy beautiful girl friend Kaela Rose. We visited my mom after our Bishop trip.\n\n\n\nback to top"
   },
   {
     "objectID": "LICENSE.html",
     "href": "LICENSE.html",
-    "title": "",
+    "title": "paxnomada",
     "section": "",
-    "text": "Code\n\n\n\n\nMIT License\nCopyright (c) 2025 Kevin Andrew Silberberg\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\nTHE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."
+    "text": "MIT License\nCopyright (c) 2025 Kevin Andrew Silberberg\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\nTHE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."
   }
 ]

@@ -1,20 +1,12 @@
 # Kevin Andrew Silberberg
 
-[About](about.qmd)
+Hi, this is my personal website. Please see the [about](about.qmd) page for more information.
 
-[Stream](stream.qmd)
-
-[License](LICENSE.qmd)
-
-## Introduction
-
-This website is my attempt to consolidate my entire online presence into one place. I am trying to move away from more mainstream social media's as the sole medium of my online identity. Perhaps in the future I will consider using something like [bluesky](https://bsky.app/) -- which is an open source twitter, but I see no need for that right now.
-
-I want the time that I spend at my computer to be more focused on learning, documenting, and writing. I have really enjoyed the experience of writing technical documentation, coding, and doing my homework and school projects using [Quarto](quarto.org) markdown which is what was used to produce this website. Every document that is accessible on this website was produced using quarto in an Emacs environment.
-
-## Course Work
+## Courses Taken
 
 [Fundamentals of Uncertainty Quantification](courses/uncertainty_quant/index.qmd)
+
+[Advanced Methods in Applied Mathematics](courses/adv_methods/index.qmd)
 
 ## Problem Sets
 

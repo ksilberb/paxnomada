@@ -1,0 +1,11 @@
+# Advanced Methods in Applied Mathematics
+
+## Course Description
+
+This course provides students with an overview of advanced topics and analytical techniques in Applied Mathematics, focusing on the analytical solution of ODEs and PDEs, including asymptotic analysis (method of strained coordinates; method of multiple scales; matched asymptotics; WKB theory), dimensional analysis, self-similar solutions, and Green's function solutions of PDEs. It also introduces students to variational calculus for the optimization of functionals.
+
+**Instructor**: [Pascale Garaud](https://users.soe.ucsc.edu/~pgaraud/)
+
+## Course Notes
+
+[AM212 Lecture Notes](notes/AM212_Lectures_edited.pdf)
