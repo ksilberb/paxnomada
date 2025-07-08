@@ -1,0 +1,1339 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.32">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Kevin Silberberg">
+<meta name="dcterms.date" content="2024-11-07">
+
+<title>Homework 4 – paxnomada</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../../">
+<script src="../../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-2fef5ea3f8957b3e4ecc936fc74692ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../../site_libs/bootstrap/bootstrap-63f775b895fc19869fff6aff88fe9a12.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../../../index.html">
+    <span class="navbar-title">paxnomada</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../LICENSE.html"> 
+<span class="menu-text">License</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title">Homework 4</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+</div>
+
+
+<div class="quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">Author</div>
+  <div class="quarto-title-meta-heading">Affiliation</div>
+  
+    <div class="quarto-title-meta-contents">
+    <p class="author">Kevin Silberberg <a href="mailto:ksilberb@ucsc.edu" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> <a href="https://orcid.org/0009-0009-4825-1865" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            University of California Santa Cruz
+          </p>
+      </div>
+  </div>
+
+<div class="quarto-title-meta">
+
+      
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">November 7, 2024</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="question-1" class="level1">
+<h1>Question 1</h1>
+<p>Consider the system of SDEs </p>
+<p><span id="eq-SDE"><span class="math display">\[\begin{cases}dX(t;\omega) &amp;= -X(t;\omega)^3dt + dY(t;\omega) \\dY(t;\omega) &amp;= -\tau Y(t;\omega)dt + \sigma dW(t;\omega)\end{cases} \tag{1}\]</span></span></p>
+<p>where <span class="math inline">\(\sigma, \tau \leq 0\)</span> are given parameters and <span class="math inline">\(W(t;\omega)\)</span> is a Wiener process. The initial condition <span class="math inline">\((X(0;\omega), Y(0;\omega))\)</span> has i.i.d. components both of which are uniformly distributed in <span class="math inline">\([0, 1]\)</span>, i.e., <span class="math inline">\(X(0;\omega)\)</span> and <span class="math inline">\(Y(0;\omega)\)</span> are independent random variables with uniform PDF in <span class="math inline">\([0,1]\)</span>.</p>
+<section id="part-a" class="level2">
+<h2 class="anchored" data-anchor-id="part-a">Part A</h2>
+<p>Plot a few sample paths of <span class="math inline">\(X(t;\omega)\)</span> for <span class="math inline">\(\sigma = 0.1\)</span> and <span class="math inline">\(\tau = \{0.01, 1, 10\}\)</span>.</p>
+<section id="solution" class="level3">
+<h3 class="anchored" data-anchor-id="solution">Solution</h3>
+<p>We convert <a href="#eq-SDE" class="quarto-xref">Equation&nbsp;1</a> into a numerical simulation by first converting the SDE into a discrete time form via the Euler-Maruyama discretization.</p>
+<p>We descritize a grid within the interval [0, T] into N equal parts, where <span class="math inline">\(\Delta t = \frac{T}{N}\)</span></p>
+<p>Let us recursively define <span class="math inline">\(Y_n\)</span> for <span class="math inline">\(0 \leq n \leq N-1\)</span></p>
+<p><span class="math display">\[\begin{align}
+    Y_{n+1} = Y_n  -\tau Y_n \Delta t + \sigma \Delta W
+\end{align}\]</span></p>
+<p>and <span class="math inline">\(X_n\)</span></p>
+<p><span class="math display">\[\begin{align}
+    X_{n+1} = X_n - X_n^3 \Delta t + \Delta Y_n
+\end{align}\]</span></p>
+<p>where <span class="math inline">\(\Delta Y_n = Y_{n+1} - Y_n = -\tau Y_n \Delta t + \sigma \Delta W_n\)</span></p>
+<p>where <span class="math inline">\(\Delta W_n\)</span> are i.i.d Gaussian random variables with zero mean and variance <span class="math inline">\(\Delta t\)</span>.</p>
+<div id="2" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">using</span> <span class="bu">GLMakie</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">using</span> <span class="bu">Distributions</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">partA</span>(τ<span class="op">::</span><span class="dt">Float64</span>, σ<span class="op">::</span><span class="dt">Float64</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="co"># define the length of subintervals</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    Δt <span class="op">=</span> <span class="fl">1e-4</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    ts <span class="op">=</span> <span class="fl">0.0</span><span class="op">:</span>Δt<span class="op">:</span><span class="fl">5.0</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="co"># number of samples</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    N <span class="op">=</span> <span class="fl">5</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Weiner processs</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    W <span class="op">=</span> <span class="fu">Normal</span>(<span class="fl">0</span>, <span class="fu">sqrt</span>(Δt))</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="co"># initialize mesh</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    X <span class="op">=</span> <span class="fu">Matrix</span><span class="dt">{Float64}</span>(<span class="cn">undef</span>, <span class="fu">length</span>(ts), N)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    Y <span class="op">=</span> <span class="fu">Matrix</span><span class="dt">{Float64}</span>(<span class="cn">undef</span>, <span class="fu">length</span>(ts), N)</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    <span class="co"># apply initial conditions</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span>N</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>        X[<span class="fl">1</span>, i] <span class="op">=</span> <span class="fu">rand</span>()</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>        Y[<span class="fl">1</span>, i] <span class="op">=</span> <span class="fu">rand</span>()</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>    <span class="cf">end</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>    <span class="co"># propagate the process</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span>N</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> j <span class="kw">in</span> <span class="fl">2</span><span class="op">:</span><span class="fu">length</span>(ts)</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>            ΔW <span class="op">=</span> <span class="fu">rand</span>(W)</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>            X[j, i] <span class="op">=</span> X[j<span class="op">-</span><span class="fl">1</span>, i] <span class="op">-</span> (X[j<span class="op">-</span><span class="fl">1</span>, i]<span class="op">^</span><span class="fl">3</span>)<span class="op">*</span>Δt <span class="op">-</span>τ<span class="op">*</span>Y[j<span class="op">-</span><span class="fl">1</span>, i]<span class="op">*</span>Δt <span class="op">+</span> σ<span class="op">*</span>ΔW</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>            Y[j, i] <span class="op">=</span> Y[j<span class="op">-</span><span class="fl">1</span>, i] <span class="op">-</span> τ<span class="op">*</span>Y[j<span class="op">-</span><span class="fl">1</span>, i]<span class="op">*</span>Δt <span class="op">+</span> σ<span class="op">*</span>ΔW</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>        <span class="cf">end</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>    <span class="cf">end</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>    <span class="co"># make the figure</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>    fig <span class="op">=</span> <span class="fu">Figure</span>()</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>    ax <span class="op">=</span> <span class="fu">Axis</span>(</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>        fig[<span class="fl">1</span>, <span class="fl">1</span>],</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>        title <span class="op">=</span> <span class="st">"σ = </span><span class="sc">$</span><span class="st">σ τ = </span><span class="sc">$</span><span class="st">τ",</span></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="st">        </span>xlabel<span class="st"> = "</span>t<span class="st">",</span></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>        ylabel <span class="op">=</span> L<span class="st">"</span><span class="sc">$</span>X_<span class="st">{n+1}</span><span class="sc">$</span><span class="st">"</span></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="st">    )</span></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="st">    # </span>set<span class="st"> y axis limits</span></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ylims!</span>(ax, <span class="op">-</span><span class="fl">1.0</span>, <span class="fl">1.0</span>)</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Plot the samples</span></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span>N</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>        <span class="fu">lines!</span>(ax, ts, X[<span class="op">:</span>, i])</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>    <span class="cf">end</span></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> fig</span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a><span class="fu">save</span>(<span class="st">"parta01.png"</span>, <span class="fu">partA</span>(<span class="fl">0.01</span>, <span class="fl">0.1</span>))</span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a><span class="fu">save</span>(<span class="st">"parta1.png"</span>, <span class="fu">partA</span>(<span class="fl">1.0</span>, <span class="fl">0.1</span>))</span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a><span class="fu">save</span>(<span class="st">"parta10.png"</span>, <span class="fu">partA</span>(<span class="fl">10.0</span>, <span class="fl">0.1</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="columns">
+<div class="column" style="width:33.33%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="parta01.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption><span class="math inline">\(\tau = 0.01\)</span></figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:33.33%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="parta1.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption><span class="math inline">\(\tau = 1.0\)</span></figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:33.33%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="parta10.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption><span class="math inline">\(\tau = 10.0\)</span></figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="part-b" class="level2">
+<h2 class="anchored" data-anchor-id="part-b">Part B</h2>
+<p>Do you expect the system <a href="#eq-SDE" class="quarto-xref">Equation&nbsp;1</a> to have a statistically stationary state? Justify your answer.</p>
+<section id="solution-1" class="level3">
+<h3 class="anchored" data-anchor-id="solution-1">Solution</h3>
+<p>From part A, we can see that as we increase <span class="math inline">\(\tau\)</span>, the system rapidly converges to a statistically steady-state process. We can prove this by the Kernel Density Estimation for 1000 sample paths for varying <span class="math inline">\(\tau\)</span> and comparing the estimated PDF for later times.</p>
+<p>The solution approaches a statistically steady state as <span class="math inline">\(t\rightarrow \infty\)</span> and approaches the statisically steady state at the rate <span class="math inline">\(\tau\)</span>. It seems though that the pdf for varying <span class="math inline">\(\tau\)</span> may not be the same, as <span class="math inline">\(\tau = 10.0\)</span> seems to have a bimodal distribution for later times.</p>
+<div id="4" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">using</span> <span class="bu">KernelDensity</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">simulateB</span>(τ<span class="op">::</span><span class="dt">Float64</span>)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    σ <span class="op">=</span> <span class="fl">0.1</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="co"># define the length of subintervals</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    Δt <span class="op">=</span> <span class="fl">1e-4</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    ts <span class="op">=</span> <span class="fl">0.0</span><span class="op">:</span>Δt<span class="op">:</span><span class="fl">20.0</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    <span class="co"># number of samples</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    N <span class="op">=</span> <span class="fl">1000</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Weiner processs</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    W <span class="op">=</span> <span class="fu">Normal</span>(<span class="fl">0</span>, <span class="fu">sqrt</span>(Δt))</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    <span class="co"># initialize mesh</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    X <span class="op">=</span> <span class="fu">Matrix</span><span class="dt">{Float64}</span>(<span class="cn">undef</span>, <span class="fu">length</span>(ts), N)</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    Y <span class="op">=</span> <span class="fu">Matrix</span><span class="dt">{Float64}</span>(<span class="cn">undef</span>, <span class="fu">length</span>(ts), N)</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    <span class="co"># apply initial conditions</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span>N</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>        X[<span class="fl">1</span>, i] <span class="op">=</span> <span class="fu">rand</span>()</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>        Y[<span class="fl">1</span>, i] <span class="op">=</span> <span class="fu">rand</span>()</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>    <span class="cf">end</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>    <span class="co"># propagate the process</span></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span>N</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> j <span class="kw">in</span> <span class="fl">2</span><span class="op">:</span><span class="fu">length</span>(ts)</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>            ΔW <span class="op">=</span> <span class="fu">rand</span>(W)</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>            X[j, i] <span class="op">=</span> X[j<span class="op">-</span><span class="fl">1</span>, i] <span class="op">-</span> (X[j<span class="op">-</span><span class="fl">1</span>, i]<span class="op">^</span><span class="fl">3</span>)<span class="op">*</span>Δt <span class="op">-</span>τ<span class="op">*</span>Y[j<span class="op">-</span><span class="fl">1</span>, i]<span class="op">*</span>Δt <span class="op">+</span> σ<span class="op">*</span>ΔW</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>            Y[j, i] <span class="op">=</span> Y[j<span class="op">-</span><span class="fl">1</span>, i] <span class="op">-</span> τ<span class="op">*</span>Y[j<span class="op">-</span><span class="fl">1</span>, i]<span class="op">*</span>Δt <span class="op">+</span> σ<span class="op">*</span>ΔW</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>        <span class="cf">end</span></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>    <span class="cf">end</span></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> X, Y, <span class="fu">length</span>(ts)</span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">partB</span>()</span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>    X1, Y1, ts <span class="op">=</span> <span class="fu">simulateB</span>(<span class="fl">0.01</span>)</span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>    X2, Y2, _ <span class="op">=</span> <span class="fu">simulateB</span>(<span class="fl">1.0</span>)</span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>    X3, Y3, _ <span class="op">=</span> <span class="fu">simulateB</span>(<span class="fl">10.0</span>)</span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>    fig <span class="op">=</span> <span class="fu">Figure</span>()</span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>    ax <span class="op">=</span> <span class="fu">Axis</span>(</span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>        fig[<span class="fl">1</span>, <span class="fl">1</span>]</span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ylims!</span>(ax, <span class="fl">0.0</span>, <span class="fl">3.0</span>)</span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>    <span class="fu">xlims!</span>(ax, <span class="op">-</span><span class="fl">2.0</span>, <span class="fl">2.0</span>)</span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>    d1 <span class="op">=</span> <span class="fu">kde</span>(X1[<span class="fl">1</span>, <span class="op">:</span>])</span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a>    d2 <span class="op">=</span> <span class="fu">kde</span>(X2[<span class="fl">1</span>, <span class="op">:</span>])</span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>    d3 <span class="op">=</span> <span class="fu">kde</span>(X3[<span class="fl">1</span>, <span class="op">:</span>])</span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>    kde_data1 <span class="op">=</span> <span class="fu">Observable</span>((d1.x, d1.density))</span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>    kde_data2 <span class="op">=</span> <span class="fu">Observable</span>((d2.x, d2.density))</span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a>    kde_data3 <span class="op">=</span> <span class="fu">Observable</span>((d3.x, d3.density))</span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a>    kde_line1 <span class="op">=</span> <span class="fu">lines!</span>(ax, [<span class="fl">0.0</span>], [<span class="fl">0.0</span>], color <span class="op">=</span> <span class="op">:</span>red, label <span class="op">=</span> <span class="st">"τ = 0.01"</span>)</span>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a>    kde_line2 <span class="op">=</span> <span class="fu">lines!</span>(ax, [<span class="fl">0.0</span>], [<span class="fl">0.0</span>], color <span class="op">=</span> <span class="op">:</span>blue, label <span class="op">=</span> <span class="st">"τ = 1.0"</span>)</span>
+<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a>    kde_line3 <span class="op">=</span> <span class="fu">lines!</span>(ax, [<span class="fl">0.0</span>], [<span class="fl">0.0</span>], color <span class="op">=</span> <span class="op">:</span>green, label <span class="op">=</span> <span class="st">"τ = 10.0"</span>)</span>
+<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a>    kde_plot1 <span class="op">=</span> <span class="fu">lift</span>(kde_data1) <span class="cf">do</span> (x, density)</span>
+<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a>        kde_line1[<span class="fl">1</span>] <span class="op">=</span> x</span>
+<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a>        kde_line1[<span class="fl">2</span>] <span class="op">=</span> density</span>
+<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a>    <span class="cf">end</span></span>
+<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a>    kde_plot2 <span class="op">=</span> <span class="fu">lift</span>(kde_data2) <span class="cf">do</span> (x, density)</span>
+<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a>        kde_line2[<span class="fl">1</span>] <span class="op">=</span> x</span>
+<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a>        kde_line2[<span class="fl">2</span>] <span class="op">=</span> density</span>
+<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a>    <span class="cf">end</span></span>
+<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a>    kde_plot3 <span class="op">=</span> <span class="fu">lift</span>(kde_data3) <span class="cf">do</span> (x, density)</span>
+<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a>        kde_line3[<span class="fl">1</span>] <span class="op">=</span> x</span>
+<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a>        kde_line3[<span class="fl">2</span>] <span class="op">=</span> density</span>
+<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a>    <span class="cf">end</span></span>
+<span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-68"><a href="#cb2-68" aria-hidden="true" tabindex="-1"></a>    <span class="fu">Legend</span>(fig[<span class="fl">1</span>, <span class="fl">2</span>], ax)</span>
+<span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a>    <span class="fu">record</span>(fig, <span class="st">"partb.mp4"</span>, <span class="fl">2</span><span class="op">:</span><span class="fl">400</span><span class="op">:</span>ts; framerate <span class="op">=</span> <span class="fl">30</span>) <span class="cf">do</span> k</span>
+<span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a>        d1 <span class="op">=</span> <span class="fu">kde</span>(X1[k, <span class="op">:</span>])</span>
+<span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a>        d2 <span class="op">=</span> <span class="fu">kde</span>(X2[k, <span class="op">:</span>])</span>
+<span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a>        d3 <span class="op">=</span> <span class="fu">kde</span>(X3[k, <span class="op">:</span>])</span>
+<span id="cb2-73"><a href="#cb2-73" aria-hidden="true" tabindex="-1"></a>        kde_data1[] <span class="op">=</span> (d1.x, d1.density)</span>
+<span id="cb2-74"><a href="#cb2-74" aria-hidden="true" tabindex="-1"></a>        kde_data2[] <span class="op">=</span> (d2.x, d2.density)</span>
+<span id="cb2-75"><a href="#cb2-75" aria-hidden="true" tabindex="-1"></a>        kde_data3[] <span class="op">=</span> (d3.x, d3.density)</span>
+<span id="cb2-76"><a href="#cb2-76" aria-hidden="true" tabindex="-1"></a>    <span class="cf">end</span></span>
+<span id="cb2-77"><a href="#cb2-77" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> fig</span>
+<span id="cb2-78"><a href="#cb2-78" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span>
+<span id="cb2-79"><a href="#cb2-79" aria-hidden="true" tabindex="-1"></a><span class="fu">partB</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="1">
+<img width="672" height="480" style="object-fit: contain; height: auto;" src="data:image/png;base64, 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">
+</div>
+</div>
+<video width="700" autoplay="" loop="" muted="">
+<source src="partb.mp4" type="video/mp4">
+</video>
+</section>
+</section>
+<section id="part-c" class="level2">
+<h2 class="anchored" data-anchor-id="part-c">Part C</h2>
+<p>Write the Fokker-Planck equation for the joint PDF of <span class="math inline">\(X(t;\omega)\)</span> and <span class="math inline">\(Y(t;\omega)\)</span>.</p>
+<section id="solution-2" class="level3">
+<h3 class="anchored" data-anchor-id="solution-2">Solution</h3>
+<p>Let us write <a href="#eq-SDE" class="quarto-xref">Equation&nbsp;1</a> in state-space form</p>
+<p><span class="math display">\[\begin{align}
+    dX &amp;= -X^3 dt - \tau Y dt + \sigma dW \\
+    dY &amp;= -\tau Y dt + \sigma dW
+\end{align}\]</span></p>
+<p>The vector <span class="math inline">\(\mathbf{G}(\mathbf{X}, t)\)</span> can be written as</p>
+<p><span class="math display">\[\begin{align}
+     \mathbf{G}(\mathbf{X}, t) &amp;= \left[
+     \begin{matrix}
+         -X^3 - \tau Y \\
+         -\tau Y
+     \end{matrix}\right]
+\end{align}\]</span></p>
+<p>The matrix <span class="math inline">\(\mathbf{S}\)</span> can be written as</p>
+<p><span class="math display">\[\begin{align}
+    \mathbf{S} = \left[
+    \begin{matrix}
+        \sigma \\
+        \sigma
+    \end{matrix}\right]
+\end{align}\]</span></p>
+<p>We can thus write the Fokker-Planck equation according equation 59 in course notes 4 as follows:</p>
+<p><span class="math display">\[\begin{align}
+    \frac{\partial p(\mathbf{x}, t)}{\partial t} &amp;= -\sum_{k=1}^{2} \frac{\partial}{\partial x_k} \left(G_k(\mathbf{x}, t) p(\mathbf{x})\right) + \frac{1}{2} \sum_{i, k = 1}^2 \frac{\partial^2}{\partial x_i \partial x_k}\left(\sum_{j=1}^2 S_{ij}(\mathbf{x}, t)S_{kj}(\mathbf{x}, t) p(\mathbf{x}, t) \right) \\
+\frac{\partial p}{\partial t} &amp;= -\left(\frac{\partial}{\partial x} \left((-x^3 -\tau y)p\right) + \frac{\partial}{\partial y}\left(-\tau yp\right)\right) + \frac{\sigma^2}{2}\left(\frac{\partial^2p}{\partial x^2} + \frac{\partial^2 p}{\partial y^2}\right) \\
+&amp;= \frac{\partial}{\partial x}(x^3 p) + \tau p + \tau y\left(\frac{\partial p}{\partial x} + \frac{\partial p}{\partial y}\right) + \frac{\sigma^2}{2}\left(\frac{\partial^2p}{\partial x^2} + \frac{\partial^2 p}{\partial y^2}\right)
+\end{align}\]</span></p>
+<p>The Fokker-Planck equation is thus</p>
+<p><span id="eq-fokker-planck"><span class="math display">\[\frac{\partial p(x, y, t)}{\partial t} = \frac{\partial}{\partial x}(x^3 p(x, y, t)) + \tau p(x, y, t) + \tau y\left(\frac{\partial p(x, y, t)}{\partial x} + \frac{\partial p(x, y, t)}{\partial y}\right) + \frac{\sigma^2}{2}\left(\frac{\partial^2p(x, y, t)}{\partial x^2} + \frac{\partial^2 p(x, y, t)}{\partial y^2}\right) \tag{2}\]</span></span></p>
+<p>where <span class="math inline">\(p(x, y, t)\)</span> is the joint PDF of <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>.</p>
+</section>
+</section>
+<section id="part-d" class="level2">
+<h2 class="anchored" data-anchor-id="part-d">Part D</h2>
+<p>Write the reduced-order equation for the joint PDF of <span class="math inline">\(X(t;\omega)\)</span> in terms of the conditional expectation <span class="math inline">\(\mathbb{E}\{Y(t;\omega)|X(t;\omega)\}\)</span>.</p>
+<section id="solution-3" class="level3">
+<h3 class="anchored" data-anchor-id="solution-3">Solution</h3>
+<p>To obtain the reduced-order equation, let us integrate <a href="#eq-fokker-planck" class="quarto-xref">Equation&nbsp;2</a> with respect to <span class="math inline">\(y\)</span> and use the definition of conditional PDF.</p>
+<p><span class="math display">\[\begin{align}
+\frac{\partial}{\partial t}\int_{-\infty}^{\infty}pdy &amp;= \int_{-\infty}^{\infty}\left(\frac{\partial}{\partial x} \left((x^3 +\tau y)p\right) + \frac{\partial}{\partial y}\left(\tau yp\right) + \frac{\sigma^2}{2}\left(\frac{\partial^2p}{\partial x^2} + \frac{\partial^2 p}{\partial y^2}\right)\right) dy\\
+\frac{\partial p(x,t)}{\partial t} &amp;= \frac{\partial}{\partial x} \int_{-\infty}^{\infty}(x^3 + \tau y)p dy + \int_{-\infty}^{\infty} \frac{\partial}{\partial y}(\tau yp)dy + \frac{\sigma^2}{2}\left(\frac{\partial^2}{\partial x^2}\int_{-\infty}^{\infty}p dy + \cancelto{0}{\int_{-\infty}^{\infty}\frac{\partial^2 p}{\partial y^2}dy}\right) \\
+&amp;= \frac{\partial}{\partial x}\left(x^3p(x, t) + \tau p(x, t)\mathbb{E}\{Y | X\}\right) + \cancelto{0}{\tau y p_{\bigg{|}_{-\infty}^{\infty}}} + \frac{\sigma^2}{2}\frac{\partial^2 p(x, t)}{\partial x^2}\\
+\end{align}\]</span></p>
+<p>Thus, the reduced order equation for the joint PDF can be written as,</p>
+<p><span id="eq-reduced-order"><span class="math display">\[\frac{\partial p(x, t)}{\partial t} = \frac{\partial}{\partial x}(x^3 p(x, t)) + \tau \frac{\partial}{\partial x}\left(p(x, t)\mathbb{E}\{y|x\}\right) + \frac{\sigma^2}{2} \frac{\partial^2 p(x, t)}{\partial x^2} \tag{3}\]</span></span></p>
+</section>
+</section>
+<section id="part-e" class="level2">
+<h2 class="anchored" data-anchor-id="part-e">Part E</h2>
+<p>Set <span class="math inline">\(\sigma = 0\)</span>. Compute the conditional expectation <span class="math inline">\(\mathbb{E}\{Y(t;\omega) | X(t;\omega)\}\)</span> explicity as a function of <span class="math inline">\(t\)</span> and substitute it in the reduced order equation you obtained in part d (with <span class="math inline">\(\sigma = 0\)</span>) to obtain an exact (and closed) equation for the PDF of <span class="math inline">\(X(t;\omega)\)</span>.</p>
+<section id="solution-4" class="level3">
+<h3 class="anchored" data-anchor-id="solution-4">Solution</h3>
+<p>Recall the orginal SDE <a href="#eq-SDE" class="quarto-xref">Equation&nbsp;1</a> where</p>
+<p><span class="math display">\[\begin{align}
+    dY = -\tau Y dt + \sigma dW
+\end{align}\]</span></p>
+<p>setting <span class="math inline">\(\sigma = 0\)</span> we have the following ODE:</p>
+<p><span class="math display">\[\begin{align}
+    \begin{cases}
+        \frac{dY}{dt} = -\tau Y \\
+        Y(0) \sim \text{Uniform}(0, 1)
+    \end{cases}
+\end{align}\]</span></p>
+<p>solving for <span class="math inline">\(Y(t)\)</span> we have:</p>
+<p><span class="math display">\[\begin{align}
+    Y(t) = Y(0)e^{-\tau t}
+\end{align}\]</span></p>
+<p>where <span class="math inline">\(Y(0)\)</span> can be expressed as the expectation of a uniform random variable in [0, 1], which we know is <span class="math inline">\(\frac{1}{2}\)</span></p>
+<p>therefore the conditional expectation <span class="math display">\[\mathbb{E}\{Y|X\} = \mathbb{E}\{Y\} = \frac{1}{2}e^{-\tau t}\]</span></p>
+<p>we can write a closed equation for the reduced order equation as follows:</p>
+<p><span id="eq-closed-reduced"><span class="math display">\[\frac{\partial p(x, t)}{\partial t} = \frac{\partial }{\partial x}(x^3p(x, t)) + \tau \frac{\partial }{\partial x}(p(x, t)\frac{1}{2}e^{-\tau t}) \tag{4}\]</span></span></p>
+</section>
+</section>
+<section id="part-f" class="level2">
+<h2 class="anchored" data-anchor-id="part-f">Part F</h2>
+<p>Write the PDF equation you obtained in part e as an evolution equation for the cumulative distribution function (CDF) of <span class="math inline">\(X(t;\omega)\)</span>.</p>
+<section id="solution-5" class="level3">
+<h3 class="anchored" data-anchor-id="solution-5">Solution</h3>
+<p>Recall the definition of the cumulative distribution function:</p>
+<p><span class="math display">\[\begin{align}
+F(x, y, t) = \int_{-\infty}^{x}p(y, t)dy
+\end{align}\]</span></p>
+<p>if we take the derivative on both sides with respect to <span class="math inline">\(x\)</span> we have</p>
+<p><span class="math display">\[\begin{align}
+p(x, t) = \frac{\partial F(x, t)}{\partial x}
+\end{align}\]</span></p>
+<p>plugging this into <a href="#eq-closed-reduced" class="quarto-xref">Equation&nbsp;4</a> we have</p>
+<p><span class="math display">\[\begin{align}
+\frac{\partial }{\partial t}\left(\frac{\partial F}{\partial x}\right) = \frac{\partial }{\partial x}\left(x^3\frac{\partial F}{\partial x}\right) + \tau \frac{\partial }{\partial x}\left(\frac{\partial F}{\partial x}\frac{1}{2}e^{-\tau t}\right)
+\end{align}\]</span></p>
+<p>taking the integral of both sides:</p>
+<p><span class="math display">\[\begin{align}
+    \int_{-\infty}^{x}\frac{\partial^2 F}{\partial t\partial x'}dx' &amp;= \int_{-\infty}^{x}\left(\frac{\partial }{\partial x'}\left(x'^3\frac{\partial F}{\partial x'}\right) + \frac{\tau}{2} \frac{\partial }{\partial x'}\left(\frac{\partial F}{\partial x'}e^{-\tau t}\right)\right)dx' \\
+\frac{\partial F(x, t)}{\partial t} &amp;= x'^3 \frac{\partial F}{\partial x'}\bigg|_{-\infty}^{x} + \frac{\tau}{2} \frac{\partial F}{\partial x'}e^{-\tau t}\bigg|_{-\infty}^{x} \\
+\end{align}\]</span></p>
+<p>thus we are left with the evolution equation for <span class="math inline">\(F(x, t)\)</span></p>
+<p><span class="math display">\[\frac{\partial F(x, t)}{\partial t} = x^3 \frac{\partial F(x, t)}{\partial x} + \frac{\tau}{2}e^{-\tau t}\frac{\partial F(x, t)}{\partial x}\]</span></p>
+
+
+<!-- -->
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+    const viewSource = window.document.getElementById('quarto-view-source') ||
+                       window.document.getElementById('quarto-code-tools-source');
+    if (viewSource) {
+      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+      viewSource.addEventListener("click", function(e) {
+        if (sourceUrl) {
+          // rstudio viewer pane
+          if (/\bcapabilities=\b/.test(window.location)) {
+            window.open(sourceUrl);
+          } else {
+            window.location.href = sourceUrl;
+          }
+        } else {
+          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+          modal.show();
+        }
+        return false;
+      });
+    }
+    function toggleCodeHandler(show) {
+      return function(e) {
+        const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+        for (let i=0; i<detailsSrc.length; i++) {
+          const details = detailsSrc[i].parentElement;
+          if (show) {
+            details.open = true;
+          } else {
+            details.removeAttribute("open");
+          }
+        }
+        const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+        const fromCls = show ? "hidden" : "unhidden";
+        const toCls = show ? "unhidden" : "hidden";
+        for (let i=0; i<cellCodeDivs.length; i++) {
+          const codeDiv = cellCodeDivs[i];
+          if (codeDiv.classList.contains(fromCls)) {
+            codeDiv.classList.remove(fromCls);
+            codeDiv.classList.add(toCls);
+          } 
+        }
+        return false;
+      }
+    }
+    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+    if (hideAllCode) {
+      hideAllCode.addEventListener("click", toggleCodeHandler(false));
+    }
+    const showAllCode = window.document.getElementById("quarto-show-all-code");
+    if (showAllCode) {
+      showAllCode.addEventListener("click", toggleCodeHandler(true));
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="sourceCode" id="cb3" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> Homework 4</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> 2024-11-07</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co">  - name: Kevin Silberberg</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="co">    id: ks</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co">    orcid: 0009-0009-4825-1865</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="co">    email: ksilberb@ucsc.edu</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="co">    affiliation:</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co">      - name: University of California Santa Cruz</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="co">        city: Santa Cruz</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="co">        state: CA</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="co">        href: https://www.ucsc.edu</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="an">engine:</span><span class="co"> julia-1.11</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="an">julia:</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="co">  exeflags: ["--project=/home/kevinsilberberg/Repos/paxnomada/courses/uncertainty_quant/"]</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="an">execute:</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="co">  daemon: true</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="co">  cache: true</span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="co">  eval: true</span></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a><span class="co">  freeze: auto</span></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a><span class="fu"># Question 1</span></span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>Consider the system of SDEs \footnotemark</span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>$$\begin{cases}dX(t;\omega) &amp;= -X(t;\omega)^3dt + dY(t;\omega) <span class="sc">\\</span>dY(t;\omega) &amp;= -\tau Y(t;\omega)dt + \sigma dW(t;\omega)\end{cases}$${#eq-SDE}</span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>where $\sigma, \tau \leq 0$ are given parameters and $W(t;\omega)$ is a Wiener process. The initial condition $(X(0;\omega), Y(0;\omega))$ has i.i.d. components both of which are uniformly distributed in $<span class="co">[</span><span class="ot">0, 1</span><span class="co">]</span>$, i.e., $X(0;\omega)$ and $Y(0;\omega)$ are independent random variables with uniform PDF in $<span class="co">[</span><span class="ot">0,1</span><span class="co">]</span>$.</span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>\footnotetext{The system @eq-SDE is a prototype IVP where $X(t;\omega)$ is driven by the Ornstein-Uhlenbeck process $Y(t;\omega)$, which is a colored (non-white) random noise with exponential correlation function.}</span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a><span class="fu">## Part A</span></span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>Plot a few sample paths of $X(t;\omega)$ for $\sigma = 0.1$ and $\tau = <span class="sc">\{</span>0.01, 1, 10<span class="sc">\}</span>$.</span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a><span class="fu">### Solution</span></span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>We convert @eq-SDE into a numerical simulation by first converting the SDE into a discrete time form via the Euler-Maruyama discretization.</span>
+<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a>We descritize a grid within the interval <span class="co">[</span><span class="ot">0, T</span><span class="co">]</span> into N equal parts, where $\Delta t = \frac{T}{N}$</span>
+<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a>Let us recursively define $Y_n$ for $0 \leq n \leq N-1$</span>
+<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a>\begin{align}</span>
+<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a>    Y_{n+1} = Y_n  -\tau Y_n \Delta t + \sigma \Delta W</span>
+<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a>\end{align}</span>
+<span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a>and $X_n$</span>
+<span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-51"><a href="#cb3-51" aria-hidden="true" tabindex="-1"></a>\begin{align}</span>
+<span id="cb3-52"><a href="#cb3-52" aria-hidden="true" tabindex="-1"></a>    X_{n+1} = X_n - X_n^3 \Delta t + \Delta Y_n</span>
+<span id="cb3-53"><a href="#cb3-53" aria-hidden="true" tabindex="-1"></a>\end{align}</span>
+<span id="cb3-54"><a href="#cb3-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-55"><a href="#cb3-55" aria-hidden="true" tabindex="-1"></a>where $\Delta Y_n = Y_{n+1} - Y_n = -\tau Y_n \Delta t + \sigma \Delta W_n$</span>
+<span id="cb3-56"><a href="#cb3-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-57"><a href="#cb3-57" aria-hidden="true" tabindex="-1"></a>where $\Delta W_n$ are i.i.d Gaussian random variables with zero mean and variance $\Delta t$.</span>
+<span id="cb3-58"><a href="#cb3-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-61"><a href="#cb3-61" aria-hidden="true" tabindex="-1"></a><span class="in">```{julia}</span></span>
+<span id="cb3-62"><a href="#cb3-62" aria-hidden="true" tabindex="-1"></a><span class="im">using</span> <span class="bu">GLMakie</span></span>
+<span id="cb3-63"><a href="#cb3-63" aria-hidden="true" tabindex="-1"></a><span class="im">using</span> <span class="bu">Distributions</span></span>
+<span id="cb3-64"><a href="#cb3-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-65"><a href="#cb3-65" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">partA</span>(τ<span class="op">::</span><span class="dt">Float64</span>, σ<span class="op">::</span><span class="dt">Float64</span>)</span>
+<span id="cb3-66"><a href="#cb3-66" aria-hidden="true" tabindex="-1"></a>    <span class="co"># define the length of subintervals</span></span>
+<span id="cb3-67"><a href="#cb3-67" aria-hidden="true" tabindex="-1"></a>    Δt <span class="op">=</span> <span class="fl">1e-4</span></span>
+<span id="cb3-68"><a href="#cb3-68" aria-hidden="true" tabindex="-1"></a>    ts <span class="op">=</span> <span class="fl">0.0</span><span class="op">:</span>Δt<span class="op">:</span><span class="fl">5.0</span></span>
+<span id="cb3-69"><a href="#cb3-69" aria-hidden="true" tabindex="-1"></a>    <span class="co"># number of samples</span></span>
+<span id="cb3-70"><a href="#cb3-70" aria-hidden="true" tabindex="-1"></a>    N <span class="op">=</span> <span class="fl">5</span></span>
+<span id="cb3-71"><a href="#cb3-71" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Weiner processs</span></span>
+<span id="cb3-72"><a href="#cb3-72" aria-hidden="true" tabindex="-1"></a>    W <span class="op">=</span> <span class="fu">Normal</span>(<span class="fl">0</span>, <span class="fu">sqrt</span>(Δt))</span>
+<span id="cb3-73"><a href="#cb3-73" aria-hidden="true" tabindex="-1"></a>    <span class="co"># initialize mesh</span></span>
+<span id="cb3-74"><a href="#cb3-74" aria-hidden="true" tabindex="-1"></a>    X <span class="op">=</span> <span class="fu">Matrix</span><span class="dt">{Float64}</span>(<span class="cn">undef</span>, <span class="fu">length</span>(ts), N)</span>
+<span id="cb3-75"><a href="#cb3-75" aria-hidden="true" tabindex="-1"></a>    Y <span class="op">=</span> <span class="fu">Matrix</span><span class="dt">{Float64}</span>(<span class="cn">undef</span>, <span class="fu">length</span>(ts), N)</span>
+<span id="cb3-76"><a href="#cb3-76" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-77"><a href="#cb3-77" aria-hidden="true" tabindex="-1"></a>    <span class="co"># apply initial conditions</span></span>
+<span id="cb3-78"><a href="#cb3-78" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span>N</span>
+<span id="cb3-79"><a href="#cb3-79" aria-hidden="true" tabindex="-1"></a>        X[<span class="fl">1</span>, i] <span class="op">=</span> <span class="fu">rand</span>()</span>
+<span id="cb3-80"><a href="#cb3-80" aria-hidden="true" tabindex="-1"></a>        Y[<span class="fl">1</span>, i] <span class="op">=</span> <span class="fu">rand</span>()</span>
+<span id="cb3-81"><a href="#cb3-81" aria-hidden="true" tabindex="-1"></a>    <span class="cf">end</span></span>
+<span id="cb3-82"><a href="#cb3-82" aria-hidden="true" tabindex="-1"></a>    <span class="co"># propagate the process</span></span>
+<span id="cb3-83"><a href="#cb3-83" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span>N</span>
+<span id="cb3-84"><a href="#cb3-84" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> j <span class="kw">in</span> <span class="fl">2</span><span class="op">:</span><span class="fu">length</span>(ts)</span>
+<span id="cb3-85"><a href="#cb3-85" aria-hidden="true" tabindex="-1"></a>            ΔW <span class="op">=</span> <span class="fu">rand</span>(W)</span>
+<span id="cb3-86"><a href="#cb3-86" aria-hidden="true" tabindex="-1"></a>            X[j, i] <span class="op">=</span> X[j<span class="op">-</span><span class="fl">1</span>, i] <span class="op">-</span> (X[j<span class="op">-</span><span class="fl">1</span>, i]<span class="op">^</span><span class="fl">3</span>)<span class="op">*</span>Δt <span class="op">-</span>τ<span class="op">*</span>Y[j<span class="op">-</span><span class="fl">1</span>, i]<span class="op">*</span>Δt <span class="op">+</span> σ<span class="op">*</span>ΔW</span>
+<span id="cb3-87"><a href="#cb3-87" aria-hidden="true" tabindex="-1"></a>            Y[j, i] <span class="op">=</span> Y[j<span class="op">-</span><span class="fl">1</span>, i] <span class="op">-</span> τ<span class="op">*</span>Y[j<span class="op">-</span><span class="fl">1</span>, i]<span class="op">*</span>Δt <span class="op">+</span> σ<span class="op">*</span>ΔW</span>
+<span id="cb3-88"><a href="#cb3-88" aria-hidden="true" tabindex="-1"></a>        <span class="cf">end</span></span>
+<span id="cb3-89"><a href="#cb3-89" aria-hidden="true" tabindex="-1"></a>    <span class="cf">end</span></span>
+<span id="cb3-90"><a href="#cb3-90" aria-hidden="true" tabindex="-1"></a>    <span class="co"># make the figure</span></span>
+<span id="cb3-91"><a href="#cb3-91" aria-hidden="true" tabindex="-1"></a>    fig <span class="op">=</span> <span class="fu">Figure</span>()</span>
+<span id="cb3-92"><a href="#cb3-92" aria-hidden="true" tabindex="-1"></a>    ax <span class="op">=</span> <span class="fu">Axis</span>(</span>
+<span id="cb3-93"><a href="#cb3-93" aria-hidden="true" tabindex="-1"></a>        fig[<span class="fl">1</span>, <span class="fl">1</span>],</span>
+<span id="cb3-94"><a href="#cb3-94" aria-hidden="true" tabindex="-1"></a>        title <span class="op">=</span> <span class="st">"σ = </span><span class="sc">$</span><span class="st">σ τ = </span><span class="sc">$</span><span class="st">τ",</span></span>
+<span id="cb3-95"><a href="#cb3-95" aria-hidden="true" tabindex="-1"></a><span class="st">        </span>xlabel<span class="st"> = "</span>t<span class="st">",</span></span>
+<span id="cb3-96"><a href="#cb3-96" aria-hidden="true" tabindex="-1"></a>        ylabel <span class="op">=</span> L<span class="st">"</span><span class="sc">$</span>X_<span class="st">{n+1}</span><span class="sc">$</span><span class="st">"</span></span>
+<span id="cb3-97"><a href="#cb3-97" aria-hidden="true" tabindex="-1"></a><span class="st">    )</span></span>
+<span id="cb3-98"><a href="#cb3-98" aria-hidden="true" tabindex="-1"></a><span class="st">    # </span>set<span class="st"> y axis limits</span></span>
+<span id="cb3-99"><a href="#cb3-99" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ylims!</span>(ax, <span class="op">-</span><span class="fl">1.0</span>, <span class="fl">1.0</span>)</span>
+<span id="cb3-100"><a href="#cb3-100" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-101"><a href="#cb3-101" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Plot the samples</span></span>
+<span id="cb3-102"><a href="#cb3-102" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span>N</span>
+<span id="cb3-103"><a href="#cb3-103" aria-hidden="true" tabindex="-1"></a>        <span class="fu">lines!</span>(ax, ts, X[<span class="op">:</span>, i])</span>
+<span id="cb3-104"><a href="#cb3-104" aria-hidden="true" tabindex="-1"></a>    <span class="cf">end</span></span>
+<span id="cb3-105"><a href="#cb3-105" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> fig</span>
+<span id="cb3-106"><a href="#cb3-106" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span>
+<span id="cb3-107"><a href="#cb3-107" aria-hidden="true" tabindex="-1"></a><span class="fu">save</span>(<span class="st">"parta01.png"</span>, <span class="fu">partA</span>(<span class="fl">0.01</span>, <span class="fl">0.1</span>))</span>
+<span id="cb3-108"><a href="#cb3-108" aria-hidden="true" tabindex="-1"></a><span class="fu">save</span>(<span class="st">"parta1.png"</span>, <span class="fu">partA</span>(<span class="fl">1.0</span>, <span class="fl">0.1</span>))</span>
+<span id="cb3-109"><a href="#cb3-109" aria-hidden="true" tabindex="-1"></a><span class="fu">save</span>(<span class="st">"parta10.png"</span>, <span class="fu">partA</span>(<span class="fl">10.0</span>, <span class="fl">0.1</span>))</span>
+<span id="cb3-110"><a href="#cb3-110" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb3-111"><a href="#cb3-111" aria-hidden="true" tabindex="-1"></a>:::: {.columns}</span>
+<span id="cb3-112"><a href="#cb3-112" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-113"><a href="#cb3-113" aria-hidden="true" tabindex="-1"></a>::: {.column width="33.33%"}</span>
+<span id="cb3-114"><a href="#cb3-114" aria-hidden="true" tabindex="-1"></a><span class="al">![$\tau = 0.01$](parta01.png)</span>{width=100%}</span>
+<span id="cb3-115"><a href="#cb3-115" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-116"><a href="#cb3-116" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-117"><a href="#cb3-117" aria-hidden="true" tabindex="-1"></a>::: {.column width="33.33%"}</span>
+<span id="cb3-118"><a href="#cb3-118" aria-hidden="true" tabindex="-1"></a><span class="al">![$\tau = 1.0$](parta1.png)</span>{width=100%}</span>
+<span id="cb3-119"><a href="#cb3-119" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-120"><a href="#cb3-120" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-121"><a href="#cb3-121" aria-hidden="true" tabindex="-1"></a>::: {.column width="33.33%"}</span>
+<span id="cb3-122"><a href="#cb3-122" aria-hidden="true" tabindex="-1"></a><span class="al">![$\tau = 10.0$](parta10.png)</span>{width=100%}</span>
+<span id="cb3-123"><a href="#cb3-123" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-124"><a href="#cb3-124" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-125"><a href="#cb3-125" aria-hidden="true" tabindex="-1"></a>::::</span>
+<span id="cb3-126"><a href="#cb3-126" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-127"><a href="#cb3-127" aria-hidden="true" tabindex="-1"></a><span class="fu">## Part B</span></span>
+<span id="cb3-128"><a href="#cb3-128" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-129"><a href="#cb3-129" aria-hidden="true" tabindex="-1"></a>Do you expect the system @eq-SDE to have a statistically stationary state? Justify your answer.</span>
+<span id="cb3-130"><a href="#cb3-130" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-131"><a href="#cb3-131" aria-hidden="true" tabindex="-1"></a><span class="fu">### Solution</span></span>
+<span id="cb3-132"><a href="#cb3-132" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-133"><a href="#cb3-133" aria-hidden="true" tabindex="-1"></a>From part A, we can see that as we increase $\tau$, the system rapidly converges to a statistically steady-state process. We can prove this by the Kernel Density Estimation for 1000 sample paths for varying $\tau$ and comparing the estimated PDF for later times.</span>
+<span id="cb3-134"><a href="#cb3-134" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-135"><a href="#cb3-135" aria-hidden="true" tabindex="-1"></a>The solution approaches a statistically steady state as $t\rightarrow \infty$ and approaches the statisically steady state at the rate $\tau$. It seems though that the pdf for varying $\tau$ may not be the same, as $\tau = 10.0$ seems to have a bimodal distribution for later times.</span>
+<span id="cb3-136"><a href="#cb3-136" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-139"><a href="#cb3-139" aria-hidden="true" tabindex="-1"></a><span class="in">```{julia}</span></span>
+<span id="cb3-140"><a href="#cb3-140" aria-hidden="true" tabindex="-1"></a><span class="im">using</span> <span class="bu">KernelDensity</span></span>
+<span id="cb3-141"><a href="#cb3-141" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-142"><a href="#cb3-142" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">simulateB</span>(τ<span class="op">::</span><span class="dt">Float64</span>)</span>
+<span id="cb3-143"><a href="#cb3-143" aria-hidden="true" tabindex="-1"></a>    σ <span class="op">=</span> <span class="fl">0.1</span></span>
+<span id="cb3-144"><a href="#cb3-144" aria-hidden="true" tabindex="-1"></a>    <span class="co"># define the length of subintervals</span></span>
+<span id="cb3-145"><a href="#cb3-145" aria-hidden="true" tabindex="-1"></a>    Δt <span class="op">=</span> <span class="fl">1e-4</span></span>
+<span id="cb3-146"><a href="#cb3-146" aria-hidden="true" tabindex="-1"></a>    ts <span class="op">=</span> <span class="fl">0.0</span><span class="op">:</span>Δt<span class="op">:</span><span class="fl">20.0</span></span>
+<span id="cb3-147"><a href="#cb3-147" aria-hidden="true" tabindex="-1"></a>    <span class="co"># number of samples</span></span>
+<span id="cb3-148"><a href="#cb3-148" aria-hidden="true" tabindex="-1"></a>    N <span class="op">=</span> <span class="fl">1000</span></span>
+<span id="cb3-149"><a href="#cb3-149" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Weiner processs</span></span>
+<span id="cb3-150"><a href="#cb3-150" aria-hidden="true" tabindex="-1"></a>    W <span class="op">=</span> <span class="fu">Normal</span>(<span class="fl">0</span>, <span class="fu">sqrt</span>(Δt))</span>
+<span id="cb3-151"><a href="#cb3-151" aria-hidden="true" tabindex="-1"></a>    <span class="co"># initialize mesh</span></span>
+<span id="cb3-152"><a href="#cb3-152" aria-hidden="true" tabindex="-1"></a>    X <span class="op">=</span> <span class="fu">Matrix</span><span class="dt">{Float64}</span>(<span class="cn">undef</span>, <span class="fu">length</span>(ts), N)</span>
+<span id="cb3-153"><a href="#cb3-153" aria-hidden="true" tabindex="-1"></a>    Y <span class="op">=</span> <span class="fu">Matrix</span><span class="dt">{Float64}</span>(<span class="cn">undef</span>, <span class="fu">length</span>(ts), N)</span>
+<span id="cb3-154"><a href="#cb3-154" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-155"><a href="#cb3-155" aria-hidden="true" tabindex="-1"></a>    <span class="co"># apply initial conditions</span></span>
+<span id="cb3-156"><a href="#cb3-156" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span>N</span>
+<span id="cb3-157"><a href="#cb3-157" aria-hidden="true" tabindex="-1"></a>        X[<span class="fl">1</span>, i] <span class="op">=</span> <span class="fu">rand</span>()</span>
+<span id="cb3-158"><a href="#cb3-158" aria-hidden="true" tabindex="-1"></a>        Y[<span class="fl">1</span>, i] <span class="op">=</span> <span class="fu">rand</span>()</span>
+<span id="cb3-159"><a href="#cb3-159" aria-hidden="true" tabindex="-1"></a>    <span class="cf">end</span></span>
+<span id="cb3-160"><a href="#cb3-160" aria-hidden="true" tabindex="-1"></a>    <span class="co"># propagate the process</span></span>
+<span id="cb3-161"><a href="#cb3-161" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span>N</span>
+<span id="cb3-162"><a href="#cb3-162" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> j <span class="kw">in</span> <span class="fl">2</span><span class="op">:</span><span class="fu">length</span>(ts)</span>
+<span id="cb3-163"><a href="#cb3-163" aria-hidden="true" tabindex="-1"></a>            ΔW <span class="op">=</span> <span class="fu">rand</span>(W)</span>
+<span id="cb3-164"><a href="#cb3-164" aria-hidden="true" tabindex="-1"></a>            X[j, i] <span class="op">=</span> X[j<span class="op">-</span><span class="fl">1</span>, i] <span class="op">-</span> (X[j<span class="op">-</span><span class="fl">1</span>, i]<span class="op">^</span><span class="fl">3</span>)<span class="op">*</span>Δt <span class="op">-</span>τ<span class="op">*</span>Y[j<span class="op">-</span><span class="fl">1</span>, i]<span class="op">*</span>Δt <span class="op">+</span> σ<span class="op">*</span>ΔW</span>
+<span id="cb3-165"><a href="#cb3-165" aria-hidden="true" tabindex="-1"></a>            Y[j, i] <span class="op">=</span> Y[j<span class="op">-</span><span class="fl">1</span>, i] <span class="op">-</span> τ<span class="op">*</span>Y[j<span class="op">-</span><span class="fl">1</span>, i]<span class="op">*</span>Δt <span class="op">+</span> σ<span class="op">*</span>ΔW</span>
+<span id="cb3-166"><a href="#cb3-166" aria-hidden="true" tabindex="-1"></a>        <span class="cf">end</span></span>
+<span id="cb3-167"><a href="#cb3-167" aria-hidden="true" tabindex="-1"></a>    <span class="cf">end</span></span>
+<span id="cb3-168"><a href="#cb3-168" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> X, Y, <span class="fu">length</span>(ts)</span>
+<span id="cb3-169"><a href="#cb3-169" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span>
+<span id="cb3-170"><a href="#cb3-170" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-171"><a href="#cb3-171" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">partB</span>()</span>
+<span id="cb3-172"><a href="#cb3-172" aria-hidden="true" tabindex="-1"></a>    X1, Y1, ts <span class="op">=</span> <span class="fu">simulateB</span>(<span class="fl">0.01</span>)</span>
+<span id="cb3-173"><a href="#cb3-173" aria-hidden="true" tabindex="-1"></a>    X2, Y2, _ <span class="op">=</span> <span class="fu">simulateB</span>(<span class="fl">1.0</span>)</span>
+<span id="cb3-174"><a href="#cb3-174" aria-hidden="true" tabindex="-1"></a>    X3, Y3, _ <span class="op">=</span> <span class="fu">simulateB</span>(<span class="fl">10.0</span>)</span>
+<span id="cb3-175"><a href="#cb3-175" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-176"><a href="#cb3-176" aria-hidden="true" tabindex="-1"></a>    fig <span class="op">=</span> <span class="fu">Figure</span>()</span>
+<span id="cb3-177"><a href="#cb3-177" aria-hidden="true" tabindex="-1"></a>    ax <span class="op">=</span> <span class="fu">Axis</span>(</span>
+<span id="cb3-178"><a href="#cb3-178" aria-hidden="true" tabindex="-1"></a>        fig[<span class="fl">1</span>, <span class="fl">1</span>]</span>
+<span id="cb3-179"><a href="#cb3-179" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb3-180"><a href="#cb3-180" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ylims!</span>(ax, <span class="fl">0.0</span>, <span class="fl">3.0</span>)</span>
+<span id="cb3-181"><a href="#cb3-181" aria-hidden="true" tabindex="-1"></a>    <span class="fu">xlims!</span>(ax, <span class="op">-</span><span class="fl">2.0</span>, <span class="fl">2.0</span>)</span>
+<span id="cb3-182"><a href="#cb3-182" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-183"><a href="#cb3-183" aria-hidden="true" tabindex="-1"></a>    d1 <span class="op">=</span> <span class="fu">kde</span>(X1[<span class="fl">1</span>, <span class="op">:</span>])</span>
+<span id="cb3-184"><a href="#cb3-184" aria-hidden="true" tabindex="-1"></a>    d2 <span class="op">=</span> <span class="fu">kde</span>(X2[<span class="fl">1</span>, <span class="op">:</span>])</span>
+<span id="cb3-185"><a href="#cb3-185" aria-hidden="true" tabindex="-1"></a>    d3 <span class="op">=</span> <span class="fu">kde</span>(X3[<span class="fl">1</span>, <span class="op">:</span>])</span>
+<span id="cb3-186"><a href="#cb3-186" aria-hidden="true" tabindex="-1"></a>    kde_data1 <span class="op">=</span> <span class="fu">Observable</span>((d1.x, d1.density))</span>
+<span id="cb3-187"><a href="#cb3-187" aria-hidden="true" tabindex="-1"></a>    kde_data2 <span class="op">=</span> <span class="fu">Observable</span>((d2.x, d2.density))</span>
+<span id="cb3-188"><a href="#cb3-188" aria-hidden="true" tabindex="-1"></a>    kde_data3 <span class="op">=</span> <span class="fu">Observable</span>((d3.x, d3.density))</span>
+<span id="cb3-189"><a href="#cb3-189" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-190"><a href="#cb3-190" aria-hidden="true" tabindex="-1"></a>    kde_line1 <span class="op">=</span> <span class="fu">lines!</span>(ax, [<span class="fl">0.0</span>], [<span class="fl">0.0</span>], color <span class="op">=</span> <span class="op">:</span>red, label <span class="op">=</span> <span class="st">"τ = 0.01"</span>)</span>
+<span id="cb3-191"><a href="#cb3-191" aria-hidden="true" tabindex="-1"></a>    kde_line2 <span class="op">=</span> <span class="fu">lines!</span>(ax, [<span class="fl">0.0</span>], [<span class="fl">0.0</span>], color <span class="op">=</span> <span class="op">:</span>blue, label <span class="op">=</span> <span class="st">"τ = 1.0"</span>)</span>
+<span id="cb3-192"><a href="#cb3-192" aria-hidden="true" tabindex="-1"></a>    kde_line3 <span class="op">=</span> <span class="fu">lines!</span>(ax, [<span class="fl">0.0</span>], [<span class="fl">0.0</span>], color <span class="op">=</span> <span class="op">:</span>green, label <span class="op">=</span> <span class="st">"τ = 10.0"</span>)</span>
+<span id="cb3-193"><a href="#cb3-193" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-194"><a href="#cb3-194" aria-hidden="true" tabindex="-1"></a>    kde_plot1 <span class="op">=</span> <span class="fu">lift</span>(kde_data1) <span class="cf">do</span> (x, density)</span>
+<span id="cb3-195"><a href="#cb3-195" aria-hidden="true" tabindex="-1"></a>        kde_line1[<span class="fl">1</span>] <span class="op">=</span> x</span>
+<span id="cb3-196"><a href="#cb3-196" aria-hidden="true" tabindex="-1"></a>        kde_line1[<span class="fl">2</span>] <span class="op">=</span> density</span>
+<span id="cb3-197"><a href="#cb3-197" aria-hidden="true" tabindex="-1"></a>    <span class="cf">end</span></span>
+<span id="cb3-198"><a href="#cb3-198" aria-hidden="true" tabindex="-1"></a>    kde_plot2 <span class="op">=</span> <span class="fu">lift</span>(kde_data2) <span class="cf">do</span> (x, density)</span>
+<span id="cb3-199"><a href="#cb3-199" aria-hidden="true" tabindex="-1"></a>        kde_line2[<span class="fl">1</span>] <span class="op">=</span> x</span>
+<span id="cb3-200"><a href="#cb3-200" aria-hidden="true" tabindex="-1"></a>        kde_line2[<span class="fl">2</span>] <span class="op">=</span> density</span>
+<span id="cb3-201"><a href="#cb3-201" aria-hidden="true" tabindex="-1"></a>    <span class="cf">end</span></span>
+<span id="cb3-202"><a href="#cb3-202" aria-hidden="true" tabindex="-1"></a>    kde_plot3 <span class="op">=</span> <span class="fu">lift</span>(kde_data3) <span class="cf">do</span> (x, density)</span>
+<span id="cb3-203"><a href="#cb3-203" aria-hidden="true" tabindex="-1"></a>        kde_line3[<span class="fl">1</span>] <span class="op">=</span> x</span>
+<span id="cb3-204"><a href="#cb3-204" aria-hidden="true" tabindex="-1"></a>        kde_line3[<span class="fl">2</span>] <span class="op">=</span> density</span>
+<span id="cb3-205"><a href="#cb3-205" aria-hidden="true" tabindex="-1"></a>    <span class="cf">end</span></span>
+<span id="cb3-206"><a href="#cb3-206" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-207"><a href="#cb3-207" aria-hidden="true" tabindex="-1"></a>    <span class="fu">Legend</span>(fig[<span class="fl">1</span>, <span class="fl">2</span>], ax)</span>
+<span id="cb3-208"><a href="#cb3-208" aria-hidden="true" tabindex="-1"></a>    <span class="fu">record</span>(fig, <span class="st">"partb.mp4"</span>, <span class="fl">2</span><span class="op">:</span><span class="fl">400</span><span class="op">:</span>ts; framerate <span class="op">=</span> <span class="fl">30</span>) <span class="cf">do</span> k</span>
+<span id="cb3-209"><a href="#cb3-209" aria-hidden="true" tabindex="-1"></a>        d1 <span class="op">=</span> <span class="fu">kde</span>(X1[k, <span class="op">:</span>])</span>
+<span id="cb3-210"><a href="#cb3-210" aria-hidden="true" tabindex="-1"></a>        d2 <span class="op">=</span> <span class="fu">kde</span>(X2[k, <span class="op">:</span>])</span>
+<span id="cb3-211"><a href="#cb3-211" aria-hidden="true" tabindex="-1"></a>        d3 <span class="op">=</span> <span class="fu">kde</span>(X3[k, <span class="op">:</span>])</span>
+<span id="cb3-212"><a href="#cb3-212" aria-hidden="true" tabindex="-1"></a>        kde_data1[] <span class="op">=</span> (d1.x, d1.density)</span>
+<span id="cb3-213"><a href="#cb3-213" aria-hidden="true" tabindex="-1"></a>        kde_data2[] <span class="op">=</span> (d2.x, d2.density)</span>
+<span id="cb3-214"><a href="#cb3-214" aria-hidden="true" tabindex="-1"></a>        kde_data3[] <span class="op">=</span> (d3.x, d3.density)</span>
+<span id="cb3-215"><a href="#cb3-215" aria-hidden="true" tabindex="-1"></a>    <span class="cf">end</span></span>
+<span id="cb3-216"><a href="#cb3-216" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> fig</span>
+<span id="cb3-217"><a href="#cb3-217" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span>
+<span id="cb3-218"><a href="#cb3-218" aria-hidden="true" tabindex="-1"></a><span class="fu">partB</span>()</span>
+<span id="cb3-219"><a href="#cb3-219" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb3-220"><a href="#cb3-220" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-221"><a href="#cb3-221" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">video</span><span class="ot"> width</span><span class="op">=</span><span class="st">"700"</span><span class="ot"> autoplay loop muted</span><span class="dt">&gt;</span></span>
+<span id="cb3-222"><a href="#cb3-222" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">source</span><span class="ot"> src</span><span class="op">=</span><span class="st">"partb.mp4"</span><span class="ot"> type</span><span class="op">=</span><span class="st">"video/mp4"</span><span class="dt">&gt;</span></span>
+<span id="cb3-223"><a href="#cb3-223" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">video</span><span class="dt">&gt;</span></span>
+<span id="cb3-224"><a href="#cb3-224" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-225"><a href="#cb3-225" aria-hidden="true" tabindex="-1"></a><span class="fu">## Part C</span></span>
+<span id="cb3-226"><a href="#cb3-226" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-227"><a href="#cb3-227" aria-hidden="true" tabindex="-1"></a>Write the Fokker-Planck equation for the joint PDF of $X(t;\omega)$ and $Y(t;\omega)$.</span>
+<span id="cb3-228"><a href="#cb3-228" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-229"><a href="#cb3-229" aria-hidden="true" tabindex="-1"></a><span class="fu">### Solution</span></span>
+<span id="cb3-230"><a href="#cb3-230" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-231"><a href="#cb3-231" aria-hidden="true" tabindex="-1"></a>Let us write @eq-SDE in state-space form</span>
+<span id="cb3-232"><a href="#cb3-232" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-233"><a href="#cb3-233" aria-hidden="true" tabindex="-1"></a>\begin{align}</span>
+<span id="cb3-234"><a href="#cb3-234" aria-hidden="true" tabindex="-1"></a>    dX &amp;= -X^3 dt - \tau Y dt + \sigma dW <span class="sc">\\</span></span>
+<span id="cb3-235"><a href="#cb3-235" aria-hidden="true" tabindex="-1"></a>    dY &amp;= -\tau Y dt + \sigma dW</span>
+<span id="cb3-236"><a href="#cb3-236" aria-hidden="true" tabindex="-1"></a>\end{align}</span>
+<span id="cb3-237"><a href="#cb3-237" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-238"><a href="#cb3-238" aria-hidden="true" tabindex="-1"></a>The vector $\mathbf{G}(\mathbf{X}, t)$ can be written as</span>
+<span id="cb3-239"><a href="#cb3-239" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-240"><a href="#cb3-240" aria-hidden="true" tabindex="-1"></a>\begin{align}</span>
+<span id="cb3-241"><a href="#cb3-241" aria-hidden="true" tabindex="-1"></a>     \mathbf{G}(\mathbf{X}, t) &amp;= \left[</span>
+<span id="cb3-242"><a href="#cb3-242" aria-hidden="true" tabindex="-1"></a>     \begin{matrix}</span>
+<span id="cb3-243"><a href="#cb3-243" aria-hidden="true" tabindex="-1"></a>         -X^3 - \tau Y <span class="sc">\\</span></span>
+<span id="cb3-244"><a href="#cb3-244" aria-hidden="true" tabindex="-1"></a>         -\tau Y</span>
+<span id="cb3-245"><a href="#cb3-245" aria-hidden="true" tabindex="-1"></a>     \end{matrix}\right]</span>
+<span id="cb3-246"><a href="#cb3-246" aria-hidden="true" tabindex="-1"></a>\end{align}</span>
+<span id="cb3-247"><a href="#cb3-247" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-248"><a href="#cb3-248" aria-hidden="true" tabindex="-1"></a>The matrix $\mathbf{S}$ can be written as</span>
+<span id="cb3-249"><a href="#cb3-249" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-250"><a href="#cb3-250" aria-hidden="true" tabindex="-1"></a>\begin{align}</span>
+<span id="cb3-251"><a href="#cb3-251" aria-hidden="true" tabindex="-1"></a>    \mathbf{S} = \left[</span>
+<span id="cb3-252"><a href="#cb3-252" aria-hidden="true" tabindex="-1"></a>    \begin{matrix}</span>
+<span id="cb3-253"><a href="#cb3-253" aria-hidden="true" tabindex="-1"></a>        \sigma <span class="sc">\\</span></span>
+<span id="cb3-254"><a href="#cb3-254" aria-hidden="true" tabindex="-1"></a>        \sigma</span>
+<span id="cb3-255"><a href="#cb3-255" aria-hidden="true" tabindex="-1"></a>    \end{matrix}\right]</span>
+<span id="cb3-256"><a href="#cb3-256" aria-hidden="true" tabindex="-1"></a>\end{align}</span>
+<span id="cb3-257"><a href="#cb3-257" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-258"><a href="#cb3-258" aria-hidden="true" tabindex="-1"></a>We can thus write the Fokker-Planck equation according equation 59 in course notes 4 as follows:</span>
+<span id="cb3-259"><a href="#cb3-259" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-260"><a href="#cb3-260" aria-hidden="true" tabindex="-1"></a>\begin{align}</span>
+<span id="cb3-261"><a href="#cb3-261" aria-hidden="true" tabindex="-1"></a>    \frac{\partial p(\mathbf{x}, t)}{\partial t} &amp;= -\sum_{k=1}^{2} \frac{\partial}{\partial x_k} \left(G_k(\mathbf{x}, t) p(\mathbf{x})\right) + \frac{1}{2} \sum_{i, k = 1}^2 \frac{\partial^2}{\partial x_i \partial x_k}\left(\sum_{j=1}^2 S_{ij}(\mathbf{x}, t)S_{kj}(\mathbf{x}, t) p(\mathbf{x}, t) \right) <span class="sc">\\</span></span>
+<span id="cb3-262"><a href="#cb3-262" aria-hidden="true" tabindex="-1"></a>\frac{\partial p}{\partial t} &amp;= -\left(\frac{\partial}{\partial x} \left((-x^3 -\tau y)p\right) + \frac{\partial}{\partial y}\left(-\tau yp\right)\right) + \frac{\sigma^2}{2}\left(\frac{\partial^2p}{\partial x^2} + \frac{\partial^2 p}{\partial y^2}\right) <span class="sc">\\</span></span>
+<span id="cb3-263"><a href="#cb3-263" aria-hidden="true" tabindex="-1"></a>&amp;= \frac{\partial}{\partial x}(x^3 p) + \tau p + \tau y\left(\frac{\partial p}{\partial x} + \frac{\partial p}{\partial y}\right) + \frac{\sigma^2}{2}\left(\frac{\partial^2p}{\partial x^2} + \frac{\partial^2 p}{\partial y^2}\right)</span>
+<span id="cb3-264"><a href="#cb3-264" aria-hidden="true" tabindex="-1"></a>\end{align}</span>
+<span id="cb3-265"><a href="#cb3-265" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-266"><a href="#cb3-266" aria-hidden="true" tabindex="-1"></a>The Fokker-Planck equation is thus</span>
+<span id="cb3-267"><a href="#cb3-267" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-268"><a href="#cb3-268" aria-hidden="true" tabindex="-1"></a>$$\frac{\partial p(x, y, t)}{\partial t} = \frac{\partial}{\partial x}(x^3 p(x, y, t)) + \tau p(x, y, t) + \tau y\left(\frac{\partial p(x, y, t)}{\partial x} + \frac{\partial p(x, y, t)}{\partial y}\right) + \frac{\sigma^2}{2}\left(\frac{\partial^2p(x, y, t)}{\partial x^2} + \frac{\partial^2 p(x, y, t)}{\partial y^2}\right)$${#eq-fokker-planck}</span>
+<span id="cb3-269"><a href="#cb3-269" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-270"><a href="#cb3-270" aria-hidden="true" tabindex="-1"></a>where $p(x, y, t)$ is the joint PDF of $X$ and $Y$.</span>
+<span id="cb3-271"><a href="#cb3-271" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-272"><a href="#cb3-272" aria-hidden="true" tabindex="-1"></a><span class="fu">## Part D</span></span>
+<span id="cb3-273"><a href="#cb3-273" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-274"><a href="#cb3-274" aria-hidden="true" tabindex="-1"></a>Write the reduced-order equation for the joint PDF of $X(t;\omega)$ in terms of the conditional expectation $\mathbb{E}<span class="sc">\{</span>Y(t;\omega)|X(t;\omega)<span class="sc">\}</span>$.</span>
+<span id="cb3-275"><a href="#cb3-275" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-276"><a href="#cb3-276" aria-hidden="true" tabindex="-1"></a><span class="fu">### Solution</span></span>
+<span id="cb3-277"><a href="#cb3-277" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-278"><a href="#cb3-278" aria-hidden="true" tabindex="-1"></a>To obtain the reduced-order equation, let us integrate @eq-fokker-planck with respect to $y$ and use the definition of conditional PDF.</span>
+<span id="cb3-279"><a href="#cb3-279" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-280"><a href="#cb3-280" aria-hidden="true" tabindex="-1"></a>\begin{align}</span>
+<span id="cb3-281"><a href="#cb3-281" aria-hidden="true" tabindex="-1"></a>\frac{\partial}{\partial t}\int_{-\infty}^{\infty}pdy &amp;= \int_{-\infty}^{\infty}\left(\frac{\partial}{\partial x} \left((x^3 +\tau y)p\right) + \frac{\partial}{\partial y}\left(\tau yp\right) + \frac{\sigma^2}{2}\left(\frac{\partial^2p}{\partial x^2} + \frac{\partial^2 p}{\partial y^2}\right)\right) dy<span class="sc">\\</span></span>
+<span id="cb3-282"><a href="#cb3-282" aria-hidden="true" tabindex="-1"></a>\frac{\partial p(x,t)}{\partial t} &amp;= \frac{\partial}{\partial x} \int_{-\infty}^{\infty}(x^3 + \tau y)p dy + \int_{-\infty}^{\infty} \frac{\partial}{\partial y}(\tau yp)dy + \frac{\sigma^2}{2}\left(\frac{\partial^2}{\partial x^2}\int_{-\infty}^{\infty}p dy + \cancelto{0}{\int_{-\infty}^{\infty}\frac{\partial^2 p}{\partial y^2}dy}\right) <span class="sc">\\</span></span>
+<span id="cb3-283"><a href="#cb3-283" aria-hidden="true" tabindex="-1"></a>&amp;= \frac{\partial}{\partial x}\left(x^3p(x, t) + \tau p(x, t)\mathbb{E}<span class="sc">\{</span>Y | X<span class="sc">\}</span>\right) + \cancelto{0}{\tau y p_{\bigg{|}_{-\infty}^{\infty}}} + \frac{\sigma^2}{2}\frac{\partial^2 p(x, t)}{\partial x^2}<span class="sc">\\</span></span>
+<span id="cb3-284"><a href="#cb3-284" aria-hidden="true" tabindex="-1"></a>\end{align}</span>
+<span id="cb3-285"><a href="#cb3-285" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-286"><a href="#cb3-286" aria-hidden="true" tabindex="-1"></a>Thus, the reduced order equation for the joint PDF can be written as,</span>
+<span id="cb3-287"><a href="#cb3-287" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-288"><a href="#cb3-288" aria-hidden="true" tabindex="-1"></a>$$\frac{\partial p(x, t)}{\partial t} = \frac{\partial}{\partial x}(x^3 p(x, t)) + \tau \frac{\partial}{\partial x}\left(p(x, t)\mathbb{E}<span class="sc">\{</span>y|x<span class="sc">\}</span>\right) + \frac{\sigma^2}{2} \frac{\partial^2 p(x, t)}{\partial x^2}$${#eq-reduced-order}</span>
+<span id="cb3-289"><a href="#cb3-289" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-290"><a href="#cb3-290" aria-hidden="true" tabindex="-1"></a><span class="fu">## Part E</span></span>
+<span id="cb3-291"><a href="#cb3-291" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-292"><a href="#cb3-292" aria-hidden="true" tabindex="-1"></a>Set $\sigma = 0$. Compute the conditional expectation $\mathbb{E}<span class="sc">\{</span>Y(t;\omega) | X(t;\omega)<span class="sc">\}</span>$ explicity as a function of</span>
+<span id="cb3-293"><a href="#cb3-293" aria-hidden="true" tabindex="-1"></a>$t$ and substitute it in the reduced order equation you obtained in part d (with $\sigma = 0$) to obtain an exact (and closed) equation for the PDF of $X(t;\omega)$.</span>
+<span id="cb3-294"><a href="#cb3-294" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-295"><a href="#cb3-295" aria-hidden="true" tabindex="-1"></a><span class="fu">### Solution</span></span>
+<span id="cb3-296"><a href="#cb3-296" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-297"><a href="#cb3-297" aria-hidden="true" tabindex="-1"></a>Recall the orginal SDE @eq-SDE where</span>
+<span id="cb3-298"><a href="#cb3-298" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-299"><a href="#cb3-299" aria-hidden="true" tabindex="-1"></a>\begin{align}</span>
+<span id="cb3-300"><a href="#cb3-300" aria-hidden="true" tabindex="-1"></a>    dY = -\tau Y dt + \sigma dW</span>
+<span id="cb3-301"><a href="#cb3-301" aria-hidden="true" tabindex="-1"></a>\end{align}</span>
+<span id="cb3-302"><a href="#cb3-302" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-303"><a href="#cb3-303" aria-hidden="true" tabindex="-1"></a>setting $\sigma = 0$ we have the following ODE:</span>
+<span id="cb3-304"><a href="#cb3-304" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-305"><a href="#cb3-305" aria-hidden="true" tabindex="-1"></a>\begin{align}</span>
+<span id="cb3-306"><a href="#cb3-306" aria-hidden="true" tabindex="-1"></a>    \begin{cases}</span>
+<span id="cb3-307"><a href="#cb3-307" aria-hidden="true" tabindex="-1"></a>        \frac{dY}{dt} = -\tau Y <span class="sc">\\</span></span>
+<span id="cb3-308"><a href="#cb3-308" aria-hidden="true" tabindex="-1"></a>        Y(0) \sim \text{Uniform}(0, 1)</span>
+<span id="cb3-309"><a href="#cb3-309" aria-hidden="true" tabindex="-1"></a>    \end{cases}</span>
+<span id="cb3-310"><a href="#cb3-310" aria-hidden="true" tabindex="-1"></a>\end{align}</span>
+<span id="cb3-311"><a href="#cb3-311" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-312"><a href="#cb3-312" aria-hidden="true" tabindex="-1"></a>solving for $Y(t)$ we have:</span>
+<span id="cb3-313"><a href="#cb3-313" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-314"><a href="#cb3-314" aria-hidden="true" tabindex="-1"></a>\begin{align}</span>
+<span id="cb3-315"><a href="#cb3-315" aria-hidden="true" tabindex="-1"></a>    Y(t) = Y(0)e^{-\tau t}</span>
+<span id="cb3-316"><a href="#cb3-316" aria-hidden="true" tabindex="-1"></a>\end{align}</span>
+<span id="cb3-317"><a href="#cb3-317" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-318"><a href="#cb3-318" aria-hidden="true" tabindex="-1"></a>where $Y(0)$ can be expressed as the expectation of a uniform random variable in <span class="co">[</span><span class="ot">0, 1</span><span class="co">]</span>, which we know is $\frac{1}{2}$</span>
+<span id="cb3-319"><a href="#cb3-319" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-320"><a href="#cb3-320" aria-hidden="true" tabindex="-1"></a>therefore the conditional expectation $$\mathbb{E}<span class="sc">\{</span>Y|X<span class="sc">\}</span> = \mathbb{E}<span class="sc">\{</span>Y<span class="sc">\}</span> = \frac{1}{2}e^{-\tau t}$$</span>
+<span id="cb3-321"><a href="#cb3-321" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-322"><a href="#cb3-322" aria-hidden="true" tabindex="-1"></a>we can write a closed equation for the reduced order equation as follows:</span>
+<span id="cb3-323"><a href="#cb3-323" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-324"><a href="#cb3-324" aria-hidden="true" tabindex="-1"></a>$$\frac{\partial p(x, t)}{\partial t} = \frac{\partial }{\partial x}(x^3p(x, t)) + \tau \frac{\partial }{\partial x}(p(x, t)\frac{1}{2}e^{-\tau t})$${#eq-closed-reduced}</span>
+<span id="cb3-325"><a href="#cb3-325" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-326"><a href="#cb3-326" aria-hidden="true" tabindex="-1"></a><span class="fu">## Part F</span></span>
+<span id="cb3-327"><a href="#cb3-327" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-328"><a href="#cb3-328" aria-hidden="true" tabindex="-1"></a>Write the PDF equation you obtained in part e as an evolution equation for the cumulative distribution function (CDF) of $X(t;\omega)$.</span>
+<span id="cb3-329"><a href="#cb3-329" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-330"><a href="#cb3-330" aria-hidden="true" tabindex="-1"></a><span class="fu">### Solution</span></span>
+<span id="cb3-331"><a href="#cb3-331" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-332"><a href="#cb3-332" aria-hidden="true" tabindex="-1"></a>Recall the definition of the cumulative distribution function:</span>
+<span id="cb3-333"><a href="#cb3-333" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-334"><a href="#cb3-334" aria-hidden="true" tabindex="-1"></a>\begin{align}</span>
+<span id="cb3-335"><a href="#cb3-335" aria-hidden="true" tabindex="-1"></a>F(x, y, t) = \int_{-\infty}^{x}p(y, t)dy</span>
+<span id="cb3-336"><a href="#cb3-336" aria-hidden="true" tabindex="-1"></a>\end{align}</span>
+<span id="cb3-337"><a href="#cb3-337" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-338"><a href="#cb3-338" aria-hidden="true" tabindex="-1"></a>if we take the derivative on both sides with respect to $x$ we have</span>
+<span id="cb3-339"><a href="#cb3-339" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-340"><a href="#cb3-340" aria-hidden="true" tabindex="-1"></a>\begin{align}</span>
+<span id="cb3-341"><a href="#cb3-341" aria-hidden="true" tabindex="-1"></a>p(x, t) = \frac{\partial F(x, t)}{\partial x}</span>
+<span id="cb3-342"><a href="#cb3-342" aria-hidden="true" tabindex="-1"></a>\end{align}</span>
+<span id="cb3-343"><a href="#cb3-343" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-344"><a href="#cb3-344" aria-hidden="true" tabindex="-1"></a>plugging this into @eq-closed-reduced we have</span>
+<span id="cb3-345"><a href="#cb3-345" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-346"><a href="#cb3-346" aria-hidden="true" tabindex="-1"></a>\begin{align}</span>
+<span id="cb3-347"><a href="#cb3-347" aria-hidden="true" tabindex="-1"></a>\frac{\partial }{\partial t}\left(\frac{\partial F}{\partial x}\right) = \frac{\partial }{\partial x}\left(x^3\frac{\partial F}{\partial x}\right) + \tau \frac{\partial }{\partial x}\left(\frac{\partial F}{\partial x}\frac{1}{2}e^{-\tau t}\right)</span>
+<span id="cb3-348"><a href="#cb3-348" aria-hidden="true" tabindex="-1"></a>\end{align}</span>
+<span id="cb3-349"><a href="#cb3-349" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-350"><a href="#cb3-350" aria-hidden="true" tabindex="-1"></a>taking the integral of both sides:</span>
+<span id="cb3-351"><a href="#cb3-351" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-352"><a href="#cb3-352" aria-hidden="true" tabindex="-1"></a>\begin{align}</span>
+<span id="cb3-353"><a href="#cb3-353" aria-hidden="true" tabindex="-1"></a>    \int_{-\infty}^{x}\frac{\partial^2 F}{\partial t\partial x'}dx' &amp;= \int_{-\infty}^{x}\left(\frac{\partial }{\partial x'}\left(x'^3\frac{\partial F}{\partial x'}\right) + \frac{\tau}{2} \frac{\partial }{\partial x'}\left(\frac{\partial F}{\partial x'}e^{-\tau t}\right)\right)dx' <span class="sc">\\</span></span>
+<span id="cb3-354"><a href="#cb3-354" aria-hidden="true" tabindex="-1"></a>\frac{\partial F(x, t)}{\partial t} &amp;= x'^3 \frac{\partial F}{\partial x'}\bigg|_{-\infty}^{x} + \frac{\tau}{2} \frac{\partial F}{\partial x'}e^{-\tau t}\bigg|_{-\infty}^{x} <span class="sc">\\</span></span>
+<span id="cb3-355"><a href="#cb3-355" aria-hidden="true" tabindex="-1"></a>\end{align}</span>
+<span id="cb3-356"><a href="#cb3-356" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-357"><a href="#cb3-357" aria-hidden="true" tabindex="-1"></a>thus we are left with the evolution equation for $F(x, t)$</span>
+<span id="cb3-358"><a href="#cb3-358" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-359"><a href="#cb3-359" aria-hidden="true" tabindex="-1"></a>$$\frac{\partial F(x, t)}{\partial t} = x^3 \frac{\partial F(x, t)}{\partial x} + \frac{\tau}{2}e^{-\tau t}\frac{\partial F(x, t)}{\partial x}$$</span>
+</code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
