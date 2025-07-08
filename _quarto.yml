@@ -8,8 +8,8 @@ website:
     left:
       - text: "About"
         href: about.qmd
-      - text: "Stream"
-        href: stream.qmd
+      - text: "License"
+        href: LICENSE.qmd
 
 format:
   html:
@@ -17,3 +17,6 @@ format:
     css: styles.css
     toc: false
     code-tools: true
+
+execute:
+    freeze: auto

@@ -1,0 +1,39 @@
+# Fundamentals of Uncertainty Quantification in Computational Science and Engineering
+
+## Course description
+
+Computing the statistical properties of nonlinear random systems is of fundamental importance in many areas of science and engineering. The primary objective of the course is to introduce students to state-of-the-art methods for uncertainty propagation and quantification in model-based computations, focusing on the computational and algorithmic features of these methods most useful in dealing with systems specified in terms of ordinary and partial differential equations.
+
+The course will focus mainly on the so-called forward UQ problem, in which uncertainties in input parameters such as initial conditions, boundary conditions, geometry or forcing terms are propagated through the equations of motion of the system into the solution. The course will also discuss cutting edge topics on data-driven modeling, deep learning with stochastic neural networks, and uncertainty propagation in high-dimensional systems via tensor methods.
+
+**Instructor**: [Prof. Daniele Venturi](https://venturi.soe.ucsc.edu/home)
+
+## Course Notes
+
+[Probability Spaces and Random Variables](notes/Probability_spaces_and_random_variables.pdf)
+
+[Random Vectors](notes/Random_vectors.pdf)
+
+[Random Processes and Random Fields](notes/Random_processes_and_random_fields.pdf)
+
+[PDF equations for dynamical systems and PDEs](notes/PDF_equations_for_dynamical_systems_and_PDEs.pdf)
+
+[Polynomial Chaos](notes/Polynomial_chaos.pdf)
+
+[Sampling Methods](notes/Sampling_methods.pdf)
+
+## Homework Solutions
+
+The following are my solutions to the homework assignments presented to me in this class.
+
+[Homework 1](docs/hw1/hw1.qmd)
+
+[Homework 2](docs/hw2/hw2.qmd)
+
+[Homework 3](docs/hw3/hw3.qmd)
+
+[Homework 4](docs/hw4/hw4.qmd)
+
+[Homework 5](docs/hw5/hw5.qmd)
+
+[Final Project](docs/final/am238_final_paper.pdf)

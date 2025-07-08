@@ -1,3 +1,13 @@
+# Project Euler
+
 [Project Euler](https://projecteuler.net/about) is a website with problems in mathematics and computer science. The following are my own solutions to the problems.
 
+## Solutions
+
 [Multiples of 3 or 5](multiplesof3or5.qmd)
+
+[Even Fibonacci Numbers](evenfibonaccinumbers.qmd)
+
+[Largest Prime Factor](largestprimefactor.qmd)
+
+[Largest Palindrome Product](largestpalindromeproduct.qmd)

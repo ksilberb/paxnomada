@@ -1,0 +1,12 @@
+{
+  "hash": "246ebb780dce7431a933d77304164d8b",
+  "result": {
+    "engine": "julia",
+    "markdown": "---\nengine: julia-1.11\njulia:\n  exeflags: [\"--project=/home/kevinsilberberg/paxnomada/rosalind/\"]\nexecute:\n  daemon: true\n  cache: true\n  eval: false\n  freeze: auto\n---\n\n# Problem\n\nWrite a program\n\nGiven: A DNA string $t$ having length at most 1000 nucleotides\n\nReturn: The transcribed RNA string of $t$.\n\n## Sample data\n\n```{sh}\nGATGGAACTTGACTACGTAAATT\n```\n\n## Sample output\n\n```{sh}\nGAUGGAACUUGACUACGUAAAUU\n```\n\n## Code\n\n`transcription.jl`\n\n::: {#2 .cell execution_count=0}\n``` {.julia .cell-code}\ntranscribe(s::AbstractString) = replace(s, 'T'=>'U')\n\nfunction main()\n    if length(ARGS) < 2\n        println(\"Usage: julia $(Base.PROGRAM_FILE) <fineIN> <fileOUT>\")\n        exit(1)\n    end\n\n    s = read(ARGS[1], String)\n\n    open(ARGS[2], \"w\") do file\n        println(file, transcribe(s))\n    end\n    exit(0)\nend\n\nmain()\n\n```\n:::\n\n\n\n## Notes\n\nWe use the in-built function `replace` which takes in a collection and for each pair `old=>new` returns a copy of the collection where all occurances of `old` are replaced by `new`.\n\n[Github Files](https://github.com/ksilberb/paxnomada/tree/main/rosalind/transcription)\n\nWe download the rosalind dataset and ran the code using,\n\n```{sh}\njulia transcription.jl rosalind_rna.txt output.txt\n```\n\n",
+    "supporting": [
+      "transcription_files/figure-html"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}

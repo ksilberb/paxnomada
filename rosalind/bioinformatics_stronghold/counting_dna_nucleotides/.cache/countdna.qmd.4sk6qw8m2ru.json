@@ -1,0 +1,98 @@
+{
+    "cells": [
+        {
+            "id": "1",
+            "cell_type": "markdown",
+            "metadata": {
+            },
+            "source": [
+                "---\n",
+                "engine: julia-1.11\n",
+                "julia:\n",
+                "  exeflags: [\"--project=/home/kevinsilberberg/paxnomada/rosalind/\"]\n",
+                "execute:\n",
+                "  daemon: true\n",
+                "  cache: true\n",
+                "  eval: false\n",
+                "  freeze: auto\n",
+                "---\n",
+                "\n",
+                "# Problem\n",
+                "\n",
+                "Given: A DNA string *s* of length $1000$ nucleotides\n",
+                "\n",
+                "Return: Four integers (seperated by spaces) counting the respoective number of times that the symbols 'A' 'C' 'G' 'T' occur in *s*.\n",
+                "\n",
+                "Sample Dataset:\n",
+                "\n",
+                "AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC\n",
+                "\n",
+                "Sample Output:\n",
+                "\n",
+                "\\begin{matrix}\n",
+                "20 & 12 & 17 & 21\n",
+                "\\end{matrix}\n",
+                "\n",
+                "## Solution\n",
+                "\n",
+                "We use the inbuilt julia function `count(p, iter)` which counts the number of elements in `iter` for which predicate `p` is true.\n",
+                "\n",
+                "[count](https://www.jlhub.com/julia/manual/en/function/count)"
+            ]
+        },
+        {
+            "id": "2",
+            "cell_type": "code",
+            "metadata": {
+            },
+            "source": [
+                "#| eval: false\n",
+                "countNucs(s::String) = [\n",
+                "    count(==('A'), s), count(==('C'), s), count(==('G'), s), count(==('T'), s)\n",
+                "]\n",
+                "\n",
+                "function main()\n",
+                "    if length(ARGS) < 2\n",
+                "        println(\"Usage: julia $(Base.PROGRAM_FILE) <fileIN> <fileOUT>\")\n",
+                "        exit(1)\n",
+                "    end\n",
+                "    s = read(ARGS[1], String)\n",
+                "    data = countNucs(s)\n",
+                "    open(ARGS[2], \"w\") do file\n",
+                "        println(file, join(data, \" \"))\n",
+                "    end\n",
+                "    exit(0)\n",
+                "end\n",
+                "\n",
+                "main()\n",
+                ""
+            ],
+            "outputs": [
+            ],
+            "execution_count": 0
+        },
+        {
+            "id": "3",
+            "cell_type": "markdown",
+            "metadata": {
+            },
+            "source": [
+                "\n",
+                "## Notes\n",
+                "\n",
+                "In Rosalind, you have to 'download the dataset' and they give you five minuets to submit your answer. This essentially means that your solution nees to be reasonably computationally efficient to solve within that time frame. If you write bad code, sometimes this is a non-trivial requirement because their data files for testing contain a large number of data.\n",
+                "\n",
+                "[Github Files](https://github.com/ksilberb/paxnomada/tree/main/rosalind/countdna)\n",
+                "\n",
+                "The cold was ran by downloading the dataset, then running the following command:\n",
+                "\n",
+                "```{sh}\n",
+                "julia countdna.jl rosalind_dna.txt output.txt\n",
+                "```"
+            ]
+        }
+    ],
+    "timestamp": "2025-07-03T13:43:11.634",
+    "file": "/home/kevinsilberberg/Repos/paxnomada/rosalind/bioinformatics_stronghold/counting_dna_nucleotides/countdna.qmd",
+    "qnr_schema_version": "1.0.0"
+}

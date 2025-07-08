@@ -1,0 +1,54 @@
+---
+engine: julia-1.11
+julia:
+  exeflags: ["--project=/home/kevinsilberberg/paxnomada/projecteuler/"]
+execute:
+  daemon: 3600
+  cache: true
+  freeze: auto
+---
+
+# Largest Palindrome Product
+
+A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is
+
+\begin{align}
+9009 = 91 \times 99
+\end{align}
+
+Find the largest palindrome made from the product of two 3-digit numbers.
+
+## Solution
+
+```{julia}
+function isPalindrome(num::Int64)
+    x = Vector{Int}(undef, 18)
+    for i in eachindex(x)
+        x[i] = num % 10
+        num ÷= 10
+    end
+    y = x[1:findlast(i -> i > 0, x)]
+    for i in eachindex(y)
+        if !(y[i] == y[end - i + 1])
+            return false
+        end
+    end
+    return true
+end
+
+function main()
+    current = 0
+    idx = (0, 0)
+    for i in 999:-1:900
+        for j in 999:-1:900
+            new = i*j
+            if (new > current && isPalindrome(new))
+                current = new
+                idx = (i, j)
+            end
+        end
+    end
+    println("$(current) = $(idx[1]) x $(idx[2])")
+end
+main()
+```

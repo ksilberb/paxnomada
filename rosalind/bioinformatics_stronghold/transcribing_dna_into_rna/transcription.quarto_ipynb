@@ -1,0 +1,103 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "# Problem\n",
+        "\n",
+        "Write a program\n",
+        "\n",
+        "Given: A DNA string $t$ having length at most 1000 nucleotides\n",
+        "\n",
+        "Return: The transcribed RNA string of $t$.\n",
+        "\n",
+        "## Sample data\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "```{sh}\n",
+        "GATGGAACTTGACTACGTAAATT\n",
+        "```\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "## Sample output\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "```{sh}\n",
+        "GAUGGAACUUGACUACGUAAAUU\n",
+        "```\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "## Code\n",
+        "\n",
+        "`transcription.jl`\n"
+      ],
+      "id": "13b7466b"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "transcribe(s::AbstractString) = replace(s, 'T'=>'U')\n",
+        "\n",
+        "function main()\n",
+        "    if length(ARGS) < 2\n",
+        "        println(\"Usage: julia $(Base.PROGRAM_FILE) <fineIN> <fileOUT>\")\n",
+        "        exit(1)\n",
+        "    end\n",
+        "\n",
+        "    s = read(ARGS[1], String)\n",
+        "\n",
+        "    open(ARGS[2], \"w\") do file\n",
+        "        println(file, transcribe(s))\n",
+        "    end\n",
+        "    exit(0)\n",
+        "end\n",
+        "\n",
+        "main()"
+      ],
+      "id": "b90a3f43",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "## Notes\n",
+        "\n",
+        "We use the in-built function `replace` which takes in a collection and for each pair `old=>new` returns a copy of the collection where all occurances of `old` are replaced by `new`.\n",
+        "\n",
+        "[Github Files](https://github.com/ksilberb/paxnomada/tree/main/rosalind/transcription)\n",
+        "\n",
+        "We download the rosalind dataset and ran the code using,\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "```{sh}\n",
+        "julia transcription.jl rosalind_rna.txt output.txt\n",
+        "```"
+      ],
+      "id": "7d8008e5"
+    }
+  ],
+  "metadata": {
+    "kernelspec": {
+      "name": "julia-1.10",
+      "language": "julia",
+      "display_name": "Julia 1.10.5",
+      "path": "/home/kevinsilberberg/.local/share/jupyter/kernels/julia-1.10"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 5
+}

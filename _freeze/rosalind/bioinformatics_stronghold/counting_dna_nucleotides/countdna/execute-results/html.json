@@ -1,0 +1,12 @@
+{
+  "hash": "8c0c6588b581e274bbe974d3dc948c71",
+  "result": {
+    "engine": "julia",
+    "markdown": "---\nengine: julia-1.11\njulia:\n  exeflags: [\"--project=/home/kevinsilberberg/paxnomada/rosalind/\"]\nexecute:\n  daemon: true\n  cache: true\n  eval: false\n  freeze: auto\n---\n\n# Problem\n\nGiven: A DNA string *s* of length $1000$ nucleotides\n\nReturn: Four integers (seperated by spaces) counting the respoective number of times that the symbols 'A' 'C' 'G' 'T' occur in *s*.\n\nSample Dataset:\n\nAGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC\n\nSample Output:\n\n\\begin{matrix}\n20 & 12 & 17 & 21\n\\end{matrix}\n\n## Solution\n\nWe use the inbuilt julia function `count(p, iter)` which counts the number of elements in `iter` for which predicate `p` is true.\n\n[count](https://www.jlhub.com/julia/manual/en/function/count)\n\n::: {#2 .cell execution_count=0}\n``` {.julia .cell-code}\ncountNucs(s::String) = [\n    count(==('A'), s), count(==('C'), s), count(==('G'), s), count(==('T'), s)\n]\n\nfunction main()\n    if length(ARGS) < 2\n        println(\"Usage: julia $(Base.PROGRAM_FILE) <fileIN> <fileOUT>\")\n        exit(1)\n    end\n    s = read(ARGS[1], String)\n    data = countNucs(s)\n    open(ARGS[2], \"w\") do file\n        println(file, join(data, \" \"))\n    end\n    exit(0)\nend\n\nmain()\n\n```\n:::\n\n\n\n## Notes\n\nIn Rosalind, you have to 'download the dataset' and they give you five minuets to submit your answer. This essentially means that your solution nees to be reasonably computationally efficient to solve within that time frame. If you write bad code, sometimes this is a non-trivial requirement because their data files for testing contain a large number of data.\n\n[Github Files](https://github.com/ksilberb/paxnomada/tree/main/rosalind/countdna)\n\nThe cold was ran by downloading the dataset, then running the following command:\n\n```{sh}\njulia countdna.jl rosalind_dna.txt output.txt\n```\n\n",
+    "supporting": [
+      "countdna_files/figure-html"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}
