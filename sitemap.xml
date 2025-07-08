@@ -2,23 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://ksilberb.github.io/paxnomada/about.html</loc>
-    <lastmod>2025-07-07T16:21:19.364Z</lastmod>
+    <lastmod>2025-07-08T21:03:33.880Z</lastmod>
   </url>
   <url>
     <loc>https://ksilberb.github.io/paxnomada/stream.html</loc>
     <lastmod>2025-07-07T17:24:28.248Z</lastmod>
   </url>
   <url>
-    <loc>https://ksilberb.github.io/paxnomada/projecteuler/evenfibonaccinumbers.html</loc>
-    <lastmod>2025-04-14T02:40:43.934Z</lastmod>
+    <loc>https://ksilberb.github.io/paxnomada/photos/shasta2023/index.html</loc>
+    <lastmod>2025-07-08T21:05:13.520Z</lastmod>
   </url>
   <url>
-    <loc>https://ksilberb.github.io/paxnomada/projecteuler/largestpalindromeproduct.html</loc>
-    <lastmod>2025-05-16T05:36:11.094Z</lastmod>
+    <loc>https://ksilberb.github.io/paxnomada/index.html</loc>
+    <lastmod>2025-07-08T22:13:27.457Z</lastmod>
   </url>
   <url>
-    <loc>https://ksilberb.github.io/paxnomada/projecteuler/multiplesof3or5.html</loc>
-    <lastmod>2025-03-10T17:08:32.396Z</lastmod>
+    <loc>https://ksilberb.github.io/paxnomada/projecteuler/largestprimefactor.html</loc>
+    <lastmod>2025-04-14T05:47:53.239Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ksilberb.github.io/paxnomada/projecteuler/index.html</loc>
+    <lastmod>2025-07-07T20:35:06.667Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ksilberb.github.io/paxnomada/projecteuler/smallestmultiple.html</loc>
+    <lastmod>2025-05-16T05:56:48.040Z</lastmod>
   </url>
   <url>
     <loc>https://ksilberb.github.io/paxnomada/courses/uncertainty_quant/docs/hw1/hw1.html</loc>
@@ -50,7 +58,7 @@
   </url>
   <url>
     <loc>https://ksilberb.github.io/paxnomada/courses/uncertainty_quant/index.html</loc>
-    <lastmod>2025-07-07T20:33:47.205Z</lastmod>
+    <lastmod>2025-07-08T22:04:25.008Z</lastmod>
   </url>
   <url>
     <loc>https://ksilberb.github.io/paxnomada/courses/uncertainty_quant/docs/hw3/hw3.html</loc>
@@ -61,20 +69,28 @@
     <lastmod>2025-07-07T20:18:28.892Z</lastmod>
   </url>
   <url>
-    <loc>https://ksilberb.github.io/paxnomada/projecteuler/smallestmultiple.html</loc>
-    <lastmod>2025-05-16T05:56:48.040Z</lastmod>
+    <loc>https://ksilberb.github.io/paxnomada/courses/adv_methods/index.html</loc>
+    <lastmod>2025-07-08T22:12:41.440Z</lastmod>
   </url>
   <url>
-    <loc>https://ksilberb.github.io/paxnomada/projecteuler/index.html</loc>
-    <lastmod>2025-07-07T20:35:06.667Z</lastmod>
+    <loc>https://ksilberb.github.io/paxnomada/projecteuler/multiplesof3or5.html</loc>
+    <lastmod>2025-03-10T17:08:32.396Z</lastmod>
   </url>
   <url>
-    <loc>https://ksilberb.github.io/paxnomada/projecteuler/largestprimefactor.html</loc>
-    <lastmod>2025-04-14T05:47:53.239Z</lastmod>
+    <loc>https://ksilberb.github.io/paxnomada/projecteuler/largestpalindromeproduct.html</loc>
+    <lastmod>2025-05-16T05:36:11.094Z</lastmod>
   </url>
   <url>
-    <loc>https://ksilberb.github.io/paxnomada/index.html</loc>
-    <lastmod>2025-07-07T17:10:49.034Z</lastmod>
+    <loc>https://ksilberb.github.io/paxnomada/projecteuler/evenfibonaccinumbers.html</loc>
+    <lastmod>2025-04-14T02:40:43.934Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ksilberb.github.io/paxnomada/photos/index.html</loc>
+    <lastmod>2025-07-08T21:59:48.015Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ksilberb.github.io/paxnomada/photos/springbreak2025/index.html</loc>
+    <lastmod>2025-07-08T21:52:27.320Z</lastmod>
   </url>
   <url>
     <loc>https://ksilberb.github.io/paxnomada/LICENSE.html</loc>

@@ -163,6 +163,14 @@ window.Quarto = {
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="../../../../photos/index.html"> 
+<span class="menu-text">Photos</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../stream.html"> 
+<span class="menu-text">Stream</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="../../../../LICENSE.html"> 
 <span class="menu-text">License</span></a>
   </li>  
@@ -183,7 +191,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">Homework 1</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<h1 class="title">Homework 1</h1>
 </div>
 
 
@@ -476,8 +484,6 @@ Percent error in the calculated standard deviation = 9.972414966246794e-13</code
 </div>
 
 
-<!-- -->
-
 </section>
 </section>
 
@@ -551,57 +557,6 @@ Percent error in the calculated standard deviation = 9.972414966246794e-13</code
         container: window.document.getElementById('quarto-embedded-source-code-modal')
       });
       clipboardModal.on('success', onCopySuccess);
-    }
-    const viewSource = window.document.getElementById('quarto-view-source') ||
-                       window.document.getElementById('quarto-code-tools-source');
-    if (viewSource) {
-      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
-      viewSource.addEventListener("click", function(e) {
-        if (sourceUrl) {
-          // rstudio viewer pane
-          if (/\bcapabilities=\b/.test(window.location)) {
-            window.open(sourceUrl);
-          } else {
-            window.location.href = sourceUrl;
-          }
-        } else {
-          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
-          modal.show();
-        }
-        return false;
-      });
-    }
-    function toggleCodeHandler(show) {
-      return function(e) {
-        const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
-        for (let i=0; i<detailsSrc.length; i++) {
-          const details = detailsSrc[i].parentElement;
-          if (show) {
-            details.open = true;
-          } else {
-            details.removeAttribute("open");
-          }
-        }
-        const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
-        const fromCls = show ? "hidden" : "unhidden";
-        const toCls = show ? "unhidden" : "hidden";
-        for (let i=0; i<cellCodeDivs.length; i++) {
-          const codeDiv = cellCodeDivs[i];
-          if (codeDiv.classList.contains(fromCls)) {
-            codeDiv.classList.remove(fromCls);
-            codeDiv.classList.add(toCls);
-          } 
-        }
-        return false;
-      }
-    }
-    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
-    if (hideAllCode) {
-      hideAllCode.addEventListener("click", toggleCodeHandler(false));
-    }
-    const showAllCode = window.document.getElementById("quarto-show-all-code");
-    if (showAllCode) {
-      showAllCode.addEventListener("click", toggleCodeHandler(true));
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
@@ -931,275 +886,7 @@ Percent error in the calculated standard deviation = 9.972414966246794e-13</code
       }
     }
   });
-  </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb13" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Homework 1"</span></span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> 2024-10-2</span></span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span></span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="co">  - name: Kevin Silberberg</span></span>
-<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="co">    id: ks</span></span>
-<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a><span class="co">    orcid: 0009-0009-4825-1865</span></span>
-<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a><span class="co">    email: ksilberb@ucsc.edu</span></span>
-<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a><span class="co">    affiliation:</span></span>
-<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a><span class="co">      - name: University of California Santa Cruz</span></span>
-<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a><span class="co">        city: Santa Cruz</span></span>
-<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a><span class="co">        state: CA</span></span>
-<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a><span class="co">        href: www.ucsc.edu</span></span>
-<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a><span class="an">engine:</span><span class="co"> julia-1.11</span></span>
-<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a><span class="an">julia:</span></span>
-<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a><span class="co">  exeflags: ["--project=/home/kevinsilberberg/Repos/paxnomada/courses/uncertainty_quant/"]</span></span>
-<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a><span class="an">execute:</span></span>
-<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a><span class="co">  daemon: true</span></span>
-<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a><span class="co">  cache: true</span></span>
-<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a><span class="co">  eval: true</span></span>
-<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a><span class="co">  freeze: auto</span></span>
-<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb13-23"><a href="#cb13-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-24"><a href="#cb13-24" aria-hidden="true" tabindex="-1"></a><span class="fu"># Problem definition</span></span>
-<span id="cb13-25"><a href="#cb13-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-26"><a href="#cb13-26" aria-hidden="true" tabindex="-1"></a>Let $X$ be a random variable with Probability density function:</span>
-<span id="cb13-27"><a href="#cb13-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-28"><a href="#cb13-28" aria-hidden="true" tabindex="-1"></a>$$p(x) =</span>
-<span id="cb13-29"><a href="#cb13-29" aria-hidden="true" tabindex="-1"></a>    \begin{cases}</span>
-<span id="cb13-30"><a href="#cb13-30" aria-hidden="true" tabindex="-1"></a>        \frac{2x\cos{(x^2)} + 5}{10 + \sin{(4)}} &amp; x \in <span class="co">[</span><span class="ot">0, 2</span><span class="co">]</span> <span class="sc">\\</span></span>
-<span id="cb13-31"><a href="#cb13-31" aria-hidden="true" tabindex="-1"></a>        0 &amp; \text{otherwise}</span>
-<span id="cb13-32"><a href="#cb13-32" aria-hidden="true" tabindex="-1"></a>    \end{cases}$${#eq-pdf}</span>
-<span id="cb13-33"><a href="#cb13-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-36"><a href="#cb13-36" aria-hidden="true" tabindex="-1"></a><span class="in">```{julia}</span></span>
-<span id="cb13-37"><a href="#cb13-37" aria-hidden="true" tabindex="-1"></a><span class="im">using</span> <span class="bu">CairoMakie</span></span>
-<span id="cb13-38"><a href="#cb13-38" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-39"><a href="#cb13-39" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">p</span>(x<span class="op">::</span><span class="dt">Real</span>)</span>
-<span id="cb13-40"><a href="#cb13-40" aria-hidden="true" tabindex="-1"></a>    (<span class="fl">0</span> <span class="op">≤</span> x <span class="op">≤</span> <span class="fl">2.0</span>) ? (<span class="fl">2.0</span> <span class="op">*</span> x <span class="op">*</span> <span class="fu">cos</span>(x<span class="op">^</span><span class="fl">2.0</span>) <span class="op">+</span> <span class="fl">5.0</span>) <span class="op">/</span> (<span class="fl">10.0</span> <span class="op">+</span> <span class="fu">sin</span>(<span class="fl">4.0</span>)) <span class="op">:</span> <span class="fl">0.0</span></span>
-<span id="cb13-41"><a href="#cb13-41" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span>
-<span id="cb13-42"><a href="#cb13-42" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-43"><a href="#cb13-43" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">plotPDF</span>()</span>
-<span id="cb13-44"><a href="#cb13-44" aria-hidden="true" tabindex="-1"></a>    fig <span class="op">=</span> <span class="fu">Figure</span>()</span>
-<span id="cb13-45"><a href="#cb13-45" aria-hidden="true" tabindex="-1"></a>    ax <span class="op">=</span> <span class="fu">Axis</span>(fig[<span class="fl">1</span>,<span class="fl">1</span>],</span>
-<span id="cb13-46"><a href="#cb13-46" aria-hidden="true" tabindex="-1"></a>               title <span class="op">=</span> <span class="st">"PDF"</span>,</span>
-<span id="cb13-47"><a href="#cb13-47" aria-hidden="true" tabindex="-1"></a>               xlabel <span class="op">=</span> <span class="st">"x"</span>,</span>
-<span id="cb13-48"><a href="#cb13-48" aria-hidden="true" tabindex="-1"></a>               ylabel <span class="op">=</span> <span class="st">"p(x)"</span></span>
-<span id="cb13-49"><a href="#cb13-49" aria-hidden="true" tabindex="-1"></a>               )</span>
-<span id="cb13-50"><a href="#cb13-50" aria-hidden="true" tabindex="-1"></a>    r <span class="op">=</span> <span class="op">-</span><span class="fl">0.1</span><span class="op">:</span><span class="fl">0.01</span><span class="op">:</span><span class="fl">2.1</span></span>
-<span id="cb13-51"><a href="#cb13-51" aria-hidden="true" tabindex="-1"></a>    <span class="fu">lines!</span>(ax, r, <span class="fu">p</span>.(r))</span>
-<span id="cb13-52"><a href="#cb13-52" aria-hidden="true" tabindex="-1"></a>    <span class="fu">xlims!</span>(ax, <span class="op">-</span><span class="fl">0.1</span>, <span class="fl">2.1</span>)</span>
-<span id="cb13-53"><a href="#cb13-53" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ylims!</span>(ax, <span class="op">-</span><span class="fl">0.1</span>, <span class="fl">0.7</span>)</span>
-<span id="cb13-54"><a href="#cb13-54" aria-hidden="true" tabindex="-1"></a>    <span class="fu">display</span>(fig);</span>
-<span id="cb13-55"><a href="#cb13-55" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span>
-<span id="cb13-56"><a href="#cb13-56" aria-hidden="true" tabindex="-1"></a><span class="fu">plotPDF</span>();</span>
-<span id="cb13-57"><a href="#cb13-57" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb13-58"><a href="#cb13-58" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-59"><a href="#cb13-59" aria-hidden="true" tabindex="-1"></a><span class="fu">## Part A</span></span>
-<span id="cb13-60"><a href="#cb13-60" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-61"><a href="#cb13-61" aria-hidden="true" tabindex="-1"></a><span class="fu">### Solve for the mean and standard deviation Numerically</span></span>
-<span id="cb13-62"><a href="#cb13-62" aria-hidden="true" tabindex="-1"></a>Using the Gauss-Kronrod quadrature we can numerically solve for the mean and the variance by calculating the first moment and second momements of the PDF of X.</span>
-<span id="cb13-63"><a href="#cb13-63" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-66"><a href="#cb13-66" aria-hidden="true" tabindex="-1"></a><span class="in">```{julia}</span></span>
-<span id="cb13-67"><a href="#cb13-67" aria-hidden="true" tabindex="-1"></a><span class="im">using</span> <span class="bu">QuadGK</span></span>
-<span id="cb13-68"><a href="#cb13-68" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-69"><a href="#cb13-69" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">E1</span>(x<span class="op">::</span><span class="dt">Real</span>)</span>
-<span id="cb13-70"><a href="#cb13-70" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x <span class="op">*</span> <span class="fu">p</span>(x)</span>
-<span id="cb13-71"><a href="#cb13-71" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span>
-<span id="cb13-72"><a href="#cb13-72" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-73"><a href="#cb13-73" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">E2</span>(x<span class="op">::</span><span class="dt">Real</span>)</span>
-<span id="cb13-74"><a href="#cb13-74" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x<span class="op">^</span><span class="fl">2</span> <span class="op">*</span> <span class="fu">p</span>(x)</span>
-<span id="cb13-75"><a href="#cb13-75" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span>
-<span id="cb13-76"><a href="#cb13-76" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-77"><a href="#cb13-77" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">parta_numeric</span>()</span>
-<span id="cb13-78"><a href="#cb13-78" aria-hidden="true" tabindex="-1"></a>    Ex  <span class="op">=</span> <span class="fu">quadgk</span>(E1, <span class="fl">0.0</span>, <span class="fl">2.0</span>, rtol<span class="op">=</span><span class="fl">1e-3</span>)[<span class="fl">1</span>]</span>
-<span id="cb13-79"><a href="#cb13-79" aria-hidden="true" tabindex="-1"></a>    Ex² <span class="op">=</span> <span class="fu">quadgk</span>(E2, <span class="fl">0.0</span>, <span class="fl">2.0</span>, rtol<span class="op">=</span><span class="fl">1e-3</span>)[<span class="fl">1</span>]</span>
-<span id="cb13-80"><a href="#cb13-80" aria-hidden="true" tabindex="-1"></a>    σ²  <span class="op">=</span> Ex² <span class="op">-</span> (Ex)<span class="op">^</span><span class="fl">2</span></span>
-<span id="cb13-81"><a href="#cb13-81" aria-hidden="true" tabindex="-1"></a>    σ   <span class="op">=</span> <span class="fu">sqrt</span>(σ²)</span>
-<span id="cb13-82"><a href="#cb13-82" aria-hidden="true" tabindex="-1"></a>    <span class="fu">println</span>(<span class="st">"The numeric mean and standard deviation of the PDF of X are:"</span>)</span>
-<span id="cb13-83"><a href="#cb13-83" aria-hidden="true" tabindex="-1"></a>    <span class="fu">println</span>(<span class="st">"μ = </span><span class="sc">$</span>Ex<span class="st">"</span>)</span>
-<span id="cb13-84"><a href="#cb13-84" aria-hidden="true" tabindex="-1"></a>    <span class="fu">println</span>(<span class="st">"σ = </span><span class="sc">$</span><span class="st">σ")</span></span>
-<span id="cb13-85"><a href="#cb13-85" aria-hidden="true" tabindex="-1"></a><span class="st">    </span>return<span class="st"> Ex, σ</span></span>
-<span id="cb13-86"><a href="#cb13-86" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span>
-<span id="cb13-87"><a href="#cb13-87" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-88"><a href="#cb13-88" aria-hidden="true" tabindex="-1"></a>μ_numeric, σ_numeric <span class="op">=</span> <span class="fu">parta_numeric</span>();</span>
-<span id="cb13-89"><a href="#cb13-89" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb13-90"><a href="#cb13-90" aria-hidden="true" tabindex="-1"></a>Let us solve for the first and second moments of (@eq-pdf) analytically and compare with the numerical findings.</span>
-<span id="cb13-91"><a href="#cb13-91" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-92"><a href="#cb13-92" aria-hidden="true" tabindex="-1"></a><span class="fu">### First moment</span></span>
-<span id="cb13-93"><a href="#cb13-93" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-94"><a href="#cb13-94" aria-hidden="true" tabindex="-1"></a>\begin{align}</span>
-<span id="cb13-95"><a href="#cb13-95" aria-hidden="true" tabindex="-1"></a>    E<span class="co">[</span><span class="ot">X</span><span class="co">]</span> &amp;= \int_0^2 x\bigg(\frac{2x\cos{(x^2)} + 5}{10 + \sin{(4)}}\bigg)dx <span class="sc">\\</span></span>
-<span id="cb13-96"><a href="#cb13-96" aria-hidden="true" tabindex="-1"></a>    &amp;= x\bigg(\frac{\sin{(x^2)} + 5x}{10 + \sin{(4)}}\bigg)\bigg{\vert}_0^2 - \frac{1}{10 + \sin{(4)}}\int_0^2\bigg(\sin{(x^2)} + 5x\bigg)dx <span class="sc">\\</span></span>
-<span id="cb13-97"><a href="#cb13-97" aria-hidden="true" tabindex="-1"></a>    &amp;= \frac{-\sqrt{\frac{\pi}{2}}S\big(\sqrt{\frac{2}{\pi}}x\big) + \frac{5x^2}{2} + x\sin{(x^2)}}{10 + \sin{(4)}}\bigg{\vert}_0^2 <span class="sc">\\</span></span>
-<span id="cb13-98"><a href="#cb13-98" aria-hidden="true" tabindex="-1"></a>\end{align}</span>
-<span id="cb13-99"><a href="#cb13-99" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-100"><a href="#cb13-100" aria-hidden="true" tabindex="-1"></a>Where $S(x)$ is the fresnel integral defined as $$S(x) = \int_0^x \sin{(t^2)} dt$$</span>
-<span id="cb13-101"><a href="#cb13-101" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-104"><a href="#cb13-104" aria-hidden="true" tabindex="-1"></a><span class="in">```{julia}</span></span>
-<span id="cb13-105"><a href="#cb13-105" aria-hidden="true" tabindex="-1"></a><span class="im">using</span> <span class="bu">FresnelIntegrals</span></span>
-<span id="cb13-106"><a href="#cb13-106" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">first_moment</span>()</span>
-<span id="cb13-107"><a href="#cb13-107" aria-hidden="true" tabindex="-1"></a>    <span class="fu">E</span>(x) <span class="op">=</span> (<span class="fu">-sqrt</span>(<span class="cn">π</span><span class="op">/</span><span class="fl">2.0</span>)<span class="fu">*fresnels</span>(<span class="fu">sqrt</span>(<span class="fl">2.0</span><span class="op">/</span><span class="cn">π</span>)<span class="op">*</span>x) <span class="op">+</span> (<span class="fl">5.0</span><span class="op">/</span><span class="fl">2.0</span>)<span class="op">*</span>x<span class="op">^</span><span class="fl">2</span> <span class="op">+</span> <span class="fu">x*sin</span>(x<span class="op">^</span><span class="fl">2.0</span>)) <span class="op">/</span> (<span class="fl">10.0</span> <span class="op">+</span> <span class="fu">sin</span>(<span class="fl">4.0</span>))</span>
-<span id="cb13-108"><a href="#cb13-108" aria-hidden="true" tabindex="-1"></a>    μ <span class="op">=</span> <span class="fu">E</span>(<span class="fl">2.0</span>) <span class="op">-</span> <span class="fu">E</span>(<span class="fl">0.0</span>)</span>
-<span id="cb13-109"><a href="#cb13-109" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span>
-<span id="cb13-110"><a href="#cb13-110" aria-hidden="true" tabindex="-1"></a>μ_exact <span class="op">=</span> <span class="fu">first_moment</span>();</span>
-<span id="cb13-111"><a href="#cb13-111" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb13-112"><a href="#cb13-112" aria-hidden="true" tabindex="-1"></a><span class="fu">### Second moment</span></span>
-<span id="cb13-113"><a href="#cb13-113" aria-hidden="true" tabindex="-1"></a>\begin{align}</span>
-<span id="cb13-114"><a href="#cb13-114" aria-hidden="true" tabindex="-1"></a>    E<span class="co">[</span><span class="ot">X^2</span><span class="co">]</span> &amp;= \int_0^2x^2\bigg(\frac{2x\cos{(x^2)}+5}{10 + \sin{(4)}}\bigg)dx <span class="sc">\\</span></span>
-<span id="cb13-115"><a href="#cb13-115" aria-hidden="true" tabindex="-1"></a>    &amp;= \frac{1}{10 + \sin{(4)}}\bigg<span class="co">[</span><span class="ot">2\int_0^2x^3\cos{(x^2)}dx + 5\int_0^2x^2dx\bigg</span><span class="co">]</span> <span class="sc">\\</span></span>
-<span id="cb13-116"><a href="#cb13-116" aria-hidden="true" tabindex="-1"></a>    &amp;= \frac{x^2\sin{(x^2)}+\cos{(x^2)}+\frac{5x^3}{3}}{10 + \sin{(4)}}\bigg{\vert}_0^2</span>
-<span id="cb13-117"><a href="#cb13-117" aria-hidden="true" tabindex="-1"></a>\end{align}</span>
-<span id="cb13-118"><a href="#cb13-118" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-121"><a href="#cb13-121" aria-hidden="true" tabindex="-1"></a><span class="in">```{julia}</span></span>
-<span id="cb13-122"><a href="#cb13-122" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">stdev</span>()</span>
-<span id="cb13-123"><a href="#cb13-123" aria-hidden="true" tabindex="-1"></a>    <span class="fu">E2</span>(x) <span class="op">=</span> (x<span class="op">^</span><span class="fl">2.0</span><span class="fu">*sin</span>(x<span class="op">^</span><span class="fl">2.0</span>) <span class="op">+</span> <span class="fu">cos</span>(x<span class="op">^</span><span class="fl">2.0</span>) <span class="op">+</span> (<span class="fl">5.0</span>x<span class="op">^</span><span class="fl">3</span><span class="op">/</span><span class="fl">3.0</span>)) <span class="op">/</span> (<span class="fl">10.0</span> <span class="op">+</span> <span class="fu">sin</span>(<span class="fl">4.0</span>))</span>
-<span id="cb13-124"><a href="#cb13-124" aria-hidden="true" tabindex="-1"></a>    Ex²   <span class="op">=</span> <span class="fu">E2</span>(<span class="fl">2.0</span>) <span class="op">-</span> <span class="fu">E2</span>(<span class="fl">0.0</span>)</span>
-<span id="cb13-125"><a href="#cb13-125" aria-hidden="true" tabindex="-1"></a>    σ² <span class="op">=</span> Ex² <span class="op">-</span> μ_exact<span class="op">^</span><span class="fl">2</span></span>
-<span id="cb13-126"><a href="#cb13-126" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="fu">sqrt</span>(σ²)</span>
-<span id="cb13-127"><a href="#cb13-127" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span>
-<span id="cb13-128"><a href="#cb13-128" aria-hidden="true" tabindex="-1"></a>σ_exact <span class="op">=</span> <span class="fu">stdev</span>()</span>
-<span id="cb13-129"><a href="#cb13-129" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-130"><a href="#cb13-130" aria-hidden="true" tabindex="-1"></a><span class="fu">println</span>(<span class="st">"The mean and the standard deviation of the PDF of X by analytical solution:"</span>)</span>
-<span id="cb13-131"><a href="#cb13-131" aria-hidden="true" tabindex="-1"></a><span class="fu">println</span>(<span class="st">"μ = </span><span class="sc">$</span><span class="st">μ</span>_exact<span class="st">"</span>)</span>
-<span id="cb13-132"><a href="#cb13-132" aria-hidden="true" tabindex="-1"></a><span class="fu">println</span>(<span class="st">"σ = </span><span class="sc">$</span><span class="st">σ</span>_exact<span class="st">"</span>)</span>
-<span id="cb13-133"><a href="#cb13-133" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb13-134"><a href="#cb13-134" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-135"><a href="#cb13-135" aria-hidden="true" tabindex="-1"></a>The numeric and analytic solutions agree.</span>
-<span id="cb13-136"><a href="#cb13-136" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-139"><a href="#cb13-139" aria-hidden="true" tabindex="-1"></a><span class="in">```{julia}</span></span>
-<span id="cb13-140"><a href="#cb13-140" aria-hidden="true" tabindex="-1"></a>err_μ <span class="op">=</span> (<span class="fu">abs</span>(μ_numeric <span class="op">-</span> μ_exact) <span class="op">/</span> μ_exact) <span class="op">*</span> <span class="fl">100</span></span>
-<span id="cb13-141"><a href="#cb13-141" aria-hidden="true" tabindex="-1"></a>err_σ <span class="op">=</span> (<span class="fu">abs</span>(σ_numeric <span class="op">-</span> σ_exact) <span class="op">/</span> σ_exact) <span class="op">*</span> <span class="fl">100</span></span>
-<span id="cb13-142"><a href="#cb13-142" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-143"><a href="#cb13-143" aria-hidden="true" tabindex="-1"></a><span class="fu">println</span>(<span class="st">"Percent error in the calculated mean = </span><span class="sc">$</span>err_<span class="st">μ"</span>)</span>
-<span id="cb13-144"><a href="#cb13-144" aria-hidden="true" tabindex="-1"></a><span class="fu">println</span>(<span class="st">"Percent error in the calculated standard deviation = </span><span class="sc">$</span>err_<span class="st">σ"</span>)</span>
-<span id="cb13-145"><a href="#cb13-145" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb13-146"><a href="#cb13-146" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-147"><a href="#cb13-147" aria-hidden="true" tabindex="-1"></a><span class="fu">## Part B</span></span>
-<span id="cb13-148"><a href="#cb13-148" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-149"><a href="#cb13-149" aria-hidden="true" tabindex="-1"></a>In order to find the CDF numerically, we will need to write a modified version of the trapezoidal rule such that we are populating an array with the cumulative sum of every dx of the PDF of $X$.</span>
-<span id="cb13-150"><a href="#cb13-150" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-153"><a href="#cb13-153" aria-hidden="true" tabindex="-1"></a><span class="in">```{julia}</span></span>
-<span id="cb13-154"><a href="#cb13-154" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">cumsumtrap</span>(f<span class="op">::</span><span class="dt">Function</span>, x)</span>
-<span id="cb13-155"><a href="#cb13-155" aria-hidden="true" tabindex="-1"></a>    y <span class="op">=</span> <span class="fu">f</span>.(x)</span>
-<span id="cb13-156"><a href="#cb13-156" aria-hidden="true" tabindex="-1"></a>    N <span class="op">=</span> <span class="fu">length</span>(x)</span>
-<span id="cb13-157"><a href="#cb13-157" aria-hidden="true" tabindex="-1"></a>    dx <span class="op">=</span> x[<span class="fl">2</span><span class="op">:</span>N] <span class="op">.-</span> x[<span class="fl">1</span><span class="op">:</span>N<span class="op">-</span><span class="fl">1</span>]</span>
-<span id="cb13-158"><a href="#cb13-158" aria-hidden="true" tabindex="-1"></a>    meanY <span class="op">=</span> (y[<span class="fl">2</span><span class="op">:</span>N] <span class="op">.+</span> y[<span class="fl">1</span><span class="op">:</span>N<span class="op">-</span><span class="fl">1</span>]) <span class="op">./</span> <span class="fl">2</span></span>
-<span id="cb13-159"><a href="#cb13-159" aria-hidden="true" tabindex="-1"></a>    integral <span class="op">=</span> <span class="fu">cumsum</span>(dx <span class="op">.*</span> meanY)</span>
-<span id="cb13-160"><a href="#cb13-160" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-161"><a href="#cb13-161" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> [<span class="fl">0</span>; integral]</span>
-<span id="cb13-162"><a href="#cb13-162" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span>
-<span id="cb13-163"><a href="#cb13-163" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-164"><a href="#cb13-164" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">plotCDF</span>()</span>
-<span id="cb13-165"><a href="#cb13-165" aria-hidden="true" tabindex="-1"></a>    fig <span class="op">=</span> <span class="fu">Figure</span>();</span>
-<span id="cb13-166"><a href="#cb13-166" aria-hidden="true" tabindex="-1"></a>    ax <span class="op">=</span> <span class="fu">Axis</span>(fig[<span class="fl">1</span>,<span class="fl">1</span>],</span>
-<span id="cb13-167"><a href="#cb13-167" aria-hidden="true" tabindex="-1"></a>               title <span class="op">=</span> <span class="st">"CDF"</span>,</span>
-<span id="cb13-168"><a href="#cb13-168" aria-hidden="true" tabindex="-1"></a>               xlabel <span class="op">=</span> <span class="st">"x"</span>,</span>
-<span id="cb13-169"><a href="#cb13-169" aria-hidden="true" tabindex="-1"></a>               ylabel <span class="op">=</span> <span class="st">"F(x)"</span></span>
-<span id="cb13-170"><a href="#cb13-170" aria-hidden="true" tabindex="-1"></a>               )</span>
-<span id="cb13-171"><a href="#cb13-171" aria-hidden="true" tabindex="-1"></a>    r <span class="op">=</span> <span class="op">-</span><span class="fl">0.1</span><span class="op">:</span><span class="fl">0.01</span><span class="op">:</span><span class="fl">2.1</span></span>
-<span id="cb13-172"><a href="#cb13-172" aria-hidden="true" tabindex="-1"></a>    <span class="fu">lines!</span>(ax, r, <span class="fu">cumsumtrap</span>(p, r), label <span class="op">=</span> <span class="st">"numerical"</span>, color <span class="op">=</span> <span class="op">:</span>blue)</span>
-<span id="cb13-173"><a href="#cb13-173" aria-hidden="true" tabindex="-1"></a>    <span class="fu">xlims!</span>(ax, <span class="op">-</span><span class="fl">0.1</span>, <span class="fl">2.1</span>)</span>
-<span id="cb13-174"><a href="#cb13-174" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ylims!</span>(ax, <span class="op">-</span><span class="fl">0.1</span>, <span class="fl">1.1</span>)</span>
-<span id="cb13-175"><a href="#cb13-175" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-176"><a href="#cb13-176" aria-hidden="true" tabindex="-1"></a>    <span class="fu">display</span>(fig)</span>
-<span id="cb13-177"><a href="#cb13-177" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> fig, ax, r</span>
-<span id="cb13-178"><a href="#cb13-178" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span>
-<span id="cb13-179"><a href="#cb13-179" aria-hidden="true" tabindex="-1"></a>fig1, ax1, r <span class="op">=</span> <span class="fu">plotCDF</span>();</span>
-<span id="cb13-180"><a href="#cb13-180" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb13-181"><a href="#cb13-181" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-182"><a href="#cb13-182" aria-hidden="true" tabindex="-1"></a>Let us calculate the CDF by direct integration. The CDF of a continuous random variable $X$ can be expressed as the integral of its probability density function $p(x)$ as:</span>
-<span id="cb13-183"><a href="#cb13-183" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-184"><a href="#cb13-184" aria-hidden="true" tabindex="-1"></a>$$F_X(x) = \int_{-\inf}^x p_X(t)dt$${#eq-cdf}</span>
-<span id="cb13-185"><a href="#cb13-185" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-186"><a href="#cb13-186" aria-hidden="true" tabindex="-1"></a>Plugging (@eq-pdf) on the interval <span class="co">[</span><span class="ot">0, 2</span><span class="co">]</span> into (@eq-cdf) we get:</span>
-<span id="cb13-187"><a href="#cb13-187" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-188"><a href="#cb13-188" aria-hidden="true" tabindex="-1"></a>\begin{align}</span>
-<span id="cb13-189"><a href="#cb13-189" aria-hidden="true" tabindex="-1"></a>    F_X(x) &amp;= \int_0^x\bigg(\frac{2t\cos{(t^2)} + 5}{10 + \sin{(4)}}\bigg)dt <span class="sc">\\</span></span>
-<span id="cb13-190"><a href="#cb13-190" aria-hidden="true" tabindex="-1"></a>    &amp;= \frac{1}{10 + \sin{(4)}}\bigg(2\int_0^xt\cos{(t^2)}dt + 5\int_0^xdt\bigg) <span class="sc">\\</span></span>
-<span id="cb13-191"><a href="#cb13-191" aria-hidden="true" tabindex="-1"></a>    &amp;= \frac{\sin{(x^2)} + 5x}{10 + \sin{(4)}}</span>
-<span id="cb13-192"><a href="#cb13-192" aria-hidden="true" tabindex="-1"></a>\end{align}</span>
-<span id="cb13-193"><a href="#cb13-193" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-194"><a href="#cb13-194" aria-hidden="true" tabindex="-1"></a>Let us plot the exact solution of the CDF over the numerical solution.</span>
-<span id="cb13-195"><a href="#cb13-195" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-198"><a href="#cb13-198" aria-hidden="true" tabindex="-1"></a><span class="in">```{julia}</span></span>
-<span id="cb13-199"><a href="#cb13-199" aria-hidden="true" tabindex="-1"></a><span class="fu">Fₓ</span>(x) <span class="op">=</span> (<span class="fu">sin</span>(x<span class="op">^</span><span class="fl">2</span>) <span class="op">+</span> <span class="fl">5</span>x) <span class="op">/</span> (<span class="fl">10</span> <span class="op">+</span> <span class="fu">sin</span>(<span class="fl">4</span>))</span>
-<span id="cb13-200"><a href="#cb13-200" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-201"><a href="#cb13-201" aria-hidden="true" tabindex="-1"></a><span class="fu">lines!</span>(ax1, r, <span class="fu">Fₓ</span>.(r), label <span class="op">=</span> <span class="st">"exact"</span>, color <span class="op">=</span> <span class="op">:</span>red, linestyle <span class="op">=</span> <span class="op">:</span>dash);</span>
-<span id="cb13-202"><a href="#cb13-202" aria-hidden="true" tabindex="-1"></a>fig1[<span class="fl">1</span>,<span class="fl">2</span>] <span class="op">=</span> <span class="fu">Legend</span>(fig1, ax1, <span class="st">"Legend"</span>, framevisible <span class="op">=</span> <span class="cn">false</span>);</span>
-<span id="cb13-203"><a href="#cb13-203" aria-hidden="true" tabindex="-1"></a><span class="fu">display</span>(fig1);</span>
-<span id="cb13-204"><a href="#cb13-204" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb13-205"><a href="#cb13-205" aria-hidden="true" tabindex="-1"></a>The we can plot the inverse CDF by flipping the axis.</span>
-<span id="cb13-206"><a href="#cb13-206" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-209"><a href="#cb13-209" aria-hidden="true" tabindex="-1"></a><span class="in">```{julia}</span></span>
-<span id="cb13-210"><a href="#cb13-210" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">plotCDFInverse</span>()</span>
-<span id="cb13-211"><a href="#cb13-211" aria-hidden="true" tabindex="-1"></a>    fig <span class="op">=</span> <span class="fu">Figure</span>();</span>
-<span id="cb13-212"><a href="#cb13-212" aria-hidden="true" tabindex="-1"></a>    ax <span class="op">=</span> <span class="fu">Axis</span>(fig[<span class="fl">1</span>, <span class="fl">1</span>],</span>
-<span id="cb13-213"><a href="#cb13-213" aria-hidden="true" tabindex="-1"></a>               title <span class="op">=</span> <span class="st">"Inverse CDF"</span>,</span>
-<span id="cb13-214"><a href="#cb13-214" aria-hidden="true" tabindex="-1"></a>               xlabel <span class="op">=</span> <span class="st">"x"</span>,</span>
-<span id="cb13-215"><a href="#cb13-215" aria-hidden="true" tabindex="-1"></a>               ylabel <span class="op">=</span> <span class="st">"F⁻¹(x)"</span></span>
-<span id="cb13-216"><a href="#cb13-216" aria-hidden="true" tabindex="-1"></a>               )</span>
-<span id="cb13-217"><a href="#cb13-217" aria-hidden="true" tabindex="-1"></a>    <span class="fu">lines!</span>(ax, <span class="fu">cumsumtrap</span>(p, r), r)</span>
-<span id="cb13-218"><a href="#cb13-218" aria-hidden="true" tabindex="-1"></a>    <span class="fu">xlims!</span>(ax, <span class="op">-</span><span class="fl">0.1</span>, <span class="fl">1.1</span>)</span>
-<span id="cb13-219"><a href="#cb13-219" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ylims!</span>(ax, <span class="op">-</span><span class="fl">0.1</span>, <span class="fl">2.1</span>)</span>
-<span id="cb13-220"><a href="#cb13-220" aria-hidden="true" tabindex="-1"></a>    <span class="fu">display</span>(fig);</span>
-<span id="cb13-221"><a href="#cb13-221" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span>
-<span id="cb13-222"><a href="#cb13-222" aria-hidden="true" tabindex="-1"></a><span class="fu">plotCDFInverse</span>();</span>
-<span id="cb13-223"><a href="#cb13-223" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb13-224"><a href="#cb13-224" aria-hidden="true" tabindex="-1"></a><span class="fu">## Part C</span></span>
-<span id="cb13-225"><a href="#cb13-225" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-226"><a href="#cb13-226" aria-hidden="true" tabindex="-1"></a>Let us develop a sampler for the random variable $X$.</span>
-<span id="cb13-227"><a href="#cb13-227" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-228"><a href="#cb13-228" aria-hidden="true" tabindex="-1"></a>Let the Matrix $\Sigma$ be a (N,2) matrix such that the rows are (x, y) coordinates, and the vector $\textbf{x}$ also be of size N, where each element is a sample from the Uniform normal distribution.</span>
-<span id="cb13-229"><a href="#cb13-229" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-230"><a href="#cb13-230" aria-hidden="true" tabindex="-1"></a>By using linear interpolation from the formula:</span>
-<span id="cb13-231"><a href="#cb13-231" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-232"><a href="#cb13-232" aria-hidden="true" tabindex="-1"></a>$$y = y_1 + \frac{(x - x_1)(y_2 - y_1)}{x_2 - x_1}$${#eq-li}</span>
-<span id="cb13-233"><a href="#cb13-233" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-234"><a href="#cb13-234" aria-hidden="true" tabindex="-1"></a>The first column of $\Sigma$ comes from the cumulative trapazoidal integration of the pdf function in the range <span class="co">[</span><span class="ot">0, 2</span><span class="co">]</span>, while the second column are equally spaced points from the range <span class="co">[</span><span class="ot">0, 2</span><span class="co">]</span>.</span>
-<span id="cb13-235"><a href="#cb13-235" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-238"><a href="#cb13-238" aria-hidden="true" tabindex="-1"></a><span class="in">```{julia}</span></span>
-<span id="cb13-239"><a href="#cb13-239" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">liy</span>(x<span class="op">::</span><span class="dt">Float64</span>, p1<span class="op">::</span><span class="dt">Vector{Float64}</span>, p2<span class="op">::</span><span class="dt">Vector{Float64}</span>)</span>
-<span id="cb13-240"><a href="#cb13-240" aria-hidden="true" tabindex="-1"></a>    x1, y1 <span class="op">=</span> p1</span>
-<span id="cb13-241"><a href="#cb13-241" aria-hidden="true" tabindex="-1"></a>    x2, y2 <span class="op">=</span> p2</span>
-<span id="cb13-242"><a href="#cb13-242" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> y1 <span class="op">+</span> (x <span class="op">-</span> x1)<span class="fu">*</span>(y2 <span class="op">-</span> y1)<span class="op">/</span>(x2 <span class="op">-</span> x1)</span>
-<span id="cb13-243"><a href="#cb13-243" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span>
-<span id="cb13-244"><a href="#cb13-244" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-245"><a href="#cb13-245" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">sampleInverseCDF</span>(x<span class="op">::</span><span class="dt">Vector{Float64}</span>, points<span class="op">::</span><span class="dt">Matrix{Float64}</span>)</span>
-<span id="cb13-246"><a href="#cb13-246" aria-hidden="true" tabindex="-1"></a>    output <span class="op">=</span> <span class="fu">Vector</span><span class="dt">{Float64}</span>(<span class="cn">undef</span>, <span class="fu">length</span>(x))</span>
-<span id="cb13-247"><a href="#cb13-247" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> (i, x_val) <span class="kw">in</span> <span class="fu">enumerate</span>(x)</span>
-<span id="cb13-248"><a href="#cb13-248" aria-hidden="true" tabindex="-1"></a>        idx <span class="op">=</span> <span class="fu">findfirst</span>(points[<span class="op">:</span>, <span class="fl">1</span>] <span class="op">.&gt;</span> x_val)</span>
-<span id="cb13-249"><a href="#cb13-249" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-250"><a href="#cb13-250" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> idx <span class="op">==</span> <span class="cn">nothing</span></span>
-<span id="cb13-251"><a href="#cb13-251" aria-hidden="true" tabindex="-1"></a>            <span class="co"># If x_val is greater than or equal to the last x value in inverse, use the last segment</span></span>
-<span id="cb13-252"><a href="#cb13-252" aria-hidden="true" tabindex="-1"></a>            p1 <span class="op">=</span> points[<span class="kw">end</span><span class="op">-</span><span class="fl">1</span>, <span class="op">:</span>]</span>
-<span id="cb13-253"><a href="#cb13-253" aria-hidden="true" tabindex="-1"></a>            p2 <span class="op">=</span> points[<span class="kw">end</span>, <span class="op">:</span>]</span>
-<span id="cb13-254"><a href="#cb13-254" aria-hidden="true" tabindex="-1"></a>        <span class="cf">elseif</span> idx <span class="op">==</span> <span class="fl">1</span></span>
-<span id="cb13-255"><a href="#cb13-255" aria-hidden="true" tabindex="-1"></a>            <span class="co"># If x_val is less than or equal to the first x value in inverse, use the first segment</span></span>
-<span id="cb13-256"><a href="#cb13-256" aria-hidden="true" tabindex="-1"></a>            p1 <span class="op">=</span> points[<span class="fl">1</span>, <span class="op">:</span>]</span>
-<span id="cb13-257"><a href="#cb13-257" aria-hidden="true" tabindex="-1"></a>            p2 <span class="op">=</span> points[<span class="fl">2</span>, <span class="op">:</span>]</span>
-<span id="cb13-258"><a href="#cb13-258" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span></span>
-<span id="cb13-259"><a href="#cb13-259" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Otherwise, use the segment between idx-1 and idx</span></span>
-<span id="cb13-260"><a href="#cb13-260" aria-hidden="true" tabindex="-1"></a>            p1 <span class="op">=</span> points[idx<span class="op">-</span><span class="fl">1</span>, <span class="op">:</span>]</span>
-<span id="cb13-261"><a href="#cb13-261" aria-hidden="true" tabindex="-1"></a>            p2 <span class="op">=</span> points[idx, <span class="op">:</span>]</span>
-<span id="cb13-262"><a href="#cb13-262" aria-hidden="true" tabindex="-1"></a>        <span class="cf">end</span></span>
-<span id="cb13-263"><a href="#cb13-263" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-264"><a href="#cb13-264" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Calculate interpolated y value using the liy function</span></span>
-<span id="cb13-265"><a href="#cb13-265" aria-hidden="true" tabindex="-1"></a>        output[i] <span class="op">=</span> <span class="fu">liy</span>(x_val, p1, p2)</span>
-<span id="cb13-266"><a href="#cb13-266" aria-hidden="true" tabindex="-1"></a>    <span class="cf">end</span></span>
-<span id="cb13-267"><a href="#cb13-267" aria-hidden="true" tabindex="-1"></a>    output</span>
-<span id="cb13-268"><a href="#cb13-268" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span>
-<span id="cb13-269"><a href="#cb13-269" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-270"><a href="#cb13-270" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">plotsampledist</span>()</span>
-<span id="cb13-271"><a href="#cb13-271" aria-hidden="true" tabindex="-1"></a>    Δr <span class="op">=</span> <span class="fl">1e-3</span></span>
-<span id="cb13-272"><a href="#cb13-272" aria-hidden="true" tabindex="-1"></a>    r <span class="op">=</span> <span class="op">-</span><span class="fl">0.1</span><span class="op">:</span>Δr<span class="op">:</span><span class="fl">2.1</span></span>
-<span id="cb13-273"><a href="#cb13-273" aria-hidden="true" tabindex="-1"></a>    points <span class="op">=</span> [<span class="fu">cumsumtrap</span>(p, r) r]</span>
-<span id="cb13-274"><a href="#cb13-274" aria-hidden="true" tabindex="-1"></a>    N <span class="op">=</span> <span class="fl">100000</span></span>
-<span id="cb13-275"><a href="#cb13-275" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> <span class="fu">rand</span>(N)</span>
-<span id="cb13-276"><a href="#cb13-276" aria-hidden="true" tabindex="-1"></a>    fig <span class="op">=</span> <span class="fu">Figure</span>()</span>
-<span id="cb13-277"><a href="#cb13-277" aria-hidden="true" tabindex="-1"></a>    ax <span class="op">=</span> <span class="fu">Axis</span>(fig[<span class="fl">1</span>,<span class="fl">1</span>], title <span class="op">=</span> <span class="st">"histogram of </span><span class="sc">$</span>N<span class="st"> samples"</span>)</span>
-<span id="cb13-278"><a href="#cb13-278" aria-hidden="true" tabindex="-1"></a>    <span class="fu">hist!</span>(fig[<span class="fl">1</span>,<span class="fl">1</span>], <span class="fu">sampleInverseCDF</span>(x, points), bins <span class="op">=</span> <span class="fl">80</span>, normalization <span class="op">=</span> <span class="op">:</span>pdf)</span>
-<span id="cb13-279"><a href="#cb13-279" aria-hidden="true" tabindex="-1"></a>    <span class="fu">lines!</span>(fig[<span class="fl">1</span>,<span class="fl">1</span>], r, <span class="fu">p</span>.(r), color <span class="op">=</span> <span class="op">:</span>red, label <span class="op">=</span> <span class="st">"p(x)"</span>, linestyle <span class="op">=</span> <span class="op">:</span>dash)</span>
-<span id="cb13-280"><a href="#cb13-280" aria-hidden="true" tabindex="-1"></a>    fig[<span class="fl">1</span>, <span class="fl">2</span>] <span class="op">=</span> <span class="fu">Legend</span>(fig, ax, <span class="st">"Legend"</span>, framevisible <span class="op">=</span> <span class="cn">false</span>)</span>
-<span id="cb13-281"><a href="#cb13-281" aria-hidden="true" tabindex="-1"></a>    <span class="fu">display</span>(fig)</span>
-<span id="cb13-282"><a href="#cb13-282" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span>
-<span id="cb13-283"><a href="#cb13-283" aria-hidden="true" tabindex="-1"></a><span class="fu">plotsampledist</span>();</span>
-<span id="cb13-284"><a href="#cb13-284" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-</code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
-</div></div></div></div></div>
+  </script>
 </div> <!-- /content -->
 
 
