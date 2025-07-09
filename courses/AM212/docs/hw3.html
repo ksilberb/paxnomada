@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Kevin Silberberg">
+<meta name="dcterms.date" content="2024-10-10">
 
-<title>about – paxnomada</title>
+<title>Homework 3 AM212 – paxnomada</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,23 +25,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-2fef5ea3f8957b3e4ecc936fc74692ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-63f775b895fc19869fff6aff88fe9a12.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-2fef5ea3f8957b3e4ecc936fc74692ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-63f775b895fc19869fff6aff88fe9a12.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,8 +70,37 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="styles.css">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../../styles.css">
 </head>
 
 <body class="nav-fixed fullcontent quarto-light">
@@ -79,7 +110,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../../index.html">
     <span class="navbar-title">paxnomada</span>
     </a>
   </div>
@@ -90,19 +121,19 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./about.html" aria-current="page"> 
+    <a class="nav-link" href="../../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./photos/index.html"> 
+    <a class="nav-link" href="../../../photos/index.html"> 
 <span class="menu-text">Photos</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./stream.html"> 
+    <a class="nav-link" href="../../../stream.html"> 
 <span class="menu-text">Stream</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./LICENSE.html"> 
+    <a class="nav-link" href="../../../LICENSE.html"> 
 <span class="menu-text">License</span></a>
   </li>  
 </ul>
@@ -118,47 +149,63 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Homework 3 AM212</h1>
+</div>
 
 
+<div class="quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">Author</div>
+  <div class="quarto-title-meta-heading">Affiliation</div>
+  
+    <div class="quarto-title-meta-contents">
+    <p class="author">Kevin Silberberg <a href="mailto:ksilberb@ucsc.edu" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> <a href="https://orcid.org/0009-0009-4825-1865" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            University of California Santa Cruz
+          </p>
+      </div>
+  </div>
+
+<div class="quarto-title-meta">
+
+      
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">October 10, 2024</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
 
 
-<section id="about" class="level1">
-<h1>About</h1>
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>I’m Kevin Andrew Silberberg, a recent graduate from the Scientific Computing and Applied Math Master’s program at <a href="https://www.ucsc.edu/">University of California Santa Cruz</a>.</p>
-<section id="what-youll-find-here" class="level3">
-<h3 class="anchored" data-anchor-id="what-youll-find-here">What You’ll Find Here</h3>
-<!-- * [Stream](stream.qmd): My personal blog where I share my thoughts, life updates. -->
-<ul>
-<li><a href="./photos/index.html">Photos</a>: A visual blog featuring photography from my travels and daily life, with dedicated sections for specific trips and a continuous stream of recent photos.</li>
-</ul>
-</section>
-</section>
-<section id="contact-information" class="level2">
-<h2 class="anchored" data-anchor-id="contact-information">Contact Information</h2>
-<p><strong>Email:</strong> <a href="mailto:ksilberb@pm.me">ksilberb@pm.me</a></p>
-<p><strong>Phone:</strong> 1 (619) 417-6705</p>
-<p><strong>Website:</strong> <a href="https://ksilberb.github.io/paxnomada/">ksilberb.github.io/paxnomada</a></p>
-<section id="professional-links" class="level3">
-<h3 class="anchored" data-anchor-id="professional-links">Professional Links</h3>
-<ul>
-<li><a href="https://github.com/ksilberb"><strong>GitHub</strong></a></li>
-<li><a href="https://orcid.org/0009-0009-4825-1865"><strong>ORCID</strong></a></li>
-<li><a href="https://linkedin.com/in/kevin-silberberg-60877336b"><strong>LinkedIn</strong></a></li>
-</ul>
-</section>
-<section id="social-media" class="level3">
-<h3 class="anchored" data-anchor-id="social-media">Social Media</h3>
-<ul>
-<li><a href="https://bsky.app/profile/ksilberb.bsky.social"><strong>BlueSky</strong></a></li>
-<li><a href="https://www.instagram.com/kevysilb/"><strong>Instagram</strong></a></li>
-<li><a href="https://www.facebook.com/silberbergka"><strong>Facebook</strong></a></li>
-</ul>
+</header>
 
 
-</section>
+<section id="drunk-problem" class="level1">
+<h1>Drunk Problem</h1>
+<p>The diffusion or people leaving a bar on a 1-dimensional street is modeled using the 1-d forced diffusion equation:</p>
+<p><span id="eq-forceddiff"><span class="math display">\[\begin{cases}
+\frac{\partial p}{\partial t} = D \frac{\partial^2p}{\partial x^2} + S(x, t) \\
+p(x, 0) = 0 \\
+\frac{\partial p}{\partial x}(0, t) = \frac{\partial p}{\partial x}(L, t) = 0
+\end{cases} \tag{1}\]</span></span></p>
+<p>where <span class="math inline">\(p\)</span> is the probability density of drunk people, <span class="math inline">\(S(x, t)\)</span> is the ‘source’ of drunk people per unit time coming into the street at position <span class="math inline">\(x\)</span>.</p>
+<p>To model the exit of the pub the forcing equation is such that:</p>
+<p><span id="eq-forcing"><span class="math display">\[  S(x, t) = S_0 \delta(x - \frac{L}{2})e^{-\frac{t}{\tau}} \quad \text{for } t &gt; 0 \tag{2}\]</span></span></p>
+<p>where <span class="math inline">\(\tau\)</span> is the characteristic time scale.</p>
+<section id="part-a" class="level2">
+<h2 class="anchored" data-anchor-id="part-a">Part A</h2>
+<p>Use dimensional analysis to find the characteristic diffusion timescale of the problem in the absense of forcing, <span class="math inline">\(\tau_D\)</span></p>
+
+
 </section>
 </section>
 

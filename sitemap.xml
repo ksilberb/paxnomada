@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://ksilberb.github.io/paxnomada/about.html</loc>
-    <lastmod>2025-07-08T21:03:33.880Z</lastmod>
+    <lastmod>2025-07-09T20:02:06.170Z</lastmod>
   </url>
   <url>
     <loc>https://ksilberb.github.io/paxnomada/stream.html</loc>
@@ -14,7 +14,7 @@
   </url>
   <url>
     <loc>https://ksilberb.github.io/paxnomada/index.html</loc>
-    <lastmod>2025-07-08T22:13:27.457Z</lastmod>
+    <lastmod>2025-07-09T20:03:59.436Z</lastmod>
   </url>
   <url>
     <loc>https://ksilberb.github.io/paxnomada/projecteuler/largestprimefactor.html</loc>
@@ -29,48 +29,68 @@
     <lastmod>2025-05-16T05:56:48.040Z</lastmod>
   </url>
   <url>
-    <loc>https://ksilberb.github.io/paxnomada/courses/uncertainty_quant/docs/hw1/hw1.html</loc>
-    <lastmod>2025-07-07T20:27:47.414Z</lastmod>
+    <loc>https://ksilberb.github.io/paxnomada/courses/AM213A/index.html</loc>
+    <lastmod>2025-07-09T19:42:47.859Z</lastmod>
   </url>
   <url>
-    <loc>https://ksilberb.github.io/paxnomada/courses/uncertainty_quant/docs/hw2/hw2.html</loc>
-    <lastmod>2025-07-07T20:25:15.597Z</lastmod>
+    <loc>https://ksilberb.github.io/paxnomada/courses/AM238/docs/hw4/hw4.html</loc>
+    <lastmod>2025-07-09T19:47:17.113Z</lastmod>
   </url>
   <url>
-    <loc>https://ksilberb.github.io/paxnomada/courses/uncertainty_quant/docs/hw5/hw5.html</loc>
-    <lastmod>2025-07-07T20:10:32.221Z</lastmod>
+    <loc>https://ksilberb.github.io/paxnomada/courses/AM238/docs/hw3/hw3.html</loc>
+    <lastmod>2025-07-09T19:46:37.821Z</lastmod>
   </url>
   <url>
-    <loc>https://ksilberb.github.io/paxnomada/rosalind/bioinformatics_stronghold/complementing_a_strand_of_dna/complement.html</loc>
-    <lastmod>2025-07-03T06:48:24.661Z</lastmod>
+    <loc>https://ksilberb.github.io/paxnomada/courses/AM238/index.html</loc>
+    <lastmod>2025-07-09T19:35:47.777Z</lastmod>
   </url>
   <url>
-    <loc>https://ksilberb.github.io/paxnomada/rosalind/bioinformatics_stronghold/transcribing_dna_into_rna/transcription.html</loc>
-    <lastmod>2025-07-03T20:31:40.064Z</lastmod>
+    <loc>https://ksilberb.github.io/paxnomada/courses/AM212/docs/hw2.html</loc>
+    <lastmod>2025-07-09T19:13:16.997Z</lastmod>
   </url>
   <url>
-    <loc>https://ksilberb.github.io/paxnomada/rosalind/index.html</loc>
-    <lastmod>2025-07-07T20:34:36.708Z</lastmod>
+    <loc>https://ksilberb.github.io/paxnomada/courses/AM212/index.html</loc>
+    <lastmod>2025-07-09T19:15:25.480Z</lastmod>
   </url>
   <url>
     <loc>https://ksilberb.github.io/paxnomada/rosalind/bioinformatics_stronghold/counting_dna_nucleotides/countdna.html</loc>
     <lastmod>2025-07-03T20:30:43.849Z</lastmod>
   </url>
   <url>
-    <loc>https://ksilberb.github.io/paxnomada/courses/uncertainty_quant/index.html</loc>
-    <lastmod>2025-07-08T22:04:25.008Z</lastmod>
+    <loc>https://ksilberb.github.io/paxnomada/rosalind/index.html</loc>
+    <lastmod>2025-07-07T20:34:36.708Z</lastmod>
   </url>
   <url>
-    <loc>https://ksilberb.github.io/paxnomada/courses/uncertainty_quant/docs/hw3/hw3.html</loc>
-    <lastmod>2025-07-08T16:12:22.779Z</lastmod>
+    <loc>https://ksilberb.github.io/paxnomada/rosalind/bioinformatics_stronghold/transcribing_dna_into_rna/transcription.html</loc>
+    <lastmod>2025-07-03T20:31:40.064Z</lastmod>
   </url>
   <url>
-    <loc>https://ksilberb.github.io/paxnomada/courses/uncertainty_quant/docs/hw4/hw4.html</loc>
-    <lastmod>2025-07-07T20:18:28.892Z</lastmod>
+    <loc>https://ksilberb.github.io/paxnomada/rosalind/bioinformatics_stronghold/complementing_a_strand_of_dna/complement.html</loc>
+    <lastmod>2025-07-03T06:48:24.661Z</lastmod>
   </url>
   <url>
-    <loc>https://ksilberb.github.io/paxnomada/courses/adv_methods/index.html</loc>
-    <lastmod>2025-07-08T22:12:41.440Z</lastmod>
+    <loc>https://ksilberb.github.io/paxnomada/courses/AM212/docs/hw3.html</loc>
+    <lastmod>2025-07-09T19:15:07.626Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ksilberb.github.io/paxnomada/courses/AM212/docs/hw1.html</loc>
+    <lastmod>2025-07-09T19:04:16.997Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ksilberb.github.io/paxnomada/courses/AM238/docs/hw5/hw5.html</loc>
+    <lastmod>2025-07-09T19:47:35.180Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ksilberb.github.io/paxnomada/courses/AM238/docs/hw2/hw2.html</loc>
+    <lastmod>2025-07-09T19:46:16.844Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ksilberb.github.io/paxnomada/courses/AM238/docs/hw1/hw1.html</loc>
+    <lastmod>2025-07-09T19:46:04.247Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ksilberb.github.io/paxnomada/courses/AM213B/index.html</loc>
+    <lastmod>2025-07-09T20:29:28.889Z</lastmod>
   </url>
   <url>
     <loc>https://ksilberb.github.io/paxnomada/projecteuler/multiplesof3or5.html</loc>
