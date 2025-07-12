@@ -1,0 +1,36 @@
+---
+title: "Homework 3 AM212"
+date: 2024-10-10
+author:
+  - name: Kevin Silberberg
+    id: ks
+    orcid: 0009-0009-4825-1865
+    email: ksilberb@ucsc.edu
+    affiliation:
+      - name: University of California Santa Cruz
+        city: Santa Cruz
+        state: CA
+        href: www.ucsc.edu
+---
+
+# Drunk Problem
+
+The diffusion or people leaving a bar on a 1-dimensional street is modeled using the 1-d forced diffusion equation:
+
+$$\begin{cases}
+\frac{\partial p}{\partial t} = D \frac{\partial^2p}{\partial x^2} + S(x, t) \\
+p(x, 0) = 0 \\
+\frac{\partial p}{\partial x}(0, t) = \frac{\partial p}{\partial x}(L, t) = 0
+\end{cases}$${#eq-forceddiff}
+
+where $p$ is the probability density of drunk people, $S(x, t)$ is the 'source' of drunk people per unit time coming into the street at position $x$.
+
+To model the exit of the pub the forcing equation is such that:
+
+$$	S(x, t) = S_0 \delta(x - \frac{L}{2})e^{-\frac{t}{\tau}} \quad \text{for } t > 0$${#eq-forcing}
+
+where $\tau$ is the characteristic time scale.
+
+## Part A
+
+Use dimensional analysis to find the characteristic diffusion timescale of the problem in the absense of forcing, $\tau_D$

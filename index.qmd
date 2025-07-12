@@ -1,15 +1,28 @@
-# Kevin Andrew Silberberg
+---
+title: "Kevin Silberberg"
+image: avatar.jpg
+title-block-banner: background.jpg
+about:
+  template: trestles
+  links:
+    - text: Email
+      icon: envelope
+      url: "mailto:ksilberb@pm.me"
+    - text: GitHub
+      icon: github
+      url: "https://github.com/ksilberb"
+    - text: LinkedIn
+      icon: linkedin
+      url: "https://linkedin.com/in/kevin-silberberg-60877336b"
+    - text: Bluesky
+      icon: bluesky
+      url: "https://bsky.app/profile/ksilberb.bsky.social"
+    - text: CV
+      icon: file-person
+      url: "cv.pdf"
+comments: false
+---
 
-Hi, this is my personal website. Please see the [about](about.qmd) page for more information.
+## Bio
 
-## Courses Taken
-
-[Fundamentals of Uncertainty Quantification](courses/uncertainty_quant/index.qmd)
-
-[Advanced Methods in Applied Mathematics](courses/adv_methods/index.qmd)
-
-## Problem Sets
-
-[Rosalind](rosalind/index.qmd)
-
-[Project Euler](projecteuler/index.qmd)
+I am a recent graduate from the Scientific Computing and Applied Mathematics Master's program at [University of California, Santa Cruz](https://www.ucsc.edu/).

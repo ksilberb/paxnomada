@@ -1,0 +1,359 @@
+---
+title: "Homework 2 AM212"
+date: 2024-10-5
+author:
+  - name: Kevin Silberberg
+    id: 1900136
+    orcid: 0009-0009-4825-1865
+    email: ksilberb@ucsc.edu
+    affiliation:
+      - name: University of California Santa Cruz
+        city: Santa Cruz
+        state: CA
+        href: www.ucsc.edu
+---
+
+# Haberman 2.3.8
+
+## Problem definition
+The heat equation with homogenous boundary conditions:
+
+$$\begin{cases}
+u_t = ku_{xx} - \alpha u \\
+u(0, t) = 0 \\
+u(L, t) = 0
+\end{cases}$${#eq-heat}
+
+## Part a
+
+What are the possible equilibrium temperature distributions if $\alpha > 0$?
+
+### Solution
+
+An equilibrium temperature distribution is such that the time derivative of temperature is zero ($u_t = 0$). Let us solve the homogenous BVP:
+
+$$ku_{xx} - \alpha u = 0, u(0) = 0, u(L) = 0$${#eq-steady}
+
+Before proceeding it is important to note that $k$ corresponds to the $\textbf{thermal diffusivity}$ of the material and is made of $K_0$ the $\textbf{thermal conductivity}$, $c$ $\textbf{specific heat capacity}$, and $\rho$ $\textbf{mass density}$ such that
+
+$$k = \frac{K_0}{c\rho}$$ where $k > 0$
+
+Let $u(x) = e^{rx}$, the characteristic polynomial becomes:
+
+$kr^2 - \alpha = 0$
+
+where the roots are
+
+$r = \pm \sqrt{\frac{\alpha}{k}}$
+
+the solution of positive real roots:
+
+$$u(x) = c_1e^{\sqrt{\frac{\alpha}{k}}x} + c_2e^{-{\sqrt{\frac{\alpha}{k}}x}}$$
+
+plugging in the boundary conditions:
+
+\begin{align}
+	&\bigg[\begin{matrix}
+		1 & 1 \\
+		e^{\sqrt{\frac{\alpha}{k}}L} & e^{-\sqrt{\frac{\alpha}{k}}L}
+	\end{matrix}\bigg]
+	\bigg[\begin{matrix}
+		c_1 \\
+		c_2
+	\end{matrix}\bigg] =
+	\bigg[\begin{matrix}
+		0 \\
+		0
+	\end{matrix}\bigg] \\
+	&\det{\bigg(\bigg[\begin{matrix}
+		1 & 1 \\
+		e^{\sqrt{\frac{\alpha}{k}}L} & e^{-\sqrt{\frac{\alpha}{k}}L}
+	\end{matrix}\bigg]\bigg)} = e^{-\sqrt{\frac{\alpha}{k}}L} - e^{\sqrt{\frac{\alpha}{k}}L} = -2\sinh{(\sqrt{\frac{\alpha}{k}}L)}
+\end{align}
+
+$c_1 = c_2 = 0$
+
+This leaves us with only a trivial solution $u(x) = 0$.
+
+Thus if $\alpha$ is strictly positive the only possible equilibrium temperature distribution is zero everywhere.
+
+## Part b
+
+Solve the time dependent problem with IC $u(x, 0) = f(x)$ if $\alpha > 0$ and analyze temperature as $t \rightarrow \infty$ and compare with part a.
+
+The IBVP:
+
+$$\begin{cases}
+u_t = ku_{xx} - \alpha u \\
+u(x, 0) = f(x) \\
+u(0, t) = 0 \\
+u(L, t) = 0
+\end{cases}$${#eq-ibvp}
+
+Let
+
+\begin{align}
+	u(x, t) &= X(x)T(t) \\
+	u_t &= XT' \\
+	u_{xx} &= X''T
+\end{align}
+
+Plugging into @eq-ibvp
+
+\begin{align}
+	XT' &= kX''T - \alpha XT \\
+	\frac{T'}{kT} - \frac{\alpha}{k} &= \frac{X''}{X} = \lambda
+\end{align}
+
+The solution of the eigen-value problem $X''(x) = \lambda X(x),  X(0) = X(L) = 0$ is
+
+\begin{align}
+	X_n(x) = \sin{(\frac{n\pi x}{L})}  && \lambda_n = -\big(\frac{n\pi}{L}\big)^2 && n = 1, 2, 3, ...
+\end{align}
+
+Solving for the IVP:
+
+$$T' = \lambda_n kT + \alpha T$$
+
+Let $T_n(t) = e^{rt}$
+
+the characteristic polynomial:
+
+$r - \lambda_n k - \alpha = 0$
+
+with a single root:
+
+$r = \lambda_n k + \alpha$
+
+thus the solution to the BVP:
+
+$$u(x, t) = \sum_{n=1}^{\infty} a_n\sin{(\frac{n\pi x}{L})}e^{(-k(\frac{n\pi}{L})^2 + \alpha)t}$$
+
+Applying the initial condition:
+
+\begin{align}
+	u(x, 0) = \sum_{n=1}^{\infty} a_n\sin{(\frac{n\pi x}{L})} &= f(x) \\
+	\int_0^L \sum_{n=1}^{\infty} a_n\sin{(\frac{n\pi x}{L})}\sin{(\frac{m\pi x}{L})}dx &= \int_0^Lf(x)\sin{(\frac{m\pi x}{L})}dx \\
+	\sum_{n=1}^{\infty}\int_0^L a_n\sin{(\frac{n\pi x}{L})}\sin{(\frac{m\pi x}{L})}dx &= \int_0^Lf(x)\sin{(\frac{m\pi x}{L})}dx
+\end{align}
+
+all terms in the integral cancel when $n = m$ (Sturm-Louiville) due to the eigenfunctions forming an orthonormal basis.
+
+Let us solve for the coefficient $a_n$ on the LHS:
+
+\begin{align}
+	a_n\int_0^L\sin^2{(\frac{n \pi x}{L})}dx \\
+	\text{Let} \ \ u &= \frac{n \pi x}{L} \\
+	\frac{du}{dx} &= \frac{n \pi}{L} \\
+	dx &= \frac{L}{n \pi}du \\
+\end{align}
+
+\begin{align}
+a_n\frac{L}{n\pi}\int_0^{n \pi}\sin^2{(u)}du &= a_n\frac{L}{n\pi}\bigg[\frac{1}{2}(x - \sin{(x)}\cos{(x)})\bigg\vert_0^{n \pi}\bigg] \\
+&= a_n \frac{L}{2} \\
+a_n &= \frac{2}{L} \int_0^L f(x) \sin{(\frac{n \pi x}{L})}dx
+\end{align}
+
+the full solution to the the IBVP of @eq-heat is thus,
+
+$$u(x, t) = \sum_{n=1}^{\infty} a_n\sin{(\frac{n\pi x}{L})}e^{(-k(\frac{n\pi}{L})^2 + \alpha)t}$${#eq-sol}
+
+If we take the limit as ($t \rightarrow \infty$)
+
+\begin{align}
+\lim_{t \rightarrow \infty} \bigg[ e^{\alpha t}\sum_{n=1}^{\infty} e^{-k(\frac{n \pi}{L})^2 t}\bigg]
+\end{align}
+
+Since $k, L, \alpha$ are all positive real numbers we can clearly see that the limit goes to zero since the infinite sum appraoches $e^{-\infty}$ much faster than $e^{\alpha t}$ approaches $e^{\infty}$
+
+# Haberman 4.4.3
+
+## Problem definition
+
+Consider a slightly damped vibrating string that satisfies:
+
+$$\rho_0 \frac{d^2u}{dt^2} = T_0 \frac{d^2u}{dx^2} - \beta \frac{du}{dt}$${#eq-vibstring}
+
+## Part a
+
+Why must the parameter $\beta > 0$?
+
+### Solution
+
+The parameter $\beta$ must be positive, because this is the frictional coefficient. If $\beta < 0$ the amplitude of the vibrating string would blow up to infinity as time progresses instead of converging to zero as $t \rightarrow \infty$.
+
+## Part b
+n
+Solve the IBVP:
+
+\begin{align}
+	\begin{cases}
+		\rho_0 \frac{d^2u}{dt^2} = T_0 \frac{d^2u}{dx^2} - \beta \frac{du}{dt} \\
+		u(0, t) = 0 & u(L, t) = 0 \\
+		u(x, 0) = f(x) & \frac{d}{dt}u(x, 0) = g(x)
+	\end{cases}
+\end{align}
+
+### Solution
+
+Let us non-dimensionalize the problem
+
+Let
+
+\begin{align}
+	&\hat{u} = \frac{u}{u_s} \Longrightarrow u = \hat{u}u_s
+	&\hat{x} = \frac{x}{x_s} \Longrightarrow u = \hat{x}x_s &
+	&\hat{t} = \frac{t}{t_s} \Longrightarrow u = \hat{t}t_s
+\end{align}
+
+\begin{align}
+	\frac{\rho_0 u_s}{t_s^2}\frac{d^2 \hat{u}}{d\hat{t}^2} + \beta \frac{u_s}{t_s} \frac{d\hat{u}}{\hat{t}} = T_0 \frac{u_s}{x_s^2} \frac{d^2 \hat{u}}{d\hat{x}^2} \\
+	\frac{d^2 \hat{u}}{d \hat{t}^2} + \frac{\beta}{\rho_0} t_s \frac{d\hat{u}}{d\hat{t}} = \frac{T_0}{\rho_0} \frac{t_s^2}{x_s^2} \frac{d^2\hat{u}}{d \hat{x}^2}
+\end{align}
+
+Let
+
+\begin{align}
+	t_s = \tau = \frac{\rho_0}{\beta}
+\end{align}
+
+where $\tau$ is the characteristic time scale for @eq-vibstring.
+
+\begin{align}
+	x_s = L_c = \sqrt{\frac{T_0 \rho_0}{\beta^2}}
+\end{align}
+
+where $L_c$ is the characteristic length scale for @eq-vibstring.
+
+Let us solve the non-dimensionalized IBVP
+
+$$	\begin{cases}
+		u_{tt} + u_t = u_{xx} \\
+		u(0, t) = 0 & u(L, t) = 0 \\
+		u(x, 0) = f(x) & u_t(x, 0) = g(x)
+	\end{cases}$${#eq-nondimvibstring}
+
+Let $u(x, t) = X(x) T(t)$
+
+\begin{align}
+	\frac{T'' + T'}{T} = \frac{X''}{X} = -\lambda
+\end{align}
+
+The solution to the eigen value problem:
+\begin{align}
+\begin{cases}
+X'' = \lambda X \\
+X(0) = X(L) = 0
+\end{cases}\\
+\Longrightarrow X_n(x) = \sin{(\frac{n \pi x}{L})} \quad n = 1, 2, 3, \cdots
+\end{align}
+
+where $\lambda = -\big(\frac{n \pi}{L}\big)^2$
+
+for the IVP:
+
+\begin{align}
+	T'' + T' = \tau^2 \lambda T
+\end{align}
+
+the characteristic equation becomes:
+
+$$r^2 + r + \frac{n^2\pi^2}{\hat{L}} = 0 \quad \text{where } \hat{L} = \frac{L}{L_c}$$
+
+where the roots of the characteristic polynomial is:
+
+\begin{align}
+	r_{1, 2} = \frac{-1}{2} \pm \frac{1}{2}\sqrt{1 - \frac{4n^2\pi^2}{\hat{L}^2}}
+\end{align}
+
+Assuming the frictional coefficient $\beta$ is small where $\beta^2 < \frac{4\pi^2\rho_0T_0}{L^2}$ let us plug in $\hat{L}$ to check if the roots are complex.
+
+The contents inside of the square root:
+
+\begin{align}
+	1 - \frac{4n^2\pi^2}{\hat{L}^2} &= 1 - \frac{4n^2\pi^2}{(\frac{L}{L_c})^2} \\
+	&= 1 - \frac{4n^2\pi^2}{(\frac{L}{\sqrt{\frac{T_0 \rho_0}{\beta^2}}})^2} \\
+	&= 1 - \frac{4n^2\pi^2\rho_0T_0}{\beta^2 L^2}
+\end{align}
+
+since the denominator $\beta^2 L^2$ is less than the numerator we know that the contents inside the square root is always negative. Thus we have a pair of complex roots and the general solution can be written as:
+
+\begin{align}
+	T(t) = e^{-\frac{\hat{t}}{2}}\left(a_n \cos{(\omega t)} + b_n \sin{(\omega t)}\right) \quad \text{where } \omega = \frac{1}{2} \sqrt{\frac{4n^2\pi^2}{\hat{L}} - 1}
+\end{align}
+
+for initial conditions $T(0) = f(x) \quad T'(0) = g(x)$ we have:
+
+\begin{align}
+	T(0) = f(x) = a_n \\
+	T'(0) = g(x) &= \frac{1}{2}\left(b_n2\omega - f(x)\right)\\
+	b_n &= \frac{2g(x) + f(x)}{2\omega}
+\end{align}
+
+The final solution can be written as:
+
+$$u(x, t) = e^{-\frac{\hat{t}}{2}} \sum_{n=1}^{\infty} \sin{(\frac{n \pi x}{\hat{L}})}\left(f(x) \cos{(\omega_n t)} + \frac{2g(x) + f(x)}{2\omega_n}\sin{(\omega_n t)}\right) \quad \text{where } \omega_n = \frac{1}{2} \sqrt{\frac{4n^2\pi^2}{\hat{L}} - 1}$$
+
+# Haberman 2.5.2
+
+## Problem definition
+
+$$\begin{cases}
+u_{xx} + u_{yy} = 0 \\
+u_x(0, y) = 0 & u_y(x, 0) = 0 \\
+u_x(L, y) = 0 & u_y(x, H) = f(x)
+\end{cases}$${#eq-laplace}
+
+## Part a
+
+Without solving this problem, explain the physical condition under which there is a solution to this problem.
+
+### Solution
+
+The steady-state condition must be maintained along the boundaries. Along $y$ from $[0, H]$ we have homogeneous boundary conditions such that the flow along left and right vertical sides of the rectangle are both zero. Along $x$ we must enforce the condition that the sum of the contributions of the flow along $x$ from $[0, L]$ also sum to zero. Thus the following solvavility criteria must be imposed in order for a solution to exist.
+
+$$\int_0^L f(x) dx = 0$$
+
+## Part b
+
+Solve the problem only by separation of variables. Show that the solution exists only under the condition in part a.
+
+### Solution
+
+Let $u(x, y) = X(x)Y(y)$ such that
+
+\begin{align}
+	-\frac{Y''}{Y} = \frac{X''}{X} = \lambda
+\end{align}
+
+Since the non-homogenous BC are in $y$ we can expect that $Y(y)$ is composed of exponentials and $X(x)$ oscillates.
+
+The eigen value problem $X'' = \lambda X \quad X'(0) = X'(L) = 0$ (Neumann boundary conditions) produces the following solutions:
+
+$$X_n(x) = \cos{(\frac{n \pi x}{L})} \quad n = 1, 2, 3, ... \quad \lambda_n = -(\frac{n \pi}{L})^2$$
+
+The ODE in the $y$ domain
+
+$$Y_n(y) = \frac{n^2 \pi^2}{L^2} Y_n(y)$$
+
+The general solution:
+
+$$Y_n(y) = c_1 \cosh{(\frac{n \pi y}{L})} + c_2 \sinh{(\frac{n \pi y}{L})}$$
+
+Enforcing the boundary conditions at $y = 0$
+
+$\begin{align}
+	Y'_n(y) &= c_1 \frac{n \pi}{L}\sinh{(\frac{n \pi y}{L})} + c_2 \frac{n \pi}{L}\cosh{(\frac{n \pi y}{L})} \\
+	Y'_n(0) &= 0 = c_2 \frac{n \pi}{L} \\
+	\Longrightarrow c_2 = 0
+\end{align}$
+
+$\begin{align}
+	Y'_n(H) = f(x) &= c_1 \frac{n \pi}{L}\sinh{(\frac{n \pi H}{L})} \\
+	\frac{L}{n \pi}\int_0^L f(x) \sinh{(\frac{m \pi H}{L})} dx &= c_1 \frac{L}{2}  \quad \textit{orthogonality} \\
+	\Longrightarrow c_1 = \frac{2}{n \pi}\int_0^L f(x) \sinh{(\frac{m \pi H}{L})} dx
+\end{align}$
+
+The full solution to the Laplace equation with 3 homogeneous boundary conditions is thus,
+
+$$u(x, y) = \frac{2}{n \pi} \int_0^L f(x) \sinh{(\frac{n \pi H}{L})}dx \cosh{(\frac{n \pi y}{L})} \cos{(\frac{n \pi x}{L})} \quad n = 1, 2, 3, ...$$

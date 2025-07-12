@@ -1,12 +1,8 @@
-# Travels
-
-[Spring Break 2025](springbreak2025/index.qmd)
-
-[Shasta 2023](shasta2023/index.qmd)
-
-# Life
-
-::: {.figure-container}
-<div class="figure-date">Tue, 27 Oct 2015, 05:17:56 PM PDT</div>
-![My first time at Thousand Island Lake. We hiked in from the trail head accross from silver lake. The plan was to summit Banner Peak, but we bailed half way up due to snow conditions.](life_1.jpg)
-:::
+---
+title: "Photos"
+listing:
+  contents:
+    - "*/index.qmd"
+  sort: "date desc"
+  type: default
+---

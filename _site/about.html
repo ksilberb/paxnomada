@@ -98,10 +98,6 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Photos</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./stream.html"> 
-<span class="menu-text">Stream</span></a>
-  </li>  
-  <li class="nav-item">
     <a class="nav-link" href="./LICENSE.html"> 
 <span class="menu-text">License</span></a>
   </li>  
@@ -128,16 +124,11 @@ ul.task-list li input[type="checkbox"] {
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
 <p>I’m Kevin Andrew Silberberg, a recent graduate from the Scientific Computing and Applied Math Master’s program at <a href="https://www.ucsc.edu/">University of California Santa Cruz</a>.</p>
-</section>
-<section id="about-this-website" class="level2">
-<h2 class="anchored" data-anchor-id="about-this-website">About This Website</h2>
-<p>This website serves as my consolidated online presence, moving away from mainstream social media as the primary medium of my digital identity. I’ve designed it to be a focused space for learning, documenting, and sharing my work and thoughts.</p>
-<p>Every document accessible on this website was created using <a href="https://quarto.org">Quarto</a> markdown in an Emacs environment and published on GitHub Pages. I’ve found this workflow particularly rewarding for technical documentation, coding projects, and academic work.</p>
 <section id="what-youll-find-here" class="level3">
 <h3 class="anchored" data-anchor-id="what-youll-find-here">What You’ll Find Here</h3>
+<!-- * [Stream](stream.qmd): My personal blog where I share my thoughts, life updates. -->
 <ul>
-<li><p><strong><a href="./stream.html">Stream</a></strong>: My personal blog where I share thoughts, projects, and insights</p></li>
-<li><p><strong><a href="./photos/index.html">Photos</a></strong>: A visual blog featuring photography from my travels and daily life, with dedicated sections for specific trips and a continuous stream of recent photos</p></li>
+<li><a href="./photos/index.html">Photos</a>: A visual blog featuring photography from my travels and daily life, with dedicated sections for specific trips and a continuous stream of recent photos.</li>
 </ul>
 </section>
 </section>
@@ -240,7 +231,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/ksilberb\.github\.io\/paxnomada\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

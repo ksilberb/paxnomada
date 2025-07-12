@@ -1,0 +1,16 @@
+---
+title: "Life"
+date: "2025-07-10"
+description: "A random assortment of photos from my daily life."
+image: "life_1.jpg"
+lightbox: true
+---
+
+::: {.figure-container}
+<span class="badge bg-info">Tue, 27 Oct 2015, 05:17:56 PM PDT</span>
+![My first time at Thousand Island Lake. We hiked in from the trail head accross from silver lake. The plan was to summit Banner Peak, but we bailed half way up due to snow conditions.](life_1.jpg){group="life"}
+:::
+
+<div class="btn-group-vertical">
+  <a href="index.qmd" class="btn btn-primary" role="button">Back to top</a>
+</div>

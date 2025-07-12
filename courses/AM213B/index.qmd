@@ -1,0 +1,49 @@
+# Numerical Methods for the Solution of Differential Equations
+
+## Course Description
+
+This course introduces the numerical solutions of ordinary and partial differential equations (ODEs and PDEs). Focuses on the derivation of discrete solution methods for a variety of differential equations, and their stability and convergence. Also provides hands-on experience in implementing such numerical algorithms for the solution of engineering and scientific problems using MATLAB software. The class consists of lectures and hands-on programming sections. Basic mathematical knowledge of ODEs and PDEs is assumed, and a basic working knowledge of programming in MATLAB is expected.
+
+**Instructor**: [Javier Gonzalez-Rocha](https://campusdirectory.ucsc.edu/cd_detail?uid=jgonz406)
+
+## Course Notes
+
+[Polynomial approximation of functions and derivatives](notes/danielle/Polynomial_approximation_of_functions_and_derivatives.pdf)
+
+[Initial value problems for ODEs](notes/danielle/The_initial_value_problem_for_ODEs.pdf)
+
+[Overview of numerical methods for ODEs](notes/danielle/Overview_of_numerical_methods_for_ODEs.pdf)
+
+[Consistency of numerical methods for ODEs](notes/danielle/Consistency_of_numerical_methods_for_ODEs.pdf)
+
+[Stability and convergence of numerical methods for ODEs](notes/danielle/Zero-stability_of_numerical_methods_for_ODEs.pdf)
+
+[Absolute stability of numerical methods for ODEs](notes/danielle/Absolute_stability_of_numerical_methods_for_ODEs.pdf)
+
+[Boundary value problems for ODEs](notes/danielle/Boundary_value_problems.pdf)
+
+[Numerical methods to solve boundary value problems for ODEs](notes/danielle/Numerical_methods_to_solve_boundary_value_problems_for_ODEs.pdf)
+
+[Numerical methods for the heat equation](notes/danielle/Numerical_methods_for_the_heat_equation.pdf)
+
+[Convergence analysis of finite difference methods for PDEs](notes/danielle/Convergence_analysis_of_finite_difference_methods_for_PDEs.pdf)
+
+[Finite-difference methods for the advection equation](notes/danielle/Numerical_methods_for_the_advection_equation.pdf)
+
+[Fourier spectral methods](notes/danielle/Fourier_spectral_methods.pdf)
+
+## Course Work
+
+[Homework 0](docs/hw0.pdf)
+
+[Homework 1](docs/hw1.pdf)
+
+[Homework 2](docs/hw2.pdf)
+
+[Homework 3](docs/hw3.pdf)
+
+[Homework 4](docs/hw4.pdf)
+
+[Homework 6](docs/hw6.pdf)
+
+[Final](docs/final.pdf)

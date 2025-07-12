@@ -1,0 +1,52 @@
+---
+title: "Homework 1 AM212"
+date: 2024-10-4
+author:
+  - name: Kevin Silberberg
+    id: ks
+    orcid: 0009-0009-4825-1865
+    email: ksilberb@ucsc.edu
+    affiliation:
+      - name: University of California Santa Cruz
+        city: Santa Cruz
+        state: CA
+        href: www.ucsc.edu
+---
+
+# Bush problem 4 page 23
+
+A mass-spring system is subject to a small damping proportional to the cubed power of speed. The governing equation:
+
+$$M\frac{d^2x}{dt^2} = -\frac{\Lambda}{L}x -K\bigg(\frac{dx}{dt}\bigg)^3$${#eq-nondim}
+
+Non-dimensionalize the @eq-nondim and express $\epsilon$ in terms of the constants of the system.
+
+## Solution
+
+Let us non-dimensionalize @eq-nondim
+
+Let
+\begin{align}
+	\hat{x} &= \frac{x}{x_s} \Longrightarrow x = \hat{x}x_s \\
+	\hat{t} &= \frac{t}{t_s} \Longrightarrow t = \hat{t}t_s
+\end{align}
+
+Plugging in for $x$ and $t$ into equation @eq-nondim we get
+
+\begin{align}
+	\frac{Mx_s}{t_s^2}\frac{d^2\hat{x}}{d\hat{t}^2} + \frac{\Lambda x_s}{L}\hat{x} + \frac{Kx_s^3}{t_s^3}\bigg(\frac{d\hat{x}}{d\hat{t}}\bigg)^3 &= 0 \\
+	\frac{d^2\hat{x}}{d\hat{t}^2} + \frac{\Lambda t_s^2}{ML}\hat{x} + \frac{K}{M}\frac{x_s^2}{t_s}\bigg(\frac{d\hat{x}}{d\hat{t}}\bigg)^3 &= 0 \\
+\end{align}
+
+Let
+
+\begin{align}
+	\frac{\Lambda t_s^2}{ML} &= 1 \Longrightarrow t_s = \tau = \sqrt{\frac{ML}{\Lambda}} \\
+	\frac{x_s^2K}{M} &= 1 \Longrightarrow x_s = L_c = \sqrt{\frac{M}{K}}
+\end{align}
+
+thus the non-dimensionalized equation becomes,
+
+$$\frac{d^2\hat{x}}{d\hat{t}^2} + \hat{x} = -\epsilon\bigg(\frac{d\hat{x}}{d\hat{t}}\bigg)^3$$
+
+where $\epsilon = \frac{1}{\tau}$
