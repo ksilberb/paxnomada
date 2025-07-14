@@ -8,6 +8,8 @@
             "source": [
                 "---\n",
                 "title: \"Multiples of 3 or 5\"\n",
+                "date: 03/10/2025\n",
+                "author: Kevin Silberberg\n",
                 "engine: julia-1.11\n",
                 "julia:\n",
                 "  exeflags: [\"--project=/home/kevinsilberberg/paxnomada/projecteuler/\"]\n",
@@ -165,7 +167,7 @@
             ]
         }
     ],
-    "timestamp": "2025-07-13T15:15:16.072",
+    "timestamp": "2025-07-14T09:51:48.742",
     "file": "/home/kevinsilberberg/Repos/paxnomada/problems/projecteuler/level_1/multiplesof3or5.qmd",
     "qnr_schema_version": "1.0.0"
 }

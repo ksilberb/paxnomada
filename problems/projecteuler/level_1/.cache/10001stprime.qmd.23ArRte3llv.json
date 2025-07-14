@@ -7,7 +7,9 @@
             },
             "source": [
                 "---\n",
-                "title: \"Smallest Multiple\"\n",
+                "title: \"10,001st Prime\"\n",
+                "subtitle: Problem 7\n",
+                "date: 07/14/2025\n",
                 "author: Kevin Silberberg\n",
                 "engine: julia-1.11\n",
                 "julia:\n",
@@ -20,10 +22,9 @@
                 "\n",
                 "## Problem definition\n",
                 "\n",
-                "$2520$ is the smallest number that can be divided by each of the numbers from $1$ to $10$ without any remainder.\n",
+                "By listing the first six prime numbers: $2, 3, 5, 7, 11, \\text{ and } 13$, we can see that the $6$th prime is 13.\n",
                 "\n",
-                "What is the smallest positive number that can is **evenly divisible** by all of the numbers from $1$ to $20$?\n",
-                "\n",
+                "What is the 10,001st prime number?\n",
                 "\n",
                 "## Solution"
             ]
@@ -34,32 +35,21 @@
             "metadata": {
             },
             "source": [
-                "function isDivisible(num::Int)\n",
-                "    r::Int = 0\n",
-                "    for i = 1:20\n",
-                "        r = mod(num, i)\n",
-                "        if r != 0\n",
-                "            return false\n",
-                "        end\n",
-                "    end\n",
-                "    return true\n",
+                "function primes(N::Int)\n",
+                "    p = Vector{Int}(undef, N)\n",
+                "    p[1] = 2\n",
+                "    p[2] = 3\n",
+                "    p[3] = 5\n",
+                "    p\n",
                 "end\n",
-                "\n",
-                "function main()\n",
-                "    current = 2520\n",
-                "    while !(isDivisible(current))\n",
-                "        current += 1\n",
-                "    end\n",
-                "    current\n",
-                "end\n",
-                "main()"
+                "primes(5)"
             ],
             "outputs": [
                 {
                     "output_type": "execute_result",
                     "execution_count": 1,
                     "data": {
-                        "text/plain": "232792560"
+                        "text/plain": "5-element Vector{Int64}:\n                   2\n                   3\n                   5\n 7955995135889534561\n                   0"
                     },
                     "metadata": {
                     }
@@ -76,7 +66,7 @@
             ]
         }
     ],
-    "timestamp": "2025-07-13T15:44:34.234",
-    "file": "/home/kevinsilberberg/Repos/paxnomada/problems/projecteuler/level_1/smallestmultiple.qmd",
+    "timestamp": "2025-07-14T11:04:28.93",
+    "file": "/home/kevinsilberberg/Repos/paxnomada/problems/projecteuler/level_1/10001stprime.qmd",
     "qnr_schema_version": "1.0.0"
 }

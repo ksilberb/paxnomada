@@ -1,0 +1,53 @@
+---
+title: "Sum Square Difference"
+subtitle: Problem 6
+date: 07/14/2025
+author: Kevin Silberberg
+engine: julia-1.11
+julia:
+  exeflags: ["--project=/home/kevinsilberberg/paxnomada/projecteuler/"]
+execute:
+  daemon: 3600
+  cache: true
+  freeze: auto
+---
+
+## Problem Definition
+
+The sum of the squares of the first ten natural numbers is,
+
+$$1^2 + 2^2 + \cdots + 10^2 = 385$${#eq-example1}
+
+The square of the sum of the first ten natural numbers is,
+
+$$(1 + 2 + \cdots + 10)^2 = 55^2 = 3025$${#eq-example2}
+
+Hence the difference between the sum of the squares of the first ten natural numbers and the square of the sum is $3025 - 385 = 2640$.
+
+Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.
+
+## Solution
+
+In julia we can create a vector of the first $N$ natural numbers by collecting a range. We can then apply a function to that collection by broadcasting. This uses "Single Instruction Multiple Data" or SIMD compiler optimizations to efficiently solve the problem.
+
+```{julia}
+"""
+N :: Integer, the first N natural numbers
+"""
+function sum_square_difference(N::Int)
+    numbers = collect(1:N)
+    return sum(numbers)^2 - sum(numbers.^2)
+end
+```
+
+Lets check the implementation with the provided solution to see if the function works as expected.
+
+```{julia}
+sum_square_difference(10)
+```
+
+Perfect! So the correct answer is,
+
+```{julia}
+sum_square_difference(100)
+```

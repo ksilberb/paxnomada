@@ -7,7 +7,10 @@
             },
             "source": [
                 "---\n",
-                "title: \"Smallest Multiple\"\n",
+                "title: \"10,001st Prime\"\n",
+                "subtitle: Problem 7\n",
+                "date: 07/14/2025\n",
+                "author: Kevin Silberberg\n",
                 "engine: julia-1.11\n",
                 "julia:\n",
                 "  exeflags: [\"--project=/home/kevinsilberberg/paxnomada/projecteuler/\"]\n",
@@ -19,12 +22,13 @@
                 "\n",
                 "## Problem definition\n",
                 "\n",
-                "$2520$ is the smallest number that can be divided by each of the numbers from $1$ to $10$ without any remainder.\n",
+                "By listing the first six prime numbers: $2, 3, 5, 7, 11, \\text{ and } 13$, we can see that the $6$th prime is 13.\n",
                 "\n",
-                "What is the smallest positive number that can is **evenly divisible** by all of the numbers from $1$ to $20$?\n",
+                "What is the 10,001st prime number?\n",
                 "\n",
+                "## Solution\n",
                 "\n",
-                "## Solution"
+                "We are going to implement the ancient algorithm the [sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes) for finding all prime numbers up to any given limit."
             ]
         },
         {
@@ -33,32 +37,28 @@
             "metadata": {
             },
             "source": [
-                "function isDivisible(num::Int)\n",
-                "    r::Int = 0\n",
-                "    for i = 1:20\n",
-                "        r = mod(num, i)\n",
-                "        if r != 0\n",
-                "            return false\n",
+                "function sieve_of_erato(N::Int)\n",
+                "    sieve = trues(N)\n",
+                "    sieve[1] = false\n",
+                "    for k in [2, 3, 5, 7]\n",
+                "        l = k\n",
+                "        while l ≤ N\n",
+                "            if sieve[l]\n",
+                "                sieve[l] = false\n",
+                "            end\n",
+                "            l += k\n",
                 "        end\n",
                 "    end\n",
-                "    return true\n",
+                "    [i for i in 1:N if sieve[i]]\n",
                 "end\n",
-                "\n",
-                "function main()\n",
-                "    current = 2520\n",
-                "    while !(isDivisible(current))\n",
-                "        current += 1\n",
-                "    end\n",
-                "    current\n",
-                "end\n",
-                "main()"
+                "sieve_of_erato(30)"
             ],
             "outputs": [
                 {
                     "output_type": "execute_result",
                     "execution_count": 1,
                     "data": {
-                        "text/plain": "232792560"
+                        "text/plain": "6-element Vector{Int64}:\n 11\n 13\n 17\n 19\n 23\n 29"
                     },
                     "metadata": {
                     }
@@ -75,7 +75,7 @@
             ]
         }
     ],
-    "timestamp": "2025-07-13T15:15:37.177",
-    "file": "/home/kevinsilberberg/Repos/paxnomada/problems/projecteuler/level_1/smallestmultiple.qmd",
+    "timestamp": "2025-07-14T11:46:55.626",
+    "file": "/home/kevinsilberberg/Repos/paxnomada/problems/projecteuler/level_1/10001stprime.qmd",
     "qnr_schema_version": "1.0.0"
 }

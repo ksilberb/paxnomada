@@ -8,6 +8,9 @@
             "source": [
                 "---\n",
                 "title: \"Largest Prime Factor\"\n",
+                "subtitle: Problem 3\n",
+                "date: 04/14/2025\n",
+                "author: Kevin Silberberg\n",
                 "engine: julia-1.11\n",
                 "julia:\n",
                 "  exeflags: [\"--project=/home/kevinsilberberg/paxnomada/projecteuler/\"]\n",
@@ -168,7 +171,7 @@
             ]
         }
     ],
-    "timestamp": "2025-07-13T15:14:40.123",
+    "timestamp": "2025-07-14T09:56:15.635",
     "file": "/home/kevinsilberberg/Repos/paxnomada/problems/projecteuler/level_1/largestprimefactor.qmd",
     "qnr_schema_version": "1.0.0"
 }

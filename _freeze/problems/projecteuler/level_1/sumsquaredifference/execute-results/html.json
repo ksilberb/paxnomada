@@ -1,0 +1,12 @@
+{
+  "hash": "45933db3af90bad44e696d4a82fa9a8c",
+  "result": {
+    "engine": "julia",
+    "markdown": "---\ntitle: \"Sum Square Difference\"\nsubtitle: Problem 6\ndate: 07/14/2025\nauthor: Kevin Silberberg\nengine: julia-1.11\njulia:\n  exeflags: [\"--project=/home/kevinsilberberg/paxnomada/projecteuler/\"]\nexecute:\n  daemon: 3600\n  cache: true\n  freeze: auto\n---\n\n## Problem Definition\n\nThe sum of the squares of the first ten natural numbers is,\n\n$$1^2 + 2^2 + \\cdots + 10^2 = 385$${#eq-example1}\n\nThe square of the sum of the first ten natural numbers is,\n\n$$(1 + 2 + \\cdots + 10)^2 = 55^2 = 3025$${#eq-example2}\n\nHence the difference between the sum of the squares of the first ten natural numbers and the square of the sum is $3025 - 385 = 2640$.\n\nFind the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.\n\n## Solution\n\nIn julia we can create a vector of the first $N$ natural numbers by collecting a range. We can then apply a function to that collection by broadcasting. This uses \"Single Instruction Multiple Data\" or SIMD compiler optimizations to efficiently solve the problem.\n\n::: {#2 .cell execution_count=1}\n``` {.julia .cell-code}\n\"\"\"\nN :: Integer, the first N natural numbers\n\"\"\"\nfunction sum_square_difference(N::Int)\n    numbers = collect(1:N)\n    return sum(numbers)^2 - sum(numbers.^2)\nend\n```\n\n::: {.cell-output .cell-output-display execution_count=1}\n```\nMain.Notebook.sum_square_difference\n```\n:::\n:::\n\n\n\nLets check the implementation with the provided solution to see if the function works as expected.\n\n::: {#4 .cell execution_count=1}\n``` {.julia .cell-code}\nsum_square_difference(10)\n```\n\n::: {.cell-output .cell-output-display execution_count=1}\n```\n2640\n```\n:::\n:::\n\n\n\nPerfect! So the correct answer is,\n\n::: {#6 .cell execution_count=1}\n``` {.julia .cell-code}\nsum_square_difference(100)\n```\n\n::: {.cell-output .cell-output-display execution_count=1}\n```\n25164150\n```\n:::\n:::\n\n\n\n",
+    "supporting": [
+      "sumsquaredifference_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}

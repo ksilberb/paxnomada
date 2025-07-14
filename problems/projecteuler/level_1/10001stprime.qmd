@@ -1,0 +1,83 @@
+---
+title: "10,001st Prime"
+subtitle: Problem 7
+date: 07/14/2025
+author: Kevin Silberberg
+bibliography: ref.bib
+engine: julia-1.11
+julia:
+  exeflags: ["--project=/home/kevinsilberberg/paxnomada/projecteuler/"]
+execute:
+  daemon: 3600
+  cache: true
+  freeze: auto
+---
+
+## Problem definition
+
+By listing the first six prime numbers: $2, 3, 5, 7, 11, \text{ and } 13$, we can see that the $6$th prime is 13.
+
+What is the 10,001st prime number?
+
+## Solution
+
+We are going to implement the ancient algorithm the [sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes) for finding all prime numbers up to any given limit.
+
+```{julia}
+"""
+N :: Integer, primes up to N
+"""
+function sieve_of_erato(N::Int)
+    if N < 2
+        return Int[]
+    end
+
+    sieve = trues(N)
+    sieve[1] = false
+
+    if N ≥ 2
+        sieve[4:2:N] .= false
+    end
+
+    for p in 3:2:isqrt(N)
+        if sieve[p]
+            r = p*p
+            if r ≤ N
+                sieve[r:2*p:N] .= false
+            end
+        end
+    end
+    return findall(sieve)
+end
+```
+
+This returns a Vector of integers, of all the primes up to the number $N$. What we want though is specifically the Nth prime number denoted $p_n$. Using the above function is computationally expensive, so ideally we only want to generate the numbers once.
+
+In 1902, [Mechele Cipolla](https://en.wikipedia.org/wiki/Michele_Cipolla) proved that the nth prime $p_n$ has aymptotic expansion,
+
+$$p_n = n \text{log}(n) + n \text{log}(\text{log}(n)) - n + \sum_{i=1}^{r}(-1)^{i-1}\frac{f_i \left(\text{log}(\text{log}(n))\right)}{i! \text{log}^{i}(n)} + o \left(\frac{n}{\text{log}^{r}(n)}\right)$$
+
+Where $f_i(\text{log}(\text{log}(n)))$ and $g_i(\text{log}(\text{log}(n)))$ are polynomials in $\text{log}(\text{log}(n))$ of degree $i$, with integer coefficients and positive leading coefficient [@jakimczuk2008].
+
+If $r = 0$ we obtain
+
+$$p_n = n \text{log}(n) + n \text{log}(\text{log}(n)) - n + o(n)$$
+
+We want to over approximate the input though so we will just use the value
+
+$$p_n \approx n \left(\text{log}(n) + \text{log}(\text{log}(n))\right)$$
+
+Let us write a function that finds the nth prime number $p_n$ given this over-approximation.
+
+```{julia}
+function nthprime(N::Int)
+    p = Int(ceil(N*(log(N) + log(log(N)))))
+    return sieve_of_erato(p)[N]
+end
+```
+
+So the answer is thus,
+
+```{julia}
+nthprime(10001)
+```

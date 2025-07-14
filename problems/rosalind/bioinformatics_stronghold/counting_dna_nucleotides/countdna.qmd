@@ -1,5 +1,6 @@
 ---
 title: "Counting DNA nucleotides"
+date: 03/09/2025
 author: Kevin Silberberg
 engine: julia-1.11
 julia:

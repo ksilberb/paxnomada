@@ -1,5 +1,7 @@
 ---
 title: "Smallest Multiple"
+subtitle: Problem 5
+date: 05/16/2025
 author: Kevin Silberberg
 engine: julia-1.11
 julia:

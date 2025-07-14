@@ -8,6 +8,8 @@
             "source": [
                 "---\n",
                 "title: \"Largest Palindrome Product\"\n",
+                "date: 05/16/2025\n",
+                "author: Kevin Silberberg\n",
                 "engine: julia-1.11\n",
                 "julia:\n",
                 "  exeflags: [\"--project=/home/kevinsilberberg/paxnomada/projecteuler/\"]\n",
@@ -85,7 +87,7 @@
             ]
         }
     ],
-    "timestamp": "2025-07-13T15:14:02.086",
+    "timestamp": "2025-07-14T09:52:58.044",
     "file": "/home/kevinsilberberg/Repos/paxnomada/problems/projecteuler/level_1/largestpalindromeproduct.qmd",
     "qnr_schema_version": "1.0.0"
 }

@@ -7,6 +7,10 @@
             },
             "source": [
                 "---\n",
+                "title: \"Largest Palindrome Product\"\n",
+                "subtitle: Problem 4\n",
+                "date: 05/16/2025\n",
+                "author: Kevin Silberberg\n",
                 "engine: julia-1.11\n",
                 "julia:\n",
                 "  exeflags: [\"--project=/home/kevinsilberberg/paxnomada/projecteuler/\"]\n",
@@ -16,7 +20,7 @@
                 "  freeze: auto\n",
                 "---\n",
                 "\n",
-                "# Largest Palindrome Product\n",
+                "## Problem definition\n",
                 "\n",
                 "A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is\n",
                 "\n",
@@ -84,7 +88,7 @@
             ]
         }
     ],
-    "timestamp": "2025-07-13T11:42:28.824",
+    "timestamp": "2025-07-14T09:56:30.819",
     "file": "/home/kevinsilberberg/Repos/paxnomada/problems/projecteuler/level_1/largestpalindromeproduct.qmd",
     "qnr_schema_version": "1.0.0"
 }

@@ -7,6 +7,10 @@
             },
             "source": [
                 "---\n",
+                "title: \"Multiples of 3 or 5\"\n",
+                "subtitle: Problem 1\n",
+                "date: 03/10/2025\n",
+                "author: Kevin Silberberg\n",
                 "engine: julia-1.11\n",
                 "julia:\n",
                 "  exeflags: [\"--project=/home/kevinsilberberg/paxnomada/projecteuler/\"]\n",
@@ -16,7 +20,7 @@
                 "  freeze: auto\n",
                 "---\n",
                 "\n",
-                "# Problem\n",
+                "## Problem definition\n",
                 "\n",
                 "If we list all the natural numbers below $10$ that are multiplies of $3$ or $5$, we get $3, 5, 6, \\text{and } 9$. The sum of these multiples is $23$.\n",
                 "\n",
@@ -164,7 +168,7 @@
             ]
         }
     ],
-    "timestamp": "2025-07-13T11:42:23.268",
+    "timestamp": "2025-07-14T09:55:43.828",
     "file": "/home/kevinsilberberg/Repos/paxnomada/problems/projecteuler/level_1/multiplesof3or5.qmd",
     "qnr_schema_version": "1.0.0"
 }

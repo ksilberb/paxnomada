@@ -7,6 +7,9 @@
             },
             "source": [
                 "---\n",
+                "title: \"Largest Prime Factor\"\n",
+                "date: 04/14/2025\n",
+                "author: Kevin Silberberg\n",
                 "engine: julia-1.11\n",
                 "julia:\n",
                 "  exeflags: [\"--project=/home/kevinsilberberg/paxnomada/projecteuler/\"]\n",
@@ -16,7 +19,7 @@
                 "  freeze: auto\n",
                 "---\n",
                 "\n",
-                "# Largest Prime Factor (Problem 3)\n",
+                "## Problem definition\n",
                 "\n",
                 "The prime factors of 13195 are 5, 7, 13, and 29.\n",
                 "\n",
@@ -167,7 +170,7 @@
             ]
         }
     ],
-    "timestamp": "2025-07-13T11:42:34.92",
+    "timestamp": "2025-07-14T09:52:33.301",
     "file": "/home/kevinsilberberg/Repos/paxnomada/problems/projecteuler/level_1/largestprimefactor.qmd",
     "qnr_schema_version": "1.0.0"
 }

@@ -1,5 +1,6 @@
 ---
 title: "Complementing a Strand of DNA"
+date: 07/02/2025
 author: Kevin Silberberg
 engine: julia-1.11
 julia:
