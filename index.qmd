@@ -16,7 +16,7 @@ about:
       url: "https://linkedin.com/in/kevin-silberberg-60877336b"
     - text: CV
       icon: file-person
-      url: "cv.pdf"
+      url: "https://ksilberb.github.io/paxnomada/cv.pdf"
 comments: false
 
 # text: Bluesky
@@ -26,7 +26,7 @@ comments: false
 listing:
   - id: courses
     contents: "courses/*/index.qmd"
-    type: default
+    type: table
     fields: [image, title, author]
 ---
 
@@ -34,7 +34,7 @@ listing:
 
 I am a recent graduate from the Scientific Computing and Applied Mathematics Master's program at [University of California, Santa Cruz](https://www.ucsc.edu/).
 
-## Courses
+## Selected Courses
 
 A selection of courses from my time at UCSC.
 

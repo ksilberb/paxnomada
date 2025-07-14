@@ -78,9 +78,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-image','listing-title','listing-author',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-image','listing-title','listing-author',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description"],
+      searchColumns: ["listing-date","listing-title","listing-author"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -137,7 +137,7 @@ window.Quarto = {
 
 <meta property="og:title" content="Kevin Silberberg – paxnomada">
 <meta property="og:description" content="">
-<meta property="og:image" content="https://ksilberb.github.io/paxnomada/avatar.jpg">
+<meta property="og:image" content="avatar.jpg">
 <meta property="og:site_name" content="paxnomada">
 <meta property="og:locale" content="en_US">
 </head>
@@ -216,7 +216,7 @@ window.Quarto = {
     <i class="bi bi-linkedin"></i>
      <span class="about-link-text">LinkedIn</span>
   </a>
-  <a href="/cv.pdf" class="about-link" rel="" target="">
+  <a href="https://ksilberb.github.io/paxnomada/cv.pdf" class="about-link" rel="" target="">
     <i class="bi bi-file-person"></i>
      <span class="about-link-text">CV</span>
   </a>
@@ -227,76 +227,89 @@ window.Quarto = {
 <h2 data-anchor-id="bio">Bio</h2>
 <p>I am a recent graduate from the Scientific Computing and Applied Mathematics Master’s program at <a href="https://www.ucsc.edu/">University of California, Santa Cruz</a>.</p>
 </section>
-<section id="courses" class="level2">
-<h2 data-anchor-id="courses">Courses</h2>
+<section id="selected-courses" class="level2">
+<h2 data-anchor-id="selected-courses">Selected Courses</h2>
 <p>A selection of courses from my time at UCSC.</p>
-<div id="listing-courses" class="quarto-listing quarto-listing-container-default">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1726210800000" data-listing-file-modified-sort="1752440848709" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
-<div class="thumbnail"><a href="./courses/AM212/index.html" class="no-external">
-<img loading="lazy" src="./courses/AM212/p3pa.png" class="thumbnail-image">
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./courses/AM212/index.html" class="no-external">Advanced Methods in Applied Mathematics</a>
-</h3>
+<div id="listing-courses" class="quarto-listing quarto-listing-container-table">
+<div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+    <select id="listing-courses-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-courses'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+      <option value="" disabled="" selected="" hidden="">Order By</option>
+      <option value="index" data-direction="asc">Default</option>
+      <option value="listing-title-sort" data-direction="asc">
+        Title
+      </option>
+      <option value="listing-author" data-direction="asc">
+        Author
+      </option>
+    </select>
+  </div>
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filter">
+    </div>
 </div>
-<div class="metadata">
-<a href="./courses/AM212/index.html" class="no-external">
-</a><div class="listing-author"><a href="./courses/AM212/index.html" class="no-external">
-</a><a href="https://users.soe.ucsc.edu/~pgaraud/">Pascale Garaud</a>
-</div>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-listing-date-sort="1726210800000" data-listing-file-modified-sort="1752439345453" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="17">
-<div class="thumbnail"><a href="./courses/AM238/index.html" class="no-external">
-<img loading="lazy" src="./courses/AM238/thumbnail.png" class="thumbnail-image">
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./courses/AM238/index.html" class="no-external">Fundamentals of Uncertainty Quantification in Computational Science and Engineering</a>
-</h3>
-</div>
-<div class="metadata">
-<a href="./courses/AM238/index.html" class="no-external">
-</a><div class="listing-author"><a href="./courses/AM238/index.html" class="no-external">
-</a><a href="https://venturi.soe.ucsc.edu/home">Prof.&nbsp;Daniele Venturi</a>
-</div>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-listing-date-sort="1736150400000" data-listing-file-modified-sort="1752438160413" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="16">
-<div class="thumbnail"><a href="./courses/AM213A/index.html" class="no-external">
-<img loading="lazy" src="./courses/AM213A/thumbnail.png" class="thumbnail-image">
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./courses/AM213A/index.html" class="no-external">Numberical Linear Algebra</a>
-</h3>
-</div>
-<div class="metadata">
-<a href="./courses/AM213A/index.html" class="no-external">
-</a><div class="listing-author"><a href="./courses/AM213A/index.html" class="no-external">
-</a><a href="https://users.soe.ucsc.edu/~dongwook/">Dongwook Lee</a>
-</div>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-listing-date-sort="1743318000000" data-listing-file-modified-sort="1752443179929" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
-<div class="thumbnail"><a href="./courses/AM213B/index.html" class="no-external">
-<img loading="lazy" src="./courses/AM213B/thumbnail.png" class="thumbnail-image">
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./courses/AM213B/index.html" class="no-external">Numerical Methods for the Solution of Differential Equations</a>
-</h3>
-</div>
-<div class="metadata">
-<a href="./courses/AM213B/index.html" class="no-external">
-</a><div class="listing-author"><a href="./courses/AM213B/index.html" class="no-external">
-</a><a href="https://campusdirectory.ucsc.edu/cd_detail?uid=jgonz406">Javier Gonzalez-Rocha</a>
-</div>
-</div>
-</div>
-</div>
+<table class="quarto-listing-table table">
+<thead>
+<tr>
+<th>
+</th>
+<th>
+<a class="sort" data-sort="listing-title-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Title</a>
+</th>
+<th>
+<a class="sort" data-sort="listing-author" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Author</a>
+</th>
+</tr>
+</thead>
+<tbody class="list">
+<tr data-index="0" data-listing-date-sort="1726210800000" data-listing-file-modified-sort="1752440848709" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3" data-listing-title-sort="Advanced Methods in Applied Mathematics" data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-image"><img loading="lazy" src="./courses/AM212/p3pa.png" style="height: 40px;"></span>
+</td>
+<td>
+<a href="./courses/AM212/index.html" class="title listing-title">Advanced Methods in Applied Mathematics</a>
+</td>
+<td>
+<span class="listing-author"><a href="https://users.soe.ucsc.edu/~pgaraud/">Pascale Garaud</a></span>
+</td>
+</tr>
+<tr data-index="1" data-listing-date-sort="1726210800000" data-listing-file-modified-sort="1752439345453" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="17" data-listing-title-sort="Fundamentals of Uncertainty Quantification in Computational Science and Engineering" data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-image"><img loading="lazy" src="./courses/AM238/thumbnail.png" style="height: 40px;"></span>
+</td>
+<td>
+<a href="./courses/AM238/index.html" class="title listing-title">Fundamentals of Uncertainty Quantification in Computational Science and Engineering</a>
+</td>
+<td>
+<span class="listing-author"><a href="https://venturi.soe.ucsc.edu/home">Prof.&nbsp;Daniele Venturi</a></span>
+</td>
+</tr>
+<tr data-index="2" data-listing-date-sort="1736150400000" data-listing-file-modified-sort="1752438160413" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="16" data-listing-title-sort="Numberical Linear Algebra" data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-image"><img loading="lazy" src="./courses/AM213A/thumbnail.png" style="height: 40px;"></span>
+</td>
+<td>
+<a href="./courses/AM213A/index.html" class="title listing-title">Numberical Linear Algebra</a>
+</td>
+<td>
+<span class="listing-author"><a href="https://users.soe.ucsc.edu/~dongwook/">Dongwook Lee</a></span>
+</td>
+</tr>
+<tr data-index="3" data-listing-date-sort="1743318000000" data-listing-file-modified-sort="1752443179929" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3" data-listing-title-sort="Numerical Methods for the Solution of Differential Equations" data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-image"><img loading="lazy" src="./courses/AM213B/thumbnail.png" style="height: 40px;"></span>
+</td>
+<td>
+<a href="./courses/AM213B/index.html" class="title listing-title">Numerical Methods for the Solution of Differential Equations</a>
+</td>
+<td>
+<span class="listing-author"><a href="https://campusdirectory.ucsc.edu/cd_detail?uid=jgonz406">Javier Gonzalez-Rocha</a></span>
+</td>
+</tr>
+</tbody>
+</table>
 <div class="listing-no-matching d-none">No matching items</div>
 </div>
 
@@ -370,7 +383,7 @@ window.Quarto = {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/ksilberb\.github\.io\/paxnomada\/");
+        var filterRegex = new RegExp('/' + window.location.host + '/');
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

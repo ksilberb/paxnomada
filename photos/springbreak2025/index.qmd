@@ -1,76 +1,120 @@
 ---
-title: "Spring Break 2025"
-date: "2025-03-23"
-description: "Climbing and car camping in Bishop, CA with friends"
+title: Spring Break 2025
+date: 2025-03-23
+description: "[Kaela](https://www.instagram.com/_rose.kaela_/) and I spent our spring break in Bishop, CA climbing and car camping with our friends [Ethan](https://www.instagram.com/ethan.ramsey47/), [Ruby](https://www.instagram.com/rubygonda/), [Joey](https://www.instagram.com/joey.cusenza/), and [Maija](https://www.instagram.com/mai.jah/)."
 image: "spring_9.JPG"
 lightbox: true
+crossref:
+  fig-title: ""
 ---
-
-Kaela and I spent our spring break in Bishop, CA climbing and car camping with our friends [Ethan](https://www.instagram.com/ethan.ramsey47/), [Ruby](https://www.instagram.com/rubygonda/), [Joey](https://www.instagram.com/joey.cusenza/), and [Maija](https://www.instagram.com/mai.jah/).
 
 ## Arrival and Pine Creek Canyon
 
-::: {.figure-container}
+::: {.figure-container #fig-spring1}
+
 <span class="badge bg-info">Sun, 23 Mar 2025, 03:08:16 AM PDT</span>
-![We found our friends! The view from our camp site looking at Pine creek canyon.](spring_1.JPG){group="spring-break"}
+
+![](spring_1.JPG){group="spring-break"}
+
+We found our friends! The view from our camp site looking at Pine creek canyon.
 :::
 
-::: {.figure-container}
+::: {.figure-container #fig-spring2}
+
 <span class="badge bg-info">Sun, 23 Mar 2025, 05:47:38 AM PDT</span>
-![Getting our gear ready for the hike up to the climb.](spring_2.JPG){group="spring-break"}
+
+![](spring_2.JPG){group="spring-break"}
+
+Getting our gear ready for the hike up to the climb.
 :::
 
-::: {.figure-container}
+::: {.figure-container #fig-spring3}
+
 <span class="badge bg-info">Sun, 23 Mar 2025, 05:48:42 AM PDT</span>
-![The view of the crag from the road.](spring_3.JPG){group="spring-break"}
+
+![](spring_3.JPG){group="spring-break"}
+
+The view of the crag from the road.
 :::
 
-::: {.figure-container}
+::: {.figure-container #fig-spring4}
+
 <span class="badge bg-info">Sun, 23 Mar 2025, 06:05:14 AM PDT</span>
-![Looking out across the canyon. We found a cairn!](spring_4.JPG){group="spring-break"}
+
+![](spring_4.JPG){group="spring-break"}
+
+Looking out across the canyon. Found a cairn!
 :::
 
 ## Climbing Day
 
-::: {.figure-container}
+::: {.figure-container #fig-spring5}
+
 <span class="badge bg-info">Sun, 23 Mar 2025, 07:15:12 AM PDT</span>
-![About to rope up and climb some slab! Kaela found the belay spot.](spring_5.JPG){group="spring-break"}
+
+![](spring_5.JPG){group="spring-break"}
+
+About to rope up and climb some slab! Kaela found the belay spot.
 :::
 
-::: {.figure-container}
+::: {.figure-container #fig-spring6}
+
 <span class="badge bg-info">Sun, 23 Mar 2025, 07:25:04 AM PDT</span>
-![Crushing the scary slab climb!](spring_6.JPG){group="spring-break"}
+
+![](spring_6.JPG){group="spring-break"}
+
+Crushing the scary slab!
 :::
 
-::: {.figure-container}
+::: {.figure-container #fig-spring7}
+
 <span class="badge bg-info">Sun, 23 Mar 2025, 01:17:44 PM PDT</span>
-![Right before sunset at the camp after we got back from Pine Creek.](spring_7.JPG){group="spring-break"}
+
+![](spring_7.JPG){group="spring-break"}
+
+Right before sunset at the camp after we got back from Pine Creek.
 :::
 
 ## Lake Sabrina
 
 I bought some snowshoes at the Mammoth Gear Exchange for 15 dollars and decided to take a rest day from climbing. I drove up to Aspendell and snowshoed to Lake Sabrina!
 
-::: {.figure-container}
+::: {.figure-container #fig-spring8}
+
 <span class="badge bg-info">Mon, 24 Mar 2025, 11:30:20 AM PDT</span>
-![Lake Sabrina still frozen.](spring_8.JPG){group="spring-break"}
+
+![](spring_8.JPG){group="spring-break"}
+
+Lake Sabrina still frozen.
 :::
 
 ## Final Days
 
-::: {.figure-container}
+::: {.figure-container #fig-spring9}
+
 <span class="badge bg-info">Wed, 26 Mar 2025, 01:10:16 PM PDT</span>
-![Bishop Sunset.](spring_9.JPG){group="spring-break"}
+
+![](spring_9.JPG){group="spring-break"}
+
+Bishop Sunset.
 :::
 
-::: {.figure-container}
+::: {.figure-container #fig-spring10}
+
 <span class="badge bg-info">Thu, 27 Mar 2025, 02:11:48 AM PDT</span>
-![Obligatory group photo :)](spring_10.JPG){group="spring-break"}
+
+![](spring_10.JPG){group="spring-break"}
+
+Obligatory group photo :)
 :::
 
-::: {.figure-container}
+::: {.figure-container #fig-spring11}
+
 <span class="badge bg-info">Thu, 27 Mar 2025, 02:51:46 PM PDT</span>
-![My beautiful girlfriend Kaela Rose. We visited my mom after our Bishop trip.](spring_11.JPG){group="spring-break"}
+
+![](spring_11.JPG){group="spring-break"}
+
+My beautiful girlfriend Kaela Rose. We visited my mom after our Bishop trip.
 :::
 
 <div class="btn-group-vertical">

@@ -1,0 +1,58 @@
+---
+title: "Trans-Sierra Hike 2015"
+description: "This was a hike that I did with some friends from Fresno, CA that I met at [Metalmark](https://touchstoneclimbing.com/metalmark/) in the early days of adventuring outdoors. The people in this group were generally much older than me -- alot of them are teachers and working professionals with a passion for the outdoors and had a profound influence on my perspective. We started from roads end in Kings Canyon NP and hiked to Onion Valley. It was a through hike where we swapped keys with another group in the middle around upper paradise doing the hike in reverse."
+image: "trans_1.jpg"
+date: 06-13-2015
+lightbox: true
+crossref:
+  fig-title: ""
+---
+
+::: {.figure-container #fig-trans1}
+
+<span class="badge bg-info">Sat, 18 Jul 2015, 12:17:56 PM PDT</span>
+
+![](trans_1.jpg){group="trans-sierra"}
+
+We made a left at the fork in cedar grove at the base of Buck Peak and went up Mist Falls to upper paradise valley. The trail is really flat compared to going up bubbs creek.
+:::
+
+
+::: {.figure-container #fig-trans2}
+
+<span class="badge bg-info">Sat, 18 Jul 2015, 01:16:16 PM PDT</span>
+
+![](trans_2.jpg){group="trans-sierra"}
+
+Paradise Valley!
+:::
+
+
+::: {.figure-container #fig-trans3}
+
+<span class="badge bg-info">Sat, 18 Jul 2015, 01:43:38 PM PDT</span>
+
+![](trans_3.jpg){group="trans-sierra"}
+
+Just past Upper Paradise. Almost to bull frog lake.
+:::
+
+
+::: {.figure-container #fig-trans4}
+
+<span class="badge bg-info">Sat, 18 Jul 2015, 04:57:46 PM PDT</span>
+
+![](trans_4.jpg){group="trans-sierra"}
+
+This was my first time going up Kearsarge Pass. It started to rain on us and I didn't have a jacket so I decided to run down the trail.
+:::
+
+
+::: {.figure-container #fig-trans5}
+
+<span class="badge bg-info">Sun, 19 Jul 2015, 05:43:24 AM PDT</span>
+
+![](trans_5.jpg){group="trans-sierra"}
+
+The storm passed and I set up a hammock to sleep in. I remember it was a warm night. I also remember being really uncomfortable in the hammock all night haha.
+:::

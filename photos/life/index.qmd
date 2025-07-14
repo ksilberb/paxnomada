@@ -1,14 +1,18 @@
 ---
-title: "Life"
-date: "2025-07-10"
+title: Life
+date: 2025-07-10
 description: "A random assortment of photos from my daily life."
 image: "life_1.jpg"
 lightbox: true
+crossref:
+  fig-title: ""
 ---
 
-::: {.figure-container}
+::: {.figure-container #fig-life1}
 <span class="badge bg-info">Tue, 27 Oct 2015, 05:17:56 PM PDT</span>
-![My first time at Thousand Island Lake. We hiked in from the trail head accross from silver lake. The plan was to summit Banner Peak, but we bailed half way up due to snow conditions.](life_1.jpg){group="life"}
+![](life_1.jpg){group="life"}
+
+My first time at Thousand Island Lake. We hiked in from the trail head accross from silver lake. The plan was to summit Banner Peak, but we bailed half way up due to snow conditions.
 :::
 
 <div class="btn-group-vertical">

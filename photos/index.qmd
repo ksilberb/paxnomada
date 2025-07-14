@@ -1,8 +1,9 @@
 ---
 title: "Photos"
 listing:
-  contents:
-    - "*/index.qmd"
-  sort: "date desc"
-  type: default
+  - id: photos
+    contents:
+      - "*/index.qmd"
+    sort: "date desc"
+    type: default
 ---
