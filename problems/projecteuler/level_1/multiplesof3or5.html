@@ -7,9 +7,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Kevin Silberberg">
-<meta name="dcterms.date" content="2024-10-10">
 
-<title>Homework 3 AM212 – paxnomada</title>
+<title>Multiples of 3 or 5 – paxnomada</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -100,14 +134,13 @@ window.Quarto = {
 };
 </script>
 
-<meta property="og:title" content="Homework 3 AM212 – paxnomada">
+<meta property="og:title" content="Multiples of 3 or 5 – paxnomada">
 <meta property="og:description" content="">
-<meta property="og:image" content="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==">
 <meta property="og:site_name" content="paxnomada">
 <meta property="og:locale" content="en_US">
 </head>
 
-<body class="nav-fixed fullcontent quarto-light">
+<body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -137,6 +170,11 @@ window.Quarto = {
 </i> 
 <span class="menu-text">Photos</span></a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../problems/index.html"> <i class="bi bi-code" role="img">
+</i> 
+<span class="menu-text">Study</span></a>
+  </li>  
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
@@ -145,42 +183,29 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content column-page" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Homework 3 AM212</h1>
+<h1 class="title">Multiples of 3 or 5</h1>
 </div>
 
 
-<div class="quarto-title-meta-author">
-  <div class="quarto-title-meta-heading">Author</div>
-  <div class="quarto-title-meta-heading">Affiliation</div>
-  
-    <div class="quarto-title-meta-contents">
-    <p class="author">Kevin Silberberg <a href="mailto:ksilberb@ucsc.edu" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> <a href="https://orcid.org/0009-0009-4825-1865" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
-  </div>
-  <div class="quarto-title-meta-contents">
-        <p class="affiliation">
-            University of California Santa Cruz
-          </p>
-      </div>
-  </div>
 
-<div class="quarto-title-meta">
+<div class="quarto-title-meta column-page">
 
-      
     <div>
-    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">October 10, 2024</p>
-    </div>
+             <p>Kevin Silberberg </p>
+          </div>
   </div>
+    
   
     
   </div>
@@ -190,21 +215,101 @@ window.Quarto = {
 </header>
 
 
-<section id="drunk-problem" class="level1">
-<h1>Drunk Problem</h1>
-<p>The diffusion or people leaving a bar on a 1-dimensional street is modeled using the 1-d forced diffusion equation:</p>
-<p><span id="eq-forceddiff"><span class="math display">\[\begin{cases}
-\frac{\partial p}{\partial t} = D \frac{\partial^2p}{\partial x^2} + S(x, t) \\
-p(x, 0) = 0 \\
-\frac{\partial p}{\partial x}(0, t) = \frac{\partial p}{\partial x}(L, t) = 0
-\end{cases} \tag{1}\]</span></span></p>
-<p>where <span class="math inline">\(p\)</span> is the probability density of drunk people, <span class="math inline">\(S(x, t)\)</span> is the ‘source’ of drunk people per unit time coming into the street at position <span class="math inline">\(x\)</span>.</p>
-<p>To model the exit of the pub the forcing equation is such that:</p>
-<p><span id="eq-forcing"><span class="math display">\[  S(x, t) = S_0 \delta(x - \frac{L}{2})e^{-\frac{t}{\tau}} \quad \text{for } t &gt; 0 \tag{2}\]</span></span></p>
-<p>where <span class="math inline">\(\tau\)</span> is the characteristic time scale.</p>
-<section id="part-a" class="level2">
-<h2 class="anchored" data-anchor-id="part-a">Part A</h2>
-<p>Use dimensional analysis to find the characteristic diffusion timescale of the problem in the absense of forcing, <span class="math inline">\(\tau_D\)</span></p>
+<section id="problem-definition" class="level2">
+<h2 class="anchored" data-anchor-id="problem-definition">Problem definition</h2>
+<p>If we list all the natural numbers below <span class="math inline">\(10\)</span> that are multiplies of <span class="math inline">\(3\)</span> or <span class="math inline">\(5\)</span>, we get <span class="math inline">\(3, 5, 6, \text{and } 9\)</span>. The sum of these multiples is <span class="math inline">\(23\)</span>.</p>
+<p>Find the sum of all the multiples of <span class="math inline">\(3\)</span> or <span class="math inline">\(5\)</span> below <span class="math inline">\(1000\)</span>.</p>
+</section>
+<section id="solution" class="level2">
+<h2 class="anchored" data-anchor-id="solution">Solution</h2>
+<section id="analytical-solution" class="level3">
+<h3 class="anchored" data-anchor-id="analytical-solution">Analytical Solution</h3>
+<p>Let <span class="math inline">\(A \in \mathbb{N}\)</span> be the set that contains all the natural numbers in the domain <span class="math inline">\([1, 1000)\)</span> that are multiples of <span class="math inline">\(3\)</span>.</p>
+<p><span class="math display">\[\begin{align}
+A = 3, 6, 9, 12, 15, \cdots, 999
+\end{align}\]</span></p>
+<p>Let <span class="math inline">\(B \in \mathbb{N}\)</span> be the set that contains the numbers in the same domain as <span class="math inline">\(A\)</span> but that are multiples of <span class="math inline">\(5\)</span>.</p>
+<p><span class="math display">\[\begin{align}
+B = 5, 10, 15, 20, 25, \cdots, 995
+\end{align}\]</span></p>
+<p>Essentially what we are looking for here is the sum of all the elements contained in <span class="math inline">\(A \cup B\)</span>.</p>
+<p>By the inclusion-exculsion principle, recall that</p>
+<p><span class="math display">\[\begin{align}
+A \cup B = A + B - A \cap B
+\end{align}\]</span></p>
+<p>so we need to find the sum of the elements contained in <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, and the set <span class="math inline">\(C = A \cap B\)</span> which is the set of all the numbers which are multiples of <span class="math inline">\(15\)</span>.</p>
+<p><span class="math display">\[\begin{align}
+C = 15, 30, 45, 60, \cdots, 990
+\end{align}\]</span></p>
+<p>For this we can use the formulas for <a href="https://en.wikipedia.org/wiki/Arithmetic_progression">Arithmetic Progression</a>.</p>
+<p><span class="math display">\[\begin{align}
+\sum A = n \left(\frac{a_1 + a_n}{2}\right)
+\end{align}\]</span></p>
+<p>where <span class="math inline">\(n\)</span> is the number of terms in the sequence, <span class="math inline">\(a_1\)</span> is the first term and <span class="math inline">\(a_n\)</span> is the last term. We don’t know what how many terms there are in the sequence so we can also use the <em>nth term formula</em></p>
+<p><span class="math display">\[\begin{align}
+a_n = a_1 + \left(n - 1\right)d
+\end{align}\]</span></p>
+<p>where <span class="math inline">\(d\)</span> is the value being added to <span class="math inline">\(a_{n-1}\)</span> to obtain <span class="math inline">\(a_n\)</span>.</p>
+<p>Let us compute these sums for <span class="math inline">\(A, B, C\)</span></p>
+<section id="a" class="level4">
+<h4 class="anchored" data-anchor-id="a">A</h4>
+<p>the last term in the sequence is <span class="math inline">\(999\)</span> thus,</p>
+<p><span class="math display">\[\begin{align}
+999 &amp;= 3 + \left(n - 1\right)3\\
+999 &amp;= 3n\\
+n &amp;= 333
+\end{align}\]</span></p>
+<p>hence,</p>
+<p><span class="math display">\[\begin{align}
+\sum A &amp;= 333 \left(\frac{3 + 999}{2}\right)\\
+&amp;= 333 \cdot \frac{1002}{2} \\
+&amp;= 166833
+\end{align}\]</span></p>
+</section>
+<section id="b" class="level4">
+<h4 class="anchored" data-anchor-id="b">B</h4>
+<p>the last term in the sequence is <span class="math inline">\(995\)</span> thus,</p>
+<p><span class="math display">\[\begin{align}
+995 &amp;= 5 + \left(n - 1\right)5\\
+995 &amp;= 5n\\
+n &amp;= 199
+\end{align}\]</span></p>
+<p>hence,</p>
+<p><span class="math display">\[\begin{align}
+\sum B &amp;= 199 \left(\frac{5 + 995}{2}\right)\\
+&amp;= 99500
+\end{align}\]</span></p>
+</section>
+<section id="c" class="level4">
+<h4 class="anchored" data-anchor-id="c">C</h4>
+<p>the last term in the sequence is <span class="math inline">\(990\)</span> thus,</p>
+<p><span class="math display">\[\begin{align}
+990 &amp;= 15 + \left(n - 1\right)15\\
+&amp;= 15n\\
+n &amp;= 66
+\end{align}\]</span></p>
+<p>hence,</p>
+<p><span class="math display">\[\begin{align}
+\sum C &amp;= 66 \left(\frac{15 + 990}{2}\right)\\
+&amp;= 66 \cdot \left(\frac{1005}{2}\right)\\
+&amp;= 33165
+\end{align}\]</span></p>
+<p>Therefore the final solution,</p>
+<p><span class="math display">\[\begin{align}
+\sum A \cup B = 166833 + 99500 - 33165 = 233168
+\end{align}\]</span></p>
+</section>
+</section>
+<section id="code" class="level3">
+<h3 class="anchored" data-anchor-id="code">Code</h3>
+<p>We can solve the problem brute force by writing a code that computes the sum of any number in the range <span class="math inline">\([1, 1000]\)</span> that is a multiple of <span class="math inline">\(3\)</span> or <span class="math inline">\(5\)</span>.</p>
+<div id="2" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(x <span class="cf">for</span> x <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span><span class="fl">999</span> <span class="cf">if</span> (x <span class="op">%</span> <span class="fl">3</span> <span class="op">==</span> <span class="fl">0</span>) <span class="op">||</span> (x <span class="op">%</span> <span class="fl">5</span> <span class="op">==</span> <span class="fl">0</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="1">
+<pre><code>233168</code></pre>
+</div>
+</div>
+<p>We use a generator function in the call to <code>sum</code> so that we don’t generate an intermediate array and then sum over the elements of the array. Instead it simply keeps a running total of the elements produced by the generator function.</p>
 
 
 </section>
@@ -283,7 +388,7 @@ p(x, 0) = 0 \\
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/ksilberb\.github\.io\/paxnomada\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

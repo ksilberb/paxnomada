@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Javier Gonzalez-Rocha">
+<meta name="dcterms.date" content="2025-03-30">
+<meta name="description" content="This course introduces the numerical solutions of ordinary and partial differential equations (ODEs and PDEs). Focuses on the derivation of discrete solution methods for a variety of differential equations, and their stability and convergence. Also provides hands-on experience in implementing such numerical algorithms for the solution of engineering and scientific problems using MATLAB software. The class consists of lectures and hands-on programming sections. Basic mathematical knowledge of ODEs and PDEs is assumed, and a basic working knowledge of programming in MATLAB is expected.">
 
-<title>index – paxnomada</title>
+<title>Numerical Methods for the Solution of Differential Equations – paxnomada</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,6 +33,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-listing/list.min.js"></script>
+<script src="../../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
@@ -67,14 +72,104 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
 
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-course-notes .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
 
-<meta property="og:title" content="paxnomada">
+    const options = {
+      valueNames: ['listing-title','listing-description','listing-author','listing-date',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-title-sort'] },{ data: ['listing-date-sort'] }],
+      
+      searchColumns: ["listing-title","listing-description","listing-author","listing-date"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-course-notes'] = new List('listing-course-notes', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-course-work .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-author','listing-date',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-title-sort'] },{ data: ['listing-date-sort'] }],
+      
+      searchColumns: ["listing-title","listing-author","listing-date"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-course-work'] = new List('listing-course-work', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<meta property="og:title" content="Numerical Methods for the Solution of Differential Equations – paxnomada">
+<meta property="og:description" content="This course introduces the numerical solutions of ordinary and partial differential equations (ODEs and PDEs). Focuses on the derivation of discrete solution methods for a variety of differential equations, and their stability and convergence. Also provides hands-on experience in implementing such numerical algorithms for the solution of engineering and scientific problems using MATLAB software. The class consists of lectures and hands-on programming sections. Basic mathematical knowledge of ODEs and PDEs is assumed, and a basic working knowledge of programming in MATLAB is expected.">
+<meta property="og:image" content="https://ksilberb.github.io/paxnomada/courses/AM213B/thumbnail.png">
 <meta property="og:site_name" content="paxnomada">
 <meta property="og:locale" content="en_US">
+<meta property="og:image:height" content="450">
+<meta property="og:image:width" content="600">
 </head>
 
-<body class="nav-fixed fullcontent quarto-light">
+<body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -104,6 +199,11 @@ ul.task-list li input[type="checkbox"] {
 </i> 
 <span class="menu-text">Photos</span></a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../problems/index.html"> <i class="bi bi-code" role="img">
+</i> 
+<span class="menu-text">Study</span></a>
+  </li>  
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
@@ -112,50 +212,448 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content column-page" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Numerical Methods for the Solution of Differential Equations</h1>
+<p class="subtitle lead">AM 213B</p>
+</div>
+
+<div>
+  <div class="description">
+    This course introduces the numerical solutions of ordinary and partial differential equations (ODEs and PDEs). Focuses on the derivation of discrete solution methods for a variety of differential equations, and their stability and convergence. Also provides hands-on experience in implementing such numerical algorithms for the solution of engineering and scientific problems using MATLAB software. The class consists of lectures and hands-on programming sections. Basic mathematical knowledge of ODEs and PDEs is assumed, and a basic working knowledge of programming in MATLAB is expected.
+  </div>
+</div>
 
 
+<div class="quarto-title-meta column-page">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p><a href="https://campusdirectory.ucsc.edu/cd_detail?uid=jgonz406">Javier Gonzalez-Rocha</a> </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">March 30, 2025</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
 
 
-<section id="numerical-methods-for-the-solution-of-differential-equations" class="level1">
-<h1>Numerical Methods for the Solution of Differential Equations</h1>
-<section id="course-description" class="level2">
-<h2 class="anchored" data-anchor-id="course-description">Course Description</h2>
-<p>This course introduces the numerical solutions of ordinary and partial differential equations (ODEs and PDEs). Focuses on the derivation of discrete solution methods for a variety of differential equations, and their stability and convergence. Also provides hands-on experience in implementing such numerical algorithms for the solution of engineering and scientific problems using MATLAB software. The class consists of lectures and hands-on programming sections. Basic mathematical knowledge of ODEs and PDEs is assumed, and a basic working knowledge of programming in MATLAB is expected.</p>
-<p><strong>Instructor</strong>: <a href="https://campusdirectory.ucsc.edu/cd_detail?uid=jgonz406">Javier Gonzalez-Rocha</a></p>
-</section>
+</header>
+
+
 <section id="course-notes" class="level2">
 <h2 class="anchored" data-anchor-id="course-notes">Course Notes</h2>
-<p><a href="notes/danielle/Polynomial_approximation_of_functions_and_derivatives.pdf">Polynomial approximation of functions and derivatives</a></p>
-<p><a href="notes/danielle/The_initial_value_problem_for_ODEs.pdf">Initial value problems for ODEs</a></p>
-<p><a href="notes/danielle/Overview_of_numerical_methods_for_ODEs.pdf">Overview of numerical methods for ODEs</a></p>
-<p><a href="notes/danielle/Consistency_of_numerical_methods_for_ODEs.pdf">Consistency of numerical methods for ODEs</a></p>
-<p><a href="notes/danielle/Zero-stability_of_numerical_methods_for_ODEs.pdf">Stability and convergence of numerical methods for ODEs</a></p>
-<p><a href="notes/danielle/Absolute_stability_of_numerical_methods_for_ODEs.pdf">Absolute stability of numerical methods for ODEs</a></p>
-<p><a href="notes/danielle/Boundary_value_problems.pdf">Boundary value problems for ODEs</a></p>
-<p><a href="notes/danielle/Numerical_methods_to_solve_boundary_value_problems_for_ODEs.pdf">Numerical methods to solve boundary value problems for ODEs</a></p>
-<p><a href="notes/danielle/Numerical_methods_for_the_heat_equation.pdf">Numerical methods for the heat equation</a></p>
-<p><a href="notes/danielle/Convergence_analysis_of_finite_difference_methods_for_PDEs.pdf">Convergence analysis of finite difference methods for PDEs</a></p>
-<p><a href="notes/danielle/Numerical_methods_for_the_advection_equation.pdf">Finite-difference methods for the advection equation</a></p>
-<p><a href="notes/danielle/Fourier_spectral_methods.pdf">Fourier spectral methods</a></p>
+<div id="listing-course-notes" class="quarto-listing quarto-listing-container-table">
+<div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+    <select id="listing-course-notes-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-course-notes'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+      <option value="" disabled="" selected="" hidden="">Order By</option>
+      <option value="index" data-direction="asc">Default</option>
+      <option value="listing-title-sort" data-direction="asc">
+        Title
+      </option>
+      <option value="listing-description" data-direction="asc">
+        Description
+      </option>
+      <option value="listing-author" data-direction="asc">
+        Author
+      </option>
+      <option value="listing-date-sort" data-direction="asc">
+        Date - Oldest
+      </option>
+      <option value="listing-date-sort" data-direction="desc">
+        Date - Newest
+      </option>
+    </select>
+  </div>
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filter">
+    </div>
+</div>
+<table class="quarto-listing-table table">
+<thead>
+<tr>
+
+<th>
+<a class="sort" data-sort="listing-title-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Title</a>
+</th>
+
+<th>
+<a class="sort" data-sort="listing-description" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Description</a>
+</th>
+
+<th>
+<a class="sort" data-sort="listing-author" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Author</a>
+</th>
+
+<th>
+<a class="sort" data-sort="listing-date-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Date</a>
+</th>
+
+</tr>
+</thead>
+<tbody class="list">
+
+<tr data-index="0" data-listing-date-sort="1716620400000" data-listing-title-sort="Polynomial approximation of functions and derivatives">
+<td>
+<a href="notes/danielle/Polynomial_approximation_of_functions_and_derivatives.pdf" class="title listing-title">Polynomial approximation of functions and derivatives</a>
+</td>
+<td>
+<span class="listing-description">Polynomial approximation theory for numerical methods in ODEs and PDEs, focusing on interpolation techniques (particularly Lagrangian interpolation), error analysis, and numerical differentiation methods including finite differences and pseudo-spectral methods using various grid point distributions like evenly-spaced and Gauss-Chebyshev-Lobatto nodes.</span>
+</td>
+<td>
+<span class="listing-author"><a href="https://venturi.soe.ucsc.edu/home">Prof.&nbsp;Daniele Venturi</a></span>
+</td>
+<td>
+<span class="listing-date">May 25, 2024</span>
+</td>
+
+</tr>
+
+<tr data-index="1" data-listing-date-sort="1648450800000" data-listing-title-sort="Initial value problems for ODEs">
+<td>
+<a href="notes/danielle/The_initial_value_problem_for_ODEs.pdf" class="title listing-title">Initial value problems for ODEs</a>
+</td>
+<td>
+<span class="listing-description">Initial value problems for ordinary differential equations (ODEs) that covers the theoretical foundations including Lipschitz continuity conditions for well-posedness, existence and uniqueness theorems for both single ODEs and systems of ODEs, numerical solution methods like Euler forward and Crank-Nicolson schemes, and applications to discretizing partial differential equations.</span>
+</td>
+<td>
+<span class="listing-author"><a href="https://venturi.soe.ucsc.edu/home">Prof.&nbsp;Daniele Venturi</a></span>
+</td>
+<td>
+<span class="listing-date">Mar 28, 2022</span>
+</td>
+
+</tr>
+
+<tr data-index="2" data-listing-date-sort="1713596400000" data-listing-title-sort="Overview of numerical methods for ODEs">
+<td>
+<a href="notes/danielle/Overview_of_numerical_methods_for_ODEs.pdf" class="title listing-title">Overview of numerical methods for ODEs</a>
+</td>
+<td>
+<span class="listing-description">Solving ordinary differential equations (ODEs), covering elementary methods like Euler and Crank-Nicolson, multistep methods such as Adams-Bashforth and Adams-Moulton, backward differentiation formulas (BDF), and Runge-Kutta methods, along with their derivations, stability properties, and implementation considerations.</span>
+</td>
+<td>
+<span class="listing-author"><a href="https://venturi.soe.ucsc.edu/home">Prof.&nbsp;Daniele Venturi</a></span>
+</td>
+<td>
+<span class="listing-date">Apr 20, 2024</span>
+</td>
+
+</tr>
+
+<tr data-index="3" data-listing-date-sort="1713596400000" data-listing-title-sort="Consistency of numerical methods for ODEs">
+<td>
+<a href="notes/danielle/Consistency_of_numerical_methods_for_ODEs.pdf" class="title listing-title">Consistency of numerical methods for ODEs</a>
+</td>
+<td>
+<span class="listing-description">Consistency for numerical methods solving ordinary differential equations (ODEs), showing that a numerical scheme is consistent if its local truncation error approaches zero as the time step approaches zero, and derives conditions and order analysis for various methods including linear multistep methods, Runge-Kutta methods, and backward differentiation formulas.</span>
+</td>
+<td>
+<span class="listing-author"><a href="https://venturi.soe.ucsc.edu/home">Prof.&nbsp;Daniele Venturi</a></span>
+</td>
+<td>
+<span class="listing-date">Apr 20, 2024</span>
+</td>
+
+</tr>
+
+<tr data-index="4" data-listing-date-sort="1713423600000" data-listing-title-sort="Stability and convergence of numerical methods for ODEs">
+<td>
+<a href="notes/danielle/Zero-stability_of_numerical_methods_for_ODEs.pdf" class="title listing-title">Stability and convergence of numerical methods for ODEs</a>
+</td>
+<td>
+<span class="listing-description">Establishes the fundamental equivalence between convergence, consistency, and zero-stability for numerical methods solving ordinary differential equations, proving that a numerical scheme converges if and only if it is both consistent (truncation error approaches zero) and zero-stable (satisfies the root condition that all characteristic polynomial roots lie within or on the unit circle with simple multiplicity).</span>
+</td>
+<td>
+<span class="listing-author"><a href="https://venturi.soe.ucsc.edu/home">Prof.&nbsp;Daniele Venturi</a></span>
+</td>
+<td>
+<span class="listing-date">Apr 18, 2024</span>
+</td>
+
+</tr>
+
+<tr data-index="5" data-listing-date-sort="1714028400000" data-listing-title-sort="Absolute stability of numerical methods for ODEs">
+<td>
+<a href="notes/danielle/Absolute_stability_of_numerical_methods_for_ODEs.pdf" class="title listing-title">Absolute stability of numerical methods for ODEs</a>
+</td>
+<td>
+<span class="listing-description">Analysis of absolute stability for numerical methods solving ordinary differential equations (ODEs), examining when numerical solutions decay to zero like their analytical counterparts by studying prototype linear systems and deriving stability conditions for various methods including Euler, Crank-Nicolson, linear multistep, and Runge-Kutta schemes.</span>
+</td>
+<td>
+<span class="listing-author"><a href="https://venturi.soe.ucsc.edu/home">Prof.&nbsp;Daniele Venturi</a></span>
+</td>
+<td>
+<span class="listing-date">Apr 25, 2024</span>
+</td>
+
+</tr>
+
+<tr data-index="6" data-listing-date-sort="1714460400000" data-listing-title-sort="Boundary value problems for ODEs">
+<td>
+<a href="notes/danielle/Boundary_value_problems.pdf" class="title listing-title">Boundary value problems for ODEs</a>
+</td>
+<td>
+<span class="listing-description">Boundary value problems (BVPs) for ordinary differential equations, demonstrating through examples like the second-order linear ODE with Dirichlet conditions how such problems can have unique solutions (as shown with Green functions and the maximum principle), infinite solutions, or no solutions depending on the boundary conditions and whether the equations are linear or nonlinear.</span>
+</td>
+<td>
+<span class="listing-author"><a href="https://venturi.soe.ucsc.edu/home">Prof.&nbsp;Daniele Venturi</a></span>
+</td>
+<td>
+<span class="listing-date">Apr 30, 2024</span>
+</td>
+
+</tr>
+
+<tr data-index="7" data-listing-date-sort="1716188400000" data-listing-title-sort="Numerical methods to solve boundary value problems for ODEs">
+<td>
+<a href="notes/danielle/Numerical_methods_to_solve_boundary_value_problems_for_ODEs.pdf" class="title listing-title">Numerical methods to solve boundary value problems for ODEs</a>
+</td>
+<td>
+<span class="listing-description">Overview of numerical methods for solving boundary value problems (BVPs) for ordinary differential equations, covering three main approaches: the shooting method (which converts BVPs to initial value problems solved iteratively), finite difference methods (which discretize the domain and approximate derivatives), and weighted residual methods like Galerkin, collocation, and least squares (which use polynomial approximations and minimize residuals in different ways).</span>
+</td>
+<td>
+<span class="listing-author"><a href="https://venturi.soe.ucsc.edu/home">Prof.&nbsp;Daniele Venturi</a></span>
+</td>
+<td>
+<span class="listing-date">May 20, 2024</span>
+</td>
+
+</tr>
+
+<tr data-index="8" data-listing-date-sort="1718175600000" data-listing-title-sort="Numerical methods for the heat equation">
+<td>
+<a href="notes/danielle/Numerical_methods_for_the_heat_equation.pdf" class="title listing-title">Numerical methods for the heat equation</a>
+</td>
+<td>
+<span class="listing-description">Numerical methods for solving the heat equation and related partial differential equations, covering finite difference discretization schemes, stability analysis, time integration methods, and spectral approaches like Galerkin and collocation methods.</span>
+</td>
+<td>
+<span class="listing-author"><a href="https://venturi.soe.ucsc.edu/home">Prof.&nbsp;Daniele Venturi</a></span>
+</td>
+<td>
+<span class="listing-date">Jun 12, 2024</span>
+</td>
+
+</tr>
+
+<tr data-index="9" data-listing-date-sort="1716706800000" data-listing-title-sort="Convergence analysis of finite difference methods for PDEs">
+<td>
+<a href="notes/danielle/Convergence_analysis_of_finite_difference_methods_for_PDEs.pdf" class="title listing-title">Convergence analysis of finite difference methods for PDEs</a>
+</td>
+<td>
+<span class="listing-description">Lax-Richtmyer stability theory, which establishes that for consistent finite difference schemes approximating linear PDEs, stability (uniform boundedness of matrix powers) is both necessary and sufficient for convergence, and demonstrates how this can be analyzed using either matrix norms in physical space or Von-Neumann analysis in Fourier space for periodic boundary conditions.</span>
+</td>
+<td>
+<span class="listing-author"><a href="https://venturi.soe.ucsc.edu/home">Prof.&nbsp;Daniele Venturi</a></span>
+</td>
+<td>
+<span class="listing-date">May 26, 2024</span>
+</td>
+
+</tr>
+
+<tr data-index="10" data-listing-date-sort="1717138800000" data-listing-title-sort="Finite-difference methods for the advection equation">
+<td>
+<a href="notes/danielle/Numerical_methods_for_the_advection_equation.pdf" class="title listing-title">Finite-difference methods for the advection equation</a>
+</td>
+<td>
+<span class="listing-description">Stability and convergence of various finite-difference schemes (Euler-forward, Leapfrog, Lax-Friedrichs, and Lax-Wendroff) for solving the linear advection equation, analyzing their consistency, stability conditions (particularly the CFL condition), and convergence properties using Von-Neumann analysis and the method of characteristics.</span>
+</td>
+<td>
+<span class="listing-author"><a href="https://venturi.soe.ucsc.edu/home">Prof.&nbsp;Daniele Venturi</a></span>
+</td>
+<td>
+<span class="listing-date">May 31, 2024</span>
+</td>
+
+</tr>
+
+<tr data-index="11" data-listing-date-sort="1717657200000" data-listing-title-sort="Fourier spectral methods">
+<td>
+<a href="notes/danielle/Fourier_spectral_methods.pdf" class="title listing-title">Fourier spectral methods</a>
+</td>
+<td>
+<span class="listing-description">Introduction to Fourier spectral methods for solving partial differential equations with periodic boundary conditions, covering trigonometric approximation theory, discrete Fourier expansions, and both Fourier-Galerkin and Fourier-collocation computational approaches.</span>
+</td>
+<td>
+<span class="listing-author"><a href="https://venturi.soe.ucsc.edu/home">Prof.&nbsp;Daniele Venturi</a></span>
+</td>
+<td>
+<span class="listing-date">Jun 6, 2024</span>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+<div class="listing-no-matching d-none">No matching items</div>
+</div>
 </section>
 <section id="course-work" class="level2">
 <h2 class="anchored" data-anchor-id="course-work">Course Work</h2>
-<p><a href="docs/hw0.pdf">Homework 0</a></p>
-<p><a href="docs/hw1.pdf">Homework 1</a></p>
-<p><a href="docs/hw2.pdf">Homework 2</a></p>
-<p><a href="docs/hw3.pdf">Homework 3</a></p>
-<p><a href="docs/hw4.pdf">Homework 4</a></p>
-<p><a href="docs/hw6.pdf">Homework 6</a></p>
-<p><a href="docs/final.pdf">Final</a></p>
+<div id="listing-course-work" class="quarto-listing quarto-listing-container-table">
+<div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+    <select id="listing-course-work-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-course-work'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+      <option value="" disabled="" selected="" hidden="">Order By</option>
+      <option value="index" data-direction="asc">Default</option>
+      <option value="listing-title-sort" data-direction="asc">
+        Title
+      </option>
+      <option value="listing-author" data-direction="asc">
+        Author
+      </option>
+      <option value="listing-date-sort" data-direction="asc">
+        Date - Oldest
+      </option>
+      <option value="listing-date-sort" data-direction="desc">
+        Date - Newest
+      </option>
+    </select>
+  </div>
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filter">
+    </div>
+</div>
+<table class="quarto-listing-table table">
+<thead>
+<tr>
+
+<th>
+<a class="sort" data-sort="listing-title-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Title</a>
+</th>
+
+<th>
+<a class="sort" data-sort="listing-author" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Author</a>
+</th>
+
+<th>
+<a class="sort" data-sort="listing-date-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Date</a>
+</th>
+
+</tr>
+</thead>
+<tbody class="list">
+
+<tr data-index="0" data-listing-date-sort="1745910000000" data-listing-title-sort="Homework 0">
+<td>
+<a href="docs/hw0.pdf" class="title listing-title">Homework 0</a>
+</td>
+<td>
+<span class="listing-author">Kevin Silberberg</span>
+</td>
+<td>
+<span class="listing-date">Apr 29, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="1" data-listing-date-sort="1744959600000" data-listing-title-sort="Homework 1">
+<td>
+<a href="docs/hw1.pdf" class="title listing-title">Homework 1</a>
+</td>
+<td>
+<span class="listing-author">Kevin Silberberg</span>
+</td>
+<td>
+<span class="listing-date">Apr 18, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="2" data-listing-date-sort="1745737200000" data-listing-title-sort="Homework 2">
+<td>
+<a href="docs/hw2.pdf" class="title listing-title">Homework 2</a>
+</td>
+<td>
+<span class="listing-author">Kevin Silberberg</span>
+</td>
+<td>
+<span class="listing-date">Apr 27, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="3" data-listing-date-sort="1746601200000" data-listing-title-sort="Homework 3">
+<td>
+<a href="docs/hw3.pdf" class="title listing-title">Homework 3</a>
+</td>
+<td>
+<span class="listing-author">Kevin Silberberg</span>
+</td>
+<td>
+<span class="listing-date">May 7, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="4" data-listing-date-sort="1747206000000" data-listing-title-sort="Homework 4">
+<td>
+<a href="docs/hw4.pdf" class="title listing-title">Homework 4</a>
+</td>
+<td>
+<span class="listing-author">Kevin Silberberg</span>
+</td>
+<td>
+<span class="listing-date">May 14, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="5" data-listing-date-sort="1748415600000" data-listing-title-sort="Homework 6">
+<td>
+<a href="docs/hw6.pdf" class="title listing-title">Homework 6</a>
+</td>
+<td>
+<span class="listing-author">Kevin Silberberg</span>
+</td>
+<td>
+<span class="listing-date">May 28, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="6" data-listing-date-sort="1749538800000" data-listing-title-sort="Final Exam">
+<td>
+<a href="docs/final.pdf" class="title listing-title">Final Exam</a>
+</td>
+<td>
+<span class="listing-author">Kevin Silberberg</span>
+</td>
+<td>
+<span class="listing-date">Jun 10, 2025</span>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+<div class="listing-no-matching d-none">No matching items</div>
+</div>
 
 
-</section>
+
 </section>
 
 </main> <!-- /main -->
