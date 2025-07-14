@@ -42,6 +42,9 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap-c6a8b31e6c5a44cf8523ddff27d1d839.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -158,8 +161,15 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="figure-container">
-<p><span class="badge bg-info">Tue, 27 Oct 2015, 05:17:56 PM PDT</span> <img src="life_1.jpg" class="img-fluid" data-group="life" alt="My first time at Thousand Island Lake. We hiked in from the trail head accross from silver lake. The plan was to summit Banner Peak, but we bailed half way up due to snow conditions."></p>
+<div id="fig-life1" class="figure-container quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-life1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<p><span class="badge bg-info">Tue, 27 Oct 2015, 05:17:56 PM PDT</span> <a href="life_1.jpg" class="lightbox" data-gallery="life" title="&nbsp;1: My first time at Thousand Island Lake. We hiked in from the trail head accross from silver lake. The plan was to summit Banner Peak, but we bailed half way up due to snow conditions."><img src="life_1.jpg" class="img-fluid figure-img"></a></p>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-life1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+&nbsp;1: My first time at Thousand Island Lake. We hiked in from the trail head accross from silver lake. The plan was to summit Banner Peak, but we bailed half way up due to snow conditions.
+</figcaption>
+</figure>
 </div>
 <div class="btn-group-vertical">
 <p><a href="../../photos/life/index.html" class="btn btn-primary" role="button">Back to top</a></p>
@@ -581,6 +591,38 @@ ul.task-list li input[type="checkbox"] {
     </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 
