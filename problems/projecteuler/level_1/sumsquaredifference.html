@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Kevin Silberberg">
-<meta name="dcterms.date" content="2025-03-09">
+<meta name="dcterms.date" content="2025-07-14">
 
-<title>Counting DNA nucleotides – paxnomada</title>
+<title>Sum Square Difference – paxnomada</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -60,23 +60,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="../../../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../../../">
-<script src="../../../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../../site_libs/bootstrap/bootstrap-c6a8b31e6c5a44cf8523ddff27d1d839.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-c6a8b31e6c5a44cf8523ddff27d1d839.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -135,8 +135,8 @@ window.Quarto = {
 };
 </script>
 
-<meta property="og:title" content="Counting DNA nucleotides – paxnomada">
-<meta property="og:description" content="">
+<meta property="og:title" content="Sum Square Difference – paxnomada">
+<meta property="og:description" content="Problem 6">
 <meta property="og:site_name" content="paxnomada">
 <meta property="og:locale" content="en_US">
 </head>
@@ -151,7 +151,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../../../index.html">
+    <a class="navbar-brand" href="../../../index.html">
     <span class="navbar-title">paxnomada</span>
     </a>
   </div>
@@ -162,17 +162,17 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../../../index.html"> <i class="bi bi-house" role="img">
+    <a class="nav-link" href="../../../index.html"> <i class="bi bi-house" role="img">
 </i> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../../photos/index.html"> <i class="bi bi-camera" role="img">
+    <a class="nav-link" href="../../../photos/index.html"> <i class="bi bi-camera" role="img">
 </i> 
 <span class="menu-text">Photos</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../../problems/index.html"> <i class="bi bi-code" role="img">
+    <a class="nav-link" href="../../../problems/index.html"> <i class="bi bi-code" role="img">
 </i> 
 <span class="menu-text">Study</span></a>
   </li>  
@@ -193,7 +193,8 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Counting DNA nucleotides</h1>
+<h1 class="title">Sum Square Difference</h1>
+<p class="subtitle lead">Problem 6</p>
 </div>
 
 
@@ -210,7 +211,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">March 9, 2025</p>
+      <p class="date">July 14, 2025</p>
     </div>
   </div>
   
@@ -223,47 +224,43 @@ window.Quarto = {
 
 
 <section id="problem-definition" class="level2">
-<h2 class="anchored" data-anchor-id="problem-definition">Problem definition</h2>
-<p>Given: A DNA string <em>s</em> of length <span class="math inline">\(1000\)</span> nucleotides</p>
-<p>Return: Four integers (seperated by spaces) counting the respoective number of times that the symbols ‘A’ ‘C’ ‘G’ ‘T’ occur in <em>s</em>.</p>
-<p>Sample Dataset:</p>
-<p>AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC</p>
-<p>Sample Output:</p>
-<span class="math display">\[\begin{matrix}
-20 &amp; 12 &amp; 17 &amp; 21
-\end{matrix}\]</span>
+<h2 class="anchored" data-anchor-id="problem-definition">Problem Definition</h2>
+<p>The sum of the squares of the first ten natural numbers is,</p>
+<p><span id="eq-example1"><span class="math display">\[1^2 + 2^2 + \cdots + 10^2 = 385 \tag{1}\]</span></span></p>
+<p>The square of the sum of the first ten natural numbers is,</p>
+<p><span id="eq-example2"><span class="math display">\[(1 + 2 + \cdots + 10)^2 = 55^2 = 3025 \tag{2}\]</span></span></p>
+<p>Hence the difference between the sum of the squares of the first ten natural numbers and the square of the sum is <span class="math inline">\(3025 - 385 = 2640\)</span>.</p>
+<p>Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.</p>
 </section>
 <section id="solution" class="level2">
 <h2 class="anchored" data-anchor-id="solution">Solution</h2>
-<p>We use the inbuilt julia function <code>count(p, iter)</code> which counts the number of elements in <code>iter</code> for which predicate <code>p</code> is true.</p>
-<p><a href="https://www.jlhub.com/julia/manual/en/function/count">count</a></p>
-<div id="2" class="cell" data-execution_count="0">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">countNucs</span>(s<span class="op">::</span><span class="dt">String</span>) <span class="op">=</span> [</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">count</span>(<span class="op">==</span>(<span class="ch">'A'</span>), s), <span class="fu">count</span>(<span class="op">==</span>(<span class="ch">'C'</span>), s), <span class="fu">count</span>(<span class="op">==</span>(<span class="ch">'G'</span>), s), <span class="fu">count</span>(<span class="op">==</span>(<span class="ch">'T'</span>), s)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>]</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">main</span>()</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="fu">length</span>(<span class="cn">ARGS</span>) <span class="op">&lt;</span> <span class="fl">2</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>        <span class="fu">println</span>(<span class="st">"Usage: julia </span><span class="sc">$</span>(<span class="bu">Base</span>.<span class="cn">PROGRAM_FILE</span>)<span class="st"> &lt;fileIN&gt; &lt;fileOUT&gt;"</span>)</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>        <span class="fu">exit</span>(<span class="fl">1</span>)</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">end</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    s <span class="op">=</span> <span class="fu">read</span>(<span class="cn">ARGS</span>[<span class="fl">1</span>], <span class="dt">String</span>)</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    data <span class="op">=</span> <span class="fu">countNucs</span>(s)</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">open</span>(<span class="cn">ARGS</span>[<span class="fl">2</span>], <span class="st">"w"</span>) <span class="cf">do</span> file</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>        <span class="fu">println</span>(file, <span class="fu">join</span>(data, <span class="st">" "</span>))</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">end</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    <span class="fu">exit</span>(<span class="fl">0</span>)</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="fu">main</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>In julia we can create a vector of the first <span class="math inline">\(N\)</span> natural numbers by collecting a range. We can then apply a function to that collection by broadcasting. This uses “Single Instruction Multiple Data” or SIMD compiler optimizations to efficiently solve the problem.</p>
+<div id="2" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="st">"""</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="st">N :: Integer, the first N natural numbers</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="st">"""</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">sum_square_difference</span>(N<span class="op">::</span><span class="dt">Int</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    numbers <span class="op">=</span> <span class="fu">collect</span>(<span class="fl">1</span><span class="op">:</span>N)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="fu">sum</span>(numbers)<span class="op">^</span><span class="fl">2</span> <span class="op">-</span> <span class="fu">sum</span>(numbers<span class="op">.^</span><span class="fl">2</span>)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="1">
+<pre><code>Main.Notebook.sum_square_difference</code></pre>
 </div>
-</section>
-<section id="notes" class="level2">
-<h2 class="anchored" data-anchor-id="notes">Notes</h2>
-<p>In Rosalind, you have to ‘download the dataset’ and they give you five minuets to submit your answer. This essentially means that your solution nees to be reasonably computationally efficient to solve within that time frame. If you write bad code, sometimes this is a non-trivial requirement because their data files for testing contain a large number of data.</p>
-<p><a href="https://github.com/ksilberb/paxnomada/tree/main/rosalind/countdna">Github Files</a></p>
-<p>The cold was ran by downloading the dataset, then running the following command:</p>
-<pre class="{sh}"><code>julia countdna.jl rosalind_dna.txt output.txt</code></pre>
+</div>
+<p>Lets check the implementation with the provided solution to see if the function works as expected.</p>
+<div id="4" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sum_square_difference</span>(<span class="fl">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="1">
+<pre><code>2640</code></pre>
+</div>
+</div>
+<p>Perfect! So the correct answer is,</p>
+<div id="6" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sum_square_difference</span>(<span class="fl">100</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="1">
+<pre><code>25164150</code></pre>
+</div>
+</div>
 
 
 </section>

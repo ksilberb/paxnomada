@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Kevin Silberberg">
-<meta name="dcterms.date" content="2025-03-09">
+<meta name="dcterms.date" content="2025-07-14">
 
-<title>Counting DNA nucleotides – paxnomada</title>
+<title>10,001st Prime – paxnomada</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -57,26 +57,46 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
-<script src="../../../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../../../">
-<script src="../../../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../../site_libs/bootstrap/bootstrap-c6a8b31e6c5a44cf8523ddff27d1d839.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-c6a8b31e6c5a44cf8523ddff27d1d839.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -135,8 +155,8 @@ window.Quarto = {
 };
 </script>
 
-<meta property="og:title" content="Counting DNA nucleotides – paxnomada">
-<meta property="og:description" content="">
+<meta property="og:title" content="10,001st Prime – paxnomada">
+<meta property="og:description" content="Problem 7">
 <meta property="og:site_name" content="paxnomada">
 <meta property="og:locale" content="en_US">
 </head>
@@ -151,7 +171,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../../../index.html">
+    <a class="navbar-brand" href="../../../index.html">
     <span class="navbar-title">paxnomada</span>
     </a>
   </div>
@@ -162,17 +182,17 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../../../index.html"> <i class="bi bi-house" role="img">
+    <a class="nav-link" href="../../../index.html"> <i class="bi bi-house" role="img">
 </i> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../../photos/index.html"> <i class="bi bi-camera" role="img">
+    <a class="nav-link" href="../../../photos/index.html"> <i class="bi bi-camera" role="img">
 </i> 
 <span class="menu-text">Photos</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../../problems/index.html"> <i class="bi bi-code" role="img">
+    <a class="nav-link" href="../../../problems/index.html"> <i class="bi bi-code" role="img">
 </i> 
 <span class="menu-text">Study</span></a>
   </li>  
@@ -193,7 +213,8 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Counting DNA nucleotides</h1>
+<h1 class="title">10,001st Prime</h1>
+<p class="subtitle lead">Problem 7</p>
 </div>
 
 
@@ -210,7 +231,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">March 9, 2025</p>
+      <p class="date">July 14, 2025</p>
     </div>
   </div>
   
@@ -224,51 +245,77 @@ window.Quarto = {
 
 <section id="problem-definition" class="level2">
 <h2 class="anchored" data-anchor-id="problem-definition">Problem definition</h2>
-<p>Given: A DNA string <em>s</em> of length <span class="math inline">\(1000\)</span> nucleotides</p>
-<p>Return: Four integers (seperated by spaces) counting the respoective number of times that the symbols ‘A’ ‘C’ ‘G’ ‘T’ occur in <em>s</em>.</p>
-<p>Sample Dataset:</p>
-<p>AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC</p>
-<p>Sample Output:</p>
-<span class="math display">\[\begin{matrix}
-20 &amp; 12 &amp; 17 &amp; 21
-\end{matrix}\]</span>
+<p>By listing the first six prime numbers: <span class="math inline">\(2, 3, 5, 7, 11, \text{ and } 13\)</span>, we can see that the <span class="math inline">\(6\)</span>th prime is 13.</p>
+<p>What is the 10,001st prime number?</p>
 </section>
 <section id="solution" class="level2">
 <h2 class="anchored" data-anchor-id="solution">Solution</h2>
-<p>We use the inbuilt julia function <code>count(p, iter)</code> which counts the number of elements in <code>iter</code> for which predicate <code>p</code> is true.</p>
-<p><a href="https://www.jlhub.com/julia/manual/en/function/count">count</a></p>
-<div id="2" class="cell" data-execution_count="0">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">countNucs</span>(s<span class="op">::</span><span class="dt">String</span>) <span class="op">=</span> [</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">count</span>(<span class="op">==</span>(<span class="ch">'A'</span>), s), <span class="fu">count</span>(<span class="op">==</span>(<span class="ch">'C'</span>), s), <span class="fu">count</span>(<span class="op">==</span>(<span class="ch">'G'</span>), s), <span class="fu">count</span>(<span class="op">==</span>(<span class="ch">'T'</span>), s)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>]</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">main</span>()</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="fu">length</span>(<span class="cn">ARGS</span>) <span class="op">&lt;</span> <span class="fl">2</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>        <span class="fu">println</span>(<span class="st">"Usage: julia </span><span class="sc">$</span>(<span class="bu">Base</span>.<span class="cn">PROGRAM_FILE</span>)<span class="st"> &lt;fileIN&gt; &lt;fileOUT&gt;"</span>)</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>        <span class="fu">exit</span>(<span class="fl">1</span>)</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">end</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    s <span class="op">=</span> <span class="fu">read</span>(<span class="cn">ARGS</span>[<span class="fl">1</span>], <span class="dt">String</span>)</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    data <span class="op">=</span> <span class="fu">countNucs</span>(s)</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">open</span>(<span class="cn">ARGS</span>[<span class="fl">2</span>], <span class="st">"w"</span>) <span class="cf">do</span> file</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>        <span class="fu">println</span>(file, <span class="fu">join</span>(data, <span class="st">" "</span>))</span>
+<p>We are going to implement the ancient algorithm the <a href="https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes">sieve of Eratosthenes</a> for finding all prime numbers up to any given limit.</p>
+<div id="2" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="st">"""</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="st">N :: Integer, primes up to N</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="st">"""</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">sieve_of_erato</span>(N<span class="op">::</span><span class="dt">Int</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> N <span class="op">&lt;</span> <span class="fl">2</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="dt">Int</span>[]</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">end</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    sieve <span class="op">=</span> <span class="fu">trues</span>(N)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    sieve[<span class="fl">1</span>] <span class="op">=</span> <span class="cn">false</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> N <span class="op">≥</span> <span class="fl">2</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>        sieve[<span class="fl">4</span><span class="op">:</span><span class="fl">2</span><span class="op">:</span>N] <span class="op">.=</span> <span class="cn">false</span></span>
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">end</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    <span class="fu">exit</span>(<span class="fl">0</span>)</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="fu">main</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> p <span class="kw">in</span> <span class="fl">3</span><span class="op">:</span><span class="fl">2</span><span class="op">:</span><span class="fu">isqrt</span>(N)</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> sieve[p]</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>            r <span class="op">=</span> p<span class="op">*</span>p</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> r <span class="op">≤</span> N</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>                sieve[r<span class="op">:</span><span class="fl">2</span><span class="op">*</span>p<span class="op">:</span>N] <span class="op">.=</span> <span class="cn">false</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>            <span class="cf">end</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>        <span class="cf">end</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>    <span class="cf">end</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="fu">findall</span>(sieve)</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="1">
+<pre><code>Main.Notebook.sieve_of_erato</code></pre>
 </div>
+</div>
+<p>This returns a Vector of integers, of all the primes up to the number <span class="math inline">\(N\)</span>. What we want though is specifically the Nth prime number denoted <span class="math inline">\(p_n\)</span>. Using the above function is computationally expensive, so ideally we only want to generate the numbers once.</p>
+<p>In 1902, <a href="https://en.wikipedia.org/wiki/Michele_Cipolla">Mechele Cipolla</a> proved that the nth prime <span class="math inline">\(p_n\)</span> has aymptotic expansion,</p>
+<p><span class="math display">\[p_n = n \text{log}(n) + n \text{log}(\text{log}(n)) - n + \sum_{i=1}^{r}(-1)^{i-1}\frac{f_i \left(\text{log}(\text{log}(n))\right)}{i! \text{log}^{i}(n)} + o \left(\frac{n}{\text{log}^{r}(n)}\right)\]</span></p>
+<p>Where <span class="math inline">\(f_i(\text{log}(\text{log}(n)))\)</span> and <span class="math inline">\(g_i(\text{log}(\text{log}(n)))\)</span> are polynomials in <span class="math inline">\(\text{log}(\text{log}(n))\)</span> of degree <span class="math inline">\(i\)</span>, with integer coefficients and positive leading coefficient <span class="citation" data-cites="jakimczuk2008">(<a href="#ref-jakimczuk2008" role="doc-biblioref">Jakimczuk 2008</a>)</span>.</p>
+<p>If <span class="math inline">\(r = 0\)</span> we obtain</p>
+<p><span class="math display">\[p_n = n \text{log}(n) + n \text{log}(\text{log}(n)) - n + o(n)\]</span></p>
+<p>We want to over approximate the input though so we will just use the value</p>
+<p><span class="math display">\[p_n \approx n \left(\text{log}(n) + \text{log}(\text{log}(n))\right)\]</span></p>
+<p>Let us write a function that finds the nth prime number <span class="math inline">\(p_n\)</span> given this over-approximation.</p>
+<div id="4" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">nthprime</span>(N<span class="op">::</span><span class="dt">Int</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    p <span class="op">=</span> <span class="fu">Int</span>(<span class="fu">ceil</span>(<span class="fu">N*</span>(<span class="fu">log</span>(N) <span class="op">+</span> <span class="fu">log</span>(<span class="fu">log</span>(N)))))</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="fu">sieve_of_erato</span>(p)[N]</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="1">
+<pre><code>nthprime (generic function with 1 method)</code></pre>
+</div>
+</div>
+<p>So the answer is thus,</p>
+<div id="6" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">nthprime</span>(<span class="fl">10001</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="1">
+<pre><code>104743</code></pre>
+</div>
+</div>
+
+
+
 </section>
-<section id="notes" class="level2">
-<h2 class="anchored" data-anchor-id="notes">Notes</h2>
-<p>In Rosalind, you have to ‘download the dataset’ and they give you five minuets to submit your answer. This essentially means that your solution nees to be reasonably computationally efficient to solve within that time frame. If you write bad code, sometimes this is a non-trivial requirement because their data files for testing contain a large number of data.</p>
-<p><a href="https://github.com/ksilberb/paxnomada/tree/main/rosalind/countdna">Github Files</a></p>
-<p>The cold was ran by downloading the dataset, then running the following command:</p>
-<pre class="{sh}"><code>julia countdna.jl rosalind_dna.txt output.txt</code></pre>
 
-
-</section>
-
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-jakimczuk2008" class="csl-entry" role="listitem">
+Jakimczuk, Rafael. 2008. <span>“An Observation on the Cipolla’s Expansion.”</span> <em>Mathematical Sciences Quarterly Journal</em> 2 (January).
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

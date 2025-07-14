@@ -80,9 +80,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-title','listing-author',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-author',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
       
-      searchColumns: ["listing-title","listing-author"],
+      searchColumns: ["listing-date","listing-title","listing-author"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -108,9 +108,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-title','listing-author',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-author',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
       
-      searchColumns: ["listing-title","listing-author"],
+      searchColumns: ["listing-date","listing-title","listing-author"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -251,6 +251,12 @@ window.Quarto = {
     <select id="listing-level-one-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-level-one'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
       <option value="" disabled="" selected="" hidden="">Order By</option>
       <option value="index" data-direction="asc">Default</option>
+      <option value="listing-date-sort" data-direction="asc">
+        Date - Oldest
+      </option>
+      <option value="listing-date-sort" data-direction="desc">
+        Date - Newest
+      </option>
       <option value="listing-title-sort" data-direction="asc">
         Title
       </option>
@@ -269,6 +275,10 @@ window.Quarto = {
 <tr>
 
 <th>
+<a class="sort" data-sort="listing-date-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Date</a>
+</th>
+
+<th>
 <a class="sort" data-sort="listing-title-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Title</a>
 </th>
 
@@ -280,7 +290,23 @@ window.Quarto = {
 </thead>
 <tbody class="list">
 
-<tr data-index="0" data-listing-file-modified-sort="1752446629395" data-listing-reading-time-sort="1" data-listing-word-count-sort="160" data-listing-title-sort="Even Fibonacci Numbers" data-listing-filename-sort="evenfibonaccinumbers.qmd">
+<tr data-index="0" data-listing-date-sort="1752476400000" data-listing-file-modified-sort="1752524086631" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="358" data-listing-title-sort="10,001st Prime" data-listing-filename-sort="10001stprime.qmd">
+<td>
+<span class="listing-date">Jul 14, 2025</span>
+</td>
+<td>
+<a href="../problems/projecteuler/level_1/10001stprime.html" class="title listing-title">10,001st Prime</a>
+</td>
+<td>
+<span class="listing-author">Kevin Silberberg</span>
+</td>
+
+</tr>
+
+<tr data-index="1" data-listing-date-sort="1744614000000" data-listing-file-modified-sort="1752512156706" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="160" data-listing-title-sort="Even Fibonacci Numbers" data-listing-filename-sort="evenfibonaccinumbers.qmd">
+<td>
+<span class="listing-date">Apr 14, 2025</span>
+</td>
 <td>
 <a href="../problems/projecteuler/level_1/evenfibonaccinumbers.html" class="title listing-title">Even Fibonacci Numbers</a>
 </td>
@@ -290,7 +316,10 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="1" data-listing-file-modified-sort="1752446639722" data-listing-reading-time-sort="2" data-listing-word-count-sort="272" data-listing-title-sort="Largest Palindrome Product" data-listing-filename-sort="largestpalindromeproduct.qmd">
+<tr data-index="2" data-listing-date-sort="1747378800000" data-listing-file-modified-sort="1752512190536" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="272" data-listing-title-sort="Largest Palindrome Product" data-listing-filename-sort="largestpalindromeproduct.qmd">
+<td>
+<span class="listing-date">May 16, 2025</span>
+</td>
 <td>
 <a href="../problems/projecteuler/level_1/largestpalindromeproduct.html" class="title listing-title">Largest Palindrome Product</a>
 </td>
@@ -300,7 +329,10 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="2" data-listing-file-modified-sort="1752446651096" data-listing-reading-time-sort="5" data-listing-word-count-sort="831" data-listing-title-sort="Largest Prime Factor" data-listing-filename-sort="largestprimefactor.qmd">
+<tr data-index="3" data-listing-date-sort="1744614000000" data-listing-file-modified-sort="1752512175221" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="831" data-listing-title-sort="Largest Prime Factor" data-listing-filename-sort="largestprimefactor.qmd">
+<td>
+<span class="listing-date">Apr 14, 2025</span>
+</td>
 <td>
 <a href="../problems/projecteuler/level_1/largestprimefactor.html" class="title listing-title">Largest Prime Factor</a>
 </td>
@@ -310,7 +342,10 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="3" data-listing-file-modified-sort="1752446655205" data-listing-reading-time-sort="3" data-listing-word-count-sort="447" data-listing-title-sort="Multiples of 3 or 5" data-listing-filename-sort="multiplesof3or5.qmd">
+<tr data-index="4" data-listing-date-sort="1741590000000" data-listing-file-modified-sort="1752512143554" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="447" data-listing-title-sort="Multiples of 3 or 5" data-listing-filename-sort="multiplesof3or5.qmd">
+<td>
+<span class="listing-date">Mar 10, 2025</span>
+</td>
 <td>
 <a href="../problems/projecteuler/level_1/multiplesof3or5.html" class="title listing-title">Multiples of 3 or 5</a>
 </td>
@@ -320,9 +355,25 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="4" data-listing-file-modified-sort="1752446672985" data-listing-reading-time-sort="1" data-listing-word-count-sort="137" data-listing-title-sort="Smallest Multiple" data-listing-filename-sort="smallestmultiple.qmd">
+<tr data-index="5" data-listing-date-sort="1747378800000" data-listing-file-modified-sort="1752512211434" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="137" data-listing-title-sort="Smallest Multiple" data-listing-filename-sort="smallestmultiple.qmd">
+<td>
+<span class="listing-date">May 16, 2025</span>
+</td>
 <td>
 <a href="../problems/projecteuler/level_1/smallestmultiple.html" class="title listing-title">Smallest Multiple</a>
+</td>
+<td>
+<span class="listing-author">Kevin Silberberg</span>
+</td>
+
+</tr>
+
+<tr data-index="6" data-listing-date-sort="1752476400000" data-listing-file-modified-sort="1752513434556" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="172" data-listing-title-sort="Sum Square Difference" data-listing-filename-sort="sumsquaredifference.qmd">
+<td>
+<span class="listing-date">Jul 14, 2025</span>
+</td>
+<td>
+<a href="../problems/projecteuler/level_1/sumsquaredifference.html" class="title listing-title">Sum Square Difference</a>
 </td>
 <td>
 <span class="listing-author">Kevin Silberberg</span>
@@ -348,6 +399,12 @@ window.Quarto = {
     <select id="listing-bioinformatics-stronghold-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-bioinformatics-stronghold'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
       <option value="" disabled="" selected="" hidden="">Order By</option>
       <option value="index" data-direction="asc">Default</option>
+      <option value="listing-date-sort" data-direction="asc">
+        Date - Oldest
+      </option>
+      <option value="listing-date-sort" data-direction="desc">
+        Date - Newest
+      </option>
       <option value="listing-title-sort" data-direction="asc">
         Title
       </option>
@@ -366,6 +423,10 @@ window.Quarto = {
 <tr>
 
 <th>
+<a class="sort" data-sort="listing-date-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Date</a>
+</th>
+
+<th>
 <a class="sort" data-sort="listing-title-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Title</a>
 </th>
 
@@ -377,7 +438,10 @@ window.Quarto = {
 </thead>
 <tbody class="list">
 
-<tr data-index="0" data-listing-file-modified-sort="1752446691545" data-listing-reading-time-sort="1" data-listing-word-count-sort="77" data-listing-title-sort="Complementing a Strand of DNA" data-listing-filename-sort="complement.qmd">
+<tr data-index="0" data-listing-date-sort="1751439600000" data-listing-file-modified-sort="1752511754549" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="77" data-listing-title-sort="Complementing a Strand of DNA" data-listing-filename-sort="complement.qmd">
+<td>
+<span class="listing-date">Jul 2, 2025</span>
+</td>
 <td>
 <a href="../problems/rosalind/bioinformatics_stronghold/complementing_a_strand_of_dna/complement.html" class="title listing-title">Complementing a Strand of DNA</a>
 </td>
@@ -387,7 +451,10 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="1" data-listing-file-modified-sort="1752446709370" data-listing-reading-time-sort="1" data-listing-word-count-sort="140" data-listing-title-sort="Counting DNA nucleotides" data-listing-filename-sort="countdna.qmd">
+<tr data-index="1" data-listing-date-sort="1741507200000" data-listing-file-modified-sort="1752511725133" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="140" data-listing-title-sort="Counting DNA nucleotides" data-listing-filename-sort="countdna.qmd">
+<td>
+<span class="listing-date">Mar 9, 2025</span>
+</td>
 <td>
 <a href="../problems/rosalind/bioinformatics_stronghold/counting_dna_nucleotides/countdna.html" class="title listing-title">Counting DNA nucleotides</a>
 </td>
@@ -397,7 +464,10 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="2" data-listing-file-modified-sort="1752446726714" data-listing-reading-time-sort="1" data-listing-word-count-sort="59" data-listing-title-sort="Transcribing DNA into RNA" data-listing-filename-sort="transcription.qmd">
+<tr data-index="2" data-listing-date-sort="1741762800000" data-listing-file-modified-sort="1752511663762" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="59" data-listing-title-sort="Transcribing DNA into RNA" data-listing-filename-sort="transcription.qmd">
+<td>
+<span class="listing-date">Mar 12, 2025</span>
+</td>
 <td>
 <a href="../problems/rosalind/bioinformatics_stronghold/transcribing_dna_into_rna/transcription.html" class="title listing-title">Transcribing DNA into RNA</a>
 </td>

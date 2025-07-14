@@ -112,6 +112,27 @@
     "text": "Solution\n\nfunction isPalindrome(num::Int64)\n    x = Vector{Int}(undef, 18)\n    for i in eachindex(x)\n        x[i] = num % 10\n        num ÷= 10\n    end\n    y = x[1:findlast(i -&gt; i &gt; 0, x)]\n    for i in eachindex(y)\n        if !(y[i] == y[end - i + 1])\n            return false\n        end\n    end\n    return true\nend\n\nfunction main()\n    current = 0\n    idx = (0, 0)\n    for i in 999:-1:900\n        for j in 999:-1:900\n            new = i*j\n            if (new &gt; current && isPalindrome(new))\n                current = new\n                idx = (i, j)\n            end\n        end\n    end\n    println(\"$(current) = $(idx[1]) x $(idx[2])\")\nend\nmain()\n\n906609 = 993 x 913"
   },
   {
+    "objectID": "problems/projecteuler/level_1/multiplesof3or5.html",
+    "href": "problems/projecteuler/level_1/multiplesof3or5.html",
+    "title": "Multiples of 3 or 5",
+    "section": "",
+    "text": "If we list all the natural numbers below \\(10\\) that are multiplies of \\(3\\) or \\(5\\), we get \\(3, 5, 6, \\text{and } 9\\). The sum of these multiples is \\(23\\).\nFind the sum of all the multiples of \\(3\\) or \\(5\\) below \\(1000\\)."
+  },
+  {
+    "objectID": "problems/projecteuler/level_1/multiplesof3or5.html#problem-definition",
+    "href": "problems/projecteuler/level_1/multiplesof3or5.html#problem-definition",
+    "title": "Multiples of 3 or 5",
+    "section": "",
+    "text": "If we list all the natural numbers below \\(10\\) that are multiplies of \\(3\\) or \\(5\\), we get \\(3, 5, 6, \\text{and } 9\\). The sum of these multiples is \\(23\\).\nFind the sum of all the multiples of \\(3\\) or \\(5\\) below \\(1000\\)."
+  },
+  {
+    "objectID": "problems/projecteuler/level_1/multiplesof3or5.html#solution",
+    "href": "problems/projecteuler/level_1/multiplesof3or5.html#solution",
+    "title": "Multiples of 3 or 5",
+    "section": "Solution",
+    "text": "Solution\n\nAnalytical Solution\nLet \\(A \\in \\mathbb{N}\\) be the set that contains all the natural numbers in the domain \\([1, 1000)\\) that are multiples of \\(3\\).\n\\[\\begin{align}\nA = 3, 6, 9, 12, 15, \\cdots, 999\n\\end{align}\\]\nLet \\(B \\in \\mathbb{N}\\) be the set that contains the numbers in the same domain as \\(A\\) but that are multiples of \\(5\\).\n\\[\\begin{align}\nB = 5, 10, 15, 20, 25, \\cdots, 995\n\\end{align}\\]\nEssentially what we are looking for here is the sum of all the elements contained in \\(A \\cup B\\).\nBy the inclusion-exculsion principle, recall that\n\\[\\begin{align}\nA \\cup B = A + B - A \\cap B\n\\end{align}\\]\nso we need to find the sum of the elements contained in \\(A\\), \\(B\\), and the set \\(C = A \\cap B\\) which is the set of all the numbers which are multiples of \\(15\\).\n\\[\\begin{align}\nC = 15, 30, 45, 60, \\cdots, 990\n\\end{align}\\]\nFor this we can use the formulas for Arithmetic Progression.\n\\[\\begin{align}\n\\sum A = n \\left(\\frac{a_1 + a_n}{2}\\right)\n\\end{align}\\]\nwhere \\(n\\) is the number of terms in the sequence, \\(a_1\\) is the first term and \\(a_n\\) is the last term. We don’t know what how many terms there are in the sequence so we can also use the nth term formula\n\\[\\begin{align}\na_n = a_1 + \\left(n - 1\\right)d\n\\end{align}\\]\nwhere \\(d\\) is the value being added to \\(a_{n-1}\\) to obtain \\(a_n\\).\nLet us compute these sums for \\(A, B, C\\)\n\nA\nthe last term in the sequence is \\(999\\) thus,\n\\[\\begin{align}\n999 &= 3 + \\left(n - 1\\right)3\\\\\n999 &= 3n\\\\\nn &= 333\n\\end{align}\\]\nhence,\n\\[\\begin{align}\n\\sum A &= 333 \\left(\\frac{3 + 999}{2}\\right)\\\\\n&= 333 \\cdot \\frac{1002}{2} \\\\\n&= 166833\n\\end{align}\\]\n\n\nB\nthe last term in the sequence is \\(995\\) thus,\n\\[\\begin{align}\n995 &= 5 + \\left(n - 1\\right)5\\\\\n995 &= 5n\\\\\nn &= 199\n\\end{align}\\]\nhence,\n\\[\\begin{align}\n\\sum B &= 199 \\left(\\frac{5 + 995}{2}\\right)\\\\\n&= 99500\n\\end{align}\\]\n\n\nC\nthe last term in the sequence is \\(990\\) thus,\n\\[\\begin{align}\n990 &= 15 + \\left(n - 1\\right)15\\\\\n&= 15n\\\\\nn &= 66\n\\end{align}\\]\nhence,\n\\[\\begin{align}\n\\sum C &= 66 \\left(\\frac{15 + 990}{2}\\right)\\\\\n&= 66 \\cdot \\left(\\frac{1005}{2}\\right)\\\\\n&= 33165\n\\end{align}\\]\nTherefore the final solution,\n\\[\\begin{align}\n\\sum A \\cup B = 166833 + 99500 - 33165 = 233168\n\\end{align}\\]\n\n\n\nCode\nWe can solve the problem brute force by writing a code that computes the sum of any number in the range \\([1, 1000]\\) that is a multiple of \\(3\\) or \\(5\\).\n\nsum(x for x in 1:999 if (x % 3 == 0) || (x % 5 == 0))\n\n233168\n\n\nWe use a generator function in the call to sum so that we don’t generate an intermediate array and then sum over the elements of the array. Instead it simply keeps a running total of the elements produced by the generator function."
+  },
+  {
     "objectID": "problems/projecteuler/level_1/smallestmultiple.html",
     "href": "problems/projecteuler/level_1/smallestmultiple.html",
     "title": "Smallest Multiple",
@@ -179,7 +200,7 @@
     "href": "index.html#selected-courses",
     "title": "Kevin Silberberg",
     "section": "Selected Courses",
-    "text": "Selected Courses\nA selection of courses from my time at UCSC.\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Title\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\n\n\n\nAdvanced Methods in Applied Mathematics\n\n\nPascale Garaud\n\n\n\n\n\n\n\nFundamentals of Uncertainty Quantification in Computational Science and Engineering\n\n\nProf. Daniele Venturi\n\n\n\n\n\n\n\nNumberical Linear Algebra\n\n\nDongwook Lee\n\n\n\n\n\n\n\nNumerical Methods for the Solution of Differential Equations\n\n\nJavier Gonzalez-Rocha\n\n\n\n\nNo matching items"
+    "text": "Selected Courses\nA selection of courses from my time at UCSC.\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Title\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\n\n\n\nAdvanced Methods in Applied Mathematics\n\n\nPascale Garaud\n\n\n\n\n\n\n\nFundamentals of Uncertainty Quantification in Computational Science and Engineering\n\n\nDaniele Venturi\n\n\n\n\n\n\n\nNumberical Linear Algebra\n\n\nDongwook Lee\n\n\n\n\n\n\n\nNumerical Methods for the Solution of Differential Equations\n\n\nJavier Gonzalez-Rocha\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "courses/AM213A/index.html",
@@ -686,25 +707,46 @@
     "text": "Solution\n\nfunction reverse_complement(s::AbstractString)\n    rev_map = Dict{Char, Char}(\n        'A' =&gt; 'T', 'T' =&gt; 'A',\n        'G' =&gt; 'C', 'C' =&gt; 'G'\n    )\n    io = IOBuffer()\n    for char in reverse(s)\n        write(io, rev_map[char])\n    end\n    return String(take!(io))\nend\n\nfunction main()\n    first_line = readline(ARGS[1])\n    output = reverse_complement(first_line)\n    write(\"output.txt\", output)\n    println(output)\nend\n\nmain()"
   },
   {
-    "objectID": "problems/projecteuler/level_1/multiplesof3or5.html",
-    "href": "problems/projecteuler/level_1/multiplesof3or5.html",
-    "title": "Multiples of 3 or 5",
+    "objectID": "problems/projecteuler/level_1/10001stprime.html",
+    "href": "problems/projecteuler/level_1/10001stprime.html",
+    "title": "10,001st Prime",
     "section": "",
-    "text": "If we list all the natural numbers below \\(10\\) that are multiplies of \\(3\\) or \\(5\\), we get \\(3, 5, 6, \\text{and } 9\\). The sum of these multiples is \\(23\\).\nFind the sum of all the multiples of \\(3\\) or \\(5\\) below \\(1000\\)."
+    "text": "By listing the first six prime numbers: \\(2, 3, 5, 7, 11, \\text{ and } 13\\), we can see that the \\(6\\)th prime is 13.\nWhat is the 10,001st prime number?"
   },
   {
-    "objectID": "problems/projecteuler/level_1/multiplesof3or5.html#problem-definition",
-    "href": "problems/projecteuler/level_1/multiplesof3or5.html#problem-definition",
-    "title": "Multiples of 3 or 5",
+    "objectID": "problems/projecteuler/level_1/10001stprime.html#problem-definition",
+    "href": "problems/projecteuler/level_1/10001stprime.html#problem-definition",
+    "title": "10,001st Prime",
     "section": "",
-    "text": "If we list all the natural numbers below \\(10\\) that are multiplies of \\(3\\) or \\(5\\), we get \\(3, 5, 6, \\text{and } 9\\). The sum of these multiples is \\(23\\).\nFind the sum of all the multiples of \\(3\\) or \\(5\\) below \\(1000\\)."
+    "text": "By listing the first six prime numbers: \\(2, 3, 5, 7, 11, \\text{ and } 13\\), we can see that the \\(6\\)th prime is 13.\nWhat is the 10,001st prime number?"
   },
   {
-    "objectID": "problems/projecteuler/level_1/multiplesof3or5.html#solution",
-    "href": "problems/projecteuler/level_1/multiplesof3or5.html#solution",
-    "title": "Multiples of 3 or 5",
+    "objectID": "problems/projecteuler/level_1/10001stprime.html#solution",
+    "href": "problems/projecteuler/level_1/10001stprime.html#solution",
+    "title": "10,001st Prime",
     "section": "Solution",
-    "text": "Solution\n\nAnalytical Solution\nLet \\(A \\in \\mathbb{N}\\) be the set that contains all the natural numbers in the domain \\([1, 1000)\\) that are multiples of \\(3\\).\n\\[\\begin{align}\nA = 3, 6, 9, 12, 15, \\cdots, 999\n\\end{align}\\]\nLet \\(B \\in \\mathbb{N}\\) be the set that contains the numbers in the same domain as \\(A\\) but that are multiples of \\(5\\).\n\\[\\begin{align}\nB = 5, 10, 15, 20, 25, \\cdots, 995\n\\end{align}\\]\nEssentially what we are looking for here is the sum of all the elements contained in \\(A \\cup B\\).\nBy the inclusion-exculsion principle, recall that\n\\[\\begin{align}\nA \\cup B = A + B - A \\cap B\n\\end{align}\\]\nso we need to find the sum of the elements contained in \\(A\\), \\(B\\), and the set \\(C = A \\cap B\\) which is the set of all the numbers which are multiples of \\(15\\).\n\\[\\begin{align}\nC = 15, 30, 45, 60, \\cdots, 990\n\\end{align}\\]\nFor this we can use the formulas for Arithmetic Progression.\n\\[\\begin{align}\n\\sum A = n \\left(\\frac{a_1 + a_n}{2}\\right)\n\\end{align}\\]\nwhere \\(n\\) is the number of terms in the sequence, \\(a_1\\) is the first term and \\(a_n\\) is the last term. We don’t know what how many terms there are in the sequence so we can also use the nth term formula\n\\[\\begin{align}\na_n = a_1 + \\left(n - 1\\right)d\n\\end{align}\\]\nwhere \\(d\\) is the value being added to \\(a_{n-1}\\) to obtain \\(a_n\\).\nLet us compute these sums for \\(A, B, C\\)\n\nA\nthe last term in the sequence is \\(999\\) thus,\n\\[\\begin{align}\n999 &= 3 + \\left(n - 1\\right)3\\\\\n999 &= 3n\\\\\nn &= 333\n\\end{align}\\]\nhence,\n\\[\\begin{align}\n\\sum A &= 333 \\left(\\frac{3 + 999}{2}\\right)\\\\\n&= 333 \\cdot \\frac{1002}{2} \\\\\n&= 166833\n\\end{align}\\]\n\n\nB\nthe last term in the sequence is \\(995\\) thus,\n\\[\\begin{align}\n995 &= 5 + \\left(n - 1\\right)5\\\\\n995 &= 5n\\\\\nn &= 199\n\\end{align}\\]\nhence,\n\\[\\begin{align}\n\\sum B &= 199 \\left(\\frac{5 + 995}{2}\\right)\\\\\n&= 99500\n\\end{align}\\]\n\n\nC\nthe last term in the sequence is \\(990\\) thus,\n\\[\\begin{align}\n990 &= 15 + \\left(n - 1\\right)15\\\\\n&= 15n\\\\\nn &= 66\n\\end{align}\\]\nhence,\n\\[\\begin{align}\n\\sum C &= 66 \\left(\\frac{15 + 990}{2}\\right)\\\\\n&= 66 \\cdot \\left(\\frac{1005}{2}\\right)\\\\\n&= 33165\n\\end{align}\\]\nTherefore the final solution,\n\\[\\begin{align}\n\\sum A \\cup B = 166833 + 99500 - 33165 = 233168\n\\end{align}\\]\n\n\n\nCode\nWe can solve the problem brute force by writing a code that computes the sum of any number in the range \\([1, 1000]\\) that is a multiple of \\(3\\) or \\(5\\).\n\nsum(x for x in 1:999 if (x % 3 == 0) || (x % 5 == 0))\n\n233168\n\n\nWe use a generator function in the call to sum so that we don’t generate an intermediate array and then sum over the elements of the array. Instead it simply keeps a running total of the elements produced by the generator function."
+    "text": "Solution\nWe are going to implement the ancient algorithm the sieve of Eratosthenes for finding all prime numbers up to any given limit.\n\n\"\"\"\nN :: Integer, primes up to N\n\"\"\"\nfunction sieve_of_erato(N::Int)\n    if N &lt; 2\n        return Int[]\n    end\n\n    sieve = trues(N)\n    sieve[1] = false\n\n    if N ≥ 2\n        sieve[4:2:N] .= false\n    end\n\n    for p in 3:2:isqrt(N)\n        if sieve[p]\n            r = p*p\n            if r ≤ N\n                sieve[r:2*p:N] .= false\n            end\n        end\n    end\n    return findall(sieve)\nend\n\nMain.Notebook.sieve_of_erato\n\n\nThis returns a Vector of integers, of all the primes up to the number \\(N\\). What we want though is specifically the Nth prime number denoted \\(p_n\\). Using the above function is computationally expensive, so ideally we only want to generate the numbers once.\nIn 1902, Mechele Cipolla proved that the nth prime \\(p_n\\) has aymptotic expansion,\n\\[p_n = n \\text{log}(n) + n \\text{log}(\\text{log}(n)) - n + \\sum_{i=1}^{r}(-1)^{i-1}\\frac{f_i \\left(\\text{log}(\\text{log}(n))\\right)}{i! \\text{log}^{i}(n)} + o \\left(\\frac{n}{\\text{log}^{r}(n)}\\right)\\]\nWhere \\(f_i(\\text{log}(\\text{log}(n)))\\) and \\(g_i(\\text{log}(\\text{log}(n)))\\) are polynomials in \\(\\text{log}(\\text{log}(n))\\) of degree \\(i\\), with integer coefficients and positive leading coefficient (Jakimczuk 2008).\nIf \\(r = 0\\) we obtain\n\\[p_n = n \\text{log}(n) + n \\text{log}(\\text{log}(n)) - n + o(n)\\]\nWe want to over approximate the input though so we will just use the value\n\\[p_n \\approx n \\left(\\text{log}(n) + \\text{log}(\\text{log}(n))\\right)\\]\nLet us write a function that finds the nth prime number \\(p_n\\) given this over-approximation.\n\nfunction nthprime(N::Int)\n    p = Int(ceil(N*(log(N) + log(log(N)))))\n    return sieve_of_erato(p)[N]\nend\n\nnthprime (generic function with 1 method)\n\n\nSo the answer is thus,\n\nnthprime(10001)\n\n104743"
+  },
+  {
+    "objectID": "problems/projecteuler/level_1/sumsquaredifference.html",
+    "href": "problems/projecteuler/level_1/sumsquaredifference.html",
+    "title": "Sum Square Difference",
+    "section": "",
+    "text": "The sum of the squares of the first ten natural numbers is,\n\\[1^2 + 2^2 + \\cdots + 10^2 = 385 \\tag{1}\\]\nThe square of the sum of the first ten natural numbers is,\n\\[(1 + 2 + \\cdots + 10)^2 = 55^2 = 3025 \\tag{2}\\]\nHence the difference between the sum of the squares of the first ten natural numbers and the square of the sum is \\(3025 - 385 = 2640\\).\nFind the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum."
+  },
+  {
+    "objectID": "problems/projecteuler/level_1/sumsquaredifference.html#problem-definition",
+    "href": "problems/projecteuler/level_1/sumsquaredifference.html#problem-definition",
+    "title": "Sum Square Difference",
+    "section": "",
+    "text": "The sum of the squares of the first ten natural numbers is,\n\\[1^2 + 2^2 + \\cdots + 10^2 = 385 \\tag{1}\\]\nThe square of the sum of the first ten natural numbers is,\n\\[(1 + 2 + \\cdots + 10)^2 = 55^2 = 3025 \\tag{2}\\]\nHence the difference between the sum of the squares of the first ten natural numbers and the square of the sum is \\(3025 - 385 = 2640\\).\nFind the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum."
+  },
+  {
+    "objectID": "problems/projecteuler/level_1/sumsquaredifference.html#solution",
+    "href": "problems/projecteuler/level_1/sumsquaredifference.html#solution",
+    "title": "Sum Square Difference",
+    "section": "Solution",
+    "text": "Solution\nIn julia we can create a vector of the first \\(N\\) natural numbers by collecting a range. We can then apply a function to that collection by broadcasting. This uses “Single Instruction Multiple Data” or SIMD compiler optimizations to efficiently solve the problem.\n\n\"\"\"\nN :: Integer, the first N natural numbers\n\"\"\"\nfunction sum_square_difference(N::Int)\n    numbers = collect(1:N)\n    return sum(numbers)^2 - sum(numbers.^2)\nend\n\nMain.Notebook.sum_square_difference\n\n\nLets check the implementation with the provided solution to see if the function works as expected.\n\nsum_square_difference(10)\n\n2640\n\n\nPerfect! So the correct answer is,\n\nsum_square_difference(100)\n\n25164150"
   },
   {
     "objectID": "problems/projecteuler/level_1/largestprimefactor.html",
@@ -732,21 +774,21 @@
     "href": "problems/index.html",
     "title": "Study",
     "section": "",
-    "text": "Project Euler is a website with problems in mathematics and computer science. The following are my own solutions to the problems.\n\n\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Title\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nTitle\n\n\n\nAuthor\n\n\n\n\n\n\n\n\nEven Fibonacci Numbers\n\n\nKevin Silberberg\n\n\n\n\n\n\nLargest Palindrome Product\n\n\nKevin Silberberg\n\n\n\n\n\n\nLargest Prime Factor\n\n\nKevin Silberberg\n\n\n\n\n\n\nMultiples of 3 or 5\n\n\nKevin Silberberg\n\n\n\n\n\n\nSmallest Multiple\n\n\nKevin Silberberg\n\n\n\n\n\n\nNo matching items"
+    "text": "Project Euler is a website with problems in mathematics and computer science. The following are my own solutions to the problems.\n\n\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Title\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\n\nTitle\n\n\n\nAuthor\n\n\n\n\n\n\n\n\nJul 14, 2025\n\n\n10,001st Prime\n\n\nKevin Silberberg\n\n\n\n\n\n\nApr 14, 2025\n\n\nEven Fibonacci Numbers\n\n\nKevin Silberberg\n\n\n\n\n\n\nMay 16, 2025\n\n\nLargest Palindrome Product\n\n\nKevin Silberberg\n\n\n\n\n\n\nApr 14, 2025\n\n\nLargest Prime Factor\n\n\nKevin Silberberg\n\n\n\n\n\n\nMar 10, 2025\n\n\nMultiples of 3 or 5\n\n\nKevin Silberberg\n\n\n\n\n\n\nMay 16, 2025\n\n\nSmallest Multiple\n\n\nKevin Silberberg\n\n\n\n\n\n\nJul 14, 2025\n\n\nSum Square Difference\n\n\nKevin Silberberg\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "problems/index.html#project-euler",
     "href": "problems/index.html#project-euler",
     "title": "Study",
     "section": "",
-    "text": "Project Euler is a website with problems in mathematics and computer science. The following are my own solutions to the problems.\n\n\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Title\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nTitle\n\n\n\nAuthor\n\n\n\n\n\n\n\n\nEven Fibonacci Numbers\n\n\nKevin Silberberg\n\n\n\n\n\n\nLargest Palindrome Product\n\n\nKevin Silberberg\n\n\n\n\n\n\nLargest Prime Factor\n\n\nKevin Silberberg\n\n\n\n\n\n\nMultiples of 3 or 5\n\n\nKevin Silberberg\n\n\n\n\n\n\nSmallest Multiple\n\n\nKevin Silberberg\n\n\n\n\n\n\nNo matching items"
+    "text": "Project Euler is a website with problems in mathematics and computer science. The following are my own solutions to the problems.\n\n\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Title\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\n\nTitle\n\n\n\nAuthor\n\n\n\n\n\n\n\n\nJul 14, 2025\n\n\n10,001st Prime\n\n\nKevin Silberberg\n\n\n\n\n\n\nApr 14, 2025\n\n\nEven Fibonacci Numbers\n\n\nKevin Silberberg\n\n\n\n\n\n\nMay 16, 2025\n\n\nLargest Palindrome Product\n\n\nKevin Silberberg\n\n\n\n\n\n\nApr 14, 2025\n\n\nLargest Prime Factor\n\n\nKevin Silberberg\n\n\n\n\n\n\nMar 10, 2025\n\n\nMultiples of 3 or 5\n\n\nKevin Silberberg\n\n\n\n\n\n\nMay 16, 2025\n\n\nSmallest Multiple\n\n\nKevin Silberberg\n\n\n\n\n\n\nJul 14, 2025\n\n\nSum Square Difference\n\n\nKevin Silberberg\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "problems/index.html#rosalind",
     "href": "problems/index.html#rosalind",
     "title": "Study",
     "section": "Rosalind",
-    "text": "Rosalind\nRosalind is a platform for learning bioinformatics through problem solving. The following are my solutions to the problems posed using the Julia programming language.\n\nBioinformatics Stronghold\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Title\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nTitle\n\n\n\nAuthor\n\n\n\n\n\n\n\n\nComplementing a Strand of DNA\n\n\nKevin Silberberg\n\n\n\n\n\n\nCounting DNA nucleotides\n\n\nKevin Silberberg\n\n\n\n\n\n\nTranscribing DNA into RNA\n\n\nKevin Silberberg\n\n\n\n\n\n\nNo matching items"
+    "text": "Rosalind\nRosalind is a platform for learning bioinformatics through problem solving. The following are my solutions to the problems posed using the Julia programming language.\n\nBioinformatics Stronghold\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Title\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\n\nTitle\n\n\n\nAuthor\n\n\n\n\n\n\n\n\nJul 2, 2025\n\n\nComplementing a Strand of DNA\n\n\nKevin Silberberg\n\n\n\n\n\n\nMar 9, 2025\n\n\nCounting DNA nucleotides\n\n\nKevin Silberberg\n\n\n\n\n\n\nMar 12, 2025\n\n\nTranscribing DNA into RNA\n\n\nKevin Silberberg\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "photos/index.html",

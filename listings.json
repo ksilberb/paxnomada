@@ -36,11 +36,13 @@
   {
     "listing": "/problems/index.html",
     "items": [
+      "/problems/projecteuler/level_1/10001stprime.html",
       "/problems/projecteuler/level_1/evenfibonaccinumbers.html",
       "/problems/projecteuler/level_1/largestpalindromeproduct.html",
       "/problems/projecteuler/level_1/largestprimefactor.html",
       "/problems/projecteuler/level_1/multiplesof3or5.html",
       "/problems/projecteuler/level_1/smallestmultiple.html",
+      "/problems/projecteuler/level_1/sumsquaredifference.html",
       "/problems/rosalind/bioinformatics_stronghold/complementing_a_strand_of_dna/complement.html",
       "/problems/rosalind/bioinformatics_stronghold/counting_dna_nucleotides/countdna.html",
       "/problems/rosalind/bioinformatics_stronghold/transcribing_dna_into_rna/transcription.html"
