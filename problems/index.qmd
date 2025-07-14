@@ -1,0 +1,32 @@
+---
+title: "Study"
+subtitle: "Personal solutions to various math and programming problems."
+description: "This page is dedicated to self-learning. I will be documenting my notes and solutions to problems on various platforms."
+listing:
+  - id: level-one
+    contents:
+      - "projecteuler/level_1/*.qmd"
+    type: table
+  - id: bioinformatics-stronghold
+    contents:
+      - "rosalind/bioinformatics_stronghold/*/*.qmd"
+    type: table
+---
+
+## Project Euler
+
+[Project Euler](https://projecteuler.net/about) is a website with problems in mathematics and computer science. The following are my own solutions to the problems.
+
+### Level 1
+
+:::{#level-one}
+:::
+
+## Rosalind
+
+[Rosalind](https://rosalind.info/about/) is a platform for learning bioinformatics through problem solving. The following are my solutions to the problems posed using the [Julia](https://julialang.org/) programming language.
+
+### Bioinformatics Stronghold
+
+:::{#bioinformatics-stronghold}
+:::

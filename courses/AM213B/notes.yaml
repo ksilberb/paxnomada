@@ -1,0 +1,71 @@
+- title: "Polynomial approximation of functions and derivatives"
+  path: notes/danielle/Polynomial_approximation_of_functions_and_derivatives.pdf
+  description: "Polynomial approximation theory for numerical methods in ODEs and PDEs, focusing on interpolation techniques (particularly Lagrangian interpolation), error analysis, and numerical differentiation methods including finite differences and pseudo-spectral methods using various grid point distributions like evenly-spaced and Gauss-Chebyshev-Lobatto nodes."
+  author: "[Prof. Daniele Venturi](https://venturi.soe.ucsc.edu/home)"
+  date: 05/25/2024
+
+- title: "Initial value problems for ODEs"
+  path: notes/danielle/The_initial_value_problem_for_ODEs.pdf
+  description: "Initial value problems for ordinary differential equations (ODEs) that covers the theoretical foundations including Lipschitz continuity conditions for well-posedness, existence and uniqueness theorems for both single ODEs and systems of ODEs, numerical solution methods like Euler forward and Crank-Nicolson schemes, and applications to discretizing partial differential equations."
+  author: "[Prof. Daniele Venturi](https://venturi.soe.ucsc.edu/home)"
+  date: 03/28/2022
+
+- title: "Overview of numerical methods for ODEs"
+  path: notes/danielle/Overview_of_numerical_methods_for_ODEs.pdf
+  description: "Solving ordinary differential equations (ODEs), covering elementary methods like Euler and Crank-Nicolson, multistep methods such as Adams-Bashforth and Adams-Moulton, backward differentiation formulas (BDF), and Runge-Kutta methods, along with their derivations, stability properties, and implementation considerations."
+  author: "[Prof. Daniele Venturi](https://venturi.soe.ucsc.edu/home)"
+  date: 04/20/2024
+
+- title: "Consistency of numerical methods for ODEs"
+  path: notes/danielle/Consistency_of_numerical_methods_for_ODEs.pdf
+  description: "Consistency for numerical methods solving ordinary differential equations (ODEs), showing that a numerical scheme is consistent if its local truncation error approaches zero as the time step approaches zero, and derives conditions and order analysis for various methods including linear multistep methods, Runge-Kutta methods, and backward differentiation formulas."
+  author: "[Prof. Daniele Venturi](https://venturi.soe.ucsc.edu/home)"
+  date: 04/20/2024
+
+- title: "Stability and convergence of numerical methods for ODEs"
+  path: notes/danielle/Zero-stability_of_numerical_methods_for_ODEs.pdf
+  description: "Establishes the fundamental equivalence between convergence, consistency, and zero-stability for numerical methods solving ordinary differential equations, proving that a numerical scheme converges if and only if it is both consistent (truncation error approaches zero) and zero-stable (satisfies the root condition that all characteristic polynomial roots lie within or on the unit circle with simple multiplicity)."
+  author: "[Prof. Daniele Venturi](https://venturi.soe.ucsc.edu/home)"
+  date: 04/18/2024
+
+- title: "Absolute stability of numerical methods for ODEs"
+  path: notes/danielle/Absolute_stability_of_numerical_methods_for_ODEs.pdf
+  description: "Analysis of absolute stability for numerical methods solving ordinary differential equations (ODEs), examining when numerical solutions decay to zero like their analytical counterparts by studying prototype linear systems and deriving stability conditions for various methods including Euler, Crank-Nicolson, linear multistep, and Runge-Kutta schemes."
+  author: "[Prof. Daniele Venturi](https://venturi.soe.ucsc.edu/home)"
+  date: 04/25/2024
+
+- title: "Boundary value problems for ODEs"
+  path: notes/danielle/Boundary_value_problems.pdf
+  description: "Boundary value problems (BVPs) for ordinary differential equations, demonstrating through examples like the second-order linear ODE with Dirichlet conditions how such problems can have unique solutions (as shown with Green functions and the maximum principle), infinite solutions, or no solutions depending on the boundary conditions and whether the equations are linear or nonlinear."
+  author: "[Prof. Daniele Venturi](https://venturi.soe.ucsc.edu/home)"
+  date: 04/30/2024
+
+- title: "Numerical methods to solve boundary value problems for ODEs"
+  path: notes/danielle/Numerical_methods_to_solve_boundary_value_problems_for_ODEs.pdf
+  description: "Overview of numerical methods for solving boundary value problems (BVPs) for ordinary differential equations, covering three main approaches: the shooting method (which converts BVPs to initial value problems solved iteratively), finite difference methods (which discretize the domain and approximate derivatives), and weighted residual methods like Galerkin, collocation, and least squares (which use polynomial approximations and minimize residuals in different ways)."
+  author: "[Prof. Daniele Venturi](https://venturi.soe.ucsc.edu/home)"
+  date: 05/20/2024
+
+- title: "Numerical methods for the heat equation"
+  path: notes/danielle/Numerical_methods_for_the_heat_equation.pdf
+  description: "Numerical methods for solving the heat equation and related partial differential equations, covering finite difference discretization schemes, stability analysis, time integration methods, and spectral approaches like Galerkin and collocation methods."
+  author: "[Prof. Daniele Venturi](https://venturi.soe.ucsc.edu/home)"
+  date: 06/12/2024
+
+- title: "Convergence analysis of finite difference methods for PDEs"
+  path: notes/danielle/Convergence_analysis_of_finite_difference_methods_for_PDEs.pdf
+  description: "Lax-Richtmyer stability theory, which establishes that for consistent finite difference schemes approximating linear PDEs, stability (uniform boundedness of matrix powers) is both necessary and sufficient for convergence, and demonstrates how this can be analyzed using either matrix norms in physical space or Von-Neumann analysis in Fourier space for periodic boundary conditions."
+  author: "[Prof. Daniele Venturi](https://venturi.soe.ucsc.edu/home)"
+  date: 05/26/2024
+
+- title: "Finite-difference methods for the advection equation"
+  path: notes/danielle/Numerical_methods_for_the_advection_equation.pdf
+  description: "Stability and convergence of various finite-difference schemes (Euler-forward, Leapfrog, Lax-Friedrichs, and Lax-Wendroff) for solving the linear advection equation, analyzing their consistency, stability conditions (particularly the CFL condition), and convergence properties using Von-Neumann analysis and the method of characteristics."
+  author: "[Prof. Daniele Venturi](https://venturi.soe.ucsc.edu/home)"
+  date: 05/31/2024
+
+- title: "Fourier spectral methods"
+  path: notes/danielle/Fourier_spectral_methods.pdf
+  description: "Introduction to Fourier spectral methods for solving partial differential equations with periodic boundary conditions, covering trigonometric approximation theory, discrete Fourier expansions, and both Fourier-Galerkin and Fourier-collocation computational approaches."
+  author: "[Prof. Daniele Venturi](https://venturi.soe.ucsc.edu/home)"
+  date: 06/06/2024

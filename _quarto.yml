@@ -2,7 +2,6 @@ project:
   type: website
   resources:
     - cv.pdf
-
 website:
   title: "paxnomada"
   repo-url: "https://github.com/ksilberb/paxnomada"
@@ -20,12 +19,14 @@ website:
       - text: "Photos"
         icon: camera
         href: photos/index.qmd
+      - text: "Study"
+        icon: code
+        href: problems/index.qmd
   page-footer:
     left: "© Copyright 2025 Kevin Silberberg. Except where otherwise noted, all text and images licensed CC-BY-NC 4.0."
-
 format:
   html:
+    page-layout: full
     theme: minty
-
 execute:
     freeze: auto

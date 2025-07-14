@@ -1,0 +1,35 @@
+- title: "PDF equations for dynamical systems and PDEs"
+  description: "Course notes on PDF (probability density function) equations for analyzing the statistical properties of dynamical systems and PDEs evolving from random initial conditions. The topics include: Liouville equations for dynamical systems, systems with random parameters and colored noise, BBGKY PDF hierarchies, reduced-order PDF equations using conditional expectations, data-driven closure methods, Fokker-Planck equations, Hopf functional equations for PDEs, and Lundgren-Monin-Novikov hierarchies for studying turbulence statistics."
+  date: 11/08/2024
+  author: "[Prof. Daniele Venturi](https://venturi.soe.ucsc.edu/home)"
+  path: "notes/PDF_equations_for_dynamical_systems_and_PDEs.pdf"
+
+- title: "Polynomial chaos"
+  description: "Course notes on polynomial chaos theory and its applications to uncertainty quantification. Topics include Wiener-Hermite expansions for Brownian motion functionals, generalized polynomial chaos (gPC) expansions for systems with random variables, multi-element gPC methods, stochastic Galerkin projection techniques for solving random ODEs and PDEs (including heat equations, Burgers equations, and thermal convection), random eigenvalue problems, orthogonal polynomial theory, and convergence analysis of random variable sequences."
+  date: 11/20/2024
+  author: "[Prof. Daniele Venturi](https://venturi.soe.ucsc.edu/home)"
+  path: "notes/Polynomial_chaos.pdf"
+
+- title: "Probability spaces and random variables"
+  description: "Course notes on probability theory and random variables covering: probability spaces (sample space, event space, probability measure), σ-algebras, random variables and their mappings, cumulative distribution functions (CDFs), probability density functions (PDFs), functions of random variables with analytical transformations, applications to dynamical systems including the Liouville equation, sampling methods for arbitrary PDFs, and statistical moments/cumulants including expectation, variance, moment generating functions, and characteristic functions."
+  date: 10/04/2024
+  author: "[Prof. Daniele Venturi](https://venturi.soe.ucsc.edu/home)"
+  path: "notes/Probability_spaces_and_random_variables.pdf"
+
+- title: "Random processes and random fields"
+  description: "Course notes on random processes and random fields, including stochastic process theory, Gaussian processes and their sampling methods, discrete Markov processes, particle filtering and Bayesian state estimation, Karhunen-Loève expansions, Wiener processes, and stochastic differential equations with their corresponding Fokker-Planck equations. The notes provide both theoretical foundations and practical computational methods for analyzing and simulating various types of random phenomena in continuous and discrete time."
+  date: 10/22/2024
+  author: "[Prof. Daniele Venturi](https://venturi.soe.ucsc.edu/home)"
+  path: "notes/Random_processes_and_random_fields.pdf"
+
+- title: "Random vectors"
+  description: "Course notes on conditional probability distributions, Bayes' theorem, and advanced sampling methods for high-dimensional probability density functions. The main topics include conditional expectations and correlations, Markov Chain Monte Carlo (MCMC) methods with emphasis on Gibbs sampling, and copulas for modeling dependence between random variables."
+  date: 10/11/2024
+  author: "[Prof. Daniele Venturi](https://venturi.soe.ucsc.edu/home)"
+  path: "notes/Random_vectors.pdf"
+
+- title: "Sampling Methods"
+  description: "Course notes on sparse grids methodology for high-dimensional interpolation and integration. The topics include Chebyshev-Gauss-Lobatto grids, Smolyak interpolation algorithms, sparse grid construction and convergence analysis, integration on sparse grids with cubature formulas, Chebyshev polynomial theory, Lagrangian interpolation at Gauss points, and Lebesgue constants for error estimation."
+  date: 12/04/2024
+  author: "[Prof. Daniele Venturi](https://venturi.soe.ucsc.edu/home)"
+  path: "notes/Sampling_methods.pdf"

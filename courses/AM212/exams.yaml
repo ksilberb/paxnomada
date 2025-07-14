@@ -1,0 +1,11 @@
+- title: "Midterm 1"
+  author: Kevin Silberberg
+  date: 10/27/2024
+  description: "Finding eigenfunctions and Green's functions for a Sturm-Liouville boundary value problem involving a second-order differential equation with logarithmic solutions, and solving a diffusion equation with non-homogeneous boundary conditions using eigenfunction expansion and auxiliary function methods."
+  path: docs/exam1.pdf
+
+- title: "Midterm 2"
+  author: Kevin Silberberg
+  date: 12/04/2024
+  description: "Analysis of three ordinary differential equations using asymptotic methods (multiple time scales, strained coordinates, and boundary layer theory) and one eigenvalue problem solved with WKB theory, comparing numerical and analytical solutions with small parameter approximations."
+  path: docs/exam2.pdf

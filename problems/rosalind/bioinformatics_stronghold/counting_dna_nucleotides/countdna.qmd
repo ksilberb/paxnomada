@@ -1,0 +1,51 @@
+---
+title: "Counting DNA nucleotides"
+author: Kevin Silberberg
+engine: julia-1.11
+julia:
+  exeflags: ["--project=/home/kevinsilberberg/paxnomada/rosalind/"]
+execute:
+  daemon: true
+  cache: true
+  eval: false
+  freeze: auto
+---
+
+## Problem definition
+
+Given: A DNA string *s* of length $1000$ nucleotides
+
+Return: Four integers (seperated by spaces) counting the respoective number of times that the symbols 'A' 'C' 'G' 'T' occur in *s*.
+
+Sample Dataset:
+
+AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC
+
+Sample Output:
+
+\begin{matrix}
+20 & 12 & 17 & 21
+\end{matrix}
+
+## Solution
+
+We use the inbuilt julia function `count(p, iter)` which counts the number of elements in `iter` for which predicate `p` is true.
+
+[count](https://www.jlhub.com/julia/manual/en/function/count)
+
+```{julia}
+#| eval: false
+{{< include countdna.jl >}}
+```
+
+## Notes
+
+In Rosalind, you have to 'download the dataset' and they give you five minuets to submit your answer. This essentially means that your solution nees to be reasonably computationally efficient to solve within that time frame. If you write bad code, sometimes this is a non-trivial requirement because their data files for testing contain a large number of data.
+
+[Github Files](https://github.com/ksilberb/paxnomada/tree/main/rosalind/countdna)
+
+The cold was ran by downloading the dataset, then running the following command:
+
+```{sh}
+julia countdna.jl rosalind_dna.txt output.txt
+```

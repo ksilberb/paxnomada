@@ -1,0 +1,12 @@
+{
+  "hash": "e00f9e42f26d6f2a1c4c374c6de5beaf",
+  "result": {
+    "engine": "julia",
+    "markdown": "---\ntitle: \"Smallest Multiple\"\nauthor: Kevin Silberberg\nengine: julia-1.11\njulia:\n  exeflags: [\"--project=/home/kevinsilberberg/paxnomada/projecteuler/\"]\nexecute:\n  daemon: 3600\n  cache: true\n  freeze: auto\n---\n\n## Problem definition\n\n$2520$ is the smallest number that can be divided by each of the numbers from $1$ to $10$ without any remainder.\n\nWhat is the smallest positive number that can is **evenly divisible** by all of the numbers from $1$ to $20$?\n\n\n## Solution\n\n::: {#2 .cell execution_count=1}\n``` {.julia .cell-code}\nfunction isDivisible(num::Int)\n    r::Int = 0\n    for i = 1:20\n        r = mod(num, i)\n        if r != 0\n            return false\n        end\n    end\n    return true\nend\n\nfunction main()\n    current = 2520\n    while !(isDivisible(current))\n        current += 1\n    end\n    current\nend\nmain()\n```\n\n::: {.cell-output .cell-output-display execution_count=1}\n```\n232792560\n```\n:::\n:::\n\n\n\n",
+    "supporting": [
+      "smallestmultiple_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}

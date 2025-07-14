@@ -1,0 +1,110 @@
+---
+title: "Largest Prime Factor"
+author: Kevin Silberberg
+engine: julia-1.11
+julia:
+  exeflags: ["--project=/home/kevinsilberberg/paxnomada/projecteuler/"]
+execute:
+  daemon: true
+  cache: true
+  freeze: auto
+---
+
+## Problem definition
+
+The prime factors of 13195 are 5, 7, 13, and 29.
+
+What is the largest prime factor of the number 600851475143?
+
+## Solution
+
+A prime number is a whole number above $1$ that **cannot** be made by multiplying other whole numbers.
+
+For this problem we are going to need to generate prime numbers which I do not know how to do.
+
+**research**
+
+[Generation of primes (wiki)](https://en.wikipedia.org/wiki/Generation_of_primes)
+
+[Sieve of Atkin](https://en.wikipedia.org/wiki/Sieve_of_Atkin)
+
+Let us implement the Sieve of Atkin algorithm, so we can generate prime numbers.
+
+```{julia}
+function atkinSieve(N::Int)
+    sieve = falses(N)
+    if N >= 2 sieve[2] = true end
+    if N >= 3 sieve[3] = true end
+    if N >= 5 sieve[5] = true end
+
+    for x in 1:isqrt(N)
+        for y in 1:isqrt(N)
+            n = 4*x*x + y*y
+            if n <= N && (mod(n, 12) == 1 || mod(n, 12) == 5)
+                sieve[n] = !sieve[n]
+            end
+            n = 3*x*x + y*y
+            if n <= N && mod(n, 12) == 7
+                sieve[n] = !sieve[n]
+            end
+            if x > y
+                n = 3*x*x - y*y
+                if n <= N && mod(n, 12) == 11
+                    sieve[n] = !sieve[n]
+                end
+            end
+        end
+    end
+
+    for r in 5:isqrt(N)
+        if sieve[r]
+            for i in r*r:r*r:N
+                sieve[i] = false
+            end
+        end
+    end
+    [i for i in 1:N if sieve[i]]
+end
+```
+
+For the next part of the problem we need to develope an algorithm that finds the prime factorization for any integer $K$.
+
+```{julia}
+function primeFactor(K::Int)
+    if K <= 0
+        throw(DomainError(K, "Input must be a positive integer"))
+    elseif K == 1
+        return Dict{Int, Int}()
+    end
+    # generate prime numbers up to sqrt(K)+1
+    primes = atkinSieve(isqrt(K) + 1)
+    factors = Dict{Int, Int}()
+    remaining = K
+    for p in primes
+        if remaining == 1
+            break
+        end
+        power = 0
+        # count how many times p divides remaining
+        while mod(remaining, p) == 0
+            power += 1
+            remaining ÷= p
+        end
+        # add the prime factor to dict
+        # the value represents how many times that factor divided remaining
+        if power > 0
+            factors[p]  = power
+        end
+    end
+    # if the remaining value is greater than 1, it must be prime
+    # if it were composite it would have at least one prime factor less than or equal to sqrt(K)
+    # which we would have diveded out already.
+    if remaining > 1
+        factors[remaining] = 1
+    end
+    factors
+end
+primeFactor(600851475143)
+```
+
+So the largest prime number is therefore $6857$

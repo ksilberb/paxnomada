@@ -1,0 +1,90 @@
+{
+    "cells": [
+        {
+            "id": "1",
+            "cell_type": "markdown",
+            "metadata": {
+            },
+            "source": [
+                "---\n",
+                "title: \"Transcribing DNA into RNA\"\n",
+                "engine: julia-1.11\n",
+                "julia:\n",
+                "  exeflags: [\"--project=/home/kevinsilberberg/paxnomada/rosalind/\"]\n",
+                "execute:\n",
+                "  daemon: true\n",
+                "  cache: true\n",
+                "  eval: false\n",
+                "  freeze: auto\n",
+                "---\n",
+                "\n",
+                "## Problem definition\n",
+                "\n",
+                "Write a program\n",
+                "\n",
+                "Given: A DNA string $t$ having length at most 1000 nucleotides\n",
+                "\n",
+                "Return: The transcribed RNA string of $t$.\n",
+                "\n",
+                "### Sample data\n",
+                "\n",
+                "```{sh}\n",
+                "GATGGAACTTGACTACGTAAATT\n",
+                "```\n",
+                "\n",
+                "### Sample output\n",
+                "\n",
+                "```{sh}\n",
+                "GAUGGAACUUGACUACGUAAAUU\n",
+                "```\n",
+                "\n",
+                "## Solution\n",
+                "\n",
+                "`transcription.jl`"
+            ]
+        },
+        {
+            "id": "2",
+            "cell_type": "code",
+            "metadata": {
+            },
+            "source": [
+                "#| eval: false\n",
+                "transcribe(s::AbstractString) = replace(s, 'T'=>'U')\n",
+                "\n",
+                "function main()\n",
+                "    if length(ARGS) < 2\n",
+                "        println(\"Usage: julia $(Base.PROGRAM_FILE) <fineIN> <fileOUT>\")\n",
+                "        exit(1)\n",
+                "    end\n",
+                "\n",
+                "    s = read(ARGS[1], String)\n",
+                "\n",
+                "    open(ARGS[2], \"w\") do file\n",
+                "        println(file, transcribe(s))\n",
+                "    end\n",
+                "    exit(0)\n",
+                "end\n",
+                "\n",
+                "main()\n",
+                ""
+            ],
+            "outputs": [
+            ],
+            "execution_count": 0
+        },
+        {
+            "id": "3",
+            "cell_type": "markdown",
+            "metadata": {
+            },
+            "source": [
+                "\n",
+                "We use the in-built function `replace` which takes in a collection and for each pair `old=>new` returns a copy of the collection where all occurances of `old` are replaced by `new`."
+            ]
+        }
+    ],
+    "timestamp": "2025-07-13T15:19:12.188",
+    "file": "/home/kevinsilberberg/Repos/paxnomada/problems/rosalind/bioinformatics_stronghold/transcribing_dna_into_rna/transcription.qmd",
+    "qnr_schema_version": "1.0.0"
+}

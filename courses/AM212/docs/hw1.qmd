@@ -1,6 +1,7 @@
 ---
 title: "Homework 1 AM212"
 date: 2024-10-4
+description: "Solution to a nonlinear damping problem involving a mass-spring system with cubic velocity-dependent damping. The work demonstrates the non-dimensionalization process for the governing differential equation and derives the dimensionless parameter ε in terms of the system's physical constants (mass M, spring constant Λ/L, and damping coefficient K)."
 author:
   - name: Kevin Silberberg
     id: ks

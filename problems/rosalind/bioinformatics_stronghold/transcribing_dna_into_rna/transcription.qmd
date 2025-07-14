@@ -1,0 +1,43 @@
+---
+title: "Transcribing DNA into RNA"
+author: Kevin Silberberg
+engine: julia-1.11
+julia:
+  exeflags: ["--project=/home/kevinsilberberg/paxnomada/rosalind/"]
+execute:
+  daemon: true
+  cache: true
+  eval: false
+  freeze: auto
+---
+
+## Problem definition
+
+Write a program
+
+Given: A DNA string $t$ having length at most 1000 nucleotides
+
+Return: The transcribed RNA string of $t$.
+
+### Sample data
+
+```{sh}
+GATGGAACTTGACTACGTAAATT
+```
+
+### Sample output
+
+```{sh}
+GAUGGAACUUGACUACGUAAAUU
+```
+
+## Solution
+
+`transcription.jl`
+
+```{julia}
+#| eval: false
+{{< include transcription.jl >}}
+```
+
+We use the in-built function `replace` which takes in a collection and for each pair `old=>new` returns a copy of the collection where all occurances of `old` are replaced by `new`.

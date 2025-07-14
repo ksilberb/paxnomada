@@ -1,27 +1,29 @@
-# Numberical Linear Algebra
-
-## Course Description
-
-This course focuses on numerical solutions to classic problems of linear algebra, providing students with comprehensive training in fundamental computational techniques and their practical implementation. Topics covered include matrix factorizations such as LU, Cholesky, and QR decompositions; iterative methods for solving linear equation systems; least squares methods, power methods, and QR algorithms for eigenvalue problems; and analysis of conditioning and stability in numerical algorithms. Students will gain hands-on experience implementing numerical algorithms from scratch to solve engineering and scientific problems, with emphasis on developing and coding their own algorithmic solutions rather than relying on existing linear algebra libraries. The course aims to master essential numerical methods for numerical linear algebra while building practical programming skills through algorithm development and implementation. Basic knowledge of mathematical linear algebra is assumed as a prerequisite. This class will use Fortran 90 (or above) or C as the programming language.
-
-**Instructor**: [Dongwook Lee](https://users.soe.ucsc.edu/~dongwook/)
+---
+title: "Numberical Linear Algebra"
+subtitle: "AM 213A"
+description: "This course focuses on numerical solutions to classic problems of linear algebra, providing students with comprehensive training in fundamental computational techniques and their practical implementation. Topics covered include matrix factorizations such as LU, Cholesky, and QR decompositions; iterative methods for solving linear equation systems; least squares methods, power methods, and QR algorithms for eigenvalue problems; and analysis of conditioning and stability in numerical algorithms. Students will gain hands-on experience implementing numerical algorithms from scratch to solve engineering and scientific problems, with emphasis on developing and coding their own algorithmic solutions rather than relying on existing linear algebra libraries. The course aims to master essential numerical methods for numerical linear algebra while building practical programming skills through algorithm development and implementation. Basic knowledge of mathematical linear algebra is assumed as a prerequisite. This class will use Fortran 90 (or above) or C as the programming language."
+author: "[Dongwook Lee](https://users.soe.ucsc.edu/~dongwook/)"
+date: 01-06-2025
+image: "thumbnail.png"
+listing:
+  - id: course-notes
+    contents:
+      - notes.yaml
+    type: table
+  - id: course-work
+    contents:
+      - docs.yaml
+    type: table
+---
 
 ## Course Notes
 
-[Lecture Notes](notes/am213a.pdf)
+:::{#course-notes}
+:::
 
 ## Course Work
 
-The following are my solutions to the coding assignments presented to us in this course.
+My solutions to the homework assignments and exams presented to us in this course.
 
-[Homework 2](docs/hw2.pdf)
-
-[Homework 3](docs/hw3.pdf)
-
-[Homework 4](docs/hw4.pdf)
-
-[Homework 5](docs/hw5.pdf)
-
-[Midterm](docs/midterm.pdf)
-
-[Final](docs/final.pdf)
+:::{#course-work}
+:::

@@ -1,21 +1,28 @@
-# Advanced Methods in Applied Mathematics
-
-## Course Description
-
-This course provides students with an overview of advanced topics and analytical techniques in Applied Mathematics, focusing on the analytical solution of ODEs and PDEs, including asymptotic analysis (method of strained coordinates; method of multiple scales; matched asymptotics; WKB theory), dimensional analysis, self-similar solutions, and Green's function solutions of PDEs. It also introduces students to variational calculus for the optimization of functionals.
-
-**Instructor**: [Pascale Garaud](https://users.soe.ucsc.edu/~pgaraud/)
+---
+title: "Advanced Methods in Applied Mathematics"
+subtitle: "AM 212"
+author: "[Pascale Garaud](https://users.soe.ucsc.edu/~pgaraud/)"
+description: "This course provides students with an overview of advanced topics and analytical techniques in Applied Mathematics, focusing on the analytical solution of ODEs and PDEs, including asymptotic analysis (method of strained coordinates; method of multiple scales; matched asymptotics; WKB theory), dimensional analysis, self-similar solutions, and Green's function solutions of PDEs. It also introduces students to variational calculus for the optimization of functionals."
+date: 09-13-2024
+image: "p3pa.png"
+listing:
+  - id: course-notes
+    contents:
+      - notes.yaml
+    type: table
+  - id: course-work
+    contents:
+      - "docs/*.qmd"
+      - exams.yaml
+    type: table
+---
 
 ## Course Notes
 
-[AM212 Lecture Notes](notes/AM212_Lectures_edited.pdf)
+:::{#course-notes}
+:::
 
 ## Course Work
 
-[Homework 1](docs/hw1.qmd)
-
-[Homework 2](docs/hw2.qmd)
-
-[Midterm 1](docs/exam1.pdf)
-
-[Midterm 2](docs/exam2.pdf)
+:::{#course-work}
+:::

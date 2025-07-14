@@ -1,5 +1,6 @@
 ---
 title: "Homework 2 AM212"
+description: "Solutions to partial differential equations problems focusing on heat conduction, wave propagation, and steady-state analysis. This homework explores the heat equation with decay terms, damped vibrating string dynamics, and Laplace's equation with mixed boundary conditions using separation of variables, eigenfunction expansions, and Fourier series methods."
 date: 2024-10-5
 author:
   - name: Kevin Silberberg

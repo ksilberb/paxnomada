@@ -1,0 +1,35 @@
+- title: Homework 2
+  description: "This homework assignment requires students to prove various linear algebra theorems about eigenvalues, eigenvectors, and matrix properties, analyze the numerical conditioning of functions including plotting comparisons of mathematically equivalent but computationally different expressions, and optionally prove the equivalence between positive definiteness and positive eigenvalues for Hermitian matrices."
+  date: 02/04/2025
+  path: "docs/hw2.pdf"
+  author: Kevin Silberberg
+
+- title: Homework 3
+  description: "This homework assignment requires students to implement Gaussian elimination and LU decomposition algorithms with partial pivoting in Fortran/C/Python, apply them to solve linear systems and find a plane equation through three 3D points, and complete three theory problems covering numerical stability, block matrix operations, and complex-valued linear systems."
+  date: 02/19/2025
+  path: "docs/hw3.pdf"
+  author: Kevin Silberberg
+
+- title: Homework 4
+  description: "This homework assignment requires students to implement and compare Cholesky decomposition and QR decomposition methods for solving least-squares polynomial fitting problems using both single and double precision arithmetic, along with solving theoretical problems about orthogonal projectors and Householder reflectors."
+  date: 03/04/2025
+  path: "docs/hw4.pdf"
+  author: Kevin Silberberg
+
+- title: Homework 5
+  description: "This homework assignment requires students to implement three numerical algorithms (Householder reduction to tridiagonal form, QR algorithm with and without shift, and inverse iteration for eigenvectors) in Fortran/C/Python and solve five theoretical problems related to matrix eigenvalue computations, Householder transformations, and matrix properties."
+  date: 03/12/2025
+  path: "docs/hw5.pdf"
+  author: Kevin Silberberg
+
+- title: Midterm Exam
+  description: "This midterm exam covers seven main areas: definitions of fundamental linear algebra concepts like matrix rank, orthogonality, SVD, eigenvalues, and numerical stability; proving that real symmetric matrices are diagonalizable using Schur decomposition; analyzing the Cholesky decomposition method for solving normal equations and its numerical issues with ill-conditioned matrices; proving eigenvalue bounds for stochastic matrices and invertibility conditions; examining properties of symmetric positive definite matrices including eigenvalue positivity; analyzing Gaussian elimination without pivoting, counting its operations, identifying numerical issues, and describing partial pivoting as a solution; and studying an iterative algorithm involving Cholesky decomposition, proving invariant properties, similarity transformations, and computing explicit iterations."
+  date: 02/12/2025
+  path: "midterm.pdf"
+  author: Kevin Silberberg
+
+- title: Final Coding Project
+  description: "This final coding project requires students to implement two main problems: SVD-based image compression using LAPACK routines to compress a black-and-white dog image at various singular value levels and visualize the results, and iterative linear algebra methods including Gauss-Jacobi and Gauss-Seidel algorithms to solve systems of equations, with an optional conjugate gradient implementation for extra credit."
+  date: 03/20/2025
+  path: "final.pdf"
+  author: Kevin Silberberg

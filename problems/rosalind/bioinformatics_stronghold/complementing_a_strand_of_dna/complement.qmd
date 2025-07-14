@@ -1,0 +1,45 @@
+---
+title: "Complementing a Strand of DNA"
+author: Kevin Silberberg
+engine: julia-1.11
+julia:
+  exeflags: ["--project=/home/kevinsilberberg/paxnomada/rosalind/"]
+execute:
+  daemon: true
+  cache: true
+  eval: false
+  freeze: auto
+---
+
+## Problem definition
+
+In DNA strings, sysmbols 'A' and 'T' are complements of each other, as are 'C' and 'G'.
+
+The reverse complement of a DNA string $s$ is the string $s^C$ formed by reversing the symbols of $s$, then taking the complement of each symbol (e.g., the reverse complement of 'GTCA' is 'TGAC').
+
+### Given
+
+A DNA string $s$ of length at most 1000 base pairs.
+
+### Return
+
+The reverse complement $s^C$ of $s$.
+
+### Sample dataset
+
+```{text}
+AAAACCCGGT
+```
+
+### Sample Output
+
+```{text}
+ACCGGGTTTT
+```
+
+## Solution
+
+```{julia}
+#| eval: false
+{{< include complement.jl >}}
+```
