@@ -1,37 +1,13 @@
 [
   {
-    "listing": "/index.html",
+    "listing": "/photos/index.html",
     "items": [
-      "/courses/AM212/index.html",
-      "/courses/AM238/index.html",
-      "/courses/AM213A/index.html",
-      "/courses/AM213B/index.html"
+      "/photos/life/index.html",
+      "/photos/spring_break_2025/index.html",
+      "/photos/shasta_2023/index.html",
+      "/photos/mineral_king_2021/index.html",
+      "/photos/trans_sierra_2015/index.html"
     ]
-  },
-  {
-    "listing": "/courses/AM213A/index.html",
-    "items": []
-  },
-  {
-    "listing": "/courses/AM238/index.html",
-    "items": [
-      "/courses/AM238/docs/hw1/hw1.html",
-      "/courses/AM238/docs/hw2/hw2.html",
-      "/courses/AM238/docs/hw3/hw3.html",
-      "/courses/AM238/docs/hw4/hw4.html",
-      "/courses/AM238/docs/hw5/hw5.html"
-    ]
-  },
-  {
-    "listing": "/courses/AM212/index.html",
-    "items": [
-      "/courses/AM212/docs/hw1.html",
-      "/courses/AM212/docs/hw2.html"
-    ]
-  },
-  {
-    "listing": "/courses/AM213B/index.html",
-    "items": []
   },
   {
     "listing": "/problems/index.html",
@@ -49,12 +25,37 @@
     ]
   },
   {
-    "listing": "/photos/index.html",
+    "listing": "/courses/AM213B/index.html",
+    "items": []
+  },
+  {
+    "listing": "/courses/AM212/index.html",
     "items": [
-      "/photos/life/index.html",
-      "/photos/springbreak2025/index.html",
-      "/photos/shasta2023/index.html",
-      "/photos/transsierra2015/index.html"
+      "/courses/AM212/docs/hw1.html",
+      "/courses/AM212/docs/hw2.html"
+    ]
+  },
+  {
+    "listing": "/courses/AM238/index.html",
+    "items": [
+      "/courses/AM238/docs/hw1/hw1.html",
+      "/courses/AM238/docs/hw2/hw2.html",
+      "/courses/AM238/docs/hw3/hw3.html",
+      "/courses/AM238/docs/hw4/hw4.html",
+      "/courses/AM238/docs/hw5/hw5.html"
+    ]
+  },
+  {
+    "listing": "/courses/AM213A/index.html",
+    "items": []
+  },
+  {
+    "listing": "/index.html",
+    "items": [
+      "/courses/AM212/index.html",
+      "/courses/AM238/index.html",
+      "/courses/AM213A/index.html",
+      "/courses/AM213B/index.html"
     ]
   }
 ]
