@@ -34,6 +34,7 @@ listing:
 
 I am a recent graduate from the Scientific Computing and Applied Mathematics Master's program at [University of California, Santa Cruz](https://www.ucsc.edu/).
 
+
 ## Selected Courses
 
 A selection of courses from my time at UCSC.

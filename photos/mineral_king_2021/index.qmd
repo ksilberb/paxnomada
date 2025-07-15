@@ -1,0 +1,163 @@
+---
+title: Mineral King 2021
+author: Kevin Silberberg
+date: 05/28/2021
+description: "My friends and I have an annual tradition where we do a backpacking trip in Mineral King, Kings Canyon National Park around memorial day. All of the Photos here were taken by my friend [Ross Goedde](https://www.linkedin.com/in/rdgoedde/)."
+image: "king_14.jpg"
+lightbox: true
+crossref:
+  fig-title: ""
+---
+
+::: {.figure-container #fig-king1}
+
+<span class="badge bg-info">Fri, 28 May 2021, 02:13:42 PM PDT</span>
+
+![](king_1.jpg){group="mineral-king"}
+
+When you get to [sawtooth trail head](https://www.nps.gov/places/000/sawtooth-trailhead.htm) you need to cover your vehicle to protect it from marmots... apparently they like to chew on the rubber hoses in the engine bay. I think we are just talking about the drive and catching up here.
+:::
+
+::: {.figure-container #fig-king2}
+
+<span class="badge bg-info">Fri, 28 May 2021, 02:14:15 PM PDT</span>
+
+![](king_2.jpg){group="mineral-king"}
+
+Obligatory group photo! Esteban brought one of his coworkers and she had never backpacked before.
+:::
+
+::: {.figure-container #fig-king3}
+
+<span class="badge bg-info">Fri, 28 May 2021, 03:30:21 PM PDT</span>
+
+![](king_3.jpg){group="mineral-king"}
+
+On our way up to Timber Gap!
+:::
+
+::: {.figure-container #fig-king4}
+
+<span class="badge bg-info">Fri, 28 May 2021, 03:49:37 PM PDT</span>
+
+![](king_4.jpg){group="mineral-king"}
+
+Mark eating a snack at Timber Gap.
+:::
+
+::: {.figure-container #fig-king5}
+
+<span class="badge bg-info">Fri, 28 May 2021, 06:53:42 PM PDT</span>
+
+![](king_5.jpg){group="mineral-king"}
+
+Ross got a great photo of me as I fell into the river.
+:::
+
+::: {.figure-container #fig-king6}
+
+<span class="badge bg-info">Sat, 29 May 2021, 11:38:34 AM PDT</span>
+
+![](king_6.jpg){group="mineral-king"}
+
+Jameson joined us! He met up with us as we were setting up camp at Pinto Lake. I vaguely remember him pulling a CAST IRON PAN out of his bag...
+:::
+
+::: {.figure-container #fig-king7}
+
+<span class="badge bg-info">Sat, 29 May 2021, 11:47:34 AM PDT</span>
+
+![](king_7.jpg){group="mineral-king"}
+
+Besteban making dinner.
+:::
+
+::: {.figure-container #fig-king8}
+
+<span class="badge bg-info">Sat, 29 May 2021, 02:42:17 PM PDT</span>
+
+![](king_8.jpg){group="mineral-king"}
+
+Marky mark!
+:::
+
+::: {.figure-container #fig-king9}
+
+<span class="badge bg-info">Sat, 29 May 2021, 03:28:49 PM PDT</span>
+
+![](king_9.jpg){group="mineral-king"}
+
+On our way up to black rock pass.
+:::
+
+::: {.figure-container #fig-king10}
+
+<span class="badge bg-info">Sat, 29 May 2021, 05:33:00 PM PDT</span>
+
+![](king_10.jpg){group="mineral-king"}
+
+We made it! The top of black rock pass.
+:::
+
+::: {.figure-container #fig-king11}
+
+<span class="badge bg-info">Sat, 29 May 2021, 06:01:41 PM PDT</span>
+
+![](king_11.jpg){group="mineral-king"}
+
+Contemplative Esteban.
+:::
+
+::: {.figure-container #fig-king12}
+
+<span class="badge bg-info">Sun, 30 May 2021, 01:22:50 PM PDT</span>
+
+![](king_12.jpg){group="mineral-king"}
+
+I'm Stoked!
+:::
+
+::: {.figure-container #fig-king13}
+
+<span class="badge bg-info">Sun, 30 May 2021, 01:23:42 PM PDT</span>
+
+![](king_13.jpg){group="mineral-king"}
+
+I'm trying really hard not to fall in the water again.
+:::
+
+::: {.figure-container #fig-king14}
+
+<span class="badge bg-info">Sun, 30 May 2021, 03:14:37 PM PDT</span>
+
+![](king_14.jpg){group="mineral-king"}
+
+Ross and Sawtooth Peak!
+:::
+
+::: {.figure-container #fig-king15}
+
+<span class="badge bg-info">Sun, 30 May 2021, 05:05:45 PM PDT</span>
+
+![](king_15.jpg){group="mineral-king"}
+
+Sawtooth Peak (left) and Columbine Lake (frozen).
+:::
+
+::: {.figure-container #fig-king16}
+
+<span class="badge bg-info">Sun, 30 May 2021, 06:41:54 PM PDT</span>
+
+![](king_16.jpg){group="mineral-king"}
+
+The view looking east, at the top of Sawtooth Pass right before our descent.
+:::
+
+::: {.figure-container #fig-king17}
+
+<span class="badge bg-info">Sun, 30 May 2021, 07:18:23 PM PDT</span>
+
+![](king_17.jpg){group="mineral-king"}
+
+Group photo! We all made it!
+:::

@@ -2,6 +2,7 @@ project:
   type: website
   resources:
     - cv.pdf
+
 website:
   title: "paxnomada"
   repo-url: "https://github.com/ksilberb/paxnomada"
@@ -24,6 +25,7 @@ website:
         href: problems/index.qmd
   page-footer:
     left: "© Copyright 2025 Kevin Silberberg. Except where otherwise noted, all text and images licensed CC-BY-NC 4.0."
+
 format:
   html:
     page-layout: full
